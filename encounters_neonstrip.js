@@ -74,7 +74,13 @@ const ENCOUNTERS_NEONSTRIP = [
         minLevel: 1,
         itemSlot1: ["Map: Dead Zone"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "What happens when the maps run out?",
+                response: "He doesn't answer. He hands you the last one."
+            }
+        ]
     },
     {
         name: "Glint",
