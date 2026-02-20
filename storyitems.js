@@ -218,8 +218,8 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
     {
-        name: "Scrap Yard: The Mineral Trader",
-        desc: "A marked route to the Mineral Trader's smelting rig in the Scrap Yard.",
+        name: "Scrap Yard: Slag",
+        desc: "A marked route to Slag's makeshift crucible in the Scrap Yard. He bolted the thing right to his mech.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
@@ -230,8 +230,8 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
     {
-        name: "Old Battlefield: The Mineral Trader",
-        desc: "Directions to the Mineral Trader's mobile forge, parked between shell craters.",
+        name: "Old Battlefield: Crucible",
+        desc: "Directions to Crucible's field forge, built inside a bombed-out tank hull between shell craters.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
@@ -242,8 +242,8 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
     {
-        name: "Downtown: The Mineral Trader",
-        desc: "GPS lock on the Mineral Trader's workshop hidden beneath a neon sign Downtown.",
+        name: "Downtown: Nyx",
+        desc: "GPS lock on Nyx's unlicensed smelter, hidden behind a dumpster in a Downtown back alley.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
@@ -254,8 +254,8 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
     {
-        name: "Orbital Station: The Mineral Trader",
-        desc: "Deck coordinates for the Mineral Trader's zero-g smelting bay on the station.",
+        name: "Orbital Station: Zero",
+        desc: "Deck coordinates for Zero's magnetically-contained zero-g smelting bay on the station.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
@@ -266,8 +266,8 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
     {
-        name: "Wasteland: The Mineral Trader",
-        desc: "Coordinates to a rad-shielded smelter the Mineral Trader operates in the Wasteland.",
+        name: "Wasteland: Cinder",
+        desc: "Coordinates to Cinder's rad-shielded smelter rig out in the bleached Wasteland.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
@@ -278,8 +278,8 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
     {
-        name: "Undercity: The Mineral Trader",
-        desc: "Pipe junction coordinates for the Mineral Trader's underground forge in the Undercity.",
+        name: "Undercity: Dreg",
+        desc: "Pipe junction coordinates for Dreg's forge, jury-rigged into a drainage pipe in the Undercity.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
@@ -290,8 +290,8 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
     {
-        name: "Industrial Zone: The Mineral Trader",
-        desc: "Assembly line coordinates for the Mineral Trader's smelter rig in the Industrial Zone.",
+        name: "Industrial Zone: Anvil",
+        desc: "Assembly line coordinates for Anvil's repurposed industrial smelter in the Industrial Zone.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
@@ -302,8 +302,8 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
     {
-        name: "Frozen Reach: The Mineral Trader",
-        desc: "A geothermal vent location where the Mineral Trader runs a forge in the Frozen Reach.",
+        name: "Frozen Reach: Thaw",
+        desc: "Geothermal vent coordinates where Thaw runs her forge on the Frozen Reach ice shelf.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
@@ -314,8 +314,8 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
     {
-        name: "Neon Strip: The Mineral Trader",
-        desc: "VIP coordinates for the Mineral Trader's private smelting lounge on the Neon Strip.",
+        name: "Neon Strip: Glint",
+        desc: "VIP coordinates for Glint's chrome-plated private smelting lounge on the Neon Strip.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
@@ -326,8 +326,8 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
     {
-        name: "Dead Zone: The Mineral Trader",
-        desc: "Radiation-shielded coordinates for the Mineral Trader's forge deep in the Dead Zone.",
+        name: "Dead Zone: Ash",
+        desc: "Radiation-shielded coordinates for Ash's lead-wrapped forge deep in the Dead Zone.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },

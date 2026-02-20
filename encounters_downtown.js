@@ -77,13 +77,13 @@ const ENCOUNTERS_DOWNTOWN = [
         itemSlot3: []
     },
     {
-        name: "The Mineral Trader",
+        name: "Nyx",
         type: "shop",
         discoverable: true,
-        description: "A woman with a portable smelter strapped to her mech offers to refine raw ore.",
-        engageText: "She fires up the smelter. 'Got raw minerals? I'll turn them into something useful.'",
-        discoveredDescription: "The Mineral Trader's smelter is already fired up, heat shimmering off the forge. She sees your mech and waves.",
-        discoveredEngageText: "She grins as you pull up. 'Back again? Good. Forge is hot. Show me what you've got.'",
+        description: "A lean woman in a welding visor works a compact smelter hidden behind a dumpster. The alley reeks of ozone.",
+        engageText: "She flips the visor up. 'Keep your voice down. Refining ain't exactly licensed around here. You got ore or not?'",
+        discoveredDescription: "Nyx's alley forge hums behind the same dumpster. She's already got the crucible heating when you round the corner.",
+        discoveredEngageText: "She doesn't look surprised. 'Back door's open. Same deal — ore in, refined out, no questions.'",
         appearanceRate: 15,
         minLevel: 1,
         itemSlot1: ["Refined Gloomstone"],

@@ -77,13 +77,13 @@ const ENCOUNTERS_FROZENREACH = [
         itemSlot3: []
     },
     {
-        name: "The Mineral Trader",
+        name: "Thaw",
         type: "shop",
         discoverable: true,
-        description: "A woman with a portable smelter strapped to her mech offers to refine raw ore.",
-        engageText: "She fires up the smelter. 'Got raw minerals? I'll turn them into something useful.'",
-        discoveredDescription: "The Mineral Trader's smelter is already fired up, heat shimmering off the forge. She sees your mech and waves.",
-        discoveredEngageText: "She grins as you pull up. 'Back again? Good. Forge is hot. Show me what you've got.'",
+        description: "A frost-bitten woman works a smelter powered by a geothermal vent. Steam billows where fire meets ice.",
+        engageText: "She breathes into cupped hands. 'Only forge out here that won't freeze solid. Vent keeps her burning. Bring your ore close.'",
+        discoveredDescription: "Thaw's geothermal forge roars against the glacial wind. Icicles melt and refreeze in cycles around the vent's edge.",
+        discoveredEngageText: "She stamps her boots. 'Vent's running hot today. Good smelting weather. Let's go.'",
         appearanceRate: 15,
         minLevel: 1,
         itemSlot1: ["Refined Vortexium"],

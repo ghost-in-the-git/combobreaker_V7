@@ -77,13 +77,13 @@ const ENCOUNTERS_NEONSTRIP = [
         itemSlot3: []
     },
     {
-        name: "The Mineral Trader",
+        name: "Glint",
         type: "shop",
         discoverable: true,
-        description: "A woman with a portable smelter strapped to her mech offers to refine raw ore.",
-        engageText: "She fires up the smelter. 'Got raw minerals? I'll turn them into something useful.'",
-        discoveredDescription: "The Mineral Trader's smelter is already fired up, heat shimmering off the forge. She sees your mech and waves.",
-        discoveredEngageText: "She grins as you pull up. 'Back again? Good. Forge is hot. Show me what you've got.'",
+        description: "A woman in chrome-plated armour operates a sleek smelter behind a velvet rope. Holographic price displays flicker overhead.",
+        engageText: "She lowers designer shades. 'Darling, raw ore is so gauche. Let me refine that into something worth showing off.'",
+        discoveredDescription: "Glint's chrome smelter gleams under neon light, bass from the nearest club vibrating through the floor plates.",
+        discoveredEngageText: "She snaps her fingers. 'VIP access, as always. Furnace is hot, music's loud. Let's make something beautiful.'",
         appearanceRate: 15,
         minLevel: 1,
         itemSlot1: ["Refined Yonderite"],

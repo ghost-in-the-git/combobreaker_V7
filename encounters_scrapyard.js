@@ -76,13 +76,13 @@ const ENCOUNTERS_SCRAPYARD = [
         itemSlot3: []
     },
     {
-        name: "The Mineral Trader",
+        name: "Slag",
         type: "shop",
         discoverable: true,
-        description: "A woman with a portable smelter strapped to her mech offers to refine raw ore.",
-        engageText: "She fires up the smelter. 'Got raw minerals? I'll turn them into something useful.'",
-        discoveredDescription: "The Mineral Trader's smelter is already fired up, heat shimmering off the forge. She sees your mech and waves.",
-        discoveredEngageText: "She grins as you pull up. 'Back again? Good. Forge is hot. Show me what you've got.'",
+        description: "A hulking man welds scrap to a makeshift crucible bolted to his mech's chassis. Sparks shower the junkpiles around him.",
+        engageText: "He doesn't look up. 'Dump your ore in the hopper. I'll burn the garbage out of it. That's the deal.'",
+        discoveredDescription: "Slag's crucible glows cherry-red between towers of crushed metal. He hammers a dent out of the hopper without breaking stride.",
+        discoveredEngageText: "He spits into the furnace. 'You again. Good — hopper's empty. Feed it.'",
         appearanceRate: 15,
         minLevel: 1,
         itemSlot1: ["Refined Aetherite"],

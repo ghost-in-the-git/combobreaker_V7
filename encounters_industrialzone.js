@@ -77,13 +77,13 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         itemSlot3: []
     },
     {
-        name: "The Mineral Trader",
+        name: "Anvil",
         type: "shop",
         discoverable: true,
-        description: "A woman with a portable smelter strapped to her mech offers to refine raw ore.",
-        engageText: "She fires up the smelter. 'Got raw minerals? I'll turn them into something useful.'",
-        discoveredDescription: "The Mineral Trader's smelter is already fired up, heat shimmering off the forge. She sees your mech and waves.",
-        discoveredEngageText: "She grins as you pull up. 'Back again? Good. Forge is hot. Show me what you've got.'",
+        description: "A broad-shouldered woman runs a repurposed assembly-line smelter. Robotic arms assist her with mechanical precision.",
+        engageText: "She punches a sequence into the control panel. 'Industrial-grade refining. Consistent output, every time. Load the intake.'",
+        discoveredDescription: "Anvil's assembly-line forge clanks rhythmically, robotic arms cycling through their routines. She monitors a bank of gauges.",
+        discoveredEngageText: "She taps the intake chute. 'Line's warmed up. Drop your minerals and I'll run the batch.'",
         appearanceRate: 15,
         minLevel: 1,
         itemSlot1: ["Refined Starvitrine"],

@@ -77,13 +77,13 @@ const ENCOUNTERS_DEADZONE = [
         itemSlot3: []
     },
     {
-        name: "The Mineral Trader",
+        name: "Ash",
         type: "shop",
         discoverable: true,
-        description: "A woman with a portable smelter strapped to her mech offers to refine raw ore.",
-        engageText: "She fires up the smelter. 'Got raw minerals? I'll turn them into something useful.'",
-        discoveredDescription: "The Mineral Trader's smelter is already fired up, heat shimmering off the forge. She sees your mech and waves.",
-        discoveredEngageText: "She grins as you pull up. 'Back again? Good. Forge is hot. Show me what you've got.'",
+        description: "A gaunt figure in a sealed hazmat rig tends a smelter wrapped in lead sheeting. A Geiger counter clicks steadily nearby.",
+        engageText: "A filtered voice crackles from the suit. 'Radiation makes most refiners sick. I was born in it. Hand over the ore.'",
+        discoveredDescription: "Ash's lead-wrapped forge glows sickly green at the seams. The Geiger counter clicks faster as you approach, then steadies.",
+        discoveredEngageText: "The hazmat visor turns toward you. 'Good. More ore for the fire. The rads make the bonds break cleaner — trust me.'",
         appearanceRate: 15,
         minLevel: 1,
         itemSlot1: ["Refined Archive Shard"],

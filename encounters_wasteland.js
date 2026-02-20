@@ -77,13 +77,13 @@ const ENCOUNTERS_WASTELAND = [
         itemSlot3: []
     },
     {
-        name: "The Mineral Trader",
+        name: "Cinder",
         type: "shop",
         discoverable: true,
-        description: "A woman with a portable smelter strapped to her mech offers to refine raw ore.",
-        engageText: "She fires up the smelter. 'Got raw minerals? I'll turn them into something useful.'",
-        discoveredDescription: "The Mineral Trader's smelter is already fired up, heat shimmering off the forge. She sees your mech and waves.",
-        discoveredEngageText: "She grins as you pull up. 'Back again? Good. Forge is hot. Show me what you've got.'",
+        description: "A sun-blackened woman hunches over a smelter built from salvaged rad-scrubbers. Heat mirages bend the air around her rig.",
+        engageText: "She wipes ash from her goggles. 'Everything out here wants to kill you. My forge just wants your ore. Fair trade.'",
+        discoveredDescription: "Cinder's rad-shielded smelter throbs with heat, a bright spot in the bleached wasteland. She waves you over with a tong.",
+        discoveredEngageText: "She cracks her neck. 'Forge doesn't sleep and neither do I. Let's see what you dragged in.'",
         appearanceRate: 15,
         minLevel: 1,
         itemSlot1: ["Refined Moonshardite"],

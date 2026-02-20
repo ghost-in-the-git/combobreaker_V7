@@ -77,13 +77,13 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         itemSlot3: []
     },
     {
-        name: "The Mineral Trader",
+        name: "Crucible",
         type: "shop",
         discoverable: true,
-        description: "A woman with a portable smelter strapped to her mech offers to refine raw ore.",
-        engageText: "She fires up the smelter. 'Got raw minerals? I'll turn them into something useful.'",
-        discoveredDescription: "The Mineral Trader's smelter is already fired up, heat shimmering off the forge. She sees your mech and waves.",
-        discoveredEngageText: "She grins as you pull up. 'Back again? Good. Forge is hot. Show me what you've got.'",
+        description: "A scarred woman operates a field forge from inside a bombed-out tank hull. Shell casings litter the ground around her.",
+        engageText: "She racks a glowing ingot. 'War's over, but the forge isn't. You need refining, I'm your only option out here.'",
+        discoveredDescription: "Crucible's tank-hull forge belches black smoke between the craters. She's already pulling on her blast gloves as you approach.",
+        discoveredEngageText: "She nods once. 'Forge is primed. Let's not waste daylight — things still patrol at night.'",
         appearanceRate: 15,
         minLevel: 1,
         itemSlot1: ["Refined Duskquartz"],

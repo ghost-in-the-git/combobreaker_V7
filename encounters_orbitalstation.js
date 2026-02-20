@@ -77,13 +77,13 @@ const ENCOUNTERS_ORBITALSTATION = [
         itemSlot3: []
     },
     {
-        name: "The Mineral Trader",
+        name: "Zero",
         type: "shop",
         discoverable: true,
-        description: "A woman with a portable smelter strapped to her mech offers to refine raw ore.",
-        engageText: "She fires up the smelter. 'Got raw minerals? I'll turn them into something useful.'",
-        discoveredDescription: "The Mineral Trader's smelter is already fired up, heat shimmering off the forge. She sees your mech and waves.",
-        discoveredEngageText: "She grins as you pull up. 'Back again? Good. Forge is hot. Show me what you've got.'",
+        description: "A man in a pressurised suit tends a magnetically-contained smelter floating in a depressurised cargo bay. Everything is precise.",
+        engageText: "He adjusts a dial without looking. 'Zero-g refining. Purest yields in the system. Place your minerals on the mag-plate.'",
+        discoveredDescription: "Zero's cargo bay forge drifts in perfect stillness. The magnetic containment field hums as molten metal orbits inside it.",
+        discoveredEngageText: "He gestures to the mag-plate. 'Calibration is optimal. Proceed.'",
         appearanceRate: 15,
         minLevel: 1,
         itemSlot1: ["Refined Jetspinel"],
