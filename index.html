@@ -3108,38 +3108,65 @@
             return parts.join(' | ');
         }
 
+        // Build set of inventory indices that are currently equipped
+        function getEquippedIndices() {
+            const indices = new Set();
+            for (const slot in game.equipment) {
+                const equippedName = game.equipment[slot];
+                if (!equippedName) continue;
+                // Find the first inventory item with this name that isn't already claimed
+                const idx = game.inventory.findIndex((item, i) => item.name === equippedName && !indices.has(i));
+                if (idx !== -1) indices.add(idx);
+            }
+            return indices;
+        }
+
         // Populate the salvage dropdown with unequipped installations
         function updateSalvageDropdown() {
             const select = document.getElementById('salvage-item-select');
+            const preview = document.getElementById('salvage-preview');
+            const sellBtn = document.getElementById('salvage-sell-btn');
+
             select.innerHTML = '<option value="">[SELECT INSTALLATION TO SELL]</option>';
 
-            const equippedNames = new Set(Object.values(game.equipment).filter(Boolean));
+            const equippedIndices = getEquippedIndices();
             const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant'];
 
-            slots.forEach(slot => {
-                const slotItems = game.inventory.filter(i => i.type === slot && !equippedNames.has(i.name));
-                if (slotItems.length === 0) return;
+            let totalSellable = 0;
 
+            slots.forEach(slot => {
                 const tag = SLOT_LABELS[slot] || slot.toUpperCase();
                 const group = document.createElement('optgroup');
                 group.label = tag;
+                let groupCount = 0;
 
-                slotItems.forEach((item, idx) => {
+                game.inventory.forEach((item, invIndex) => {
+                    if (item.type !== slot) return;
+                    if (equippedIndices.has(invIndex)) return;
+
                     const option = document.createElement('option');
-                    // Use index-based value to handle duplicate names
-                    const invIndex = game.inventory.indexOf(item);
                     option.value = invIndex;
                     const scrapValue = getSalvageValue(item);
                     option.textContent = `${item.name} (${scrapValue} scrap)`;
                     group.appendChild(option);
+                    groupCount++;
                 });
 
-                select.appendChild(group);
+                if (groupCount > 0) {
+                    select.appendChild(group);
+                    totalSellable += groupCount;
+                }
             });
 
+            if (totalSellable === 0) {
+                select.innerHTML = '<option value="">[NO INSTALLATIONS TO SELL]</option>';
+            }
+
             // Reset preview and button
-            document.getElementById('salvage-preview').classList.remove('visible');
-            document.getElementById('salvage-sell-btn').disabled = true;
+            preview.classList.remove('visible');
+            preview.innerHTML = '';
+            sellBtn.disabled = true;
+            sellBtn.textContent = '--';
         }
 
         // Handle salvage dropdown selection
@@ -3172,23 +3199,22 @@
 
         // Sell the selected installation
         function sellSalvageItem() {
+            const sellBtn = document.getElementById('salvage-sell-btn');
+            if (sellBtn.disabled) return;
+
             const select = document.getElementById('salvage-item-select');
             const invIndex = parseInt(select.value);
 
             if (isNaN(invIndex) || !game.inventory[invIndex]) return;
+
+            // Disable button immediately to prevent double-click
+            sellBtn.disabled = true;
 
             const item = game.inventory[invIndex];
             const scrapValue = getSalvageValue(item);
 
             // Remove from inventory
             game.inventory.splice(invIndex, 1);
-
-            // If it was equipped (shouldn't be since we filter, but safety check), unequip
-            for (const slot in game.equipment) {
-                if (game.equipment[slot] === item.name) {
-                    game.equipment[slot] = null;
-                }
-            }
 
             // Add scrap
             game.scrap = (game.scrap || 0) + scrapValue;
