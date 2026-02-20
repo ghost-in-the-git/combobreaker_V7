@@ -13,6 +13,7 @@ const ENCOUNTERS_FORGE = [
         name: "The Forger",
         type: "shop",
         isForge: true,
+        autoEngage: true,
         description: "A heavily augmented smith works at a glowing forge, shaping refined minerals into mech components.",
         engageText: "The Forger looks up from her anvil, sparks cascading from molten metal. 'Got refined materials? I can make something worth wearing.'",
         appearanceRate: 100,
