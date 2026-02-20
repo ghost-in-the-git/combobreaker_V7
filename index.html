@@ -3028,7 +3028,7 @@
                     } else {
                         const canAfford = playerXP >= item.cost;
                         nameEl.classList.toggle('cant-afford', !canAfford);
-                        buyBtn.textContent = `[Buy ${item.cost} Silicon]`;
+                        buyBtn.textContent = `[Cost: ${item.cost} Silicon]`;
                         buyBtn.disabled = !canAfford;
                     }
                     wrapper.classList.add('visible');
