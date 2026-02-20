@@ -1,0 +1,92 @@
+/**
+ * SCRAP YARD - ENCOUNTER CONFIGURATION
+ *
+ * Junkers, scavengers, and makeshift dealers picking through the wreckage.
+ */
+
+const ENCOUNTERS_SCRAPYARD = [
+    {
+        name: "[COMMON] Mech Junker",
+        type: "shop",
+        discoverable: true,
+        description: "A wandering Junker's vessel has appeared on radar. They're broadcasting a trade signal.",
+        engageText: "The Junker greets your mech as it arrives at the hangar bay door. They motion to a shelf of salvaged mech parts.",
+        discoveredDescription: "The Junker's vessel is right where you found it, tethered to a rust-eaten gantry. Salvage is piled high on the deck.",
+        discoveredEngageText: "The Junker sees your mech and grins. 'Back for more? I've been pulling good stuff lately. Come see.'",
+        appearanceRate: 20,
+        minLevel: 1,
+        itemSlot1: [],
+        itemSlot2: [],
+        itemSlot3: []
+    },
+    {
+        name: "[COMMON] Scrap Dealer",
+        type: "shop",
+        discoverable: true,
+        description: "A Scrap Dealer's cargo ship is passing through. Their comms crackle with offers of rare components.",
+        engageText: "The Scrap Dealer eyes your mech approvingly. 'Got some quality salvage here, pilot. Take a look.'",
+        discoveredDescription: "The Scrap Dealer's cargo ship sits in its usual berth, hull scarred and antenna bent. The trade signal is already broadcasting.",
+        discoveredEngageText: "The Dealer waves from the loading ramp. 'You've got a good eye, pilot. I saved some things you might like.'",
+        appearanceRate: 20,
+        minLevel: 1,
+        itemSlot1: [],
+        itemSlot2: [],
+        itemSlot3: []
+    },
+    {
+        name: "[COMMON] Field Mechanic",
+        type: "shop",
+        discoverable: true,
+        description: "A lone field mechanic truck sits next to a decommissioned mech. A field mechanic is offering tune-ups and spare parts.",
+        engageText: "A grease-stained tech waves you in. 'I can patch armor, swap actuators, or sell you something that won't explode. Probably.'",
+        discoveredDescription: "The field mechanic's truck is parked at the same decommissioned mech, tools spread across a tarp. Grease stains mark the ground.",
+        discoveredEngageText: "The mechanic looks up from under a chassis. 'Oh hey, you again. Got some new stock. Nothing exploded yet.'",
+        appearanceRate: 15,
+        minLevel: 1,
+        itemSlot1: [],
+        itemSlot2: [],
+        itemSlot3: []
+    },
+    {
+        name: "[COMMON] Derelict Vending Array",
+        type: "shop",
+        discoverable: true,
+        description: "A derelict station's vending array still has power. The interface flickers—prices fluctuate wildly.",
+        engageText: "Your mech taps the terminal. Ancient menus scroll past. A slot clunks open with something inside.",
+        discoveredDescription: "The derelict vending array still hums with power, its screen flickering in the gloom. You know which buttons to press now.",
+        discoveredEngageText: "The terminal recognizes your mech's signature. The interface skips straight to the good stuff.",
+        appearanceRate: 10,
+        minLevel: 1,
+        itemSlot1: [],
+        itemSlot2: [],
+        itemSlot3: []
+    },
+    {
+        name: "The Mapmaker",
+        type: "shop",
+        discoverable: true,
+        description: "A hooded figure stands motionless nearby, a rolled chart clutched in one hand.",
+        engageText: "He says nothing. His eyes flick to you, then to the map.",
+        discoveredDescription: "The Mapmaker is where you left him, hood drawn, charts spread across a makeshift table.",
+        discoveredEngageText: "He glances up as you approach. A faint nod — he's already reaching for his charts.",
+        appearanceRate: 15,
+        minLevel: 1,
+        itemSlot1: ["Map: Old Battlefield"],
+        itemSlot2: [],
+        itemSlot3: []
+    },
+    {
+        name: "The Mineral Trader",
+        type: "shop",
+        discoverable: true,
+        description: "A woman with a portable smelter strapped to her mech offers to refine raw ore.",
+        engageText: "She fires up the smelter. 'Got raw minerals? I'll turn them into something useful.'",
+        discoveredDescription: "The Mineral Trader's smelter is already fired up, heat shimmering off the forge. She sees your mech and waves.",
+        discoveredEngageText: "She grins as you pull up. 'Back again? Good. Forge is hot. Show me what you've got.'",
+        appearanceRate: 15,
+        minLevel: 1,
+        itemSlot1: ["Refined Aetherite"],
+        itemSlot2: ["Refined Bronzewisp"],
+        itemSlot3: ["Refined Cindergem"]
+    }
+];
