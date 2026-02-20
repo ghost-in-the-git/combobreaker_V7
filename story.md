@@ -66,7 +66,7 @@ A heavily augmented smith who works at a glowing forge. She turns refined minera
 A colossal mech half-buried in the Mech Graveyard, its upper body still moving. One massive arm endlessly drags scrap toward its shattered legs in a patient, futile repair cycle. It doesn't speak, but it trades: bring unequipped parts, receive scrap.
 
 ### The Mapmaker
-Appears in every zone. A recurring figure who reveals the layout of each area — marking asteroid locations, shop encounters, and points of interest on your map.
+A hooded figure who stands motionless, a rolled chart clutched in one hand. He says nothing. His eyes flick to you, then to the map. He appears in every zone from the Ratpile onward — in a tunnel by lantern light, behind a beaded curtain on the Neon Strip, inside a contamination bunker in the Dead Zone. He never explains how he got there. He never moves from where you leave him. He marks asteroid locations, shops, and points of interest on your map. He is the closest thing the game has to an omnipresent mystery.
 
 ### Zone Refiners
 Each zone (past the Ratpile) has a resident refiner — a specialist who processes raw minerals into refined materials for forging:
@@ -99,6 +99,14 @@ Silicon is currency. Scrap is currency. Everything you find has value. The Profe
 - **Neural sync:** Scrambled. The old sync rigs sometimes lose the pilot's mind but keep the machine's instincts. Combat may bring fragments back.
 - **Goal:** Unknown. The frontline is past the asteroid belt. You were built to fight there. Whether you go back is up to you.
 
+### Starter Belongings
+The player begins with four items — the only clues to a past they can't remember:
+
+- **Mysterious Note** — A crumpled note found in the cockpit on day one. The handwriting is yours, but you don't remember writing it.
+- **Old Key** — A tarnished key you've had as long as you can remember. Whatever it opens, you haven't found it yet.
+- **Unreadable DNA Tag** — A smudged genetic tag clipped to your pilot jacket. The data is too degraded to scan.
+- **Destroyed Mech Heart** — The fused core reactor of a mech you once piloted. It's dead now, but it's warm when you hold it.
+
 ---
 
 ## Tone
@@ -107,6 +115,48 @@ Silicon is currency. Scrap is currency. Everything you find has value. The Profe
 - **Show, don't tell.** Lore comes from item descriptions, NPC dialogue, zone flavor text, and story collectibles — not exposition dumps.
 - **Mystery over answers.** What caused the blackout? What's past the asteroid belt? Why was your memory wiped? These questions drive the player forward. Answers should be slow, partial, and sometimes contradictory.
 - **The mech is you.** The player isn't piloting a vehicle — the combobreaker *is* the character. The neural sync blurred the line between human and machine long ago.
+
+---
+
+## Buried Lore (already in the game files)
+
+These are threads seeded through story items, NPC flavor text, and zone descriptions. They aren't explained yet — they're breadcrumbs.
+
+### Unit 00-4417
+Referenced twice. A maintenance log for a decommissioned mech whose final entry reads: *"IT MOVED."* And a set of dented dog tags — pilot name scratched off, only the serial number remaining: **00-4417**. Same number, two contexts. A mech that shouldn't be alive and a pilot who was erased.
+
+### Project Lazarus
+An experiment log describes a failed attempt to reboot a destroyed mech's AI core. The core rebooted — then refused to comply. Connects to themes of machine autonomy and the corrupted AI in the Dead Zone.
+
+### The Fold
+Mentioned exactly once, in an encrypted comms fragment intercepted between two unknown callsigns. They reference something called "The Fold." No other context exists. This is the deepest mystery hook in the game.
+
+### Non-Human Biology
+A DNA tag recovered somewhere in the sector contains a genetic sequence that doesn't match any known terrestrial organism. Origin: CLASSIFIED.
+
+### Cloned Signatures
+Two identical genetic profiles from two different bodies. Recovered six months apart.
+
+### The Dead Zone Breach
+An official incident report on the first incursion into the Dead Zone. Casualty rate: 97%. Classification: BURIED.
+
+### The Distress Signal
+A decoded transmission from an orbital station. The last line reads: *"They're inside the walls."*
+
+### The Blackbox
+Recovered from wreckage. The audio is mostly static, but there are screams near the end.
+
+---
+
+## Factions & Power Structures
+
+The war left a vacuum. Different groups filled it:
+
+- **Corporations** — Still active in Downtown and the Old Battlefield. They deploy security mechs, kill teams, and corporate supply buoys that are *still honoring contracts* as if the war economy never ended.
+- **Syndicates** — Run the Neon Strip. Casino enforcers, pit boss mechs, syndicate fences. Violence is entertainment and commerce.
+- **The Union** — Workers on the Factory Floor who survived automation. They trade with pilots who fight the bots. *"You fight the bots, you're one of us."*
+- **Black-Ops** — Active in the Undercity. Infiltrators and kill squads operating in the tunnels. Suggests an organized military or paramilitary force is still functional somewhere.
+- **Scavenger Economy** — Everyone else. Nomad traders, rad-shielded caravans, smugglers, desperate scavengers. The default state of the world.
 
 ---
 
@@ -119,4 +169,8 @@ These are unresolved story questions — hooks for future content:
 - **Why was Pilot 72632 wiped?** Memory loss from a bad sync rig — or something deliberate?
 - **Who is the Professor, really?** "Nobody important," he says. But he stayed when everyone else left, and he knows more than he lets on.
 - **What is the Abandoned Monolith?** A broken mech endlessly trying to repair itself — or something more?
+- **What is Unit 00-4417?** A decommissioned mech that moved. A pilot whose name was erased. The same serial number in two impossible places.
+- **What is The Fold?** Two unknown callsigns discussed it. Nothing else references it. The game's deepest buried secret.
+- **What is Project Lazarus?** A mech AI was rebooted from death and refused orders. What happened next?
+- **What's the non-human DNA?** Something in this sector isn't from Earth. The war may not have been against humans.
 - **What are the story fragments revealing?** Logs, DNA tags, debris, keys — the sector is full of buried information. What picture do they paint when assembled?
