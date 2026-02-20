@@ -629,7 +629,7 @@ const STORY_ITEMS = [
         cost: 100
     },
     {
-        name: "Map: The Salvage Yard",
+        name: "Map: Mech Graveyard",
         desc: "A scratched datapad listing mech chop-shop coordinates. The last entry reads: 'NO REFUNDS.'",
         category: "map",
         image: "images/IMAGE.gif",

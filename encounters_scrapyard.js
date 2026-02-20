@@ -72,7 +72,7 @@ const ENCOUNTERS_SCRAPYARD = [
         appearanceRate: 15,
         minLevel: 1,
         itemSlot1: ["Map: Old Battlefield"],
-        itemSlot2: ["Map: The Salvage Yard"],
+        itemSlot2: ["Map: Mech Graveyard"],
         itemSlot3: []
     },
     {

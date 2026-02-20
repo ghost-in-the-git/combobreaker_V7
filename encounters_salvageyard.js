@@ -1,5 +1,5 @@
 /**
- * THE SALVAGE YARD - ENCOUNTER CONFIGURATION
+ * MECH GRAVEYARD - ENCOUNTER CONFIGURATION
  *
  * A mech chop-shop where The Scrapper buys your unwanted installations
  * for scrap. No enemies — just a greasy mechanic and a pile of parts.
