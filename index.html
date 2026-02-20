@@ -3674,8 +3674,12 @@
             setEquipmentLocked(false);
 
             if (success) {
-                // Add mineral to player's collection
-                addMineral(currentMiningEvent.mineral, currentMiningEvent.category);
+                // Add minerals to player's collection (1-3 random yield)
+                const yield_ = Math.floor(Math.random() * 3) + 1;
+                for (let i = 0; i < yield_; i++) {
+                    addMineral(currentMiningEvent.mineral, currentMiningEvent.category);
+                }
+                addMessage(`Extracted ${yield_}x ${currentMiningEvent.mineral}.`, 'victory');
             }
 
             currentMiningEvent = null;
