@@ -683,5 +683,84 @@ const STORY_ITEMS = [
         category: "map",
         image: "images/IMAGE.gif",
         cost: 200
+    },
+    // Asteroid Belt - discovered mining locations
+    {
+        name: "Asteroid Belt: Aetherite Asteroid",
+        desc: "Logged coordinates to an Aetherite-rich asteroid. Shallow deposits, stable structure.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Asteroid Belt: Duskquartz Asteroid",
+        desc: "Logged coordinates to a Duskquartz asteroid. Faint violet shimmer visible on approach.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Asteroid Belt: Gloomstone Asteroid",
+        desc: "Logged coordinates to a Gloomstone asteroid. Dense rock with moderate depth deposits.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Asteroid Belt: Jetspinel Asteroid",
+        desc: "Logged coordinates to a Jetspinel asteroid. Dark crystalline veins run deep.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Asteroid Belt: Nightpyre Asteroid",
+        desc: "Logged coordinates to a Nightpyre asteroid. Faint thermal readings from within.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Asteroid Belt: Prismalune Asteroid",
+        desc: "Logged coordinates to a Prismalune asteroid. Refracts starlight across its surface.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Asteroid Belt: Riftmarble Asteroid",
+        desc: "Logged coordinates to a Riftmarble asteroid. Fracture lines suggest unstable geology.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Asteroid Belt: Vortexium Asteroid",
+        desc: "Logged coordinates to a Vortexium asteroid. Gravitational distortions detected nearby.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Asteroid Belt: Xanthryx Asteroid",
+        desc: "Logged coordinates to a Xanthryx asteroid. Amber-hued deposits deep beneath the crust.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Asteroid Belt: Zephyrsalt Asteroid",
+        desc: "Logged coordinates to a Zephyrsalt asteroid. Crystalline dust vents from surface fissures.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Asteroid Belt: Thorncrystal Asteroid",
+        desc: "Logged coordinates to a Thorncrystal asteroid. Jagged spires protrude from the surface.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Asteroid Belt: Archive Shard Asteroid",
+        desc: "Logged coordinates to an Archive Shard asteroid. Ancient data-encoded mineral buried impossibly deep.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Asteroid Belt: Strata-Null Asteroid",
+        desc: "Logged coordinates to a Strata-Null asteroid. Readings are erratic. Extreme depth required.",
+        category: "location",
+        image: "images/IMAGE.gif"
     }
 ];

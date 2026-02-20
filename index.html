@@ -2217,6 +2217,26 @@
                     { encounterName: "[COMMON] Desperate Scavenger", mapItem: "Dead Zone: Desperate Scavenger" },
                     { encounterName: "[COMMON] Sealed Bunker Terminal", mapItem: "Dead Zone: Sealed Bunker Terminal" }
                 ]
+            },
+            asteroidbelt: {
+                openWorldName: "Asteroid Field",
+                openWorldDesc: "A dense field of mineral-rich asteroids. Sensors ping with scattered mineral signatures.",
+                destinationType: "mine",
+                destinations: [
+                    { encounterName: "Aetherite Asteroid", mapItem: "Asteroid Belt: Aetherite Asteroid" },
+                    { encounterName: "Duskquartz Asteroid", mapItem: "Asteroid Belt: Duskquartz Asteroid" },
+                    { encounterName: "Gloomstone Asteroid", mapItem: "Asteroid Belt: Gloomstone Asteroid" },
+                    { encounterName: "Jetspinel Asteroid", mapItem: "Asteroid Belt: Jetspinel Asteroid" },
+                    { encounterName: "Nightpyre Asteroid", mapItem: "Asteroid Belt: Nightpyre Asteroid" },
+                    { encounterName: "Prismalune Asteroid", mapItem: "Asteroid Belt: Prismalune Asteroid" },
+                    { encounterName: "Riftmarble Asteroid", mapItem: "Asteroid Belt: Riftmarble Asteroid" },
+                    { encounterName: "Vortexium Asteroid", mapItem: "Asteroid Belt: Vortexium Asteroid" },
+                    { encounterName: "Xanthryx Asteroid", mapItem: "Asteroid Belt: Xanthryx Asteroid" },
+                    { encounterName: "Zephyrsalt Asteroid", mapItem: "Asteroid Belt: Zephyrsalt Asteroid" },
+                    { encounterName: "Thorncrystal Asteroid", mapItem: "Asteroid Belt: Thorncrystal Asteroid" },
+                    { encounterName: "Archive Shard Asteroid", mapItem: "Asteroid Belt: Archive Shard Asteroid" },
+                    { encounterName: "Strata-Null Asteroid", mapItem: "Asteroid Belt: Strata-Null Asteroid" }
+                ]
             }
         };
 
@@ -2265,7 +2285,8 @@
                     if ((game.storyItems || []).includes(dest.mapItem)) {
                         const opt = document.createElement('option');
                         opt.value = dest.encounterName;
-                        opt.textContent = `[VENDOR] ${dest.encounterName.replace(/^\[COMMON\] /, '')}`;
+                        const prefix = zoneConfig.destinationType === 'mine' ? '[MINE]' : '[VENDOR]';
+                        opt.textContent = `${prefix} ${dest.encounterName.replace(/^\[COMMON\] /, '')}`;
                         select.appendChild(opt);
                     }
                 }
@@ -2295,11 +2316,19 @@
             if (destValue === 'openworld' && zoneConfig) {
                 document.getElementById('location-desc').innerHTML = `<div class="storage-desc-content"><img src="${LOCATIONS[currentLocation].image}" alt="Location"><span>${zoneConfig.openWorldDesc}</span></div>`;
             } else if (destValue !== 'openworld') {
-                // At a named destination — show encounter description
+                // At a named destination — show encounter or asteroid description
                 const encounters = LOCATIONS[currentLocation].encounters || [];
                 const enc = encounters.find(e => e.name === destValue);
                 if (enc) {
                     document.getElementById('location-desc').innerHTML = `<div class="storage-desc-content"><img src="${LOCATIONS[currentLocation].image}" alt="Location"><span>${enc.description}</span></div>`;
+                } else if (zoneConfig && zoneConfig.destinationType === 'mine') {
+                    // Mining destination — look up asteroid info
+                    const mineralName = destValue.replace(' Asteroid', '');
+                    const locationAsteroids = LOCATIONS[currentLocation].mining || [];
+                    const asteroid = locationAsteroids.find(a => a.mineral === mineralName);
+                    if (asteroid) {
+                        document.getElementById('location-desc').innerHTML = `<div class="storage-desc-content"><img src="${LOCATIONS[currentLocation].image}" alt="Location"><span>${mineralName} asteroid. Depth: ${asteroid.depth}ft | Stability: ${asteroid.stability}</span></div>`;
+                    }
                 }
             }
 
@@ -3110,11 +3139,30 @@
             startWaveTimer();
         }
 
-        // Select a random asteroid appropriate for player's mining stat
+        // Select an asteroid — specific one at named destinations, random (filtered) in open world
         function selectAsteroid() {
             const locationAsteroids = LOCATIONS[currentLocation].mining;
             if (!locationAsteroids || locationAsteroids.length === 0) return null;
-            return locationAsteroids[Math.floor(Math.random() * locationAsteroids.length)];
+
+            // At a named mining destination: return that specific asteroid
+            if (currentDestination && currentDestination !== 'openworld') {
+                const mineralName = currentDestination.replace(' Asteroid', '');
+                return locationAsteroids.find(a => a.mineral === mineralName) || null;
+            }
+
+            // In open world: filter out discovered asteroids
+            const zoneConfig = ZONE_DESTINATIONS[currentLocation];
+            let available = locationAsteroids;
+            if (zoneConfig) {
+                available = locationAsteroids.filter(asteroid => {
+                    const dest = zoneConfig.destinations.find(d => d.encounterName === `${asteroid.mineral} Asteroid`);
+                    if (!dest) return true;
+                    return !(game.storyItems || []).includes(dest.mapItem);
+                });
+            }
+
+            if (available.length === 0) return null;
+            return available[Math.floor(Math.random() * available.length)];
         }
 
         // Spawn mining event
@@ -3192,6 +3240,21 @@
             }
 
             const mining = currentMiningEvent;
+
+            // Grant asteroid location on first engage in open world
+            {
+                const zoneConfig = ZONE_DESTINATIONS[currentLocation];
+                if (zoneConfig && (!currentDestination || currentDestination === 'openworld')) {
+                    const asteroidName = `${mining.mineral} Asteroid`;
+                    const dest = zoneConfig.destinations.find(d => d.encounterName === asteroidName);
+                    if (dest && !(game.storyItems || []).includes(dest.mapItem)) {
+                        addStoryItem(dest.mapItem);
+                        await addMessage(`You've logged this asteroid's coordinates. ${asteroidName} can now be found directly from the ${LOCATION_NAMES[currentLocation]} destination list.`, 'system');
+                        updateDestinationDropdown();
+                    }
+                }
+            }
+
             await addMessage(`Mining operation commencing on ${mining.mineral} asteroid...`, 'player');
             await addMessage(`> > >  M I N I N G  S T A R T  < < <`, 'system');
 
@@ -3570,9 +3633,19 @@
         function spawnWave() {
             if (game.inBattle || game.currentWave || currentEncounter || currentMiningEvent) return;
 
-            // At a named destination: always spawn that encounter only
+            // At a named destination: spawn the appropriate event
             if (currentDestination && currentDestination !== 'openworld') {
-                spawnEncounter();
+                const loc = LOCATIONS[currentLocation];
+                if (!loc.enemies && !loc.encounters && loc.mining) {
+                    // Mining-only destination (e.g. asteroid belt)
+                    if (game.player.mining > 0) {
+                        spawnMiningEvent();
+                    } else {
+                        addMessage(`[NO DRILL EQUIPPED] Mining drill required to operate in this zone.`, 'system');
+                    }
+                } else {
+                    spawnEncounter();
+                }
                 return;
             }
 
@@ -3581,7 +3654,9 @@
             // Mining-only locations: only spawn mining events
             if (!loc.enemies && !loc.encounters) {
                 if (game.player.mining > 0) {
-                    spawnMiningEvent();
+                    if (!spawnMiningEvent()) {
+                        addMessage(`[NO NEW ASTEROIDS] All asteroid types in this field have been mapped. Select a known asteroid from the destination list.`, 'system');
+                    }
                 } else {
                     addMessage(`[NO DRILL EQUIPPED] Mining drill required to operate in this zone.`, 'system');
                 }
