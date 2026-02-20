@@ -15,7 +15,7 @@ const ENCOUNTERS_HOME = [
         discoveredEngageText: "The Professor looks up and adjusts his goggles. 'Ah, you're back. Let me see what I've got for you.'",
         appearanceRate: 100,
         minLevel: 1,
-        itemSlot1: ["Rusty Pipe [+1 ATK]"],
+        itemSlot1: [],
         itemSlot2: ["Professor's Lesson [+10 XP]"],
         itemSlot3: []
     }
