@@ -1445,7 +1445,8 @@
                 location: currentLocation,
                 destination: currentDestination || 'openworld',
                 minerals: game.minerals || {},
-                storyItems: game.storyItems || []
+                storyItems: game.storyItems || [],
+                forgedItems: [...FORGER_ITEMS]
             };
         }
 
@@ -1628,6 +1629,9 @@
                 currentLocation = 'scrapyard';
             }
 
+            // Restore forged items registry before inventory lookup
+            restoreForgedItems(data.forgedItems);
+
             // Restore inventory
             game.inventory = [];
             if (data.inventory && Array.isArray(data.inventory)) {
@@ -1767,11 +1771,14 @@
                 document.getElementById('destination-select').value = currentDestination;
                 document.getElementById('location-desc').innerHTML = `<div class="storage-desc-content"><img src="${LOCATIONS[currentLocation].image}" alt="Location"><span>${LOCATIONS[currentLocation].desc}</span></div>`;
 
+                // Restore forged items registry before inventory lookup
+                restoreForgedItems(data.forgedItems);
+
                 // Restore inventory (convert names back to item objects)
                 game.inventory = [];
                 if (data.inventory && Array.isArray(data.inventory)) {
                     data.inventory.forEach(itemName => {
-                        const item = ITEMS.find(i => i.name === itemName);
+                        const item = ITEMS.find(i => i.name === itemName) || FORGER_ITEMS.find(i => i.name === itemName);
                         if (item) {
                             game.inventory.push(item);
                         }
@@ -2812,12 +2819,9 @@
             return null;
         }
 
-        // Find a forger item for a specific mineral and installation type
+        // Generate a forger item for a specific mineral and installation type
         function getForgerItem(mineralName, slotType) {
-            const refinedName = "Refined " + mineralName;
-            return FORGER_ITEMS.find(item =>
-                item.mineralCost && item.mineralCost.mineral === refinedName && item.type === slotType
-            ) || null;
+            return generateForgerItem(mineralName, slotType);
         }
 
         // Populate the forge mineral dropdown with all minerals grouped by tier
@@ -2920,6 +2924,7 @@
                 } else if (item.category) {
                     addStoryItem(item.name);
                 } else {
+                    if (item.isForged) registerForgedItem(item);
                     addItemToInventory(item);
                 }
                 const scrapMsg = item.scrapCost ? ` + ${item.scrapCost} Scrap` : '';

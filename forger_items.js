@@ -1,13 +1,18 @@
 /**
- * THE FORGER - CRAFTABLE EQUIPMENT
+ * THE FORGER - CRAFTABLE EQUIPMENT (Generator System)
  *
- * The Forger offers equipment crafted from refined minerals.
- * Each mineral tier has 3 minerals, and each mineral covers 3 installation types:
- *   - Mineral 1 (pos 0): body, legs, arms
- *   - Mineral 2 (pos 1): weapon, chip, processor
- *   - Mineral 3 (pos 2): pilot, implant, drill
+ * Forger items are generated dynamically when the player selects a mineral.
+ * Each item gets:
+ *   - Primary stat: 2 × tier value (double the standard item for that slot)
+ *   - Secondary stat: +tier in a randomly chosen stat (from 8 types, excluding ALL)
  *
- * This means each tier covers all 9 installation types across its 3 minerals.
+ * HP scales at 10× everywhere (primary body = 20×tier, secondary HP on any slot = 10×tier).
+ *
+ * Naming format: "[Mineral] [SlotWord] of [StatSuffix] [StatTags]"
+ * Example: "Duskquartz Blade of Striking [+4 ATK][+2 ATK]" = T2 weapon with ATK secondary
+ *
+ * FORGER_ITEMS is a runtime registry — starts empty, populated as items are forged.
+ * Persisted via save/load so name-based lookups continue to work.
  */
 
 // Mineral groupings by tier (order matters: position determines slot types)
@@ -32,39 +37,187 @@ const FORGER_SLOT_GROUPS = [
     ["pilot", "implant", "drill"]
 ];
 
-// Forger items - looked up by mineralCost.mineral + type
-const FORGER_ITEMS = [
-    {
-        name: "Forged Alloy Plating [+50 HP][+5 DEF]",
-        type: "body",
-        desc: "Hand-forged chassis plating, hammered from refined stone. Heavier than standard issue, but impossibly tough.",
-        image: "images/IMAGE.gif",
-        stats: { hp: 50, defence: 5 },
-        mineralCost: { mineral: "Refined Aetherite", category: "refined", count: 3 },
-        scrapCost: 30,
-        dropRate: 0,
-        droppedBy: []
-    },
-    {
-        name: "Tempered Combat Blade [+6 ATK][+4 COMBO]",
-        type: "weapon",
-        desc: "A blade forged from smelted hematite. The edge never dulls, and each strike flows into the next.",
-        image: "images/IMAGE.gif",
-        stats: { attack: 6, combo: 4 },
-        mineralCost: { mineral: "Refined Jetspinel", category: "refined", count: 3 },
-        scrapCost: 30,
-        dropRate: 0,
-        droppedBy: []
-    },
-    {
-        name: "Resonance Core Implant [+8 REGEN]",
-        type: "implant",
-        desc: "A pulsing core of refined gold, wired directly into the mech's repair systems. Heals damage at an alarming rate.",
-        image: "images/IMAGE.gif",
-        stats: { regen: 8 },
-        mineralCost: { mineral: "Refined Vortexium", category: "refined", count: 3 },
-        scrapCost: 30,
-        dropRate: 0,
-        droppedBy: []
-    }
+// Runtime registry of forged items (for name-based lookups after save/load)
+// Populated when items are forged, restored from save data on load
+const FORGER_ITEMS = [];
+
+// Primary stat key for each slot type
+const FORGER_PRIMARY_STATS = {
+    body: "hp",
+    legs: "speed",
+    arms: "defence",
+    weapon: "attack",
+    chip: "combo",
+    processor: "xpBonus",
+    pilot: "all",
+    drill: "mining",
+    implant: "regen"
+};
+
+// Base item word for each slot type (used in naming)
+const FORGER_SLOT_WORDS = {
+    body: "Plating",
+    legs: "Treads",
+    arms: "Gauntlets",
+    weapon: "Blade",
+    chip: "Circuit",
+    processor: "Core",
+    pilot: "Interface",
+    implant: "Implant",
+    drill: "Excavator"
+};
+
+// The 8 secondary stat types (excluding ALL) with naming suffixes
+const FORGER_SECONDARY_STATS = [
+    { key: "hp",      suffix: "of Fortitude",    label: "HP" },
+    { key: "attack",  suffix: "of Striking",     label: "ATK" },
+    { key: "defence", suffix: "of the Bulwark",  label: "DEF" },
+    { key: "speed",   suffix: "of Swiftness",    label: "SPD" },
+    { key: "combo",   suffix: "of the Chain",    label: "COMBO" },
+    { key: "xpBonus", suffix: "of Insight",      label: "XP" },
+    { key: "mining",  suffix: "of Excavation",   label: "MINING" },
+    { key: "regen",   suffix: "of Mending",      label: "REGEN" }
 ];
+
+// Stat key → display label mapping
+const FORGER_STAT_LABELS = {
+    hp: "HP", attack: "ATK", defence: "DEF", speed: "SPD",
+    combo: "COMBO", xpBonus: "XP", mining: "MINING", regen: "REGEN"
+};
+
+// Display order for stat tags in item names
+const FORGER_STAT_ORDER = ["hp", "attack", "defence", "speed", "combo", "xpBonus", "mining", "regen"];
+
+// Flavour text per slot type
+const FORGER_SLOT_DESCS = {
+    body: "Hand-forged chassis plating, hammered from refined minerals. Heavier than standard issue, but impossibly tough.",
+    legs: "Precision-forged leg servos built from crystallized minerals. Every stride feels deliberate and powerful.",
+    arms: "Mineral-reinforced arm plating shaped in the forge's heat. Built to endure sustained punishment.",
+    weapon: "A weapon forged from smelted minerals. The edge never dulls, and each strike lands with unnatural force.",
+    chip: "A systems chip grown from mineral lattice structures. Its crystalline pathways chain commands faster than silicon.",
+    processor: "A processor core refined from raw mineral substrate. Processes combat data with crystalline efficiency.",
+    pilot: "A neural interface infused with mineral resonance. Synchronizes pilot and mech at a fundamental level.",
+    implant: "A self-repair implant powered by mineral energy. Damaged systems knit back together between blows.",
+    drill: "A mining head forged from the hardest mineral compounds. Cuts through deposits like they're not there."
+};
+
+/**
+ * Get the tier number and mineral position for a given mineral name.
+ * Handles both raw ("Aetherite") and refined ("Refined Aetherite") names.
+ * Returns { tier, position, zone } or null if not found.
+ */
+function getForgerMineralInfo(mineralName) {
+    const baseName = mineralName.replace(/^Refined\s+/i, "");
+    for (const tierData of FORGER_TIERS) {
+        const pos = tierData.minerals.indexOf(baseName);
+        if (pos !== -1) {
+            return { tier: tierData.tier, position: pos, zone: tierData.zone };
+        }
+    }
+    return null;
+}
+
+/**
+ * Calculate stat value at a given tier. HP always scales at 10×.
+ */
+function getForgerStatValue(statKey, tier) {
+    return statKey === "hp" ? tier * 10 : tier;
+}
+
+/**
+ * Generate a forger item for a given mineral and slot type.
+ * Picks a random secondary stat and builds the complete item object.
+ *
+ * @param {string} mineralName - Raw mineral name (e.g. "Duskquartz")
+ * @param {string} slotType - Installation slot (e.g. "weapon")
+ * @returns {object|null} Complete item object ready for shop display / inventory
+ */
+function generateForgerItem(mineralName, slotType) {
+    const info = getForgerMineralInfo(mineralName);
+    if (!info) return null;
+
+    const tier = info.tier;
+    const baseName = mineralName.replace(/^Refined\s+/i, "");
+    const primaryKey = FORGER_PRIMARY_STATS[slotType];
+
+    // Pick random secondary stat from the 8 options
+    const secondary = FORGER_SECONDARY_STATS[Math.floor(Math.random() * FORGER_SECONDARY_STATS.length)];
+
+    // Build stats object
+    const stats = {};
+
+    if (primaryKey === "all") {
+        // Pilot: +2×tier to all 5 combat stats, then layer secondary on top
+        const allVal = tier * 2;
+        stats.hp = allVal;
+        stats.attack = allVal;
+        stats.speed = allVal;
+        stats.defence = allVal;
+        stats.combo = allVal;
+        const secValue = getForgerStatValue(secondary.key, tier);
+        stats[secondary.key] = (stats[secondary.key] || 0) + secValue;
+    } else {
+        // Primary stat at 2× tier
+        const primaryValue = getForgerStatValue(primaryKey, tier) * 2;
+        stats[primaryKey] = primaryValue;
+        // Secondary stat at 1× tier
+        const secValue = getForgerStatValue(secondary.key, tier);
+        stats[secondary.key] = (stats[secondary.key] || 0) + secValue;
+    }
+
+    // Build stat tag string for item name
+    let statTag;
+    if (primaryKey === "all") {
+        // Pilot always shows [+N ALL][+M STAT] for clarity
+        const secValue = getForgerStatValue(secondary.key, tier);
+        statTag = `[+${tier * 2} ALL][+${secValue} ${secondary.label}]`;
+    } else {
+        // Non-pilot: list each stat in fixed order, combining if primary === secondary
+        const parts = [];
+        for (const key of FORGER_STAT_ORDER) {
+            if (stats[key] && stats[key] > 0) {
+                parts.push(`[+${stats[key]} ${FORGER_STAT_LABELS[key]}]`);
+            }
+        }
+        statTag = parts.join("");
+    }
+
+    // Build item name: "Mineral SlotWord of Suffix [stats]"
+    const slotWord = FORGER_SLOT_WORDS[slotType];
+    const fullName = `${baseName} ${slotWord} ${secondary.suffix} ${statTag}`;
+
+    return {
+        name: fullName,
+        type: slotType,
+        desc: FORGER_SLOT_DESCS[slotType],
+        image: "images/IMAGE.gif",
+        stats: stats,
+        mineralCost: { mineral: `Refined ${baseName}`, category: "refined", count: 3 },
+        scrapCost: tier * 15,
+        dropRate: 0,
+        droppedBy: [],
+        isForged: true,
+        forgerTier: tier
+    };
+}
+
+/**
+ * Register a forged item in the runtime registry.
+ * Called when a player purchases a forger item, so it can be found by name later.
+ */
+function registerForgedItem(item) {
+    if (item && item.isForged && !FORGER_ITEMS.find(i => i.name === item.name)) {
+        FORGER_ITEMS.push(item);
+    }
+}
+
+/**
+ * Restore forged items from save data into the runtime registry.
+ * Called during game load.
+ */
+function restoreForgedItems(savedItems) {
+    FORGER_ITEMS.length = 0;
+    if (savedItems && Array.isArray(savedItems)) {
+        savedItems.forEach(item => FORGER_ITEMS.push(item));
+    }
+}
