@@ -74,7 +74,17 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         minLevel: 1,
         itemSlot1: ["Map: Downtown"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "You were here before me.",
+                response: "'Long before.' He doesn't look up."
+            },
+            {
+                question: "What do you get out of this?",
+                response: "A long silence. He folds a chart carefully along its creases. 'I'll know where I am.'"
+            }
+        ]
     },
     {
         name: "Crucible",
