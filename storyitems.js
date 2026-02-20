@@ -629,6 +629,13 @@ const STORY_ITEMS = [
         cost: 100
     },
     {
+        name: "Map: The Salvage Yard",
+        desc: "A scratched datapad listing mech chop-shop coordinates. The last entry reads: 'NO REFUNDS.'",
+        category: "map",
+        image: "images/IMAGE.gif",
+        cost: 100
+    },
+    {
         name: "Map: Orbital Station",
         desc: "A schematic of the station's deck layout. Several sections are labelled DEPRESSURISED.",
         category: "map",

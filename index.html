@@ -513,6 +513,89 @@
             border-color: #ff8800;
         }
 
+        /* Salvage Yard Selector */
+        .salvage-selector {
+            margin-bottom: 8px;
+        }
+
+        .salvage-selector select {
+            width: 100%;
+            padding: 8px 24px 8px 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            background: #1a1a2e;
+            color: #ffcc00;
+            border: 1px solid #ffcc0055;
+            border-radius: 4px;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23ffcc00'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+        }
+
+        .salvage-selector select:focus {
+            outline: none;
+            border-color: #ffcc00;
+        }
+
+        .salvage-preview {
+            padding: 8px 10px;
+            background: #1a1a2e;
+            border: 1px solid #ffcc0033;
+            border-radius: 4px;
+            margin-top: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            color: #ccc;
+            display: none;
+        }
+
+        .salvage-preview.visible {
+            display: block;
+        }
+
+        .salvage-preview .salvage-item-name {
+            color: #ffcc00;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .salvage-preview .salvage-item-stats {
+            color: #888;
+            font-size: 10px;
+        }
+
+        .salvage-sell-btn {
+            padding: 8px 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            font-weight: bold;
+            border: 1px solid #ffcc00;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: #1a1a2e;
+            color: #ffcc00;
+            text-align: center;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .salvage-sell-btn:hover:not(:disabled) {
+            background: #ffcc00;
+            color: #0a0a0f;
+            box-shadow: 0 0 15px #ffcc0055;
+        }
+
+        .salvage-sell-btn:disabled {
+            cursor: not-allowed;
+            border-color: #666;
+            color: #888;
+            opacity: 0.7;
+        }
+
         .shop-btn {
             padding: 10px 12px;
             font-family: 'Courier New', monospace;
@@ -1226,6 +1309,13 @@
                         <option value="">[SELECT MINERAL]</option>
                     </select>
                 </div>
+                <div class="salvage-selector" id="salvage-selector" style="display: none;">
+                    <select id="salvage-item-select">
+                        <option value="">[SELECT INSTALLATION TO SELL]</option>
+                    </select>
+                    <div class="salvage-preview" id="salvage-preview"></div>
+                    <button class="salvage-sell-btn" id="salvage-sell-btn" disabled>--</button>
+                </div>
                 <div class="shop-item-wrapper" id="shop-wrapper-1">
                     <div class="shop-name" id="shop-name-1"></div>
                     <div class="shop-desc" id="shop-desc-1"></div>
@@ -1337,6 +1427,7 @@
     <script src="storyitems.js"></script>
     <script src="encounters_home.js"></script>
     <script src="encounters_forge.js"></script>
+    <script src="encounters_salvageyard.js"></script>
     <script src="encounters_ratpile.js"></script>
     <script src="encounters_scrapyard.js"></script>
     <script src="encounters_oldbattlefield.js"></script>
@@ -2042,6 +2133,15 @@
                 desc: "A hidden workshop built into an old munitions bunker. The air shimmers with heat from the forge.",
                 image: "images/IMAGE.gif"
             },
+            salvageyard: {
+                enemies: null,
+                encounters: ENCOUNTERS_SALVAGEYARD,
+                mining: null,
+                ambush: null,
+                fuelCost: 10,
+                desc: "A mech chop-shop carved into an old freight depot. Hydraulic presses hiss and sparks fly from cutting torches.",
+                image: "images/IMAGE.gif"
+            },
             home: {
                 enemies: null,
                 encounters: ENCOUNTERS_HOME,
@@ -2095,6 +2195,7 @@
             deadzone: 'DEAD ZONE',
             asteroidbelt: 'ASTEROID BELT',
             forge: 'THE FORGE',
+            salvageyard: 'THE SALVAGE YARD',
             home: 'HOME'
         };
 
@@ -2112,7 +2213,8 @@
             neonstrip: 'Map: Neon Strip',
             deadzone: 'Map: Dead Zone',
             asteroidbelt: 'Map: Asteroid Belt',
-            forge: 'Map: The Forge'
+            forge: 'Map: The Forge',
+            salvageyard: 'Map: The Salvage Yard'
         };
 
         // Zone destinations: open world name + discoverable encounter locations per zone
@@ -2979,17 +3081,149 @@
             updateShopUI();
         }
 
+        // ========== SALVAGE YARD FUNCTIONS ==========
+
+        // Calculate scrap value for an item
+        function getSalvageValue(item) {
+            if (item.isForged) {
+                // Forged items: tier * 5 scrap
+                return (item.forgerTier || 1) * 5;
+            }
+            // Regular items: based on XP cost
+            return Math.max(1, Math.ceil((item.cost || 5) / 5));
+        }
+
+        // Build stat summary string for an item
+        function getSalvageStatSummary(item) {
+            if (!item.stats) return '';
+            const parts = [];
+            if (item.stats.hp) parts.push(`+${item.stats.hp} HP`);
+            if (item.stats.attack) parts.push(`+${item.stats.attack} ATK`);
+            if (item.stats.defence) parts.push(`+${item.stats.defence} DEF`);
+            if (item.stats.speed) parts.push(`+${item.stats.speed} SPD`);
+            if (item.stats.combo) parts.push(`+${item.stats.combo} COMBO`);
+            if (item.stats.mining) parts.push(`+${item.stats.mining} MINING`);
+            if (item.stats.regen) parts.push(`+${item.stats.regen} REGEN`);
+            if (item.stats.xpBonus) parts.push(`+${item.stats.xpBonus} XP`);
+            return parts.join(' | ');
+        }
+
+        // Populate the salvage dropdown with unequipped installations
+        function updateSalvageDropdown() {
+            const select = document.getElementById('salvage-item-select');
+            select.innerHTML = '<option value="">[SELECT INSTALLATION TO SELL]</option>';
+
+            const equippedNames = new Set(Object.values(game.equipment).filter(Boolean));
+            const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant'];
+
+            slots.forEach(slot => {
+                const slotItems = game.inventory.filter(i => i.type === slot && !equippedNames.has(i.name));
+                if (slotItems.length === 0) return;
+
+                const tag = SLOT_LABELS[slot] || slot.toUpperCase();
+                const group = document.createElement('optgroup');
+                group.label = tag;
+
+                slotItems.forEach((item, idx) => {
+                    const option = document.createElement('option');
+                    // Use index-based value to handle duplicate names
+                    const invIndex = game.inventory.indexOf(item);
+                    option.value = invIndex;
+                    const scrapValue = getSalvageValue(item);
+                    option.textContent = `${item.name} (${scrapValue} scrap)`;
+                    group.appendChild(option);
+                });
+
+                select.appendChild(group);
+            });
+
+            // Reset preview and button
+            document.getElementById('salvage-preview').classList.remove('visible');
+            document.getElementById('salvage-sell-btn').disabled = true;
+        }
+
+        // Handle salvage dropdown selection
+        function onSalvageItemChange() {
+            const select = document.getElementById('salvage-item-select');
+            const preview = document.getElementById('salvage-preview');
+            const sellBtn = document.getElementById('salvage-sell-btn');
+            const invIndex = parseInt(select.value);
+
+            if (isNaN(invIndex) || !game.inventory[invIndex]) {
+                preview.classList.remove('visible');
+                sellBtn.disabled = true;
+                sellBtn.textContent = '--';
+                return;
+            }
+
+            const item = game.inventory[invIndex];
+            const scrapValue = getSalvageValue(item);
+            const tag = SLOT_LABELS[item.type] || item.type.toUpperCase();
+            const statLine = getSalvageStatSummary(item);
+
+            preview.innerHTML = `<div class="salvage-item-name">[${tag}] ${item.name}</div>`
+                + (item.desc ? `<div>${item.desc}</div>` : '')
+                + (statLine ? `<div class="salvage-item-stats">${statLine}</div>` : '');
+            preview.classList.add('visible');
+
+            sellBtn.textContent = `[Sell for ${scrapValue} Scrap]`;
+            sellBtn.disabled = false;
+        }
+
+        // Sell the selected installation
+        function sellSalvageItem() {
+            const select = document.getElementById('salvage-item-select');
+            const invIndex = parseInt(select.value);
+
+            if (isNaN(invIndex) || !game.inventory[invIndex]) return;
+
+            const item = game.inventory[invIndex];
+            const scrapValue = getSalvageValue(item);
+
+            // Remove from inventory
+            game.inventory.splice(invIndex, 1);
+
+            // If it was equipped (shouldn't be since we filter, but safety check), unequip
+            for (const slot in game.equipment) {
+                if (game.equipment[slot] === item.name) {
+                    game.equipment[slot] = null;
+                }
+            }
+
+            // Add scrap
+            game.scrap = (game.scrap || 0) + scrapValue;
+
+            addMessage(`Sold: ${item.name} for ${scrapValue} Scrap`, 'victory');
+            addMessage(`Total scrap: ${game.scrap}`, 'system');
+
+            recalculateStats();
+            updateEquipmentUI();
+            updateStats();
+            updateStorageUI();
+            saveGame();
+
+            // Refresh the salvage dropdown
+            updateSalvageDropdown();
+        }
+
         // Show shop panel (switch to store page)
         function showShopPanel() {
             storeAvailable = true;
 
             // Show forge dropdown if this is the forge encounter
             const forgeSelector = document.getElementById('forge-selector');
+            const salvageSelector = document.getElementById('salvage-selector');
             if (currentEncounter && currentEncounter.isForge) {
                 updateForgeDropdown();
                 forgeSelector.style.display = 'block';
+                salvageSelector.style.display = 'none';
+            } else if (currentEncounter && currentEncounter.isSalvageYard) {
+                updateSalvageDropdown();
+                salvageSelector.style.display = 'block';
+                forgeSelector.style.display = 'none';
             } else {
                 forgeSelector.style.display = 'none';
+                salvageSelector.style.display = 'none';
             }
 
             updateShopUI();
@@ -3002,6 +3236,10 @@
             const forgeSelect = document.getElementById('forge-mineral-select');
             forgeSelect.value = '';
             document.getElementById('forge-selector').style.display = 'none';
+            document.getElementById('salvage-selector').style.display = 'none';
+            document.getElementById('salvage-item-select').value = '';
+            document.getElementById('salvage-preview').classList.remove('visible');
+            document.getElementById('salvage-sell-btn').disabled = true;
             if (currentPage === 6) showPage(0);
             updatePanelNav();
         }
@@ -3098,8 +3336,8 @@
 
             currentEncounter = encounter;
 
-            // Forge uses dropdown-driven slots, not pre-generated items
-            if (encounter.isForge) {
+            // Forge and Salvage Yard use custom UI, not pre-generated items
+            if (encounter.isForge || encounter.isSalvageYard) {
                 shopItems = [null, null, null];
             } else {
                 shopItems = generateShopItems(encounter);
@@ -3186,7 +3424,11 @@
                 }
             }
 
-            await addMessage(`Your XP: ${game.player.xp}`, 'system');
+            if (currentEncounter.isSalvageYard) {
+                await addMessage(`Your Scrap: ${game.scrap || 0}`, 'system');
+            } else {
+                await addMessage(`Your XP: ${game.player.xp}`, 'system');
+            }
 
             // Add inline leave button in chat (not needed at vendor destinations)
             if (!currentDestination || currentDestination === 'openworld') {
@@ -4115,6 +4357,10 @@
 
         // Forge mineral dropdown listener
         document.getElementById('forge-mineral-select').addEventListener('change', onForgeMineralChange);
+
+        // Salvage yard listeners
+        document.getElementById('salvage-item-select').addEventListener('change', onSalvageItemChange);
+        document.getElementById('salvage-sell-btn').addEventListener('click', sellSalvageItem);
 
         // Initialize game
         function init() {
