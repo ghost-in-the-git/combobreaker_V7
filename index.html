@@ -2348,7 +2348,8 @@
                     if ((game.storyItems || []).includes(dest.mapItem)) {
                         const opt = document.createElement('option');
                         opt.value = dest.encounterName;
-                        const prefix = zoneConfig.destinationType === 'mine' ? '[MINE]' : '[VENDOR]';
+                        const isMine = zoneConfig.destinationType === 'mine' || dest.encounterName.endsWith(' Asteroid');
+                        const prefix = isMine ? '[MINE]' : '[VENDOR]';
                         opt.textContent = `${prefix} ${dest.encounterName.replace(/^\[COMMON\] /, '')}`;
                         select.appendChild(opt);
                     }
@@ -2384,7 +2385,7 @@
                 const enc = encounters.find(e => e.name === destValue);
                 if (enc) {
                     document.getElementById('location-desc').innerHTML = `<div class="storage-desc-content"><img src="${LOCATIONS[currentLocation].image}" alt="Location"><span>${enc.description}</span></div>`;
-                } else if (zoneConfig && zoneConfig.destinationType === 'mine') {
+                } else if (zoneConfig && (zoneConfig.destinationType === 'mine' || destValue.endsWith(' Asteroid'))) {
                     // Mining destination — look up asteroid info
                     const mineralName = destValue.replace(' Asteroid', '');
                     const locationAsteroids = LOCATIONS[currentLocation].mining || [];
@@ -3699,8 +3700,8 @@
             // At a named destination: spawn the appropriate event
             if (currentDestination && currentDestination !== 'openworld') {
                 const loc = LOCATIONS[currentLocation];
-                if (!loc.enemies && !loc.encounters && loc.mining) {
-                    // Mining-only destination (e.g. asteroid belt)
+                if (currentDestination.endsWith(' Asteroid') || (!loc.enemies && !loc.encounters && loc.mining)) {
+                    // Mining destination (asteroid in any zone, or mining-only zone)
                     if (game.player.mining > 0) {
                         spawnMiningEvent();
                     } else {
