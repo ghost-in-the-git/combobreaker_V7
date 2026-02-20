@@ -414,6 +414,34 @@
             box-shadow: 0 0 20px #ff444455;
         }
 
+        /* Dialogue Buttons */
+        .dialogue-btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 0;
+        }
+
+        .dialogue-btn {
+            padding: 6px 14px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 12px;
+            font-weight: bold;
+            border: 1px solid #ccaa44;
+            border-radius: 4px;
+            cursor: pointer;
+            background: #1a1a10;
+            color: #ccaa44;
+            transition: all 0.2s ease;
+        }
+
+        .dialogue-btn:hover {
+            background: #ccaa44;
+            color: #0a0a0f;
+            box-shadow: 0 0 15px #ccaa4455;
+        }
+
         /* Shop Panel */
         .shop-panel {
             display: flex;
@@ -3345,6 +3373,9 @@
         // End shop encounter
         function endShopEncounter() {
             hideShopPanel();
+            // Remove dialogue buttons
+            const dialogueContainer = document.querySelector('.dialogue-btn-container');
+            if (dialogueContainer) dialogueContainer.remove();
             if (game.shopLeaveBtn && game.shopLeaveBtn.parentNode) {
                 game.shopLeaveBtn.remove();
                 game.shopLeaveBtn = null;
@@ -3456,6 +3487,11 @@
                 await addMessage(`Your XP: ${game.player.xp}`, 'system');
             }
 
+            // Show dialogue buttons if encounter has dialogue
+            if (currentEncounter.dialogue && currentEncounter.dialogue.length > 0) {
+                showDialogueButtons(currentEncounter);
+            }
+
             // Add inline leave button in chat (not needed at vendor destinations)
             if (!currentDestination || currentDestination === 'openworld') {
                 game.shopLeaveBtn = document.createElement('div');
@@ -3472,6 +3508,36 @@
             }
 
             showShopPanel();
+        }
+
+        // Show dialogue buttons for an encounter with dialogue options
+        function showDialogueButtons(encounter) {
+            // Remove any existing dialogue buttons
+            const existing = document.querySelector('.dialogue-btn-container');
+            if (existing) existing.remove();
+
+            const container = document.createElement('div');
+            container.className = 'dialogue-btn-container';
+
+            encounter.dialogue.forEach(entry => {
+                const btn = document.createElement('button');
+                btn.className = 'dialogue-btn';
+                btn.textContent = entry.question;
+                btn.addEventListener('click', async () => {
+                    // Show the player's question
+                    await addMessage(entry.question, 'player');
+                    // Show the NPC response
+                    await addMessage(entry.response, 'system');
+                    // Re-render dialogue buttons so the player can ask more
+                    showDialogueButtons(encounter);
+                    // Scroll to the new buttons
+                    const newContainer = document.querySelector('.dialogue-btn-container');
+                    if (newContainer) newContainer.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                });
+                container.appendChild(btn);
+            });
+
+            chatMessages.appendChild(container);
         }
 
         // Decline encounter
