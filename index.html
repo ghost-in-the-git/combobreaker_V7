@@ -624,6 +624,18 @@
             opacity: 0.7;
         }
 
+        .salvage-sell-all-btn {
+            border-color: #ff6644;
+            color: #ff6644;
+            margin-top: 6px;
+        }
+
+        .salvage-sell-all-btn:hover:not(:disabled) {
+            background: #ff6644;
+            color: #0a0a0f;
+            box-shadow: 0 0 15px #ff664455;
+        }
+
         .shop-btn {
             padding: 10px 12px;
             font-family: 'Courier New', monospace;
@@ -1343,6 +1355,7 @@
                     </select>
                     <div class="salvage-preview" id="salvage-preview"></div>
                     <button class="salvage-sell-btn" id="salvage-sell-btn" disabled>--</button>
+                    <button class="salvage-sell-btn salvage-sell-all-btn" id="salvage-sell-all-btn" style="display: none;">--</button>
                 </div>
                 <div class="shop-item-wrapper" id="shop-wrapper-1">
                     <div class="shop-name" id="shop-name-1"></div>
@@ -3227,6 +3240,20 @@
             preview.innerHTML = '';
             sellBtn.disabled = true;
             sellBtn.textContent = '--';
+
+            // Update sell-all button
+            const sellAllBtn = document.getElementById('salvage-sell-all-btn');
+            if (totalSellable > 1) {
+                const equippedIdx = getEquippedIndices();
+                let totalScrap = 0;
+                game.inventory.forEach((item, i) => {
+                    if (!equippedIdx.has(i)) totalScrap += getSalvageValue(item);
+                });
+                sellAllBtn.textContent = `[Sell All Unequipped (${totalSellable}) for ${totalScrap} Scrap]`;
+                sellAllBtn.style.display = 'block';
+            } else {
+                sellAllBtn.style.display = 'none';
+            }
         }
 
         // Handle salvage dropdown selection
@@ -3292,6 +3319,37 @@
             updateSalvageDropdown();
         }
 
+        // Sell all unequipped installations
+        function sellAllSalvageItems() {
+            const equippedIndices = getEquippedIndices();
+            let totalScrap = 0;
+            let count = 0;
+
+            // Collect unequipped items (iterate in reverse to safely splice)
+            for (let i = game.inventory.length - 1; i >= 0; i--) {
+                if (equippedIndices.has(i)) continue;
+                const item = game.inventory[i];
+                totalScrap += getSalvageValue(item);
+                game.inventory.splice(i, 1);
+                count++;
+            }
+
+            if (count === 0) return;
+
+            game.scrap = (game.scrap || 0) + totalScrap;
+
+            addMessage(`Sold ${count} installation${count > 1 ? 's' : ''} for ${totalScrap} Scrap`, 'victory');
+            addMessage(`Total scrap: ${game.scrap}`, 'system');
+
+            recalculateStats();
+            updateEquipmentUI();
+            updateStats();
+            updateStorageUI();
+            saveGame();
+
+            updateSalvageDropdown();
+        }
+
         // Show shop panel (switch to store page)
         function showShopPanel() {
             storeAvailable = true;
@@ -3326,6 +3384,7 @@
             document.getElementById('salvage-item-select').value = '';
             document.getElementById('salvage-preview').classList.remove('visible');
             document.getElementById('salvage-sell-btn').disabled = true;
+            document.getElementById('salvage-sell-all-btn').style.display = 'none';
             if (currentPage === 6) showPage(0);
             updatePanelNav();
         }
@@ -4493,6 +4552,7 @@
         // Salvage yard listeners
         document.getElementById('salvage-item-select').addEventListener('change', onSalvageItemChange);
         document.getElementById('salvage-sell-btn').addEventListener('click', sellSalvageItem);
+        document.getElementById('salvage-sell-all-btn').addEventListener('click', sellAllSalvageItems);
 
         // Initialize game
         function init() {
