@@ -2890,6 +2890,11 @@
                             ? `[${verb} ${count} ${mineral} + ${item.scrapCost} Scrap]`
                             : `[${verb} ${count} ${mineral}]`;
                         buyBtn.disabled = !canAfford;
+                    } else if (item.scrapCost) {
+                        const canAfford = (game.scrap || 0) >= item.scrapCost;
+                        nameEl.classList.toggle('cant-afford', !canAfford);
+                        buyBtn.textContent = `[Buy ${item.scrapCost} Scrap]`;
+                        buyBtn.disabled = !canAfford;
                     } else {
                         const canAfford = playerXP >= item.cost;
                         nameEl.classList.toggle('cant-afford', !canAfford);
@@ -3034,6 +3039,17 @@
                     const scrapMsg = item.scrapCost ? ` + ${item.scrapCost} Scrap` : '';
                     addMessage(`Purchased: ${item.name} for ${count} ${mineral}${scrapMsg}`, 'victory');
                 }
+            } else if (item.scrapCost) {
+                // Scrap cost purchase (e.g. XP service)
+                if ((game.scrap || 0) < item.scrapCost) return;
+                game.scrap -= item.scrapCost;
+                if (item.xpReward) {
+                    game.player.xp += item.xpReward;
+                    addMessage(`Purchased: ${item.name} for ${item.scrapCost} Scrap — gained ${item.xpReward} XP`, 'victory');
+                } else {
+                    addItemToInventory(item);
+                    addMessage(`Purchased: ${item.name} for ${item.scrapCost} Scrap`, 'victory');
+                }
             } else {
                 // XP cost purchase
                 if (game.player.xp < item.cost) return;
@@ -3052,6 +3068,9 @@
             if (currentEncounter && currentEncounter.isForge) {
                 updateForgeDropdown();
                 onForgeMineralChange();
+            } else if (item.xpReward) {
+                // Service item: keep in slot for repeat purchase
+                updateShopUI();
             } else {
                 // Regular shop: remove item from slot
                 shopItems[index] = null;

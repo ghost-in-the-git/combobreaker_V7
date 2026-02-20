@@ -16,7 +16,7 @@ const ENCOUNTERS_HOME = [
         appearanceRate: 100,
         minLevel: 1,
         itemSlot1: ["Rusty Pipe [+1 ATK]"],
-        itemSlot2: [],
+        itemSlot2: ["Professor's Lesson [+10 XP]"],
         itemSlot3: []
     }
 ];

@@ -29,6 +29,15 @@
  */
 
 const ITEMS = [
+    // ==================== SERVICES ====================
+    {
+        name: "Professor's Lesson [+10 XP]",
+        type: "service",
+        desc: "The Professor pulls out a battered datapad and walks you through salvage analysis, combat theory, and mech calibration. You leave sharper than you arrived.",
+        image: "images/IMAGE.gif",
+        scrapCost: 1,
+        xpReward: 10
+    },
     // ==================== BODY (HP) ====================
     {
         name: "Rat-Gnawed Plating [+5 HP]",
