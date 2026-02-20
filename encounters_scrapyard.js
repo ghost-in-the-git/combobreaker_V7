@@ -73,7 +73,17 @@ const ENCOUNTERS_SCRAPYARD = [
         minLevel: 1,
         itemSlot1: ["Map: Old Battlefield"],
         itemSlot2: ["Map: Mech Graveyard"],
-        itemSlot3: []
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "How are you here?",
+                response: "He doesn't answer. He's already marking something on a fresh chart. The ink is still wet on the last one."
+            },
+            {
+                question: "Are you following me?",
+                response: "'No.' He glances at the dust on your chassis. 'You do.' He goes back to his charts."
+            }
+        ]
     },
     {
         name: "Slag",
