@@ -2791,9 +2791,10 @@
                         const hasScrap = item.scrapCost ? (game.scrap || 0) >= item.scrapCost : true;
                         const canAfford = has >= count && hasScrap;
                         nameEl.classList.toggle('cant-afford', !canAfford);
+                        const verb = item.isForgerPreview ? 'Forge' : 'Buy';
                         buyBtn.textContent = item.scrapCost
-                            ? `[Buy ${count} ${mineral} + ${item.scrapCost} Scrap]`
-                            : `[Buy ${count} ${mineral}]`;
+                            ? `[${verb} ${count} ${mineral} + ${item.scrapCost} Scrap]`
+                            : `[${verb} ${count} ${mineral}]`;
                         buyBtn.disabled = !canAfford;
                     } else {
                         const canAfford = playerXP >= item.cost;
@@ -2819,9 +2820,9 @@
             return null;
         }
 
-        // Generate a forger item for a specific mineral and installation type
+        // Build a preview item for the forge shop (stats hidden until purchase)
         function getForgerItem(mineralName, slotType) {
-            return generateForgerItem(mineralName, slotType);
+            return generateForgerPreview(mineralName, slotType);
         }
 
         // Populate the forge mineral dropdown with all minerals grouped by tier
@@ -2919,7 +2920,15 @@
                 removeMinerals(mineral, category, count);
                 if (item.scrapCost) game.scrap -= item.scrapCost;
 
-                if (item.refinedMineral) {
+                if (item.isForgerPreview) {
+                    // Blind forge: generate the real item now, reveal stats
+                    const forged = generateForgerItem(item.forgerMineral, item.forgerSlot);
+                    registerForgedItem(forged);
+                    addItemToInventory(forged);
+                    const scrapMsg = item.scrapCost ? ` + ${item.scrapCost} Scrap` : '';
+                    addMessage(`Forged: ${item.name} for ${count} ${mineral}${scrapMsg}`, 'system');
+                    addMessage(`Received: ${forged.name}`, 'victory');
+                } else if (item.refinedMineral) {
                     addMineral(item.name, 'refined');
                 } else if (item.category) {
                     addStoryItem(item.name);
@@ -2927,8 +2936,10 @@
                     if (item.isForged) registerForgedItem(item);
                     addItemToInventory(item);
                 }
-                const scrapMsg = item.scrapCost ? ` + ${item.scrapCost} Scrap` : '';
-                addMessage(`Purchased: ${item.name} for ${count} ${mineral}${scrapMsg}`, 'victory');
+                if (!item.isForgerPreview) {
+                    const scrapMsg = item.scrapCost ? ` + ${item.scrapCost} Scrap` : '';
+                    addMessage(`Purchased: ${item.name} for ${count} ${mineral}${scrapMsg}`, 'victory');
+                }
             } else {
                 // XP cost purchase
                 if (game.player.xp < item.cost) return;

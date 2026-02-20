@@ -1,15 +1,16 @@
 /**
  * THE FORGER - CRAFTABLE EQUIPMENT (Generator System)
  *
- * Forger items are generated dynamically when the player selects a mineral.
- * Each item gets:
+ * Forger items use a blind-forge system:
+ *   - Shop shows generic previews: "Duskquartz Weapon" (no stats revealed)
+ *   - On purchase, the real item is generated with random hybrid stats
+ *   - Player receives: "Duskquartz Blade of the Bulwark [+4 ATK][+2 DEF]"
+ *
+ * Each generated item gets:
  *   - Primary stat: 2 × tier value (double the standard item for that slot)
  *   - Secondary stat: +tier in a randomly chosen stat (from 8 types, excluding ALL)
  *
  * HP scales at 10× everywhere (primary body = 20×tier, secondary HP on any slot = 10×tier).
- *
- * Naming format: "[Mineral] [SlotWord] of [StatSuffix] [StatTags]"
- * Example: "Duskquartz Blade of Striking [+4 ATK][+2 ATK]" = T2 weapon with ATK secondary
  *
  * FORGER_ITEMS is a runtime registry — starts empty, populated as items are forged.
  * Persisted via save/load so name-based lookups continue to work.
@@ -100,6 +101,45 @@ const FORGER_SLOT_DESCS = {
     implant: "A self-repair implant powered by mineral energy. Damaged systems knit back together between blows.",
     drill: "A mining head forged from the hardest mineral compounds. Cuts through deposits like they're not there."
 };
+
+// Generic slot names for the blind-forge shop preview (player sees these before forging)
+const FORGER_PREVIEW_NAMES = {
+    body: "Body Armor",
+    legs: "Leg Module",
+    arms: "Arm Module",
+    weapon: "Weapon",
+    chip: "Chip",
+    processor: "Processor",
+    pilot: "Pilot Module",
+    implant: "Implant",
+    drill: "Drill"
+};
+
+/**
+ * Generate a preview item for the forge shop display.
+ * Shows generic name (e.g. "Duskquartz Weapon") with no stats revealed.
+ * The real item is generated on purchase via generateForgerItem().
+ */
+function generateForgerPreview(mineralName, slotType) {
+    const info = getForgerMineralInfo(mineralName);
+    if (!info) return null;
+
+    const baseName = mineralName.replace(/^Refined\s+/i, "");
+    const previewName = FORGER_PREVIEW_NAMES[slotType];
+
+    return {
+        name: `${baseName} ${previewName}`,
+        type: slotType,
+        desc: FORGER_SLOT_DESCS[slotType],
+        image: "images/IMAGE.gif",
+        mineralCost: { mineral: `Refined ${baseName}`, category: "refined", count: 3 },
+        scrapCost: info.tier * 15,
+        isForgerPreview: true,
+        forgerMineral: baseName,
+        forgerSlot: slotType,
+        forgerTier: info.tier
+    };
+}
 
 /**
  * Get the tier number and mineral position for a given mineral name.
