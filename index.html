@@ -3068,8 +3068,8 @@
             if (currentEncounter && currentEncounter.isForge) {
                 updateForgeDropdown();
                 onForgeMineralChange();
-            } else if (item.xpReward) {
-                // Service item: keep in slot for repeat purchase
+            } else if (item.xpReward || item.refinedMineral) {
+                // Repeatable: services and mineral refining stay in slot
                 updateShopUI();
             } else {
                 // Regular shop: remove item from slot
