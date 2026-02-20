@@ -1,8 +1,9 @@
 /**
  * MECH GRAVEYARD - ENCOUNTER CONFIGURATION
  *
- * A mech chop-shop where The Scrapper buys your unwanted installations
- * for scrap. No enemies — just a greasy mechanic and a pile of parts.
+ * A colossal mech sits motionless among the dead, slowly cannibalising
+ * fallen machines to rebuild its shattered legs. It will trade scrap
+ * for any parts you no longer need.
  *
  * Uses a custom salvage UI instead of fixed item slots.
  * Player selects unequipped installations to sell for scrap.
@@ -10,12 +11,12 @@
 
 const ENCOUNTERS_SALVAGEYARD = [
     {
-        name: "The Scrapper",
+        name: "Abandoned Monolith",
         type: "shop",
         isSalvageYard: true,
         autoEngage: true,
-        description: "A squat, heavily scarred mech sits in a clearing of crushed metal, its torso split open like a clamshell workshop. A woman in oil-black overalls leans against a hydraulic press.",
-        engageText: "She sizes up your mech with a practiced eye. 'Got parts you don't need? I'll strip 'em down and give you scrap for the trouble. Fair rates — mostly.'",
+        description: "A towering mech looms above the graveyard, half-buried in wreckage. Its upper body still moves — one massive arm dragging scrap toward its shattered legs in an endless, patient repair cycle.",
+        engageText: "A deep mechanical groan echoes across the field as the Monolith's sensors lock onto your mech. A cargo bay in its chest grinds open. It doesn't speak — but the message is clear: bring parts, receive scrap.",
         appearanceRate: 100,
         minLevel: 1
     }
