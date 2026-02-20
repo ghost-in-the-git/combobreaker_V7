@@ -74,7 +74,13 @@ const ENCOUNTERS_FROZENREACH = [
         minLevel: 1,
         itemSlot1: ["Map: Neon Strip"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "We're almost there.",
+                response: "He looks up from his charts. 'Yeah. We are.'"
+            }
+        ]
     },
     {
         name: "Thaw",
