@@ -212,14 +212,14 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
     {
-        name: "Scrap Yard: The Mapmaker",
-        desc: "Coordinates to the Mapmaker's outpost in the Scrap Yard. He watches from between the wreckage.",
+        name: "Scrap Fields: The Mapmaker",
+        desc: "Coordinates to the Mapmaker's outpost in the Scrap Fields. He watches from between the wreckage.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Scrap Yard: Slag",
-        desc: "A marked route to Slag's makeshift crucible in the Scrap Yard. He bolted the thing right to his mech.",
+        name: "Scrap Fields: Slag",
+        desc: "A marked route to Slag's makeshift crucible in the Scrap Fields. He bolted the thing right to his mech.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
@@ -334,26 +334,26 @@ const STORY_ITEMS = [
 
     // Scrap Yard — Common Encounter Locations
     {
-        name: "Scrap Yard: Mech Junker",
-        desc: "GPS lock on a Junker vessel tethered to a rust-eaten gantry in the Scrap Yard. They never move far.",
+        name: "Scrap Fields: Mech Junker",
+        desc: "GPS lock on a Junker vessel tethered to a rust-eaten gantry in the Scrap Fields. They never move far.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Scrap Yard: Scrap Dealer",
+        name: "Scrap Fields: Scrap Dealer",
         desc: "Coordinates to a Scrap Dealer's permanent berth among the wreckage piles. Their trade signal runs day and night.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Scrap Yard: Field Mechanic",
+        name: "Scrap Fields: Field Mechanic",
         desc: "A marked position next to a decommissioned mech where a field mechanic has set up shop on a greasy tarp.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Scrap Yard: Derelict Vending Array",
-        desc: "Power signature of an ancient vending array still running in the Scrap Yard. The buttons are worn smooth.",
+        name: "Scrap Fields: Derelict Vending Array",
+        desc: "Power signature of an ancient vending array still running in the Scrap Fields. The buttons are worn smooth.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
@@ -601,7 +601,7 @@ const STORY_ITEMS = [
         cost: 0
     },
     {
-        name: "Map: Scrap Yard",
+        name: "Map: Scrap Fields",
         desc: "A salvager's chart marking safe paths through the wreckage. Some routes have been crossed out.",
         category: "map",
         image: "images/IMAGE.gif",
@@ -773,20 +773,20 @@ const STORY_ITEMS = [
 
     // Scrap Yard - discovered mining locations
     {
-        name: "Scrap Yard: Aetherite Asteroid",
-        desc: "Logged coordinates to an Aetherite asteroid drifting near the Scrap Yard. Shallow deposits, easy extraction.",
+        name: "Scrap Fields: Aetherite Asteroid",
+        desc: "Logged coordinates to an Aetherite asteroid drifting near the Scrap Fields. Shallow deposits, easy extraction.",
         category: "location",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Scrap Yard: Bronzewisp Asteroid",
-        desc: "Logged coordinates to a Bronzewisp asteroid orbiting the Scrap Yard. Faint metallic shimmer on approach.",
+        name: "Scrap Fields: Bronzewisp Asteroid",
+        desc: "Logged coordinates to a Bronzewisp asteroid orbiting the Scrap Fields. Faint metallic shimmer on approach.",
         category: "location",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Scrap Yard: Cindergem Asteroid",
-        desc: "Logged coordinates to a Cindergem asteroid near the Scrap Yard. Warm to the touch, shallow veins.",
+        name: "Scrap Fields: Cindergem Asteroid",
+        desc: "Logged coordinates to a Cindergem asteroid near the Scrap Fields. Warm to the touch, shallow veins.",
         category: "location",
         image: "images/IMAGE.gif"
     },

@@ -15,7 +15,7 @@ const ENCOUNTERS_RATPILE = [
         discoveredEngageText: "He glances up as you approach. A faint nod — he's already reaching for his charts.",
         appearanceRate: 15,
         minLevel: 1,
-        itemSlot1: ["Map: Scrap Yard"],
+        itemSlot1: ["Map: Scrap Fields"],
         itemSlot2: [],
         itemSlot3: []
     }
