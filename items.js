@@ -13,10 +13,23 @@
  * - droppedBy: Array of enemy names that can drop this item (empty = all enemies in zone)
  * - cost: XP cost to purchase from shops
  * - zone: Location key where this item drops and is sold (omit for special items)
+ *
+ * STANDARD ITEM SCALING (Tiers 1-10, one stat per slot):
+ *   body: +10 HP per tier (10, 20, 30 ... 100)
+ *   legs: +1 SPD per tier (1, 2, 3 ... 10)
+ *   arms: +1 DEF per tier (1, 2, 3 ... 10)
+ *   weapon: +1 ATK per tier (1, 2, 3 ... 10)
+ *   chip: +1 COMBO per tier (1, 2, 3 ... 10)
+ *   processor: +1 XP per tier (1, 2, 3 ... 10)
+ *   pilot: +1 ALL per tier (1, 2, 3 ... 10)
+ *   drill: +1 MINING per tier (1, 2, 3 ... 10)
+ *   implant: +1 REGEN per tier (1, 2, 3 ... 10)
+ *
+ * Ratpile items sit outside the tier scaling as starter gear.
  */
 
 const ITEMS = [
-    // ==================== BODY (HP & Defence) ====================
+    // ==================== BODY (HP) ====================
     {
         name: "Rat-Gnawed Plating [+5 HP]",
         type: "body",
@@ -29,110 +42,110 @@ const ITEMS = [
         zone: "ratpile"
     },
     {
-        name: "Low-Grade Chassis [+10 HP][+1 DEF]",
+        name: "Low-Grade Chassis [+10 HP]",
         type: "body",
         desc: "Scrap-welded plating bolted to the frame. Barely holds together, but it's better than nothing.",
         image: "images/IMAGE.gif",
-        stats: { hp: 10, defence: 1 },
+        stats: { hp: 10 },
         dropRate: 10,
         droppedBy: [],
         cost: 10,
         zone: "scrapyard"
     },
     {
-        name: "Standard Chassis [+20 HP][+2 DEF]",
+        name: "Standard Chassis [+20 HP]",
         type: "body",
         desc: "Mass-produced military surplus. Reliable, unglamorous, and easy to replace.",
         image: "images/IMAGE.gif",
-        stats: { hp: 20, defence: 2 },
+        stats: { hp: 20 },
         dropRate: 10,
         droppedBy: [],
         cost: 20,
         zone: "oldbattlefield"
     },
     {
-        name: "Advanced Chassis [+30 HP][+3 DEF]",
+        name: "Advanced Chassis [+30 HP]",
         type: "body",
         desc: "Layered composite armor with integrated shock dampeners. A solid mid-range frame.",
         image: "images/IMAGE.gif",
-        stats: { hp: 30, defence: 3 },
+        stats: { hp: 30 },
         dropRate: 10,
         droppedBy: [],
         cost: 35,
         zone: "downtown"
     },
     {
-        name: "Military Chassis [+40 HP][+4 DEF]",
+        name: "Military Chassis [+40 HP]",
         type: "body",
         desc: "Hardened battlefield plating stripped from a decommissioned war mech. Still has scorch marks.",
         image: "images/IMAGE.gif",
-        stats: { hp: 40, defence: 4 },
+        stats: { hp: 40 },
         dropRate: 10,
         droppedBy: [],
         cost: 50,
         zone: "orbitalstation"
     },
     {
-        name: "Old Breaker Chassis [+50 HP][+5 DEF]",
+        name: "Old Breaker Chassis [+50 HP]",
         type: "body",
         desc: "An early Breaker-class frame. The alloy is outdated but the engineering is sound.",
         image: "images/IMAGE.gif",
-        stats: { hp: 50, defence: 5 },
+        stats: { hp: 50 },
         dropRate: 10,
         droppedBy: [],
         cost: 70,
         zone: "wasteland"
     },
     {
-        name: "Breaker Chassis [+60 HP][+6 DEF]",
+        name: "Breaker Chassis [+60 HP]",
         type: "body",
         desc: "Standard-issue Breaker frame. Balanced protection across all threat profiles.",
         image: "images/IMAGE.gif",
-        stats: { hp: 60, defence: 6 },
+        stats: { hp: 60 },
         dropRate: 10,
         droppedBy: [],
         cost: 90,
         zone: "undercity"
     },
     {
-        name: "EVO1 Breaker Chassis [+70 HP][+7 DEF]",
+        name: "EVO1 Breaker Chassis [+70 HP]",
         type: "body",
         desc: "First evolution of the Breaker line. Reinforced joints and reactive plating layers.",
         image: "images/IMAGE.gif",
-        stats: { hp: 70, defence: 7 },
+        stats: { hp: 70 },
         dropRate: 10,
         droppedBy: [],
         cost: 115,
         zone: "industrialzone"
     },
     {
-        name: "EVO2 Breaker Chassis [+80 HP][+8 DEF]",
+        name: "EVO2 Breaker Chassis [+80 HP]",
         type: "body",
         desc: "Second evolution. Self-sealing armor weave that repairs minor punctures between engagements.",
         image: "images/IMAGE.gif",
-        stats: { hp: 80, defence: 8 },
+        stats: { hp: 80 },
         dropRate: 10,
         droppedBy: [],
         cost: 140,
         zone: "frozenreach"
     },
     {
-        name: "EVO3 Breaker Chassis [+90 HP][+9 DEF]",
+        name: "EVO3 Breaker Chassis [+90 HP]",
         type: "body",
         desc: "Third evolution. Nano-lattice structure distributes impact force across the entire frame.",
         image: "images/IMAGE.gif",
-        stats: { hp: 90, defence: 9 },
+        stats: { hp: 90 },
         dropRate: 10,
         droppedBy: [],
         cost: 170,
         zone: "neonstrip"
     },
     {
-        name: "EVO4 Breaker Chassis [+100 HP][+10 DEF]",
+        name: "EVO4 Breaker Chassis [+100 HP]",
         type: "body",
         desc: "Final evolution. Experimental alloy that absorbs kinetic energy and converts it to heat shielding.",
         image: "images/IMAGE.gif",
-        stats: { hp: 100, defence: 10 },
+        stats: { hp: 100 },
         dropRate: 10,
         droppedBy: [],
         cost: 200,
@@ -152,117 +165,117 @@ const ITEMS = [
         zone: "ratpile"
     },
     {
-        name: "Standard Servos [+2 SPD]",
+        name: "Standard Servos [+1 SPD]",
         type: "legs",
         desc: "Basic hydraulic legs. They move, they stop. Not much else to say.",
         image: "images/IMAGE.gif",
-        stats: { speed: 2 },
+        stats: { speed: 1 },
         dropRate: 60,
         droppedBy: [],
         cost: 8,
         zone: "scrapyard"
     },
     {
-        name: "Enhanced Servos [+4 SPD]",
+        name: "Enhanced Servos [+2 SPD]",
         type: "legs",
         desc: "Upgraded actuators with smoother response curves. Noticeably quicker on the turn.",
         image: "images/IMAGE.gif",
-        stats: { speed: 4 },
+        stats: { speed: 2 },
         dropRate: 50,
         droppedBy: [],
         cost: 18,
         zone: "oldbattlefield"
     },
     {
-        name: "Quick Striders [+6 SPD]",
+        name: "Quick Striders [+3 SPD]",
         type: "legs",
         desc: "Lightweight alloy legs built for speed. Sacrifices nothing for raw mobility.",
         image: "images/IMAGE.gif",
-        stats: { speed: 6 },
+        stats: { speed: 3 },
         dropRate: 40,
         droppedBy: [],
         cost: 30,
         zone: "downtown"
     },
     {
-        name: "Hydraulic Boosters [+8 SPD]",
+        name: "Hydraulic Boosters [+4 SPD]",
         type: "legs",
         desc: "Pressurized boost chambers fire on each stride. The ground shakes when these move.",
         image: "images/IMAGE.gif",
-        stats: { speed: 8 },
+        stats: { speed: 4 },
         dropRate: 30,
         droppedBy: [],
         cost: 45,
         zone: "orbitalstation"
     },
     {
-        name: "Reflex Actuators [+10 SPD]",
+        name: "Reflex Actuators [+5 SPD]",
         type: "legs",
         desc: "Neural-linked servo motors that react before the pilot's conscious thought catches up.",
         image: "images/IMAGE.gif",
-        stats: { speed: 10 },
+        stats: { speed: 5 },
         dropRate: 22,
         droppedBy: [],
         cost: 60,
         zone: "wasteland"
     },
     {
-        name: "Kinetic Stabilizers [+12 SPD]",
+        name: "Kinetic Stabilizers [+6 SPD]",
         type: "legs",
         desc: "Gyroscopic stabilization lets these legs maintain full speed on any terrain.",
         image: "images/IMAGE.gif",
-        stats: { speed: 12 },
+        stats: { speed: 6 },
         dropRate: 16,
         droppedBy: [],
         cost: 80,
         zone: "undercity"
     },
     {
-        name: "Phase Shift Legs [+14 SPD]",
+        name: "Phase Shift Legs [+7 SPD]",
         type: "legs",
         desc: "Experimental legs that briefly phase through obstacles during high-speed maneuvers.",
         image: "images/IMAGE.gif",
-        stats: { speed: 14 },
+        stats: { speed: 7 },
         dropRate: 12,
         droppedBy: [],
         cost: 100,
         zone: "industrialzone"
     },
     {
-        name: "Quantum Thrusters [+16 SPD]",
+        name: "Quantum Thrusters [+8 SPD]",
         type: "legs",
         desc: "Micro-thrusters fire in quantum bursts, propelling the mech faster than conventional physics allows.",
         image: "images/IMAGE.gif",
-        stats: { speed: 16 },
+        stats: { speed: 8 },
         dropRate: 8,
         droppedBy: [],
         cost: 125,
         zone: "frozenreach"
     },
     {
-        name: "Temporal Drives [+18 SPD]",
+        name: "Temporal Drives [+9 SPD]",
         type: "legs",
         desc: "Time-dilated movement systems. To observers, the mech appears to skip frames of reality.",
         image: "images/IMAGE.gif",
-        stats: { speed: 18 },
+        stats: { speed: 9 },
         dropRate: 5,
         droppedBy: [],
         cost: 150,
         zone: "neonstrip"
     },
     {
-        name: "Singularity Runners [+20 SPD]",
+        name: "Singularity Runners [+10 SPD]",
         type: "legs",
         desc: "Gravity-warping drives that fold space around each stride. The fastest legs ever built.",
         image: "images/IMAGE.gif",
-        stats: { speed: 20 },
+        stats: { speed: 10 },
         dropRate: 3,
         droppedBy: [],
         cost: 180,
         zone: "deadzone"
     },
 
-    // ==================== ARMS (Attack or Defence) ====================
+    // ==================== ARMS (Defence) ====================
     {
         name: "Rat-Bone Bracers [+1 ATK]",
         type: "arms",
@@ -275,11 +288,11 @@ const ITEMS = [
         zone: "ratpile"
     },
     {
-        name: "Standard Manipulators [+2 ATK]",
+        name: "Standard Manipulators [+1 DEF]",
         type: "arms",
         desc: "Basic mechanical arms with reinforced knuckle plates. Gets the job done.",
         image: "images/IMAGE.gif",
-        stats: { attack: 2 },
+        stats: { defence: 1 },
         dropRate: 55,
         droppedBy: [],
         cost: 10,
@@ -297,11 +310,11 @@ const ITEMS = [
         zone: "oldbattlefield"
     },
     {
-        name: "Power Gauntlets [+4 ATK]",
+        name: "Power Gauntlets [+3 DEF]",
         type: "arms",
-        desc: "Pneumatic fists that deliver bone-crushing force with every swing.",
+        desc: "Heavy-plated gauntlets with layered shock absorbers. Built to take a beating.",
         image: "images/IMAGE.gif",
-        stats: { attack: 4 },
+        stats: { defence: 3 },
         dropRate: 40,
         droppedBy: [],
         cost: 25,
@@ -319,11 +332,11 @@ const ITEMS = [
         zone: "orbitalstation"
     },
     {
-        name: "Crusher Claws [+6 ATK]",
+        name: "Armored Claws [+5 DEF]",
         type: "arms",
-        desc: "Hydraulic claws designed to rip through armored plating like paper.",
+        desc: "Heavy-plated claws designed to absorb impacts while grappling armored targets.",
         image: "images/IMAGE.gif",
-        stats: { attack: 6 },
+        stats: { defence: 5 },
         dropRate: 26,
         droppedBy: [],
         cost: 45,
@@ -341,11 +354,11 @@ const ITEMS = [
         zone: "undercity"
     },
     {
-        name: "Ravager Arms [+8 ATK]",
+        name: "Bulwark Arms [+7 DEF]",
         type: "arms",
-        desc: "Serrated blade-arms that spin at high RPM. Designed for close-quarters mech dismantling.",
+        desc: "Reinforced siege arms built to hold the line under sustained bombardment.",
         image: "images/IMAGE.gif",
-        stats: { attack: 8 },
+        stats: { defence: 7 },
         dropRate: 14,
         droppedBy: [],
         cost: 70,
@@ -363,11 +376,11 @@ const ITEMS = [
         zone: "frozenreach"
     },
     {
-        name: "Decimator Arms [+10 ATK]",
+        name: "Bastion Arms [+9 DEF]",
         type: "arms",
-        desc: "Overengineered siege arms. Each strike lands with the force of a demolition charge.",
+        desc: "Interlocking shield plates form an impenetrable wall. Built for frontline defense operations.",
         image: "images/IMAGE.gif",
-        stats: { attack: 10 },
+        stats: { defence: 9 },
         dropRate: 6,
         droppedBy: [],
         cost: 100,
@@ -385,7 +398,7 @@ const ITEMS = [
         zone: "deadzone"
     },
 
-    // ==================== WEAPON (Attack, Combo, or Defence) ====================
+    // ==================== WEAPON (Attack) ====================
     {
         name: "Sharpened Rat Fang [+1 ATK][+1 COMBO]",
         type: "weapon",
@@ -408,44 +421,44 @@ const ITEMS = [
         cost: 0
     },
     {
-        name: "Pulse Pistol [+2 ATK]",
+        name: "Pulse Pistol [+1 ATK]",
         type: "weapon",
         desc: "A compact sidearm that fires concentrated energy pulses. Reliable, if underwhelming.",
         image: "images/IMAGE.gif",
-        stats: { attack: 2 },
+        stats: { attack: 1 },
         dropRate: 55,
         droppedBy: [],
         cost: 10,
         zone: "scrapyard"
     },
     {
-        name: "Energy Shield [+2 DEF]",
+        name: "Energy Blade [+2 ATK]",
         type: "weapon",
-        desc: "A handheld energy projector that creates a temporary defensive barrier.",
+        desc: "A focused energy weapon that projects a cutting edge of superheated plasma.",
         image: "images/IMAGE.gif",
-        stats: { defence: 2 },
+        stats: { attack: 2 },
         dropRate: 55,
         droppedBy: [],
         cost: 10,
         zone: "oldbattlefield"
     },
     {
-        name: "Chain Blade [+3 ATK][+2 COMBO]",
+        name: "Chain Blade [+3 ATK]",
         type: "weapon",
-        desc: "A motorized blade with chain-linked teeth. Rips through armor and chains hits naturally.",
+        desc: "A motorized blade with chain-linked teeth. Rips through armor with relentless force.",
         image: "images/IMAGE.gif",
-        stats: { attack: 3, combo: 2 },
+        stats: { attack: 3 },
         dropRate: 40,
         droppedBy: [],
         cost: 25,
         zone: "downtown"
     },
     {
-        name: "Combo Striker [+4 COMBO]",
+        name: "Shock Cannon [+4 ATK]",
         type: "weapon",
-        desc: "A rapid-cycling weapon system optimized for sustained hit chains. Speed over power.",
+        desc: "A rapid-cycling weapon system that delivers punishing electrical discharges at close range.",
         image: "images/IMAGE.gif",
-        stats: { combo: 4 },
+        stats: { attack: 4 },
         dropRate: 26,
         droppedBy: [],
         cost: 30,
@@ -463,62 +476,62 @@ const ITEMS = [
         zone: "wasteland"
     },
     {
-        name: "Fortress Module [+5 DEF]",
+        name: "Assault Module [+6 ATK]",
         type: "weapon",
-        desc: "A deployable defense module that hardens the mech's outer shell on impact detection.",
+        desc: "A deployable weapons platform that amplifies the mech's offensive output on impact detection.",
         image: "images/IMAGE.gif",
-        stats: { defence: 5 },
+        stats: { attack: 6 },
         dropRate: 22,
         droppedBy: [],
         cost: 40,
         zone: "undercity"
     },
     {
-        name: "Railgun [+8 ATK]",
+        name: "Railgun [+7 ATK]",
         type: "weapon",
         desc: "Electromagnetic acceleration drives a tungsten slug at hypersonic velocity. One shot, one kill.",
         image: "images/IMAGE.gif",
-        stats: { attack: 8 },
+        stats: { attack: 7 },
         dropRate: 14,
         droppedBy: [],
         cost: 65,
         zone: "industrialzone"
     },
     {
-        name: "Breaker Blade [+10 ATK][+6 COMBO]",
+        name: "Breaker Blade [+8 ATK]",
         type: "weapon",
-        desc: "The signature weapon of the Breaker line. Vibro-edged and perfectly balanced for combo strikes.",
+        desc: "The signature weapon of the Breaker line. Vibro-edged and perfectly balanced for devastating strikes.",
         image: "images/IMAGE.gif",
-        stats: { attack: 10, combo: 6 },
+        stats: { attack: 8 },
         dropRate: 10,
         droppedBy: [],
         cost: 100,
         zone: "frozenreach"
     },
     {
-        name: "Annihilator Cannon [+12 ATK]",
+        name: "Annihilator Cannon [+9 ATK]",
         type: "weapon",
         desc: "A shoulder-mounted siege cannon. Overkill for most targets, perfect for the rest.",
         image: "images/IMAGE.gif",
-        stats: { attack: 12 },
+        stats: { attack: 9 },
         dropRate: 6,
         droppedBy: [],
         cost: 120,
         zone: "neonstrip"
     },
     {
-        name: "Omega Rupture Cannon [+14 ATK][+8 COMBO]",
+        name: "Omega Rupture Cannon [+10 ATK]",
         type: "weapon",
         desc: "Prototype weapon that fires cascading energy bursts. Each impact destabilizes the target for the next.",
         image: "images/IMAGE.gif",
-        stats: { attack: 14, combo: 8 },
+        stats: { attack: 10 },
         dropRate: 3,
         droppedBy: [],
         cost: 175,
         zone: "deadzone"
     },
 
-    // ==================== SYSTEMS CHIP (Any stat) ====================
+    // ==================== SYSTEMS CHIP (Combo) ====================
     {
         name: "Corroded Chip [+1 DEF]",
         type: "chip",
@@ -531,33 +544,33 @@ const ITEMS = [
         zone: "ratpile"
     },
     {
-        name: "Targeting Firmware [+1 ATK]",
+        name: "Targeting Firmware [+1 COMBO]",
         type: "chip",
-        desc: "Basic combat firmware that highlights structural weak points on scanned targets.",
+        desc: "Basic combat firmware that identifies windows for follow-up strikes on scanned targets.",
         image: "images/IMAGE.gif",
-        stats: { attack: 1 },
+        stats: { combo: 1 },
         dropRate: 50,
         droppedBy: [],
         cost: 10,
         zone: "scrapyard"
     },
     {
-        name: "Reactive Plating Chip [+2 DEF]",
+        name: "Combo Link Chip [+2 COMBO]",
         type: "chip",
-        desc: "Micro-controllers that angle armor plates toward incoming fire in real time.",
+        desc: "Micro-controllers that chain attack sequences together, finding rhythm in the chaos of combat.",
         image: "images/IMAGE.gif",
-        stats: { defence: 2 },
+        stats: { combo: 2 },
         dropRate: 45,
         droppedBy: [],
         cost: 20,
         zone: "oldbattlefield"
     },
     {
-        name: "Reflex Booster [+3 SPD]",
+        name: "Chain Booster [+3 COMBO]",
         type: "chip",
-        desc: "A co-processor that shaves milliseconds off every motor command. Feels like thinking faster.",
+        desc: "A co-processor that optimizes strike timing for maximum combo potential.",
         image: "images/IMAGE.gif",
-        stats: { speed: 3 },
+        stats: { combo: 3 },
         dropRate: 40,
         droppedBy: [],
         cost: 30,
@@ -575,33 +588,33 @@ const ITEMS = [
         zone: "orbitalstation"
     },
     {
-        name: "Hardened Targeting [+5 ATK]",
+        name: "Strike Sequencer [+5 COMBO]",
         type: "chip",
-        desc: "Military-grade targeting AI. Calculates optimal strike vectors in microseconds.",
+        desc: "Military-grade sequencing AI. Calculates optimal combo chains in microseconds.",
         image: "images/IMAGE.gif",
-        stats: { attack: 5 },
+        stats: { combo: 5 },
         dropRate: 30,
         droppedBy: [],
         cost: 60,
         zone: "wasteland"
     },
     {
-        name: "Fortress Algorithm [+6 DEF]",
+        name: "Assault Algorithm [+6 COMBO]",
         type: "chip",
-        desc: "Predictive defense AI that anticipates attack vectors and hardens armor before impact.",
+        desc: "Predictive combat AI that anticipates enemy recovery windows and chains strikes before they can react.",
         image: "images/IMAGE.gif",
-        stats: { defence: 6 },
+        stats: { combo: 6 },
         dropRate: 25,
         droppedBy: [],
         cost: 80,
         zone: "undercity"
     },
     {
-        name: "Neural Accelerator [+7 SPD]",
+        name: "Neural Sequencer [+7 COMBO]",
         type: "chip",
-        desc: "Predictive motion algorithms that pre-calculate movement paths before the pilot decides.",
+        desc: "Predictive motion algorithms that pre-calculate combo paths before the pilot decides.",
         image: "images/IMAGE.gif",
-        stats: { speed: 7 },
+        stats: { combo: 7 },
         dropRate: 20,
         droppedBy: [],
         cost: 100,
@@ -619,22 +632,22 @@ const ITEMS = [
         zone: "frozenreach"
     },
     {
-        name: "Predator Protocol [+9 ATK]",
+        name: "Predator Protocol [+9 COMBO]",
         type: "chip",
-        desc: "Black-ops firmware that maps kill trajectories across multiple targets simultaneously.",
+        desc: "Black-ops firmware that maps kill chains across multiple targets simultaneously.",
         image: "images/IMAGE.gif",
-        stats: { attack: 9 },
+        stats: { combo: 9 },
         dropRate: 10,
         droppedBy: [],
         cost: 155,
         zone: "neonstrip"
     },
     {
-        name: "Citadel Algorithm [+10 DEF]",
+        name: "Omega Protocol [+10 COMBO]",
         type: "chip",
-        desc: "Omega-class defense matrix. Converts the entire frame into an interlocking shield network.",
+        desc: "Omega-class combo matrix. Converts the entire combat system into an endless chain of strikes.",
         image: "images/IMAGE.gif",
-        stats: { defence: 10 },
+        stats: { combo: 10 },
         dropRate: 5,
         droppedBy: [],
         cost: 190,
@@ -1089,44 +1102,44 @@ const ITEMS = [
         zone: "undercity"
     },
     {
-        name: "Adaptive Hull Implant [+8 REGEN]",
+        name: "Adaptive Hull Implant [+7 REGEN]",
         type: "implant",
         desc: "Memory-metal plating that remembers its original shape and reforms after taking damage.",
         image: "images/IMAGE.gif",
-        stats: { regen: 8 },
+        stats: { regen: 7 },
         dropRate: 12,
         droppedBy: [],
         cost: 170,
         zone: "industrialzone"
     },
     {
-        name: "Phoenix Core Module [+10 REGEN]",
+        name: "Phoenix Core Module [+8 REGEN]",
         type: "implant",
         desc: "A thermite-laced repair core that burns away damaged material and regrows it from stored templates.",
         image: "images/IMAGE.gif",
-        stats: { regen: 10 },
+        stats: { regen: 8 },
         dropRate: 8,
         droppedBy: [],
         cost: 220,
         zone: "frozenreach"
     },
     {
-        name: "Lazarus Engine [+13 REGEN]",
+        name: "Lazarus Engine [+9 REGEN]",
         type: "implant",
         desc: "Experimental resurrection tech. The mech's frame heals so fast it's practically unkillable. Practically.",
         image: "images/IMAGE.gif",
-        stats: { regen: 13 },
+        stats: { regen: 9 },
         dropRate: 5,
         droppedBy: [],
         cost: 280,
         zone: "neonstrip"
     },
     {
-        name: "Omega Regeneration Core [+16 REGEN]",
+        name: "Omega Regeneration Core [+10 REGEN]",
         type: "implant",
         desc: "Prototype self-repair system that operates at the quantum level. Damage is undone before it fully registers.",
         image: "images/IMAGE.gif",
-        stats: { regen: 16 },
+        stats: { regen: 10 },
         dropRate: 3,
         droppedBy: [],
         cost: 350,
