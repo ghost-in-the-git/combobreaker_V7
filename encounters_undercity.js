@@ -74,7 +74,17 @@ const ENCOUNTERS_UNDERCITY = [
         minLevel: 1,
         itemSlot1: ["Map: Industrial Zone"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "Military run these tunnels. How are you ok?",
+                response: "'They aren't looking for ghosts.' He keeps writing."
+            },
+            {
+                question: "You're running out of places to send me.",
+                response: "'No.' He sets his pen down. 'You're running out of places I've been.'"
+            }
+        ]
     },
     {
         name: "Dreg",
