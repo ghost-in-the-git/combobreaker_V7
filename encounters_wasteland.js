@@ -32,7 +32,7 @@ const ENCOUNTERS_WASTELAND = [
         minLevel: 1,
         itemSlot1: ["Plasma Rifle [+5 ATK]"],
         itemSlot2: ["Strike Sequencer [+5 COMBO]"],
-        itemSlot3: ["Battlefield Recorder [+5 XP]"]
+        itemSlot3: ["Battlefield Recorder [+5 Silicon]"]
     },
     {
         name: "[COMMON] Scavenger Camp",

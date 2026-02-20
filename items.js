@@ -11,7 +11,7 @@
  * - stats: Object with stat bonuses { hp, defence, speed, attack, combo }
  * - dropRate: Relative chance to drop (higher = more common)
  * - droppedBy: Array of enemy names that can drop this item (empty = all enemies in zone)
- * - cost: XP cost to purchase from shops
+ * - cost: Silicon cost to purchase from shops
  * - zone: Location key where this item drops and is sold (omit for special items)
  *
  * STANDARD ITEM SCALING (Tiers 1-10, one stat per slot):
@@ -20,7 +20,7 @@
  *   arms: +1 DEF per tier (1, 2, 3 ... 10)
  *   weapon: +1 ATK per tier (1, 2, 3 ... 10)
  *   chip: +1 COMBO per tier (1, 2, 3 ... 10)
- *   processor: +1 XP per tier (1, 2, 3 ... 10)
+ *   processor: +1 SILICON per tier (1, 2, 3 ... 10)
  *   pilot: +1 ALL per tier (1, 2, 3 ... 10)
  *   drill: +1 MINING per tier (1, 2, 3 ... 10)
  *   implant: +1 REGEN per tier (1, 2, 3 ... 10)
@@ -31,7 +31,7 @@
 const ITEMS = [
     // ==================== SERVICES ====================
     {
-        name: "Professor's Lesson [+10 XP]",
+        name: "Professor's Lesson [+10 Silicon]",
         type: "service",
         desc: "The Professor pulls out a battered datapad and walks you through salvage analysis, combat theory, and mech calibration. You leave sharper than you arrived.",
         image: "images/IMAGE.gif",
@@ -663,9 +663,9 @@ const ITEMS = [
         zone: "deadzone"
     },
 
-    // ==================== PROCESSOR (XP Bonus) ====================
+    // ==================== PROCESSOR (Silicon Bonus) ====================
     {
-        name: "Cracked Data Chip [+1 XP]",
+        name: "Cracked Data Chip [+1 Silicon]",
         type: "processor",
         desc: "A cracked processor the rats were using as a chew toy. Still logs enough combat data to be useful.",
         image: "images/IMAGE.gif",
@@ -676,7 +676,7 @@ const ITEMS = [
         zone: "ratpile"
     },
     {
-        name: "Basic Data Processor [+1 XP]",
+        name: "Basic Data Processor [+1 Silicon]",
         type: "processor",
         desc: "A salvaged co-processor that logs combat data for marginal experience gains.",
         image: "images/IMAGE.gif",
@@ -687,7 +687,7 @@ const ITEMS = [
         zone: "scrapyard"
     },
     {
-        name: "Enhanced Data Processor [+2 XP]",
+        name: "Enhanced Data Processor [+2 Silicon]",
         type: "processor",
         desc: "Upgraded firmware extracts more tactical insight from every engagement.",
         image: "images/IMAGE.gif",
@@ -698,7 +698,7 @@ const ITEMS = [
         zone: "oldbattlefield"
     },
     {
-        name: "Combat Analyzer [+3 XP]",
+        name: "Combat Analyzer [+3 Silicon]",
         type: "processor",
         desc: "Real-time battle analysis that breaks down enemy patterns into actionable data.",
         image: "images/IMAGE.gif",
@@ -709,7 +709,7 @@ const ITEMS = [
         zone: "downtown"
     },
     {
-        name: "Tactical Neural Net [+4 XP]",
+        name: "Tactical Neural Net [+4 Silicon]",
         type: "processor",
         desc: "A neural network that simulates thousands of combat scenarios from a single encounter.",
         image: "images/IMAGE.gif",
@@ -720,7 +720,7 @@ const ITEMS = [
         zone: "orbitalstation"
     },
     {
-        name: "Battlefield Recorder [+5 XP]",
+        name: "Battlefield Recorder [+5 Silicon]",
         type: "processor",
         desc: "High-fidelity combat logger that reconstructs entire fights for deep post-action review.",
         image: "images/IMAGE.gif",
@@ -731,7 +731,7 @@ const ITEMS = [
         zone: "wasteland"
     },
     {
-        name: "Adaptive Learning Matrix [+6 XP]",
+        name: "Adaptive Learning Matrix [+6 Silicon]",
         type: "processor",
         desc: "Self-modifying code that rewrites its own training algorithms after every engagement.",
         image: "images/IMAGE.gif",
@@ -742,7 +742,7 @@ const ITEMS = [
         zone: "undercity"
     },
     {
-        name: "Quantum Learning Core [+7 XP]",
+        name: "Quantum Learning Core [+7 Silicon]",
         type: "processor",
         desc: "Quantum-state processor that learns across parallel probability branches simultaneously.",
         image: "images/IMAGE.gif",
@@ -753,7 +753,7 @@ const ITEMS = [
         zone: "industrialzone"
     },
     {
-        name: "Deep War Simulator [+8 XP]",
+        name: "Deep War Simulator [+8 Silicon]",
         type: "processor",
         desc: "Runs thousands of hypothetical combat permutations per second, extracting lessons from battles that never happened.",
         image: "images/IMAGE.gif",
@@ -764,7 +764,7 @@ const ITEMS = [
         zone: "frozenreach"
     },
     {
-        name: "Precognition Engine [+9 XP]",
+        name: "Precognition Engine [+9 Silicon]",
         type: "processor",
         desc: "Borderline-illegal predictive hardware that models enemy behaviour before they act. Learns faster than anything alive.",
         image: "images/IMAGE.gif",
@@ -775,7 +775,7 @@ const ITEMS = [
         zone: "neonstrip"
     },
     {
-        name: "Omega Experience Engine [+10 XP]",
+        name: "Omega Experience Engine [+10 Silicon]",
         type: "processor",
         desc: "Prototype engine that rewrites the mech's combat doctrine in real time. Every kill teaches volumes.",
         image: "images/IMAGE.gif",

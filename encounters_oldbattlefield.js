@@ -32,7 +32,7 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         minLevel: 1,
         itemSlot1: ["Energy Blade [+2 ATK]"],
         itemSlot2: ["Combo Link Chip [+2 COMBO]"],
-        itemSlot3: ["Enhanced Data Processor [+2 XP]"]
+        itemSlot3: ["Enhanced Data Processor [+2 Silicon]"]
     },
     {
         name: "[COMMON] Pilgrim Parts Caravan",

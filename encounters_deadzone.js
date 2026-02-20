@@ -32,7 +32,7 @@ const ENCOUNTERS_DEADZONE = [
         minLevel: 1,
         itemSlot1: ["Omega Rupture Cannon [+10 ATK]"],
         itemSlot2: ["Omega Protocol [+10 COMBO]"],
-        itemSlot3: ["Omega Experience Engine [+10 XP]"]
+        itemSlot3: ["Omega Experience Engine [+10 Silicon]"]
     },
     {
         name: "[COMMON] Desperate Scavenger",

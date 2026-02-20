@@ -32,7 +32,7 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         minLevel: 1,
         itemSlot1: ["Railgun [+7 ATK]"],
         itemSlot2: ["Neural Sequencer [+7 COMBO]"],
-        itemSlot3: ["Quantum Learning Core [+7 XP]"]
+        itemSlot3: ["Quantum Learning Core [+7 Silicon]"]
     },
     {
         name: "[COMMON] Automated Vending Rig",

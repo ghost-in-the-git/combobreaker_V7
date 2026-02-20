@@ -75,7 +75,7 @@ const FORGER_SECONDARY_STATS = [
     { key: "defence", suffix: "of the Bulwark",  label: "DEF" },
     { key: "speed",   suffix: "of Swiftness",    label: "SPD" },
     { key: "combo",   suffix: "of the Chain",    label: "COMBO" },
-    { key: "xpBonus", suffix: "of Insight",      label: "XP" },
+    { key: "xpBonus", suffix: "of Insight",      label: "SILICON" },
     { key: "mining",  suffix: "of Excavation",   label: "MINING" },
     { key: "regen",   suffix: "of Mending",      label: "REGEN" }
 ];
@@ -83,7 +83,7 @@ const FORGER_SECONDARY_STATS = [
 // Stat key → display label mapping
 const FORGER_STAT_LABELS = {
     hp: "HP", attack: "ATK", defence: "DEF", speed: "SPD",
-    combo: "COMBO", xpBonus: "XP", mining: "MINING", regen: "REGEN"
+    combo: "COMBO", xpBonus: "SILICON", mining: "MINING", regen: "REGEN"
 };
 
 // Display order for stat tags in item names

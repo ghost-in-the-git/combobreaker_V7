@@ -32,7 +32,7 @@ const ENCOUNTERS_FROZENREACH = [
         minLevel: 1,
         itemSlot1: ["Breaker Blade [+8 ATK]"],
         itemSlot2: ["Overdrive Sequencer [+8 COMBO]"],
-        itemSlot3: ["Deep War Simulator [+8 XP]"]
+        itemSlot3: ["Deep War Simulator [+8 Silicon]"]
     },
     {
         name: "[COMMON] Research Station Surplus",

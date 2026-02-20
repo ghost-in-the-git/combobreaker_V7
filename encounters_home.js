@@ -17,7 +17,7 @@ const ENCOUNTERS_HOME = [
         appearanceRate: 100,
         minLevel: 1,
         itemSlot1: [],
-        itemSlot2: ["Professor's Lesson [+10 XP]"],
+        itemSlot2: ["Professor's Lesson [+10 Silicon]"],
         itemSlot3: [],
         dialogue: [
             {

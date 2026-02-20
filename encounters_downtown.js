@@ -32,7 +32,7 @@ const ENCOUNTERS_DOWNTOWN = [
         minLevel: 1,
         itemSlot1: ["Chain Blade [+3 ATK]"],
         itemSlot2: ["Chain Booster [+3 COMBO]"],
-        itemSlot3: ["Combat Analyzer [+3 XP]"]
+        itemSlot3: ["Combat Analyzer [+3 Silicon]"]
     },
     {
         name: "[COMMON] Scrap Dealer",

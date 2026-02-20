@@ -32,7 +32,7 @@ const ENCOUNTERS_ORBITALSTATION = [
         minLevel: 1,
         itemSlot1: ["Shock Cannon [+4 ATK]"],
         itemSlot2: ["Chain Protocol [+4 COMBO]"],
-        itemSlot3: ["Tactical Neural Net [+4 XP]"]
+        itemSlot3: ["Tactical Neural Net [+4 Silicon]"]
     },
     {
         name: "[COMMON] Docking Ring Vendor",

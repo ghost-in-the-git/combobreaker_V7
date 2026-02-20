@@ -32,7 +32,7 @@ const ENCOUNTERS_UNDERCITY = [
         minLevel: 1,
         itemSlot1: ["Assault Module [+6 ATK]"],
         itemSlot2: ["Assault Algorithm [+6 COMBO]"],
-        itemSlot3: ["Adaptive Learning Matrix [+6 XP]"]
+        itemSlot3: ["Adaptive Learning Matrix [+6 Silicon]"]
     },
     {
         name: "[COMMON] Rogue Maintenance Drone",
