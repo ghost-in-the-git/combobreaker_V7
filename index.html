@@ -2785,9 +2785,9 @@
         function getRandomItemDrop(enemyName) {
             // Filter items that can drop in this zone from this enemy
             const droppableItems = ITEMS.filter(item => {
-                if (item.dropRate <= 0) return false;
+                if (!item.dropRate || item.dropRate <= 0) return false;
                 if (item.zone && item.zone !== currentLocation) return false;
-                if (item.droppedBy.length > 0 && !item.droppedBy.includes(enemyName)) return false;
+                if (item.droppedBy && item.droppedBy.length > 0 && !item.droppedBy.includes(enemyName)) return false;
                 return true;
             });
 
