@@ -4071,6 +4071,7 @@
                     addMessage(`Signal lost. Scanning...`, 'system');
                     game.currentWave = null;
                     hideInlineButtons();
+                    startWaveTimer();
                 }
             }, game.WAVE_EXPIRE);
         }
@@ -4322,7 +4323,9 @@
                 }
             }
 
-            runBattle();
+            runBattle().catch(() => {
+                if (game.inBattle) endBattle(false);
+            });
         }
 
         // Decline battle
@@ -4338,6 +4341,7 @@
 
             addMessage(`Engagement denied. Live to fight another day.`, 'player');
             game.currentWave = null;
+            startWaveTimer();
         }
 
         // Event listeners
