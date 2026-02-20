@@ -3373,8 +3373,8 @@
             const isVendorDest = currentDestination && currentDestination !== 'openworld';
             addMessage(isVendorDest && encounter.discoveredDescription ? encounter.discoveredDescription : encounter.description, 'system');
 
-            // At a vendor destination, auto-engage without countdown or buttons
-            if (isVendorDest) {
+            // At a vendor destination or auto-engage encounter, skip countdown and buttons
+            if (isVendorDest || encounter.autoEngage) {
                 engageEncounter();
                 return true;
             }

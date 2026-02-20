@@ -13,6 +13,7 @@ const ENCOUNTERS_SALVAGEYARD = [
         name: "The Scrapper",
         type: "shop",
         isSalvageYard: true,
+        autoEngage: true,
         description: "A squat, heavily scarred mech sits in a clearing of crushed metal, its torso split open like a clamshell workshop. A woman in oil-black overalls leans against a hydraulic press.",
         engageText: "She sizes up your mech with a practiced eye. 'Got parts you don't need? I'll strip 'em down and give you scrap for the trouble. Fair rates — mostly.'",
         appearanceRate: 100,
