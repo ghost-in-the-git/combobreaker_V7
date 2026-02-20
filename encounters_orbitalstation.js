@@ -74,7 +74,17 @@ const ENCOUNTERS_ORBITALSTATION = [
         minLevel: 1,
         itemSlot1: ["Map: Wasteland"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "Your charts show places I haven't been yet.",
+                response: "'What good is a map of a place you remember.' He doesn't look up."
+            },
+            {
+                question: "How do you survive out here?",
+                response: "'It's only a little bit further.' He traces a line on the chart with his finger."
+            }
+        ]
     },
     {
         name: "Zero",
