@@ -74,7 +74,17 @@ const ENCOUNTERS_DOWNTOWN = [
         minLevel: 1,
         itemSlot1: ["Map: Orbital Station"],
         itemSlot2: ["Map: The Forge"],
-        itemSlot3: []
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "Does anyone else know you're here?",
+                response: "'It's my job to know where they are.' He marks something on the chart. 'Not the other way around.'"
+            },
+            {
+                question: "Why do you keep selling to me?",
+                response: "His hand stills. 'So you know where to go.' He pulls a fresh chart from the stack."
+            }
+        ]
     },
     {
         name: "Nyx",
