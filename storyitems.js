@@ -762,5 +762,205 @@ const STORY_ITEMS = [
         desc: "Logged coordinates to a Strata-Null asteroid. Readings are erratic. Extreme depth required.",
         category: "location",
         image: "images/IMAGE.gif"
+    },
+
+    // Scrap Yard - discovered mining locations
+    {
+        name: "Scrap Yard: Aetherite Asteroid",
+        desc: "Logged coordinates to an Aetherite asteroid drifting near the Scrap Yard. Shallow deposits, easy extraction.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Scrap Yard: Bronzewisp Asteroid",
+        desc: "Logged coordinates to a Bronzewisp asteroid orbiting the Scrap Yard. Faint metallic shimmer on approach.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Scrap Yard: Cindergem Asteroid",
+        desc: "Logged coordinates to a Cindergem asteroid near the Scrap Yard. Warm to the touch, shallow veins.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+
+    // Old Battlefield - discovered mining locations
+    {
+        name: "Old Battlefield: Duskquartz Asteroid",
+        desc: "Logged coordinates to a Duskquartz asteroid above the Old Battlefield. Violet shimmer visible from No Man's Land.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Old Battlefield: Emberlith Asteroid",
+        desc: "Logged coordinates to an Emberlith asteroid near the Old Battlefield. Smouldering veins run through its core.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Old Battlefield: Frostveil Asteroid",
+        desc: "Logged coordinates to a Frostveil asteroid drifting over the Old Battlefield. Ice crystals coat its surface.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+
+    // Downtown - discovered mining locations
+    {
+        name: "Downtown: Gloomstone Asteroid",
+        desc: "Logged coordinates to a Gloomstone asteroid lurking above the Downtown skyline. Dense and dark.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Downtown: Hexsilica Asteroid",
+        desc: "Logged coordinates to a Hexsilica asteroid near Downtown. Geometric crystal patterns line the surface.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Downtown: Iridionite Asteroid",
+        desc: "Logged coordinates to an Iridionite asteroid above the Downtown district. Rainbow-sheened mineral deposits.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+
+    // Orbital Station - discovered mining locations
+    {
+        name: "Orbital Station: Jetspinel Asteroid",
+        desc: "Logged coordinates to a Jetspinel asteroid in the station's orbital debris field. Dark crystalline veins run deep.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Orbital Station: Kryptoglass Asteroid",
+        desc: "Logged coordinates to a Kryptoglass asteroid near the Orbital Station. Translucent surface hides deep deposits.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Orbital Station: Lumenore Asteroid",
+        desc: "Logged coordinates to a Lumenore asteroid orbiting the station. Faint bioluminescence pulses from within.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+
+    // Wasteland - discovered mining locations
+    {
+        name: "Wasteland: Moonshardite Asteroid",
+        desc: "Logged coordinates to a Moonshardite asteroid above the Wasteland. Pale fragments orbit its surface.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Wasteland: Nightpyre Asteroid",
+        desc: "Logged coordinates to a Nightpyre asteroid drifting over the badlands. Faint thermal readings from within.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Wasteland: Obsidryl Asteroid",
+        desc: "Logged coordinates to an Obsidryl asteroid near the Wasteland. Obsidian-black surface absorbs all light.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+
+    // Undercity - discovered mining locations
+    {
+        name: "Undercity: Prismalune Asteroid",
+        desc: "Logged coordinates to a Prismalune asteroid detected from the Undercity depths. Refracts starlight across its surface.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Undercity: Quellium Asteroid",
+        desc: "Logged coordinates to a Quellium asteroid above the Undercity. Liquid mineral seeps from surface cracks.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Undercity: Riftmarble Asteroid",
+        desc: "Logged coordinates to a Riftmarble asteroid near the Undercity. Fracture lines suggest unstable geology.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+
+    // Industrial Zone - discovered mining locations
+    {
+        name: "Industrial Zone: Starvitrine Asteroid",
+        desc: "Logged coordinates to a Starvitrine asteroid near the Industrial Zone. Glassy surface reflects factory lights.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Industrial Zone: Thorncrystal Asteroid",
+        desc: "Logged coordinates to a Thorncrystal asteroid above the factory district. Jagged spires protrude from its surface.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Industrial Zone: Umbracite Asteroid",
+        desc: "Logged coordinates to an Umbracite asteroid drifting over the Industrial Zone. Shadow-dark mineral deposits.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+
+    // Frozen Reach - discovered mining locations
+    {
+        name: "Frozen Reach: Vortexium Asteroid",
+        desc: "Logged coordinates to a Vortexium asteroid above the Frozen Reach. Gravitational distortions detected nearby.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Frozen Reach: Wyrmstone Asteroid",
+        desc: "Logged coordinates to a Wyrmstone asteroid in the Frozen Reach ice field. Serpentine veins coil through its mass.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Frozen Reach: Xanthryx Asteroid",
+        desc: "Logged coordinates to a Xanthryx asteroid near the Frozen Reach. Amber-hued deposits deep beneath the crust.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+
+    // Neon Strip - discovered mining locations
+    {
+        name: "Neon Strip: Yonderite Asteroid",
+        desc: "Logged coordinates to a Yonderite asteroid above the Neon Strip. Emits a faint hum on approach.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Neon Strip: Zephyrsalt Asteroid",
+        desc: "Logged coordinates to a Zephyrsalt asteroid near the Neon Strip. Crystalline dust vents from surface fissures.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Neon Strip: Isotope Lace Asteroid",
+        desc: "Logged coordinates to an Isotope Lace asteroid drifting above the Neon Strip. Radioactive lattice patterns glow faintly.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+
+    // Dead Zone - discovered mining locations
+    {
+        name: "Dead Zone: Archive Shard Asteroid",
+        desc: "Logged coordinates to an Archive Shard asteroid in the Dead Zone. Ancient data-encoded mineral buried impossibly deep.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Dead Zone: Strata-Null Asteroid",
+        desc: "Logged coordinates to a Strata-Null asteroid above the Dead Zone. Readings are erratic. Extreme depth required.",
+        category: "location",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Dead Zone: Compound 33 Asteroid",
+        desc: "Logged coordinates to a Compound 33 asteroid in the Dead Zone. Unstable isotopes pulse beneath the surface.",
+        category: "location",
+        image: "images/IMAGE.gif"
     }
 ];
