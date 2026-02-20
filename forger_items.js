@@ -187,13 +187,15 @@ function generateForgerItem(mineralName, slotType) {
     const stats = {};
 
     if (primaryKey === "all") {
-        // Pilot: +2×tier to all 5 combat stats, then layer secondary on top
+        // Pilot: +2×tier to all 7 stats, then layer secondary on top
         const allVal = tier * 2;
         stats.hp = allVal;
         stats.attack = allVal;
         stats.speed = allVal;
         stats.defence = allVal;
         stats.combo = allVal;
+        stats.mining = allVal;
+        stats.regen = allVal;
         const secValue = getForgerStatValue(secondary.key, tier);
         stats[secondary.key] = (stats[secondary.key] || 0) + secValue;
     } else {
