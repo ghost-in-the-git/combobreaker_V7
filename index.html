@@ -1439,6 +1439,7 @@
     <script src="enemies_frozenreach.js"></script>
     <script src="enemies_neonstrip.js"></script>
     <script src="enemies_deadzone.js"></script>
+    <script src="enemies_frontline.js"></script>
     <script src="enemies_ratpile.js"></script>
     <script src="ambush_ratpile.js"></script>
     <script src="ambush_scrapyard.js"></script>
@@ -1451,6 +1452,7 @@
     <script src="ambush_frozenreach.js"></script>
     <script src="ambush_neonstrip.js"></script>
     <script src="ambush_deadzone.js"></script>
+    <script src="ambush_frontline.js"></script>
     <script src="items.js"></script>
     <script src="storyitems.js"></script>
     <script src="encounters_home.js"></script>
@@ -2152,6 +2154,15 @@
                 desc: "A dense field of mineral-rich asteroids. No hostiles, no traders — just rock, ore, and the void.",
                 image: "images/IMAGE.gif"
             },
+            frontline: {
+                enemies: ENEMIES_FRONTLINE,
+                encounters: null,
+                mining: null,
+                ambush: AMBUSH_FRONTLINE,
+                fuelCost: 55,
+                desc: "Active military staging ground. Squadrons of piloted combobreakers hold the line. They killed you once.",
+                image: "images/IMAGE.gif"
+            },
             forge: {
                 enemies: null,
                 encounters: ENCOUNTERS_FORGE,
@@ -2222,6 +2233,7 @@
             neonstrip: 'NEON STRIP',
             deadzone: 'DEAD ZONE',
             asteroidbelt: 'ASTEROID BELT',
+            frontline: 'THE FRONTLINE',
             forge: 'THE FORGE',
             salvageyard: 'MECH GRAVEYARD',
             home: 'HOME'
@@ -2241,6 +2253,7 @@
             neonstrip: 'Map: Neon Strip',
             deadzone: 'Map: Dead Zone',
             asteroidbelt: 'Map: Asteroid Belt',
+            frontline: 'Map: Frontline',
             forge: 'Map: The Forge',
             salvageyard: 'Map: Mech Graveyard'
         };
@@ -2430,6 +2443,11 @@
                     { encounterName: "Archive Shard Asteroid", mapItem: "Asteroid Belt: Archive Shard Asteroid" },
                     { encounterName: "Strata-Null Asteroid", mapItem: "Asteroid Belt: Strata-Null Asteroid" }
                 ]
+            },
+            frontline: {
+                openWorldName: "The Kill Corridor",
+                openWorldDesc: "Military forward operating base. Piloted combobreakers patrol in tight formation. Every sensor is pointed at you.",
+                destinations: []
             },
             forge: {
                 openWorldName: null,

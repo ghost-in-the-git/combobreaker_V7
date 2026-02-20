@@ -321,7 +321,7 @@ const STORY_ITEMS = [
     },
     {
         name: "Dead Zone: The Mapmaker",
-        desc: "Hazmat-sealed coordinates for the Mapmaker's contamination bunker in the Dead Zone.",
+        desc: "Coordinates to where you found the Mapmaker's body in the Dead Zone. He didn't make it.",
         category: "locationmap",
         image: "images/IMAGE.gif"
     },
@@ -687,6 +687,13 @@ const STORY_ITEMS = [
     {
         name: "Map: Asteroid Belt",
         desc: "A navigation chart plotting orbital paths through the belt. Mining coordinates are encoded.",
+        category: "map",
+        image: "images/IMAGE.gif",
+        cost: 200
+    },
+    {
+        name: "Map: Frontline",
+        desc: "A military operations chart pulled from the Mapmaker's body. Troop positions, patrol routes, kill corridors. He died getting this.",
         category: "map",
         image: "images/IMAGE.gif",
         cost: 200
