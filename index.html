@@ -693,6 +693,17 @@
             color: #0a0a0f;
         }
 
+        .slot-btn.boost-xp {
+            background: #1a1a2e;
+            border-color: #ffaa00;
+            color: #ffaa00;
+        }
+
+        .slot-btn.boost-xp:hover {
+            background: #ffaa00;
+            color: #0a0a0f;
+        }
+
         .slot-btn:disabled {
             opacity: 0.3;
             cursor: not-allowed;
@@ -1257,6 +1268,7 @@
                 <div class="save-slot-actions">
                     <button class="slot-btn load" id="slot-1-load" onclick="loadFromSlot(1)">Load</button>
                     <button class="slot-btn delete" id="slot-1-delete" onclick="deleteSlot(1)" disabled>Delete</button>
+                    <button class="slot-btn boost-xp" id="slot-1-boost" onclick="boostSlotXp(1)" disabled>+XP</button>
                 </div>
             </div>
             <div class="save-slot" id="slot-2">
@@ -1269,6 +1281,7 @@
                 <div class="save-slot-actions">
                     <button class="slot-btn load" id="slot-2-load" onclick="loadFromSlot(2)">Load</button>
                     <button class="slot-btn delete" id="slot-2-delete" onclick="deleteSlot(2)" disabled>Delete</button>
+                    <button class="slot-btn boost-xp" id="slot-2-boost" onclick="boostSlotXp(2)" disabled>+XP</button>
                 </div>
             </div>
             <div class="save-slot" id="slot-3">
@@ -1281,6 +1294,7 @@
                 <div class="save-slot-actions">
                     <button class="slot-btn load" id="slot-3-load" onclick="loadFromSlot(3)">Load</button>
                     <button class="slot-btn delete" id="slot-3-delete" onclick="deleteSlot(3)" disabled>Delete</button>
+                    <button class="slot-btn boost-xp" id="slot-3-boost" onclick="boostSlotXp(3)" disabled>+XP</button>
                 </div>
             </div>
             <button class="modal-close" id="modal-close">Close</button>
@@ -1460,6 +1474,21 @@
             }
         }
 
+        // Grant +1000 XP to a save slot (tester tool)
+        function boostSlotXp(slotNum) {
+            const data = getSlotData(slotNum);
+            if (!data || !data.player) return;
+            data.player.xp = (data.player.xp || 0) + 1000;
+            localStorage.setItem(SLOT_KEYS[slotNum - 1], JSON.stringify(data));
+            // If this is the active slot, also update live game state
+            if (game.activeSlot === slotNum) {
+                game.player.xp = data.player.xp;
+                recalculateStats();
+                updateStats();
+            }
+            refreshSlotDisplays();
+        }
+
         // Refresh all slot displays in the modal
         function refreshSlotDisplays() {
             for (let i = 1; i <= 3; i++) {
@@ -1469,6 +1498,7 @@
                 const infoEl = document.getElementById(`slot-${i}-info`);
                 const loadBtn = document.getElementById(`slot-${i}-load`);
                 const deleteBtn = document.getElementById(`slot-${i}-delete`);
+                const boostBtn = document.getElementById(`slot-${i}-boost`);
                 const isActive = game.activeSlot === i;
 
                 // Highlight active slot
@@ -1479,6 +1509,7 @@
                     const p = data.player;
                     infoEl.innerHTML =
                         `Level: <span>${p.level}</span> | ` +
+                        `XP: <span>${p.xp || 0}/${p.xpToLevel || 10}</span> | ` +
                         `HP: <span>${p.baseMaxHp}</span> | ` +
                         `ATK: <span>${p.baseAttack}</span> | ` +
                         `SPD: <span>${p.baseSpeed}</span> | ` +
@@ -1489,6 +1520,7 @@
                     loadBtn.style.display = '';
                     loadBtn.disabled = false;
                     deleteBtn.disabled = false;
+                    boostBtn.disabled = false;
                     // Hide new game button if it exists
                     let ngBtn = document.getElementById(`slot-${i}-new`);
                     if (ngBtn) ngBtn.style.display = 'none';
@@ -1496,6 +1528,7 @@
                     infoEl.innerHTML = '<span class="save-slot-empty">-- Empty --</span>';
                     loadBtn.style.display = 'none';
                     deleteBtn.disabled = true;
+                    boostBtn.disabled = true;
                     // Show new game button
                     let ngBtn = document.getElementById(`slot-${i}-new`);
                     if (!ngBtn) {
