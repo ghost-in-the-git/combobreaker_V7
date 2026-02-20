@@ -74,7 +74,17 @@ const ENCOUNTERS_WASTELAND = [
         minLevel: 1,
         itemSlot1: ["Map: Undercity"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "The radiation here kills people.",
+                response: "'Yes.' He turns a page. His hands are steady."
+            },
+            {
+                question: "Do you know what I am?",
+                response: "He stops writing. For the first time, he looks at you — not at the chassis, not at the charts. At you. '...Yes.' He goes back to his charts."
+            }
+        ]
     },
     {
         name: "Cinder",
