@@ -16,9 +16,9 @@ const ENCOUNTERS_NEONSTRIP = [
         discoveredEngageText: "The dealer grins. 'Word gets around. You're a good customer. Check out the new inventory.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["EVO3 Breaker Chassis [+90 HP]"],
+        itemSlot2: ["Temporal Drives [+9 SPD]"],
+        itemSlot3: ["Bastion Arms [+9 DEF]"]
     },
     {
         name: "[COMMON] Casino Prize Counter",
@@ -30,9 +30,9 @@ const ENCOUNTERS_NEONSTRIP = [
         discoveredEngageText: "The attendant winks. 'VIP treatment for repeat customers. Got some new prizes in the back.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Annihilator Cannon [+9 ATK]"],
+        itemSlot2: ["Predator Protocol [+9 COMBO]"],
+        itemSlot3: ["Precognition Engine [+9 XP]"]
     },
     {
         name: "[COMMON] Syndicate Fence",
@@ -44,7 +44,7 @@ const ENCOUNTERS_NEONSTRIP = [
         discoveredEngageText: "The fence slides the datapad across. 'You're trusted now. That means better stock. Same rules apply.'",
         appearanceRate: 15,
         minLevel: 1,
-        itemSlot1: [],
+        itemSlot1: ["Void Ripper [+9 MINING]"],
         itemSlot2: [],
         itemSlot3: []
     },
@@ -58,8 +58,8 @@ const ENCOUNTERS_NEONSTRIP = [
         discoveredEngageText: "The host smiles. 'Welcome back, distinguished guest. We've acquired some exceptional pieces since your last visit.'",
         appearanceRate: 10,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
+        itemSlot1: ["Apex Predator [+9 ALL]"],
+        itemSlot2: ["Lazarus Engine [+9 REGEN]"],
         itemSlot3: []
     },
     {

@@ -16,9 +16,9 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         discoveredEngageText: "'RETURNING BIDDER DETECTED' flashes across your HUD. The auction feed jumps straight to premium lots.",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Standard Chassis [+20 HP]"],
+        itemSlot2: ["Enhanced Servos [+2 SPD]"],
+        itemSlot3: ["Shield Bracers [+2 DEF]"]
     },
     {
         name: "[COMMON] Corporate Supply Cache",
@@ -30,9 +30,9 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         discoveredEngageText: "The kiosk chirps. 'Welcome back, valued contractor. Your clearance level has been noted.'",
         appearanceRate: 15,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Energy Blade [+2 ATK]"],
+        itemSlot2: ["Combo Link Chip [+2 COMBO]"],
+        itemSlot3: ["Enhanced Data Processor [+2 XP]"]
     },
     {
         name: "[COMMON] Pilgrim Parts Caravan",
@@ -44,7 +44,7 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         discoveredEngageText: "The caravan captain smiles. 'The honest one returns. I set aside some things for you.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
+        itemSlot1: ["Pneumatic Drill [+2 MINING]"],
         itemSlot2: [],
         itemSlot3: []
     },
@@ -58,8 +58,8 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         discoveredEngageText: "The scientist's eyes light up. 'You survived! Excellent. I have new prototypes. Same waiver applies.'",
         appearanceRate: 10,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
+        itemSlot1: ["Trained Pilot [+2 ALL]"],
+        itemSlot2: ["Basic Nano Injector [+2 REGEN]"],
         itemSlot3: []
     },
     {

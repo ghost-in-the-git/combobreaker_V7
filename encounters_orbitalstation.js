@@ -16,9 +16,9 @@ const ENCOUNTERS_ORBITALSTATION = [
         discoveredEngageText: "The quartermaster checks the manifest. 'Ah, you're back. I pulled some new stock from the last shipment.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Military Chassis [+40 HP]"],
+        itemSlot2: ["Hydraulic Boosters [+4 SPD]"],
+        itemSlot3: ["Barrier Arms [+4 DEF]"]
     },
     {
         name: "[COMMON] Zero-G Peddler",
@@ -30,9 +30,9 @@ const ENCOUNTERS_ORBITALSTATION = [
         discoveredEngageText: "The peddler floats out grinning. 'My favourite customer! I've been saving the good crates for you.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Shock Cannon [+4 ATK]"],
+        itemSlot2: ["Chain Protocol [+4 COMBO]"],
+        itemSlot3: ["Tactical Neural Net [+4 XP]"]
     },
     {
         name: "[COMMON] Docking Ring Vendor",
@@ -44,7 +44,7 @@ const ENCOUNTERS_ORBITALSTATION = [
         discoveredEngageText: "The kiosk chimes warmly. 'Welcome back, pilot. Inventory has been refreshed since your last visit.'",
         appearanceRate: 15,
         minLevel: 1,
-        itemSlot1: [],
+        itemSlot1: ["Diamond-Tip Auger [+4 MINING]"],
         itemSlot2: [],
         itemSlot3: []
     },
@@ -58,8 +58,8 @@ const ENCOUNTERS_ORBITALSTATION = [
         discoveredEngageText: "The masked figure tilts their head. 'You again. Good. I've got something special this run.'",
         appearanceRate: 10,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
+        itemSlot1: ["Elite Pilot [+4 ALL]"],
+        itemSlot2: ["Regenerative Mesh [+4 REGEN]"],
         itemSlot3: []
     },
     {

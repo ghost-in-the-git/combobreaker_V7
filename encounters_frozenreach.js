@@ -16,9 +16,9 @@ const ENCOUNTERS_FROZENREACH = [
         discoveredEngageText: "The trader pours you something warm. 'Good to see you made it through the ice. New shipment just arrived.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["EVO2 Breaker Chassis [+80 HP]"],
+        itemSlot2: ["Quantum Thrusters [+8 SPD]"],
+        itemSlot3: ["Aegis Bracers [+8 DEF]"]
     },
     {
         name: "[COMMON] Ice Road Hauler",
@@ -30,9 +30,9 @@ const ENCOUNTERS_FROZENREACH = [
         discoveredEngageText: "The hauler driver grins. 'Came back through the pass. Picked up some good stuff on the coast this time.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Breaker Blade [+8 ATK]"],
+        itemSlot2: ["Overdrive Sequencer [+8 COMBO]"],
+        itemSlot3: ["Deep War Simulator [+8 XP]"]
     },
     {
         name: "[COMMON] Research Station Surplus",
@@ -44,7 +44,7 @@ const ENCOUNTERS_FROZENREACH = [
         discoveredEngageText: "The terminal boots faster this time. 'RETURNING USER. DISPLAYING UPDATED LIQUIDATION INVENTORY.'",
         appearanceRate: 15,
         minLevel: 1,
-        itemSlot1: [],
+        itemSlot1: ["Graviton Extractor [+8 MINING]"],
         itemSlot2: [],
         itemSlot3: []
     },
@@ -58,8 +58,8 @@ const ENCOUNTERS_FROZENREACH = [
         discoveredEngageText: "The prospector waves a frozen component. 'Drilled deeper this time. Found some real ancient hardware.'",
         appearanceRate: 10,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
+        itemSlot1: ["Revenant Pilot [+8 ALL]"],
+        itemSlot2: ["Phoenix Core Module [+8 REGEN]"],
         itemSlot3: []
     },
     {

@@ -16,9 +16,9 @@ const ENCOUNTERS_UNDERCITY = [
         discoveredEngageText: "The fixer nods as you walk in. 'The regular. Good. I've got some new pieces you'll want to see.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Breaker Chassis [+60 HP]"],
+        itemSlot2: ["Kinetic Stabilizers [+6 SPD]"],
+        itemSlot3: ["Fortress Gauntlets [+6 DEF]"]
     },
     {
         name: "[COMMON] Pipe Market Stall",
@@ -30,9 +30,9 @@ const ENCOUNTERS_UNDERCITY = [
         discoveredEngageText: "The stall owner grins. 'Hey, you're back! I put something aside. Best deal in the pipes, guaranteed.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Assault Module [+6 ATK]"],
+        itemSlot2: ["Assault Algorithm [+6 COMBO]"],
+        itemSlot3: ["Adaptive Learning Matrix [+6 XP]"]
     },
     {
         name: "[COMMON] Rogue Maintenance Drone",
@@ -44,7 +44,7 @@ const ENCOUNTERS_UNDERCITY = [
         discoveredEngageText: "The drone plays a cheerful chime. 'RETURNING CUSTOMER PROTOCOL. PRIORITY ACCESS GRANTED.'",
         appearanceRate: 15,
         minLevel: 1,
-        itemSlot1: [],
+        itemSlot1: ["Plasma Bore [+6 MINING]"],
         itemSlot2: [],
         itemSlot3: []
     },
@@ -58,8 +58,8 @@ const ENCOUNTERS_UNDERCITY = [
         discoveredEngageText: "The broker glances up this time. 'You again. Fine. New stock, same rules. Don't linger.'",
         appearanceRate: 10,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
+        itemSlot1: ["Shadow Operator [+6 ALL]"],
+        itemSlot2: ["Nano Reconstruction Array [+6 REGEN]"],
         itemSlot3: []
     },
     {

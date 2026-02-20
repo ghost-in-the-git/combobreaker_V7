@@ -16,9 +16,9 @@ const ENCOUNTERS_DOWNTOWN = [
         discoveredEngageText: "The hooded figure nods. 'You know the rules. Same deal as before. Browse and go.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Advanced Chassis [+30 HP]"],
+        itemSlot2: ["Quick Striders [+3 SPD]"],
+        itemSlot3: ["Power Gauntlets [+3 DEF]"]
     },
     {
         name: "[COMMON] Smuggler's Docking Bay",
@@ -30,9 +30,9 @@ const ENCOUNTERS_DOWNTOWN = [
         discoveredEngageText: "The voice over comms is almost friendly. 'Repeat customer! I like that. Come see what I've got.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Chain Blade [+3 ATK]"],
+        itemSlot2: ["Chain Booster [+3 COMBO]"],
+        itemSlot3: ["Combat Analyzer [+3 XP]"]
     },
     {
         name: "[COMMON] Scrap Dealer",
@@ -44,7 +44,7 @@ const ENCOUNTERS_DOWNTOWN = [
         discoveredEngageText: "The Dealer taps the counter. 'Right on time. Got a new haul from the upper levels. Take a look.'",
         appearanceRate: 15,
         minLevel: 1,
-        itemSlot1: [],
+        itemSlot1: ["Rotary Cutter [+3 MINING]"],
         itemSlot2: [],
         itemSlot3: []
     },
@@ -58,8 +58,8 @@ const ENCOUNTERS_DOWNTOWN = [
         discoveredEngageText: "The synthetic shopkeeper bows deeper this time. 'Welcome back, valued customer. New inventory loaded.'",
         appearanceRate: 10,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
+        itemSlot1: ["Veteran Pilot [+3 ALL]"],
+        itemSlot2: ["Tissue Welder Implant [+3 REGEN]"],
         itemSlot3: []
     },
     {

@@ -15,9 +15,9 @@ const ENCOUNTERS_SCRAPYARD = [
         discoveredEngageText: "The Junker sees your mech and grins. 'Back for more? I've been pulling good stuff lately. Come see.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Low-Grade Chassis [+10 HP]"],
+        itemSlot2: ["Standard Servos [+1 SPD]"],
+        itemSlot3: ["Standard Manipulators [+1 DEF]"]
     },
     {
         name: "[COMMON] Scrap Dealer",
@@ -29,9 +29,9 @@ const ENCOUNTERS_SCRAPYARD = [
         discoveredEngageText: "The Dealer waves from the loading ramp. 'You've got a good eye, pilot. I saved some things you might like.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Pulse Pistol [+1 ATK]"],
+        itemSlot2: ["Targeting Firmware [+1 COMBO]"],
+        itemSlot3: ["Basic Data Processor [+1 XP]"]
     },
     {
         name: "[COMMON] Field Mechanic",
@@ -43,7 +43,7 @@ const ENCOUNTERS_SCRAPYARD = [
         discoveredEngageText: "The mechanic looks up from under a chassis. 'Oh hey, you again. Got some new stock. Nothing exploded yet.'",
         appearanceRate: 15,
         minLevel: 1,
-        itemSlot1: [],
+        itemSlot1: ["Salvage Pick [+1 MINING]"],
         itemSlot2: [],
         itemSlot3: []
     },
@@ -57,8 +57,8 @@ const ENCOUNTERS_SCRAPYARD = [
         discoveredEngageText: "The terminal recognizes your mech's signature. The interface skips straight to the good stuff.",
         appearanceRate: 10,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
+        itemSlot1: ["Rookie Pilot [+1 ALL]"],
+        itemSlot2: ["Salvaged Repair Node [+1 REGEN]"],
         itemSlot3: []
     },
     {

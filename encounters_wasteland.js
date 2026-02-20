@@ -16,9 +16,9 @@ const ENCOUNTERS_WASTELAND = [
         discoveredEngageText: "The nomad tips their goggles. 'You made it back. That means you're tough. Let me show you the good gear.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Old Breaker Chassis [+50 HP]"],
+        itemSlot2: ["Reflex Actuators [+5 SPD]"],
+        itemSlot3: ["Armored Claws [+5 DEF]"]
     },
     {
         name: "[COMMON] Rad-Shielded Caravan",
@@ -30,9 +30,9 @@ const ENCOUNTERS_WASTELAND = [
         discoveredEngageText: "The caravan master nods. 'Ah, the careful one. Good news — fresh stock, fresh decontamination.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Plasma Rifle [+5 ATK]"],
+        itemSlot2: ["Strike Sequencer [+5 COMBO]"],
+        itemSlot3: ["Battlefield Recorder [+5 XP]"]
     },
     {
         name: "[COMMON] Scavenger Camp",
@@ -44,7 +44,7 @@ const ENCOUNTERS_WASTELAND = [
         discoveredEngageText: "The scavenger grins through cracked goggles. 'Saved you first pick this time. The good stuff's in the back.'",
         appearanceRate: 15,
         minLevel: 1,
-        itemSlot1: [],
+        itemSlot1: ["Sonic Fracture Drill [+5 MINING]"],
         itemSlot2: [],
         itemSlot3: []
     },
@@ -58,8 +58,8 @@ const ENCOUNTERS_WASTELAND = [
         discoveredEngageText: "The cache interface recognizes your access code. Deeper storage compartments unlock with a hiss.",
         appearanceRate: 10,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
+        itemSlot1: ["Ace Pilot [+5 ALL]"],
+        itemSlot2: ["Bio-Repair Matrix [+5 REGEN]"],
         itemSlot3: []
     },
     {

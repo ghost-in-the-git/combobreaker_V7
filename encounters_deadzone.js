@@ -16,9 +16,9 @@ const ENCOUNTERS_DEADZONE = [
         discoveredEngageText: "The trader's respirator crackles. 'Back again? Either you're brave or crazy. New stock, all scrubbed. Mostly.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["EVO4 Breaker Chassis [+100 HP]"],
+        itemSlot2: ["Singularity Runners [+10 SPD]"],
+        itemSlot3: ["Citadel Arms [+10 DEF]"]
     },
     {
         name: "[COMMON] Decontamination Drone",
@@ -30,9 +30,9 @@ const ENCOUNTERS_DEADZONE = [
         discoveredEngageText: "The drone projects an updated list. 'RETURNING CUSTOMER. DECON SURPLUS REFRESHED. STAY SAFE OUT THERE.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Omega Rupture Cannon [+10 ATK]"],
+        itemSlot2: ["Omega Protocol [+10 COMBO]"],
+        itemSlot3: ["Omega Experience Engine [+10 XP]"]
     },
     {
         name: "[COMMON] Desperate Scavenger",
@@ -44,7 +44,7 @@ const ENCOUNTERS_DEADZONE = [
         discoveredEngageText: "The scavenger manages a weak smile. 'You came back. Most don't. I found more stuff. Take what you need.'",
         appearanceRate: 15,
         minLevel: 1,
-        itemSlot1: [],
+        itemSlot1: ["Quantum Excavator [+10 MINING]"],
         itemSlot2: [],
         itemSlot3: []
     },
@@ -58,8 +58,8 @@ const ENCOUNTERS_DEADZONE = [
         discoveredEngageText: "The terminal flickers. 'RETURNING USER. DEEPER RESERVES UNLOCKED. BUNKER INTEGRITY: 9%.'",
         appearanceRate: 10,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
+        itemSlot1: ["Ghost Pilot [+10 ALL]"],
+        itemSlot2: ["Omega Regeneration Core [+10 REGEN]"],
         itemSlot3: []
     },
     {

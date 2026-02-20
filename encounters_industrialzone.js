@@ -16,9 +16,9 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         discoveredEngageText: "The foreman waves a clipboard. 'Another run off the line. You've got first pick this time, pilot.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["EVO1 Breaker Chassis [+70 HP]"],
+        itemSlot2: ["Phase Shift Legs [+7 SPD]"],
+        itemSlot3: ["Bulwark Arms [+7 DEF]"]
     },
     {
         name: "[COMMON] Union Supply Depot",
@@ -30,9 +30,9 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         discoveredEngageText: "The union rep opens the locker. 'You're practically one of us now. New gear came in overnight.'",
         appearanceRate: 20,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
-        itemSlot3: []
+        itemSlot1: ["Railgun [+7 ATK]"],
+        itemSlot2: ["Neural Sequencer [+7 COMBO]"],
+        itemSlot3: ["Quantum Learning Core [+7 XP]"]
     },
     {
         name: "[COMMON] Automated Vending Rig",
@@ -44,7 +44,7 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         discoveredEngageText: "The rig plays a happy chime. 'LOYAL CUSTOMER DETECTED. DISPENSING PREMIUM INVENTORY.'",
         appearanceRate: 15,
         minLevel: 1,
-        itemSlot1: [],
+        itemSlot1: ["Tectonic Shatterer [+7 MINING]"],
         itemSlot2: [],
         itemSlot3: []
     },
@@ -58,8 +58,8 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         discoveredEngageText: "The supervisor unlocks the crate quickly. 'Got a fresh batch. Same deal — they don't exist, you weren't here.'",
         appearanceRate: 10,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: [],
+        itemSlot1: ["War Mind [+7 ALL]"],
+        itemSlot2: ["Adaptive Hull Implant [+7 REGEN]"],
         itemSlot3: []
     },
     {
