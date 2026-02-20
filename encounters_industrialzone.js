@@ -74,7 +74,13 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         minLevel: 1,
         itemSlot1: ["Map: Frozen Reach"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "The frontline is close.",
+                response: "He stops charting. His hand is steady but his breathing isn't. 'Yes.'"
+            }
+        ]
     },
     {
         name: "Anvil",
