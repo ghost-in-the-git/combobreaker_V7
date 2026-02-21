@@ -264,6 +264,74 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
 
+    // Decrypted Protocols (powerups from The Decrypter — boss keys consumed)
+    {
+        name: "Protocol: Scrapyard Override",
+        desc: "Decoded combat firmware from the T1 Destroyer. Grants a permanent edge in the Scrap Fields.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Protocol: Battlefield Resonance",
+        desc: "Decrypted siege protocols from the Siege Remnant. Hardwired into your combat systems.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Protocol: Corporate Exploit",
+        desc: "Corporate override codes extracted from the Warlord's security fob. System-level access.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Protocol: Station Clearance",
+        desc: "Station defense bypass routines decoded from the Core Guardian's key module.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Protocol: Feral Instinct",
+        desc: "Predatory targeting algorithms extracted from the Feral War Engine's corrupted memory.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Protocol: Hive Frequency",
+        desc: "Network synchronization data decoded from the Hive Overlord's docking permit.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Protocol: Smelter Core",
+        desc: "Industrial override sequences extracted from the Smelter Titan's bulkhead key.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Protocol: Cryo Adaptation",
+        desc: "Cryogenic survival algorithms decoded from the Avalanche Colossus's biometric chip.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Protocol: House Edge",
+        desc: "Probability manipulation routines cracked from The House's elevator token.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Protocol: Abomination Code",
+        desc: "Reality-bending computation patterns decoded from the Abomination Core's master fob.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Protocol: Warlord's Cipher",
+        desc: "Rolling military encryption cracked from the Warlord Chassis's passphrase drive. The final protocol.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+
     // Location Maps (encounter discoveries — granted on first engage)
     {
         name: "Home: The Professor",
@@ -697,6 +765,13 @@ const STORY_ITEMS = [
     {
         name: "Map: Mech Graveyard",
         desc: "A scratched datapad listing mech chop-shop coordinates. The last entry reads: 'NO REFUNDS.'",
+        category: "map",
+        image: "images/IMAGE.gif",
+        cost: 100
+    },
+    {
+        name: "Map: The Decrypter",
+        desc: "A signal frequency etched into a scrap of shielded foil. The source is underground, heavily encrypted.",
         category: "map",
         image: "images/IMAGE.gif",
         cost: 100

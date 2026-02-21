@@ -612,6 +612,33 @@
             border-color: #ffcc00;
         }
 
+        /* Decrypter Selector */
+        .decrypter-selector {
+            margin-bottom: 8px;
+        }
+
+        .decrypter-selector select {
+            width: 100%;
+            padding: 8px 24px 8px 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            background: #1a1a2e;
+            color: #00ccff;
+            border: 1px solid #00ccff55;
+            border-radius: 4px;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2300ccff'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+        }
+
+        .decrypter-selector select:focus {
+            outline: none;
+            border-color: #00ccff;
+        }
+
         .salvage-preview {
             padding: 8px 10px;
             background: #1a1a2e;
@@ -1401,6 +1428,11 @@
                         <option value="">[SELECT MINERAL]</option>
                     </select>
                 </div>
+                <div class="decrypter-selector" id="decrypter-selector" style="display: none;">
+                    <select id="decrypter-key-select">
+                        <option value="">[SELECT KEY TO DECRYPT]</option>
+                    </select>
+                </div>
                 <div class="salvage-selector" id="salvage-selector" style="display: none;">
                     <select id="salvage-item-select">
                         <option value="">[SELECT INSTALLATION TO SELL]</option>
@@ -1529,6 +1561,7 @@
     <script src="encounters_home.js"></script>
     <script src="encounters_forge.js"></script>
     <script src="encounters_salvageyard.js"></script>
+    <script src="encounters_decrypter.js"></script>
     <script src="encounters_ratpile.js"></script>
     <script src="encounters_scrapyard.js"></script>
     <script src="encounters_oldbattlefield.js"></script>
@@ -2260,6 +2293,15 @@
                 desc: "A mech chop-shop carved into an old freight depot. Hydraulic presses hiss and sparks fly from cutting torches.",
                 image: "images/IMAGE.gif"
             },
+            decrypter: {
+                enemies: null,
+                encounters: ENCOUNTERS_DECRYPTER,
+                mining: null,
+                ambush: null,
+                fuelCost: 10,
+                desc: "A sealed bunker humming with power. Banks of cipher machines line the walls. Someone is cracking codes.",
+                image: "images/IMAGE.gif"
+            },
             home: {
                 enemies: null,
                 encounters: ENCOUNTERS_HOME,
@@ -2315,6 +2357,7 @@
             frontline: 'THE FRONTLINE',
             forge: 'THE FORGE',
             salvageyard: 'MECH GRAVEYARD',
+            decrypter: 'THE DECRYPTER',
             home: 'HOME'
         };
 
@@ -2334,7 +2377,8 @@
             asteroidbelt: 'Map: Asteroid Belt',
             frontline: 'Map: Frontline',
             forge: 'Map: The Forge',
-            salvageyard: 'Map: Mech Graveyard'
+            salvageyard: 'Map: Mech Graveyard',
+            decrypter: 'Map: The Decrypter'
         };
 
         // Zone destinations: open world name + discoverable encounter locations per zone
@@ -3133,7 +3177,11 @@
                     const img = item.image ? `<img src="${item.image}" alt="${item.name}">` : '';
                     descEl.innerHTML = item.desc ? `<div class="storage-desc-content">${img}<span>${item.desc}</span></div>` : '';
 
-                    if (item.forgerPlaceholder) {
+                    if (item.isDecrypterItem) {
+                        nameEl.classList.remove('cant-afford');
+                        buyBtn.textContent = `[Decrypt: ${item.decrypterKey}]`;
+                        buyBtn.disabled = false;
+                    } else if (item.forgerPlaceholder) {
                         nameEl.classList.add('cant-afford');
                         buyBtn.textContent = `[No Blueprint]`;
                         buyBtn.disabled = true;
@@ -3433,6 +3481,130 @@
             updateSalvageDropdown();
         }
 
+        // Decrypter: key-to-powerup mapping
+        // Each boss key unlocks a unique powerup (stored as story item for now)
+        const DECRYPTER_POWERUPS = {
+            "Old Key": {
+                name: "Protocol: Scrapyard Override",
+                desc: "Decoded combat firmware from the T1 Destroyer. Grants a permanent edge in the Scrap Fields.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            },
+            "Unmarked Keycard": {
+                name: "Protocol: Battlefield Resonance",
+                desc: "Decrypted siege protocols from the Siege Remnant. Hardwired into your combat systems.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            },
+            "Corroded Access Fob": {
+                name: "Protocol: Corporate Exploit",
+                desc: "Corporate override codes extracted from the Warlord's security fob. System-level access.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            },
+            "Skeleton Key Module": {
+                name: "Protocol: Station Clearance",
+                desc: "Station defense bypass routines decoded from the Core Guardian's key module.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            },
+            "Unmarked Crate Key": {
+                name: "Protocol: Feral Instinct",
+                desc: "Predatory targeting algorithms extracted from the Feral War Engine's corrupted memory.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            },
+            "Orbital Docking Permit": {
+                name: "Protocol: Hive Frequency",
+                desc: "Network synchronization data decoded from the Hive Overlord's docking permit.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            },
+            "Rusted Bulkhead Key": {
+                name: "Protocol: Smelter Core",
+                desc: "Industrial override sequences extracted from the Smelter Titan's bulkhead key.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            },
+            "Biometric Override Chip": {
+                name: "Protocol: Cryo Adaptation",
+                desc: "Cryogenic survival algorithms decoded from the Avalanche Colossus's biometric chip.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            },
+            "Freight Elevator Token": {
+                name: "Protocol: House Edge",
+                desc: "Probability manipulation routines cracked from The House's elevator token.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            },
+            "Warden's Master Fob": {
+                name: "Protocol: Abomination Code",
+                desc: "Reality-bending computation patterns decoded from the Abomination Core's master fob.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            },
+            "Encrypted Passphrase Drive": {
+                name: "Protocol: Warlord's Cipher",
+                desc: "Rolling military encryption cracked from the Warlord Chassis's passphrase drive. The final protocol.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            }
+        };
+
+        // Update decrypter key dropdown with collected boss keys
+        function updateDecrypterDropdown() {
+            const select = document.getElementById('decrypter-key-select');
+            select.innerHTML = '<option value="">[SELECT KEY TO DECRYPT]</option>';
+
+            const keyNames = Object.keys(DECRYPTER_POWERUPS);
+            const items = game.storyItems || [];
+
+            for (const keyName of keyNames) {
+                // Only show keys the player has and hasn't already decrypted
+                if (!items.includes(keyName)) continue;
+                const powerup = DECRYPTER_POWERUPS[keyName];
+                if (items.includes(powerup.name)) continue; // Already decrypted
+
+                const option = document.createElement('option');
+                option.value = keyName;
+                option.textContent = keyName;
+                select.appendChild(option);
+            }
+        }
+
+        // Handle decrypter key dropdown selection
+        function onDecrypterKeyChange() {
+            const select = document.getElementById('decrypter-key-select');
+            const keyName = select.value;
+
+            if (!keyName) {
+                shopItems = [null, null, null, null];
+                updateShopUI();
+                return;
+            }
+
+            const powerup = DECRYPTER_POWERUPS[keyName];
+            if (!powerup) {
+                shopItems = [null, null, null, null];
+                updateShopUI();
+                return;
+            }
+
+            // Show the powerup in shop slot 1 with the key as the cost
+            shopItems = [{
+                name: powerup.name,
+                desc: powerup.desc,
+                category: powerup.category,
+                image: powerup.image,
+                cost: 0,
+                isDecrypterItem: true,
+                decrypterKey: keyName
+            }, null, null, null];
+
+            updateShopUI();
+        }
+
         // Show shop panel (switch to store page)
         function showShopPanel() {
             storeAvailable = true;
@@ -3440,17 +3612,26 @@
             // Show forge dropdown if this is the forge encounter
             const forgeSelector = document.getElementById('forge-selector');
             const salvageSelector = document.getElementById('salvage-selector');
+            const decrypterSelector = document.getElementById('decrypter-selector');
             if (currentEncounter && currentEncounter.isForge) {
                 updateForgeDropdown();
                 forgeSelector.style.display = 'block';
                 salvageSelector.style.display = 'none';
+                decrypterSelector.style.display = 'none';
             } else if (currentEncounter && currentEncounter.isSalvageYard) {
                 updateSalvageDropdown();
                 salvageSelector.style.display = 'block';
                 forgeSelector.style.display = 'none';
+                decrypterSelector.style.display = 'none';
+            } else if (currentEncounter && currentEncounter.isDecrypter) {
+                updateDecrypterDropdown();
+                decrypterSelector.style.display = 'block';
+                forgeSelector.style.display = 'none';
+                salvageSelector.style.display = 'none';
             } else {
                 forgeSelector.style.display = 'none';
                 salvageSelector.style.display = 'none';
+                decrypterSelector.style.display = 'none';
             }
 
             updateShopUI();
@@ -3464,6 +3645,8 @@
             forgeSelect.value = '';
             document.getElementById('forge-selector').style.display = 'none';
             document.getElementById('salvage-selector').style.display = 'none';
+            document.getElementById('decrypter-selector').style.display = 'none';
+            document.getElementById('decrypter-key-select').value = '';
             document.getElementById('salvage-item-select').value = '';
             document.getElementById('salvage-preview').classList.remove('visible');
             document.getElementById('salvage-sell-btn').disabled = true;
@@ -3476,6 +3659,27 @@
         function purchaseItem(index) {
             const item = shopItems[index];
             if (!item || item.forgerPlaceholder) return;
+
+            if (item.isDecrypterItem) {
+                // Decrypter: consume the key, grant the powerup
+                const keyName = item.decrypterKey;
+                const keyIndex = (game.storyItems || []).indexOf(keyName);
+                if (keyIndex === -1) return; // Key not found
+
+                game.storyItems.splice(keyIndex, 1);
+                addStoryItem(item.name);
+                addMessage(`[DECRYPTED] ${keyName} consumed.`, 'system');
+                addMessage(`Received: ${item.name}`, 'victory');
+                addMessage(`"${DECRYPTER_POWERUPS[keyName].desc}"`, 'system');
+                updateStats();
+                updateMiningUI();
+                shopItems[index] = null;
+                updateShopUI();
+                updateDecrypterDropdown();
+                document.getElementById('decrypter-key-select').value = '';
+                saveGame();
+                return;
+            }
 
             if (item.mineralCost) {
                 // Mineral cost purchase
@@ -3567,8 +3771,8 @@
 
             currentEncounter = encounter;
 
-            // Forge and Salvage Yard use custom UI, not pre-generated items
-            if (encounter.isForge || encounter.isSalvageYard) {
+            // Forge, Salvage Yard, and Decrypter use custom UI, not pre-generated items
+            if (encounter.isForge || encounter.isSalvageYard || encounter.isDecrypter) {
                 shopItems = [null, null, null, null];
             } else {
                 shopItems = generateShopItems(encounter);
@@ -4831,6 +5035,9 @@
 
         // Forge mineral dropdown listener
         document.getElementById('forge-mineral-select').addEventListener('change', onForgeMineralChange);
+
+        // Decrypter key dropdown listener
+        document.getElementById('decrypter-key-select').addEventListener('change', onDecrypterKeyChange);
 
         // Salvage yard listeners
         document.getElementById('salvage-item-select').addEventListener('change', onSalvageItemChange);
