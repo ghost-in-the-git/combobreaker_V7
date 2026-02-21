@@ -45,18 +45,37 @@ Examples:
 | # | Zone | Boss Mech | Sealed Key | Decrypted Key | Pilot | Squad Role | Power | Effect |
 |---|------|-----------|------------|---------------|-------|------------|-------|--------|
 | — | (starter) | — | Unknown Sealed Key | Your Combobreaker Key | **You** | Combobreaker | **Combobreaker** | Double-damage chance |
-| 1 | Scrapyard | T1 Destroyer | T1 Destroyer's Sealed Key | Chunk's Steelbreaker Key | **Chunk** | Scrap Refiner | **Steelbreaker** | Bonus scrap from battle victories |
-| 2 | Old Battlefield | Siege Remnant | Siege Remnant's Sealed Key | Sarge's Shieldbreaker Key | **Sarge** | Squad Defender | **Shieldbreaker** | Defence pool partially regenerates each round |
-| 3 | Downtown | Corporate Warlord | Corporate Warlord's Sealed Key | Ghost's Lootbreaker Key | **Ghost** | Infiltrator | **Lootbreaker** | Guaranteed item drop from battles |
-| 4 | Orbital Station | Station Core Guardian | Station Core Guardian's Sealed Key | Bolt's Stonebreaker Key | **Bolt** | Miner | **Stonebreaker** | Bonus mining yield |
-| 5 | Wasteland | Feral War Engine | Feral War Engine's Sealed Key | Fang's Strikebreaker Key | **Fang** | Assault | **Strikebreaker** | Bonus flat damage on attacks |
-| 6 | Undercity | Hive Overlord | Hive Overlord's Sealed Key | Wire's Speedbreaker Key | **Wire** | Scout | **Speedbreaker** | Double-attack chance (currently default — needs locking) |
-| 7 | Industrial Zone | Smelter Titan | Smelter Titan's Sealed Key | Anvil's Crushbreaker Key | **Anvil** | Heavy Gunner | **Crushbreaker** | Attacks ignore a portion of enemy defence |
-| 8 | Frozen Reach | Avalanche Colossus | Avalanche Colossus's Sealed Key | Frost's Painbreaker Key | **Frost** | Medic | **Painbreaker** | Enhanced end-of-round regen |
-| 9 | Neon Strip | The House | The House's Sealed Key | Ace's Powerbreaker Key | **Ace** | Mechanic | **Powerbreaker** | Bonus Silicon from kills |
-| 10 | Dead Zone | Abomination Core | Abomination Core's Sealed Key | Null's Voidbreaker Key | **Null** | Specialist | **Voidbreaker** | Chance to negate enemy attacks |
-| 11 | Frontline | Warlord Chassis | Warlord Chassis's Sealed Key | Rex's Warbreaker Key | **Rex** | Commander | **Warbreaker** | All breaker effects slightly boosted |
-| 12 | Dead Zone | *(Mapmaker's body)* | Mapmaker's Sealed Key | Mapmaker's Skybreaker Key | **Mapmaker** | Navigator | **Skybreaker** | Reduced fuel cost when traveling |
+| 1 | Scrapyard | T1 Destroyer | T1 Destroyer's Sealed Key | Chunk's Steelbreaker Key | **Riley 'Chunk' Kowalski** | Scrap Refiner | **Steelbreaker** | Bonus scrap from battle victories |
+| 2 | Old Battlefield | Siege Remnant | Siege Remnant's Sealed Key | Sarge's Shieldbreaker Key | **Marcus 'Sarge' Oduya** | Squad Defender | **Shieldbreaker** | Defence pool partially regenerates each round |
+| 3 | Downtown | Corporate Warlord | Corporate Warlord's Sealed Key | Ghost's Lootbreaker Key | **Yuki 'Ghost' Tanaka** | Infiltrator | **Lootbreaker** | Guaranteed item drop from battles |
+| 4 | Orbital Station | Station Core Guardian | Station Core Guardian's Sealed Key | Bolt's Stonebreaker Key | **Petra 'Bolt' Lindgren** | Miner | **Stonebreaker** | Bonus mining yield |
+| 5 | Wasteland | Feral War Engine | Feral War Engine's Sealed Key | Fang's Strikebreaker Key | **Diego 'Fang' Reyes** | Assault | **Strikebreaker** | Bonus flat damage on attacks |
+| 6 | Undercity | Hive Overlord | Hive Overlord's Sealed Key | Wire's Speedbreaker Key | **Jess 'Wire' Nakamura** | Scout | **Speedbreaker** | Double-attack chance (currently default — needs locking) |
+| 7 | Industrial Zone | Smelter Titan | Smelter Titan's Sealed Key | Anvil's Crushbreaker Key | **Dmitri 'Anvil' Volkov** | Heavy Gunner | **Crushbreaker** | Attacks ignore a portion of enemy defence |
+| 8 | Frozen Reach | Avalanche Colossus | Avalanche Colossus's Sealed Key | Frost's Painbreaker Key | **Elise 'Frost' Calloway** | Medic | **Painbreaker** | Enhanced end-of-round regen |
+| 9 | Neon Strip | The House | The House's Sealed Key | Ace's Powerbreaker Key | **Tariq 'Ace' Hassan** | Mechanic | **Powerbreaker** | Bonus Silicon from kills |
+| 10 | Dead Zone | Abomination Core | Abomination Core's Sealed Key | Null's Voidbreaker Key | **Zara 'Null' Okonkwo** | Specialist | **Voidbreaker** | Chance to negate enemy attacks |
+| 11 | Frontline | Warlord Chassis | Warlord Chassis's Sealed Key | Rex's Warbreaker Key | **Kane 'Rex' Hargrove** | Commander | **Warbreaker** | All breaker effects slightly boosted |
+| 12 | Dead Zone | *(Mapmaker's body)* | Mapmaker's Sealed Key | Mapmaker's Skybreaker Key | **Oren 'Mapmaker' Vasquez** | Navigator | **Skybreaker** | Reduced fuel cost when traveling |
+
+### Pilot Identities
+
+The squad only knew each other by callsigns in the field. Real names surface when the Decrypter cracks a sealed key — the pilot's full identity floods back as their soul is released. This is the moment the player learns who they just saved.
+
+| Callsign | Full Name | Notes |
+|----------|-----------|-------|
+| **Chunk** | Riley Kowalski | Built like a salvage crane. Could strip a mech to parts blindfolded. |
+| **Sarge** | Marcus Oduya | Kept the squad alive longer than anyone had a right to expect. |
+| **Ghost** | Yuki Tanaka | Never seen entering or leaving. Just already there. |
+| **Bolt** | Petra Lindgren | Could crack open a rock face and tell you what's inside by the sound. |
+| **Fang** | Diego Reyes | First one in, last one standing. Preferred it that way. |
+| **Wire** | Jess Nakamura | Fastest hands in the unit. Rewired a mech mid-combat once — on a dare. |
+| **Anvil** | Dmitri Volkov | If it had armour, he treated it as a suggestion. |
+| **Frost** | Elise Calloway | Kept a cool head while putting people back together under fire. |
+| **Ace** | Tariq Hassan | Could fix anything. Engines, guns, morale. |
+| **Null** | Zara Okonkwo | Specialized in making problems disappear. Quietly. |
+| **Rex** | Kane Hargrove | The CO. Made the calls nobody else wanted to make. |
+| **Mapmaker** | Oren Vasquez | Charted every route the squad ever ran. Planted your key before the end. |
 
 ## The Unknown Sealed Key
 
