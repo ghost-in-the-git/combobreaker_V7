@@ -17,7 +17,8 @@ const ENCOUNTERS_SCRAPYARD = [
         minLevel: 1,
         itemSlot1: ["Low-Grade Chassis [+10 HP]"],
         itemSlot2: ["Standard Servos [+1 SPD]"],
-        itemSlot3: ["Standard Manipulators [+1 DEF]"]
+        itemSlot3: ["Standard Manipulators [+1 DEF]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Scrap Dealer",
@@ -31,7 +32,8 @@ const ENCOUNTERS_SCRAPYARD = [
         minLevel: 1,
         itemSlot1: ["Pulse Pistol [+1 ATK]"],
         itemSlot2: ["Targeting Firmware [+1 COMBO]"],
-        itemSlot3: ["Basic Data Processor [+1 Silicon]"]
+        itemSlot3: ["Basic Data Processor [+1 Silicon]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Field Mechanic",
@@ -45,7 +47,8 @@ const ENCOUNTERS_SCRAPYARD = [
         minLevel: 1,
         itemSlot1: ["Salvage Pick [+1 MINING]"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Derelict Vending Array",
@@ -59,7 +62,8 @@ const ENCOUNTERS_SCRAPYARD = [
         minLevel: 1,
         itemSlot1: ["Rookie Pilot [+1 ALL]"],
         itemSlot2: ["Salvaged Repair Node [+1 REGEN]"],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "The Mapmaker",
@@ -74,6 +78,7 @@ const ENCOUNTERS_SCRAPYARD = [
         itemSlot1: ["Map: Old Battlefield"],
         itemSlot2: ["Map: Mech Graveyard"],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "How are you here?",
@@ -97,7 +102,8 @@ const ENCOUNTERS_SCRAPYARD = [
         minLevel: 1,
         itemSlot1: ["Refined Aetherite"],
         itemSlot2: ["Refined Bronzewisp"],
-        itemSlot3: ["Refined Cindergem"]
+        itemSlot3: ["Refined Cindergem"],
+        itemSlot4: null
     },
     {
         name: "The Herald",
@@ -112,6 +118,7 @@ const ENCOUNTERS_SCRAPYARD = [
         itemSlot1: ["Beacon: Scrap Fields"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "What does the beacon do?",

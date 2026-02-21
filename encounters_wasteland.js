@@ -18,7 +18,8 @@ const ENCOUNTERS_WASTELAND = [
         minLevel: 1,
         itemSlot1: ["Old Breaker Chassis [+50 HP]"],
         itemSlot2: ["Reflex Actuators [+5 SPD]"],
-        itemSlot3: ["Armored Claws [+5 DEF]"]
+        itemSlot3: ["Armored Claws [+5 DEF]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Rad-Shielded Caravan",
@@ -32,7 +33,8 @@ const ENCOUNTERS_WASTELAND = [
         minLevel: 1,
         itemSlot1: ["Plasma Rifle [+5 ATK]"],
         itemSlot2: ["Strike Sequencer [+5 COMBO]"],
-        itemSlot3: ["Battlefield Recorder [+5 Silicon]"]
+        itemSlot3: ["Battlefield Recorder [+5 Silicon]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Scavenger Camp",
@@ -46,7 +48,8 @@ const ENCOUNTERS_WASTELAND = [
         minLevel: 1,
         itemSlot1: ["Sonic Fracture Drill [+5 MINING]"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Buried Supply Cache",
@@ -60,7 +63,8 @@ const ENCOUNTERS_WASTELAND = [
         minLevel: 1,
         itemSlot1: ["Ace Pilot [+5 ALL]"],
         itemSlot2: ["Bio-Repair Matrix [+5 REGEN]"],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "The Mapmaker",
@@ -75,6 +79,7 @@ const ENCOUNTERS_WASTELAND = [
         itemSlot1: ["Map: Undercity"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "The radiation here kills people.",
@@ -98,7 +103,8 @@ const ENCOUNTERS_WASTELAND = [
         minLevel: 1,
         itemSlot1: ["Refined Moonshardite"],
         itemSlot2: ["Refined Nightpyre"],
-        itemSlot3: ["Refined Obsidryl"]
+        itemSlot3: ["Refined Obsidryl"],
+        itemSlot4: null
     },
     {
         name: "The Herald",
@@ -113,6 +119,7 @@ const ENCOUNTERS_WASTELAND = [
         itemSlot1: ["Beacon: Wasteland"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "What does the beacon do?",

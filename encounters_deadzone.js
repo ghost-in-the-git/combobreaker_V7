@@ -18,7 +18,8 @@ const ENCOUNTERS_DEADZONE = [
         minLevel: 1,
         itemSlot1: ["EVO4 Breaker Chassis [+100 HP]"],
         itemSlot2: ["Singularity Runners [+10 SPD]"],
-        itemSlot3: ["Citadel Arms [+10 DEF]"]
+        itemSlot3: ["Citadel Arms [+10 DEF]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Decontamination Drone",
@@ -32,7 +33,8 @@ const ENCOUNTERS_DEADZONE = [
         minLevel: 1,
         itemSlot1: ["Omega Rupture Cannon [+10 ATK]"],
         itemSlot2: ["Omega Protocol [+10 COMBO]"],
-        itemSlot3: ["Omega Experience Engine [+10 Silicon]"]
+        itemSlot3: ["Omega Experience Engine [+10 Silicon]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Desperate Scavenger",
@@ -46,7 +48,8 @@ const ENCOUNTERS_DEADZONE = [
         minLevel: 1,
         itemSlot1: ["Quantum Excavator [+10 MINING]"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Sealed Bunker Terminal",
@@ -60,7 +63,8 @@ const ENCOUNTERS_DEADZONE = [
         minLevel: 1,
         itemSlot1: ["Ghost Pilot [+10 ALL]"],
         itemSlot2: ["Omega Regeneration Core [+10 REGEN]"],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "The Mapmaker",
@@ -74,7 +78,8 @@ const ENCOUNTERS_DEADZONE = [
         minLevel: 1,
         itemSlot1: ["Map: Asteroid Belt"],
         itemSlot2: ["Map: Frontline"],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "Ash",
@@ -88,7 +93,8 @@ const ENCOUNTERS_DEADZONE = [
         minLevel: 1,
         itemSlot1: ["Refined Archive Shard"],
         itemSlot2: ["Refined Strata-Null"],
-        itemSlot3: ["Refined Compound 33"]
+        itemSlot3: ["Refined Compound 33"],
+        itemSlot4: null
     },
     {
         name: "The Herald",
@@ -103,6 +109,7 @@ const ENCOUNTERS_DEADZONE = [
         itemSlot1: ["Beacon: Dead Zone"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "What does the beacon do?",

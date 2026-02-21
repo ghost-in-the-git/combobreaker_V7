@@ -3020,7 +3020,8 @@
             const usedItems = new Set(); // Track used items to avoid duplicates
 
             for (let i = 0; i < slots.length; i++) {
-                const slotConfig = slots[i] || [];
+                if (slots[i] === null || slots[i] === undefined) { items.push(null); continue; }
+                const slotConfig = slots[i];
                 let item = null;
 
                 if (slotConfig.length > 0) {

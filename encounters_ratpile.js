@@ -18,6 +18,7 @@ const ENCOUNTERS_RATPILE = [
         itemSlot1: ["Map: Scrap Fields"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "Who are you?",

@@ -18,7 +18,8 @@ const ENCOUNTERS_ORBITALSTATION = [
         minLevel: 1,
         itemSlot1: ["Military Chassis [+40 HP]"],
         itemSlot2: ["Hydraulic Boosters [+4 SPD]"],
-        itemSlot3: ["Barrier Arms [+4 DEF]"]
+        itemSlot3: ["Barrier Arms [+4 DEF]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Zero-G Peddler",
@@ -32,7 +33,8 @@ const ENCOUNTERS_ORBITALSTATION = [
         minLevel: 1,
         itemSlot1: ["Shock Cannon [+4 ATK]"],
         itemSlot2: ["Chain Protocol [+4 COMBO]"],
-        itemSlot3: ["Tactical Neural Net [+4 Silicon]"]
+        itemSlot3: ["Tactical Neural Net [+4 Silicon]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Docking Ring Vendor",
@@ -46,7 +48,8 @@ const ENCOUNTERS_ORBITALSTATION = [
         minLevel: 1,
         itemSlot1: ["Diamond-Tip Auger [+4 MINING]"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Void Smuggler",
@@ -60,7 +63,8 @@ const ENCOUNTERS_ORBITALSTATION = [
         minLevel: 1,
         itemSlot1: ["Elite Pilot [+4 ALL]"],
         itemSlot2: ["Regenerative Mesh [+4 REGEN]"],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "The Mapmaker",
@@ -75,6 +79,7 @@ const ENCOUNTERS_ORBITALSTATION = [
         itemSlot1: ["Map: Wasteland"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "Your charts show places I haven't been yet.",
@@ -98,7 +103,8 @@ const ENCOUNTERS_ORBITALSTATION = [
         minLevel: 1,
         itemSlot1: ["Refined Jetspinel"],
         itemSlot2: ["Refined Kryptoglass"],
-        itemSlot3: ["Refined Lumenore"]
+        itemSlot3: ["Refined Lumenore"],
+        itemSlot4: null
     },
     {
         name: "The Herald",
@@ -113,6 +119,7 @@ const ENCOUNTERS_ORBITALSTATION = [
         itemSlot1: ["Beacon: Orbital Station"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "What does the beacon do?",

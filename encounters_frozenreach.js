@@ -18,7 +18,8 @@ const ENCOUNTERS_FROZENREACH = [
         minLevel: 1,
         itemSlot1: ["EVO2 Breaker Chassis [+80 HP]"],
         itemSlot2: ["Quantum Thrusters [+8 SPD]"],
-        itemSlot3: ["Aegis Bracers [+8 DEF]"]
+        itemSlot3: ["Aegis Bracers [+8 DEF]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Ice Road Hauler",
@@ -32,7 +33,8 @@ const ENCOUNTERS_FROZENREACH = [
         minLevel: 1,
         itemSlot1: ["Breaker Blade [+8 ATK]"],
         itemSlot2: ["Overdrive Sequencer [+8 COMBO]"],
-        itemSlot3: ["Deep War Simulator [+8 Silicon]"]
+        itemSlot3: ["Deep War Simulator [+8 Silicon]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Research Station Surplus",
@@ -46,7 +48,8 @@ const ENCOUNTERS_FROZENREACH = [
         minLevel: 1,
         itemSlot1: ["Graviton Extractor [+8 MINING]"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Glacier Prospector",
@@ -60,7 +63,8 @@ const ENCOUNTERS_FROZENREACH = [
         minLevel: 1,
         itemSlot1: ["Revenant Pilot [+8 ALL]"],
         itemSlot2: ["Phoenix Core Module [+8 REGEN]"],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "The Mapmaker",
@@ -75,6 +79,7 @@ const ENCOUNTERS_FROZENREACH = [
         itemSlot1: ["Map: Neon Strip"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "We're almost there.",
@@ -94,7 +99,8 @@ const ENCOUNTERS_FROZENREACH = [
         minLevel: 1,
         itemSlot1: ["Refined Vortexium"],
         itemSlot2: ["Refined Wyrmstone"],
-        itemSlot3: ["Refined Xanthryx"]
+        itemSlot3: ["Refined Xanthryx"],
+        itemSlot4: null
     },
     {
         name: "The Herald",
@@ -109,6 +115,7 @@ const ENCOUNTERS_FROZENREACH = [
         itemSlot1: ["Beacon: Frozen Reach"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "What does the beacon do?",

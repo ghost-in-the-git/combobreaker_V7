@@ -18,7 +18,8 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         minLevel: 1,
         itemSlot1: ["EVO1 Breaker Chassis [+70 HP]"],
         itemSlot2: ["Phase Shift Legs [+7 SPD]"],
-        itemSlot3: ["Bulwark Arms [+7 DEF]"]
+        itemSlot3: ["Bulwark Arms [+7 DEF]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Union Supply Depot",
@@ -32,7 +33,8 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         minLevel: 1,
         itemSlot1: ["Railgun [+7 ATK]"],
         itemSlot2: ["Neural Sequencer [+7 COMBO]"],
-        itemSlot3: ["Quantum Learning Core [+7 Silicon]"]
+        itemSlot3: ["Quantum Learning Core [+7 Silicon]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Automated Vending Rig",
@@ -46,7 +48,8 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         minLevel: 1,
         itemSlot1: ["Tectonic Shatterer [+7 MINING]"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Shift Supervisor's Stash",
@@ -60,7 +63,8 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         minLevel: 1,
         itemSlot1: ["War Mind [+7 ALL]"],
         itemSlot2: ["Adaptive Hull Implant [+7 REGEN]"],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "The Mapmaker",
@@ -75,6 +79,7 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         itemSlot1: ["Map: Frozen Reach"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "The frontline is close.",
@@ -94,7 +99,8 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         minLevel: 1,
         itemSlot1: ["Refined Starvitrine"],
         itemSlot2: ["Refined Thorncrystal"],
-        itemSlot3: ["Refined Umbracite"]
+        itemSlot3: ["Refined Umbracite"],
+        itemSlot4: null
     },
     {
         name: "The Herald",
@@ -109,6 +115,7 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         itemSlot1: ["Beacon: Industrial Zone"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "What does the beacon do?",

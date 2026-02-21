@@ -18,7 +18,8 @@ const ENCOUNTERS_NEONSTRIP = [
         minLevel: 1,
         itemSlot1: ["EVO3 Breaker Chassis [+90 HP]"],
         itemSlot2: ["Temporal Drives [+9 SPD]"],
-        itemSlot3: ["Bastion Arms [+9 DEF]"]
+        itemSlot3: ["Bastion Arms [+9 DEF]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Casino Prize Counter",
@@ -32,7 +33,8 @@ const ENCOUNTERS_NEONSTRIP = [
         minLevel: 1,
         itemSlot1: ["Annihilator Cannon [+9 ATK]"],
         itemSlot2: ["Predator Protocol [+9 COMBO]"],
-        itemSlot3: ["Precognition Engine [+9 Silicon]"]
+        itemSlot3: ["Precognition Engine [+9 Silicon]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Syndicate Fence",
@@ -46,7 +48,8 @@ const ENCOUNTERS_NEONSTRIP = [
         minLevel: 1,
         itemSlot1: ["Void Ripper [+9 MINING]"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "[COMMON] High-Roller Lounge",
@@ -60,7 +63,8 @@ const ENCOUNTERS_NEONSTRIP = [
         minLevel: 1,
         itemSlot1: ["Apex Predator [+9 ALL]"],
         itemSlot2: ["Lazarus Engine [+9 REGEN]"],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "The Mapmaker",
@@ -75,6 +79,7 @@ const ENCOUNTERS_NEONSTRIP = [
         itemSlot1: ["Map: Dead Zone"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "What happens when the maps run out?",
@@ -94,7 +99,8 @@ const ENCOUNTERS_NEONSTRIP = [
         minLevel: 1,
         itemSlot1: ["Refined Yonderite"],
         itemSlot2: ["Refined Zephyrsalt"],
-        itemSlot3: ["Refined Isotope Lace"]
+        itemSlot3: ["Refined Isotope Lace"],
+        itemSlot4: null
     },
     {
         name: "The Herald",
@@ -109,6 +115,7 @@ const ENCOUNTERS_NEONSTRIP = [
         itemSlot1: ["Beacon: Neon Strip"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "What does the beacon do?",

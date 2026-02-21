@@ -18,7 +18,8 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         minLevel: 1,
         itemSlot1: ["Standard Chassis [+20 HP]"],
         itemSlot2: ["Enhanced Servos [+2 SPD]"],
-        itemSlot3: ["Shield Bracers [+2 DEF]"]
+        itemSlot3: ["Shield Bracers [+2 DEF]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Corporate Supply Cache",
@@ -32,7 +33,8 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         minLevel: 1,
         itemSlot1: ["Energy Blade [+2 ATK]"],
         itemSlot2: ["Combo Link Chip [+2 COMBO]"],
-        itemSlot3: ["Enhanced Data Processor [+2 Silicon]"]
+        itemSlot3: ["Enhanced Data Processor [+2 Silicon]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Pilgrim Parts Caravan",
@@ -46,7 +48,8 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         minLevel: 1,
         itemSlot1: ["Pneumatic Drill [+2 MINING]"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Experimental R&D Vendor",
@@ -60,7 +63,8 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         minLevel: 1,
         itemSlot1: ["Trained Pilot [+2 ALL]"],
         itemSlot2: ["Basic Nano Injector [+2 REGEN]"],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "The Mapmaker",
@@ -75,6 +79,7 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         itemSlot1: ["Map: Downtown"],
         itemSlot2: ["Map: The Forge"],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "You were here before me.",
@@ -98,7 +103,8 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         minLevel: 1,
         itemSlot1: ["Refined Duskquartz"],
         itemSlot2: ["Refined Emberlith"],
-        itemSlot3: ["Refined Frostveil"]
+        itemSlot3: ["Refined Frostveil"],
+        itemSlot4: null
     },
     {
         name: "The Herald",
@@ -113,6 +119,7 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         itemSlot1: ["Beacon: Old Battlefield"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "What does the beacon do?",

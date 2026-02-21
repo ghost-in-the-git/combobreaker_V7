@@ -18,7 +18,8 @@ const ENCOUNTERS_UNDERCITY = [
         minLevel: 1,
         itemSlot1: ["Breaker Chassis [+60 HP]"],
         itemSlot2: ["Kinetic Stabilizers [+6 SPD]"],
-        itemSlot3: ["Fortress Gauntlets [+6 DEF]"]
+        itemSlot3: ["Fortress Gauntlets [+6 DEF]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Pipe Market Stall",
@@ -32,7 +33,8 @@ const ENCOUNTERS_UNDERCITY = [
         minLevel: 1,
         itemSlot1: ["Assault Module [+6 ATK]"],
         itemSlot2: ["Assault Algorithm [+6 COMBO]"],
-        itemSlot3: ["Adaptive Learning Matrix [+6 Silicon]"]
+        itemSlot3: ["Adaptive Learning Matrix [+6 Silicon]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Rogue Maintenance Drone",
@@ -46,7 +48,8 @@ const ENCOUNTERS_UNDERCITY = [
         minLevel: 1,
         itemSlot1: ["Plasma Bore [+6 MINING]"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Shadow Broker",
@@ -60,7 +63,8 @@ const ENCOUNTERS_UNDERCITY = [
         minLevel: 1,
         itemSlot1: ["Shadow Operator [+6 ALL]"],
         itemSlot2: ["Nano Reconstruction Array [+6 REGEN]"],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "The Mapmaker",
@@ -75,6 +79,7 @@ const ENCOUNTERS_UNDERCITY = [
         itemSlot1: ["Map: Industrial Zone"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "Military run these tunnels. How are you ok?",
@@ -98,7 +103,8 @@ const ENCOUNTERS_UNDERCITY = [
         minLevel: 1,
         itemSlot1: ["Refined Prismalune"],
         itemSlot2: ["Refined Quellium"],
-        itemSlot3: ["Refined Riftmarble"]
+        itemSlot3: ["Refined Riftmarble"],
+        itemSlot4: null
     },
     {
         name: "The Herald",
@@ -113,6 +119,7 @@ const ENCOUNTERS_UNDERCITY = [
         itemSlot1: ["Beacon: Undercity"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "What does the beacon do?",

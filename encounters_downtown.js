@@ -18,7 +18,8 @@ const ENCOUNTERS_DOWNTOWN = [
         minLevel: 1,
         itemSlot1: ["Advanced Chassis [+30 HP]"],
         itemSlot2: ["Quick Striders [+3 SPD]"],
-        itemSlot3: ["Power Gauntlets [+3 DEF]"]
+        itemSlot3: ["Power Gauntlets [+3 DEF]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Smuggler's Docking Bay",
@@ -32,7 +33,8 @@ const ENCOUNTERS_DOWNTOWN = [
         minLevel: 1,
         itemSlot1: ["Chain Blade [+3 ATK]"],
         itemSlot2: ["Chain Booster [+3 COMBO]"],
-        itemSlot3: ["Combat Analyzer [+3 Silicon]"]
+        itemSlot3: ["Combat Analyzer [+3 Silicon]"],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Scrap Dealer",
@@ -46,7 +48,8 @@ const ENCOUNTERS_DOWNTOWN = [
         minLevel: 1,
         itemSlot1: ["Rotary Cutter [+3 MINING]"],
         itemSlot2: [],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "[COMMON] Neon Bazaar Kiosk",
@@ -60,7 +63,8 @@ const ENCOUNTERS_DOWNTOWN = [
         minLevel: 1,
         itemSlot1: ["Veteran Pilot [+3 ALL]"],
         itemSlot2: ["Tissue Welder Implant [+3 REGEN]"],
-        itemSlot3: []
+        itemSlot3: [],
+        itemSlot4: null
     },
     {
         name: "The Mapmaker",
@@ -75,6 +79,7 @@ const ENCOUNTERS_DOWNTOWN = [
         itemSlot1: ["Map: Orbital Station"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "Does anyone else know you're here?",
@@ -98,7 +103,8 @@ const ENCOUNTERS_DOWNTOWN = [
         minLevel: 1,
         itemSlot1: ["Refined Gloomstone"],
         itemSlot2: ["Refined Hexsilica"],
-        itemSlot3: ["Refined Iridionite"]
+        itemSlot3: ["Refined Iridionite"],
+        itemSlot4: null
     },
     {
         name: "The Herald",
@@ -113,6 +119,7 @@ const ENCOUNTERS_DOWNTOWN = [
         itemSlot1: ["Beacon: Downtown"],
         itemSlot2: [],
         itemSlot3: [],
+        itemSlot4: null,
         dialogue: [
             {
                 question: "What does the beacon do?",
