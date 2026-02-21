@@ -62,20 +62,20 @@ Examples:
 
 The squad only knew each other by callsigns in the field. Real names surface when the Decrypter cracks a sealed key — the pilot's full identity floods back as their soul is released. This is the moment the player learns who they just saved.
 
-| Callsign | Full Name | Notes |
-|----------|-----------|-------|
-| **Chunk** | Riley Kowalski | Built like a salvage crane. Could strip a mech to parts blindfolded. |
-| **Sarge** | Marcus Oduya | Kept the squad alive longer than anyone had a right to expect. |
-| **Ghost** | Yuki Tanaka | Never seen entering or leaving. Just already there. |
-| **Bolt** | Petra Lindgren | Could crack open a rock face and tell you what's inside by the sound. |
-| **Fang** | Diego Reyes | First one in, last one standing. Preferred it that way. |
-| **Wire** | Jess Nakamura | Fastest hands in the unit. Rewired a mech mid-combat once — on a dare. |
-| **Anvil** | Dmitri Volkov | If it had armour, he treated it as a suggestion. |
-| **Frost** | Elise Calloway | Kept a cool head while putting people back together under fire. |
-| **Ace** | Tariq Hassan | Could fix anything. Engines, guns, morale. |
-| **Null** | Zara Okonkwo | Specialized in making problems disappear. Quietly. |
-| **Rex** | Kane Hargrove | The CO. Made the calls nobody else wanted to make. |
-| **Mapmaker** | Oren Vasquez | Charted every route the squad ever ran. Planted your key before the end. |
+| Callsign | Full Name | Mech Model | Mech Description | Notes |
+|----------|-----------|------------|------------------|-------|
+| **Chunk** | Riley Kowalski | KV-8 Grinder | Heavyweight salvage frame with industrial claws and a compactor bay | Built like a salvage crane. Could strip a mech to parts blindfolded. |
+| **Sarge** | Marcus Oduya | MK-IV Bulwark | Reinforced defensive chassis, built to absorb punishment and hold the line | Kept the squad alive longer than anyone had a right to expect. |
+| **Ghost** | Yuki Tanaka | S-12 Wraith | Low-signature stealth frame with sensor-dampened hull plating | Never seen entering or leaving. Just already there. |
+| **Bolt** | Petra Lindgren | DR-7 Prospector | Hardened mining rig with seismic drill arms and ore detection array | Could crack open a rock face and tell you what's inside by the sound. |
+| **Fang** | Diego Reyes | AX-3 Ravager | Stripped-down assault frame, all engine and teeth | First one in, last one standing. Preferred it that way. |
+| **Wire** | Jess Nakamura | SC-1 Flicker | Ultralight recon frame, fastest chassis in the fleet | Fastest hands in the unit. Rewired a mech mid-combat once — on a dare. |
+| **Anvil** | Dmitri Volkov | HG-6 Devastator | Walking gun platform with triple-braced weapon mounts | If it had armour, he treated it as a suggestion. |
+| **Frost** | Elise Calloway | MD-5 Lifeline | Field medical unit with cryo-stabilization pods and triage suite | Kept a cool head while putting people back together under fire. |
+| **Ace** | Tariq Hassan | EN-9 Tinker | Mobile workshop frame with modular tool arms and fab printer | Could fix anything. Engines, guns, morale. |
+| **Null** | Zara Okonkwo | EW-0 Phantom | Electronic warfare chassis with signal-black coating | Specialized in making problems disappear. Quietly. |
+| **Rex** | Kane Hargrove | CM-1 Sovereign | Command-class mech with full tactical array and squad uplink | The CO. Made the calls nobody else wanted to make. |
+| **Mapmaker** | Oren Vasquez | NV-X Pathfinder | Exoskeleton-class lightweight navigation frame with long-range scanner | Charted every route the squad ever ran. Planted your key before the end. |
 
 ## The Unknown Sealed Key
 
