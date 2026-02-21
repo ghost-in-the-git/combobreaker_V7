@@ -35,7 +35,7 @@ Examples:
 - **12 keys total** in the game
 - **1 key** (Unknown Sealed Key) = yours = Combobreaker = you start with it sealed, must decrypt it
 - **10 keys** dropped by bosses = sealed → decrypted → breaker power unlocked
-- **1 key** found on the Mapmaker's body in the Dead Zone = Skybreaker
+- **1 key** found sealed on the Mapmaker's body in the Dead Zone = Skybreaker (still needs decryption)
 - **All breaker powers** require decryption at the Decrypter — including yours
 - **Speedbreaker** is currently always-on — needs to be **locked** behind Wire's key
 - **Combobreaker** is currently always-on — needs to be **locked** behind decrypting the Unknown Sealed Key
@@ -56,7 +56,7 @@ Examples:
 | 9 | Neon Strip | The House | The House's Sealed Key | Ace's Powerbreaker Key | **Ace** | Mechanic | **Powerbreaker** | Bonus Silicon from kills |
 | 10 | Dead Zone | Abomination Core | Abomination Core's Sealed Key | Null's Voidbreaker Key | **Null** | Specialist | **Voidbreaker** | Chance to negate enemy attacks |
 | 11 | Frontline | Warlord Chassis | Warlord Chassis's Sealed Key | Rex's Warbreaker Key | **Rex** | Commander | **Warbreaker** | All breaker effects slightly boosted |
-| 12 | Dead Zone | *(Mapmaker's body)* | *(found, not sealed)* | Mapmaker's Skybreaker Key | **Mapmaker** | Navigator | **Skybreaker** | Reduced fuel cost when traveling |
+| 12 | Dead Zone | *(Mapmaker's body)* | Mapmaker's Sealed Key | Mapmaker's Skybreaker Key | **Mapmaker** | Navigator | **Skybreaker** | Reduced fuel cost when traveling |
 
 ## The Unknown Sealed Key
 
@@ -69,10 +69,10 @@ Examples:
 
 ## The Mapmaker's Skybreaker Key
 
-- Found on the Mapmaker's body in the Dead Zone (existing lore: "He didn't make it.")
-- NOT a boss drop — it's looted from the body, already unsealed
+- Found sealed on the Mapmaker's body in the Dead Zone (existing lore: "He didn't make it.")
+- NOT a boss drop — looted from the body, but still sealed like any other key
+- Must be taken to the Decrypter to unlock Skybreaker
 - The Mapmaker was the squad's Navigator — the one who planted your key in you
-- His key doesn't need decryption at the Decrypter (he died free, not trapped in a mech)
 - Skybreaker effect: reduced fuel cost when traveling between zones
 - This is the 12th and final breaker, completing the squad
 
