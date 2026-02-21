@@ -26,7 +26,7 @@ The starter key: `Unknown Sealed Key` (was "Old Key")
 ### Decrypted keys (after the Decrypter processes them)
 Format: `[Pilot Name]'s [Power]breaker Key`
 Examples:
-- `Chunk's Scrapbreaker Key`
+- `Chunk's Steelbreaker Key`
 - `Wire's Speedbreaker Key`
 - `Rex's Warbreaker Key`
 
@@ -43,15 +43,15 @@ Examples:
 | # | Zone | Boss Mech | Sealed Key | Decrypted Key | Pilot | Squad Role | Power | Effect |
 |---|------|-----------|------------|---------------|-------|------------|-------|--------|
 | — | (starter) | — | Unknown Sealed Key | *(not decryptable)* | **You** | Combobreaker | **Combobreaker** | Double-damage chance (always active) |
-| 1 | Scrapyard | T1 Destroyer | T1 Destroyer's Sealed Key | Chunk's Scrapbreaker Key | **Chunk** | Scrap Refiner | **Scrapbreaker** | Bonus scrap from battle victories |
+| 1 | Scrapyard | T1 Destroyer | T1 Destroyer's Sealed Key | Chunk's Steelbreaker Key | **Chunk** | Scrap Refiner | **Steelbreaker** | Bonus scrap from battle victories |
 | 2 | Old Battlefield | Siege Remnant | Siege Remnant's Sealed Key | Sarge's Shieldbreaker Key | **Sarge** | Squad Defender | **Shieldbreaker** | Defence pool partially regenerates each round |
 | 3 | Downtown | Corporate Warlord | Corporate Warlord's Sealed Key | Ghost's Lootbreaker Key | **Ghost** | Infiltrator | **Lootbreaker** | Guaranteed item drop from battles |
-| 4 | Orbital Station | Station Core Guardian | Station Core Guardian's Sealed Key | Bolt's Minebreaker Key | **Bolt** | Engineer | **Minebreaker** | Bonus mining yield |
+| 4 | Orbital Station | Station Core Guardian | Station Core Guardian's Sealed Key | Bolt's Stonebreaker Key | **Bolt** | Engineer | **Stonebreaker** | Bonus mining yield |
 | 5 | Wasteland | Feral War Engine | Feral War Engine's Sealed Key | Fang's Strikebreaker Key | **Fang** | Assault | **Strikebreaker** | Bonus flat damage on attacks |
 | 6 | Undercity | Hive Overlord | Hive Overlord's Sealed Key | Wire's Speedbreaker Key | **Wire** | Scout | **Speedbreaker** | Double-attack chance (currently default — needs locking) |
 | 7 | Industrial Zone | Smelter Titan | Smelter Titan's Sealed Key | Anvil's Crushbreaker Key | **Anvil** | Heavy Gunner | **Crushbreaker** | Attacks ignore a portion of enemy defence |
-| 8 | Frozen Reach | Avalanche Colossus | Avalanche Colossus's Sealed Key | Frost's Lifebreaker Key | **Frost** | Medic | **Lifebreaker** | Enhanced end-of-round regen |
-| 9 | Neon Strip | The House | The House's Sealed Key | Ace's Luckbreaker Key | **Ace** | Pilot / Gambler | **Luckbreaker** | Bonus Silicon from kills |
+| 8 | Frozen Reach | Avalanche Colossus | Avalanche Colossus's Sealed Key | Frost's Painbreaker Key | **Frost** | Medic | **Painbreaker** | Enhanced end-of-round regen |
+| 9 | Neon Strip | The House | The House's Sealed Key | Ace's Mindbreaker Key | **Ace** | Pilot / Gambler | **Mindbreaker** | Bonus Silicon from kills |
 | 10 | Dead Zone | Abomination Core | Abomination Core's Sealed Key | Null's Voidbreaker Key | **Null** | Specialist | **Voidbreaker** | Chance to negate enemy attacks |
 | 11 | Frontline | Warlord Chassis | Warlord Chassis's Sealed Key | Rex's Warbreaker Key | **Rex** | Commander | **Warbreaker** | All breaker effects slightly boosted |
 
@@ -78,15 +78,15 @@ Examples:
 - [ ] Combobreaker stays always-on (no change)
 
 ### Phase 2: Implement all 10 breaker powers
-- [ ] Scrapbreaker — bonus scrap on battle victory
+- [ ] Steelbreaker — bonus scrap on battle victory
 - [ ] Shieldbreaker — defence pool partially regenerates each battle round
 - [ ] Lootbreaker — guaranteed item drop from battles
-- [ ] Minebreaker — bonus mining yield
+- [ ] Stonebreaker — bonus mining yield
 - [ ] Strikebreaker — bonus flat damage on attacks
 - [ ] Speedbreaker — double-attack chance (already exists, just needs gating)
 - [ ] Crushbreaker — attacks ignore a portion of enemy defence
-- [ ] Lifebreaker — enhanced end-of-round regen
-- [ ] Luckbreaker — bonus Silicon from kills
+- [ ] Painbreaker — enhanced end-of-round regen
+- [ ] Mindbreaker — bonus Silicon from kills
 - [ ] Voidbreaker — chance to negate enemy attacks
 - [ ] Warbreaker — all breaker effects slightly boosted
 
