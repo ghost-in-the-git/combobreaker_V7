@@ -365,6 +365,50 @@
             border-color: #00ff88;
         }
 
+        .beacon-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .beacon-row select {
+            flex: 1;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 36px;
+            min-width: 36px;
+            height: 18px;
+            background: #1a1a2e;
+            border: 1px solid #00ff8855;
+            border-radius: 9px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .toggle-switch.on {
+            background: #00ff8833;
+            border-color: #00ff88;
+        }
+
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 12px;
+            height: 12px;
+            background: #555;
+            border-radius: 50%;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .toggle-switch.on::after {
+            transform: translateX(18px);
+            background: #00ff88;
+        }
+
         /* Action Buttons (inline in chat) */
         .action-btn-container {
             display: flex;
@@ -1206,7 +1250,10 @@
                 </div>
                 <hr>
                 <div class="equip-slot">
-                    <select id="storage-beacon"><option value="">[BEACONS] -- Empty --</option></select>
+                    <div class="beacon-row">
+                        <select id="storage-beacon"><option value="">[BEACONS] -- Empty --</option></select>
+                        <div id="boss-toggle" class="toggle-switch on" title="Boss encounters ON"></div>
+                    </div>
                     <div class="storage-desc" id="storage-desc-beacon"></div>
                 </div>
             </div>
@@ -4210,6 +4257,14 @@
             startWaveTimer();
         }
 
+        // Boss encounter toggle
+        let bossEncountersEnabled = true;
+        document.getElementById('boss-toggle').addEventListener('click', function() {
+            bossEncountersEnabled = !bossEncountersEnabled;
+            this.classList.toggle('on', bossEncountersEnabled);
+            this.title = bossEncountersEnabled ? 'Boss encounters ON' : 'Boss encounters OFF';
+        });
+
         // Get boss encounter data for current zone
         function getBossEncounter() {
             return BOSS_ENCOUNTERS.find(b => b.zone === currentLocation) || null;
@@ -4217,6 +4272,7 @@
 
         // Spawn a boss encounter
         function spawnBossEncounter() {
+            if (!bossEncountersEnabled) return false;
             const boss = getBossEncounter();
             if (!boss) return false;
 
