@@ -89,19 +89,5 @@ const ENEMIES_FROZENREACH = [
         scrapChance: 50,
         scrapMin: 6,
         scrapMax: 8
-    },
-    {
-        name: "Avalanche Colossus",
-        attack: 60,
-        defence: 50,
-        hp: 950,
-        xp: 950,
-        appearanceRate: 3,
-        minLevel: 1,
-        squadMin: 1,
-        squadMax: 1,
-        scrapChance: 50,
-        scrapMin: 6,
-        scrapMax: 8
     }
 ];

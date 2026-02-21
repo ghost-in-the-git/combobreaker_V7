@@ -89,19 +89,5 @@ const ENEMIES_WASTELAND = [
         scrapChance: 50,
         scrapMin: 3,
         scrapMax: 5
-    },
-    {
-        name: "Feral War Engine",
-        attack: 35,
-        defence: 28,
-        hp: 420,
-        xp: 420,
-        appearanceRate: 3,
-        minLevel: 1,
-        squadMin: 1,
-        squadMax: 1,
-        scrapChance: 50,
-        scrapMin: 3,
-        scrapMax: 5
     }
 ];

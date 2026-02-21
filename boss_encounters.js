@@ -8,7 +8,7 @@
  *
  * Structure:
  * - zone: location key matching LOCATIONS
- * - enemyName: name of the boss enemy from that zone's enemy list
+ * - enemy: full enemy stat block for the boss
  * - introText: system flavour text when the boss appears
  * - dialogue: array of { question, response } for pre-fight conversation
  * - keyDrop: story item name (category: "key")
@@ -18,7 +18,15 @@
 const BOSS_ENCOUNTERS = [
     {
         zone: "scrapyard",
-        enemyName: "T1 Destroyer",
+        enemy: {
+            name: "T1 Destroyer",
+            attack: 10,
+            defence: 10,
+            hp: 100,
+            xp: 100,
+            squadMin: 1,
+            squadMax: 1
+        },
         introText: "The scrap piles shift. Something massive pushes through the wreckage — a T1 Destroyer, still running original combat firmware. Its targeting laser locks onto you.",
         dialogue: [
             {
@@ -39,7 +47,18 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "oldbattlefield",
-        enemyName: "Siege Remnant",
+        enemy: {
+            name: "Siege Remnant",
+            attack: 15,
+            defence: 12,
+            hp: 150,
+            xp: 150,
+            squadMin: 1,
+            squadMax: 1,
+            scrapChance: 40,
+            scrapMin: 1,
+            scrapMax: 2
+        },
         introText: "A low rumble rolls across the battlefield. From behind a collapsed bunker, a Siege Remnant drags itself forward on damaged treads, turret already tracking your position.",
         dialogue: [
             {
@@ -60,7 +79,18 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "downtown",
-        enemyName: "Corporate Warlord",
+        enemy: {
+            name: "Corporate Warlord",
+            attack: 20,
+            defence: 15,
+            hp: 220,
+            xp: 220,
+            squadMin: 1,
+            squadMax: 1,
+            scrapChance: 45,
+            scrapMin: 2,
+            scrapMax: 3
+        },
         introText: "The street lights cut out in sequence. A Corporate Warlord steps from the shadows flanked by flickering holograms of corporate insignia. His mech hums with military-grade modifications.",
         dialogue: [
             {
@@ -81,7 +111,18 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "orbitalstation",
-        enemyName: "Station Core Guardian",
+        enemy: {
+            name: "Station Core Guardian",
+            attack: 28,
+            defence: 22,
+            hp: 320,
+            xp: 320,
+            squadMin: 1,
+            squadMax: 1,
+            scrapChance: 45,
+            scrapMin: 2,
+            scrapMax: 4
+        },
         introText: "Bulkhead doors slam shut behind you. The corridor floods with red light. A Station Core Guardian unfolds from the ceiling — six arms, each ending in a different weapon system.",
         dialogue: [
             {
@@ -102,7 +143,18 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "wasteland",
-        enemyName: "Feral War Engine",
+        enemy: {
+            name: "Feral War Engine",
+            attack: 35,
+            defence: 28,
+            hp: 420,
+            xp: 420,
+            squadMin: 1,
+            squadMax: 1,
+            scrapChance: 50,
+            scrapMin: 3,
+            scrapMax: 5
+        },
         introText: "The sand erupts. A Feral War Engine bursts from beneath the dunes, shedding rust and rock. Its frame is a patchwork of salvaged armor bolted over something ancient and wrong.",
         dialogue: [
             {
@@ -123,7 +175,18 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "undercity",
-        enemyName: "Hive Overlord",
+        enemy: {
+            name: "Hive Overlord",
+            attack: 42,
+            defence: 35,
+            hp: 550,
+            xp: 550,
+            squadMin: 1,
+            squadMax: 1,
+            scrapChance: 50,
+            scrapMin: 4,
+            scrapMax: 6
+        },
         introText: "The tunnel walls begin to move. Thousands of small mechs scatter as a Hive Overlord pushes through the narrow passage, its bulk scraping concrete from the ceiling.",
         dialogue: [
             {
@@ -144,7 +207,18 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "industrialzone",
-        enemyName: "Smelter Titan",
+        enemy: {
+            name: "Smelter Titan",
+            attack: 50,
+            defence: 42,
+            hp: 720,
+            xp: 720,
+            squadMin: 1,
+            squadMax: 1,
+            scrapChance: 50,
+            scrapMin: 5,
+            scrapMax: 7
+        },
         introText: "The factory floor shakes. A blast furnace ruptures and a Smelter Titan walks through the molten spray, its armor glowing cherry-red. Heat distortion blurs the air around it.",
         dialogue: [
             {
@@ -165,7 +239,18 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "frozenreach",
-        enemyName: "Avalanche Colossus",
+        enemy: {
+            name: "Avalanche Colossus",
+            attack: 60,
+            defence: 50,
+            hp: 950,
+            xp: 950,
+            squadMin: 1,
+            squadMax: 1,
+            scrapChance: 50,
+            scrapMin: 6,
+            scrapMax: 8
+        },
         introText: "The ice shelf cracks. A mountain of frost and steel rises from beneath the glacier — an Avalanche Colossus, frozen mid-stride for who knows how long, now thawing and furious.",
         dialogue: [
             {
@@ -186,7 +271,18 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "neonstrip",
-        enemyName: "The House",
+        enemy: {
+            name: "The House",
+            attack: 75,
+            defence: 60,
+            hp: 1200,
+            xp: 1200,
+            squadMin: 1,
+            squadMax: 1,
+            scrapChance: 50,
+            scrapMin: 7,
+            scrapMax: 9
+        },
         introText: "Every screen on the strip goes dark. Then they all display the same message: 'THE HOUSE ALWAYS WINS.' A massive frame steps out of the central casino — gold-plated, armed to the teeth, and smiling.",
         dialogue: [
             {
@@ -207,7 +303,18 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "deadzone",
-        enemyName: "Abomination Core",
+        enemy: {
+            name: "Abomination Core",
+            attack: 100,
+            defence: 80,
+            hp: 1800,
+            xp: 1800,
+            squadMin: 1,
+            squadMax: 1,
+            scrapChance: 50,
+            scrapMin: 8,
+            scrapMax: 10
+        },
         introText: "Reality bends. The air tastes like copper and static. An Abomination Core materializes — not walking, not flying, just suddenly there. Its form shifts between solid and something else entirely.",
         dialogue: [
             {
@@ -228,7 +335,18 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "frontline",
-        enemyName: "Warlord Chassis",
+        enemy: {
+            name: "Warlord Chassis",
+            attack: 130,
+            defence: 100,
+            hp: 2500,
+            xp: 2500,
+            squadMin: 1,
+            squadMax: 1,
+            scrapChance: 50,
+            scrapMin: 10,
+            scrapMax: 12
+        },
         introText: "Artillery stops. Every mech on the battlefield freezes. Then you hear it — a horn, ancient and deep. A Warlord Chassis crests the ridge, dragging a chain of destroyed mechs behind it like trophies.",
         dialogue: [
             {

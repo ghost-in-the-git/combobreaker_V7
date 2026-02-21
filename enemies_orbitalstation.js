@@ -89,19 +89,5 @@ const ENEMIES_ORBITALSTATION = [
         scrapChance: 45,
         scrapMin: 2,
         scrapMax: 4
-    },
-    {
-        name: "Station Core Guardian",
-        attack: 28,
-        defence: 22,
-        hp: 320,
-        xp: 320,
-        appearanceRate: 3,
-        minLevel: 1,
-        squadMin: 1,
-        squadMax: 1,
-        scrapChance: 45,
-        scrapMin: 2,
-        scrapMax: 4
     }
 ];

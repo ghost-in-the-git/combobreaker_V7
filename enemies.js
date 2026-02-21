@@ -62,17 +62,6 @@ const ENEMIES = [
         squadMin: 1,
         squadMax: 4
     },
-    {
-        name: "T1 Destroyer",
-        attack: 10,
-        defence: 10,
-        hp: 100,
-        xp: 100,
-        appearanceRate: 3,
-        minLevel: 1,
-        squadMin: 1,
-        squadMax: 1
-    },
         {
         name: "T1 Nano Swarm",
         attack: 1,

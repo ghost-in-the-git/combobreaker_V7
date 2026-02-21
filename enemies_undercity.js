@@ -89,19 +89,5 @@ const ENEMIES_UNDERCITY = [
         scrapChance: 50,
         scrapMin: 4,
         scrapMax: 6
-    },
-    {
-        name: "Hive Overlord",
-        attack: 42,
-        defence: 35,
-        hp: 550,
-        xp: 550,
-        appearanceRate: 3,
-        minLevel: 1,
-        squadMin: 1,
-        squadMax: 1,
-        scrapChance: 50,
-        scrapMin: 4,
-        scrapMax: 6
     }
 ];

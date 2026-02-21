@@ -89,19 +89,5 @@ const ENEMIES_OLDBATTLEFIELD = [
         scrapChance: 40,
         scrapMin: 1,
         scrapMax: 2
-    },
-    {
-        name: "Siege Remnant",
-        attack: 15,
-        defence: 12,
-        hp: 150,
-        xp: 150,
-        appearanceRate: 3,
-        minLevel: 1,
-        squadMin: 1,
-        squadMax: 1,
-        scrapChance: 40,
-        scrapMin: 1,
-        scrapMax: 2
     }
 ];

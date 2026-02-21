@@ -89,19 +89,5 @@ const ENEMIES_NEONSTRIP = [
         scrapChance: 50,
         scrapMin: 7,
         scrapMax: 9
-    },
-    {
-        name: "The House",
-        attack: 75,
-        defence: 60,
-        hp: 1200,
-        xp: 1200,
-        appearanceRate: 3,
-        minLevel: 1,
-        squadMin: 1,
-        squadMax: 1,
-        scrapChance: 50,
-        scrapMin: 7,
-        scrapMax: 9
     }
 ];

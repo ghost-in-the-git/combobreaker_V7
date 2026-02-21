@@ -4179,9 +4179,8 @@
             const hasDna = (game.storyItems || []).includes(boss.dnaDrop);
             if (hasKey && hasDna) return false;
 
-            // Find the boss enemy from the zone's enemy list
-            const loc = LOCATIONS[currentLocation];
-            const bossEnemy = loc.enemies.find(e => e.name === boss.enemyName);
+            // Use enemy stats from boss encounter data
+            const bossEnemy = boss.enemy;
             if (!bossEnemy) return false;
 
             currentBossEncounter = boss;

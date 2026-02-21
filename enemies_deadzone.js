@@ -89,19 +89,5 @@ const ENEMIES_DEADZONE = [
         scrapChance: 50,
         scrapMin: 8,
         scrapMax: 10
-    },
-    {
-        name: "Abomination Core",
-        attack: 100,
-        defence: 80,
-        hp: 1800,
-        xp: 1800,
-        appearanceRate: 3,
-        minLevel: 1,
-        squadMin: 1,
-        squadMax: 1,
-        scrapChance: 50,
-        scrapMin: 8,
-        scrapMax: 10
     }
 ];

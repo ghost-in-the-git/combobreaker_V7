@@ -89,19 +89,5 @@ const ENEMIES_FRONTLINE = [
         scrapChance: 50,
         scrapMin: 10,
         scrapMax: 12
-    },
-    {
-        name: "Warlord Chassis",
-        attack: 130,
-        defence: 100,
-        hp: 2500,
-        xp: 2500,
-        appearanceRate: 3,
-        minLevel: 1,
-        squadMin: 1,
-        squadMax: 1,
-        scrapChance: 50,
-        scrapMin: 10,
-        scrapMax: 12
     }
 ];

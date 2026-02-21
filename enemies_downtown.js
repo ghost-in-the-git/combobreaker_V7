@@ -89,19 +89,5 @@ const ENEMIES_DOWNTOWN = [
         scrapChance: 45,
         scrapMin: 2,
         scrapMax: 3
-    },
-    {
-        name: "Corporate Warlord",
-        attack: 20,
-        defence: 15,
-        hp: 220,
-        xp: 220,
-        appearanceRate: 3,
-        minLevel: 1,
-        squadMin: 1,
-        squadMax: 1,
-        scrapChance: 45,
-        scrapMin: 2,
-        scrapMax: 3
     }
 ];

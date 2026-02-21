@@ -89,19 +89,5 @@ const ENEMIES_INDUSTRIALZONE = [
         scrapChance: 50,
         scrapMin: 5,
         scrapMax: 7
-    },
-    {
-        name: "Smelter Titan",
-        attack: 50,
-        defence: 42,
-        hp: 720,
-        xp: 720,
-        appearanceRate: 3,
-        minLevel: 1,
-        squadMin: 1,
-        squadMax: 1,
-        scrapChance: 50,
-        scrapMin: 5,
-        scrapMax: 7
     }
 ];
