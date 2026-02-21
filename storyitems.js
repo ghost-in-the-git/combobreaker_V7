@@ -183,6 +183,42 @@ const STORY_ITEMS = [
         category: "dna",
         image: "images/IMAGE.gif"
     },
+    {
+        name: "DNA Tag: Decayed Officer",
+        desc: "Pulled from a rank insignia. The DNA is degraded but the military encryption is still intact.",
+        category: "dna",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "DNA Tag: Synthetic Override",
+        desc: "Artificial genetic code designed to fool biometric locks. Someone built this from scratch.",
+        category: "dna",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "DNA Tag: Fused Pilot",
+        desc: "Biological and mechanical DNA intertwined at the molecular level. The pilot didn't eject in time.",
+        category: "dna",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "DNA Tag: Cryo-Preserved Sample",
+        desc: "A frozen blood sample that predates the collapse. Still viable after all these years.",
+        category: "dna",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "DNA Tag: Warlord Residue",
+        desc: "Trace genetic material scraped from a command throne. Multiple donors. None voluntary.",
+        category: "dna",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "DNA Tag: Frontline Commander",
+        desc: "Extracted from a command chassis cockpit. The genetic markers show signs of extreme combat stimulant exposure.",
+        category: "dna",
+        image: "images/IMAGE.gif"
+    },
 
     // Mech Debris
     {
