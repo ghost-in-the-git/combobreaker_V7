@@ -33,17 +33,18 @@ Examples:
 ## Key Structure
 
 - **12 keys total** in the game
-- **1 key** (Unknown Sealed Key) = yours = Combobreaker = always active, not decryptable
+- **1 key** (Unknown Sealed Key) = yours = Combobreaker = you start with it sealed, must decrypt it
 - **10 keys** dropped by bosses = sealed → decrypted → breaker power unlocked
 - **1 key** found on the Mapmaker's body in the Dead Zone = Skybreaker
-- **Combobreaker** stays always-on (it's YOU) — no change needed
+- **All breaker powers** require decryption at the Decrypter — including yours
 - **Speedbreaker** is currently always-on — needs to be **locked** behind Wire's key
+- **Combobreaker** is currently always-on — needs to be **locked** behind decrypting the Unknown Sealed Key
 
 ## Squad Roster
 
 | # | Zone | Boss Mech | Sealed Key | Decrypted Key | Pilot | Squad Role | Power | Effect |
 |---|------|-----------|------------|---------------|-------|------------|-------|--------|
-| — | (starter) | — | Unknown Sealed Key | *(not decryptable)* | **You** | Combobreaker | **Combobreaker** | Double-damage chance (always active) |
+| — | (starter) | — | Unknown Sealed Key | Your Combobreaker Key | **You** | Combobreaker | **Combobreaker** | Double-damage chance |
 | 1 | Scrapyard | T1 Destroyer | T1 Destroyer's Sealed Key | Chunk's Steelbreaker Key | **Chunk** | Scrap Refiner | **Steelbreaker** | Bonus scrap from battle victories |
 | 2 | Old Battlefield | Siege Remnant | Siege Remnant's Sealed Key | Sarge's Shieldbreaker Key | **Sarge** | Squad Defender | **Shieldbreaker** | Defence pool partially regenerates each round |
 | 3 | Downtown | Corporate Warlord | Corporate Warlord's Sealed Key | Ghost's Lootbreaker Key | **Ghost** | Infiltrator | **Lootbreaker** | Guaranteed item drop from battles |
@@ -60,11 +61,11 @@ Examples:
 ## The Unknown Sealed Key
 
 - Replaces "Old Key" as the starter story item
-- Player starts with it (already in storyItems on new game)
-- It is NOT a boss drop
-- It cannot be decrypted at the Decrypter (it's already you)
-- The Decrypter dropdown should not list it
-- The Mapmaker is the one who planted it in you — this connects to existing Mapmaker lore
+- Player starts with it sealed (already in storyItems on new game)
+- It is NOT a boss drop — the Mapmaker planted it in you before the squad was scattered
+- Must be taken to the Decrypter like any other sealed key
+- Decrypts into "Your Combobreaker Key" and unlocks the Combobreaker power
+- Early game hint: the Decrypter can process it right away, giving the player their first breaker
 
 ## The Mapmaker's Skybreaker Key
 
@@ -83,10 +84,10 @@ Examples:
 - [ ] Add 10 sealed key story items to storyitems.js with lore descriptions
 - [ ] Rename all Protocol story items to "[Pilot]'s [Power]breaker Key" with squad member lore
 - [ ] Update DECRYPTER_POWERUPS mapping in index.html (sealed key → decrypted key)
-- [ ] Remove Unknown Sealed Key from DECRYPTER_POWERUPS (not decryptable)
+- [ ] Add Unknown Sealed Key → Your Combobreaker Key to DECRYPTER_POWERUPS
+- [ ] Gate combobreaker proc in battleRound() behind owning Your Combobreaker Key
 - [ ] Gate speedbreaker proc in battleRound() behind owning Wire's Speedbreaker Key
 - [ ] Gate speedbreaker proc in evadeAmbush() behind owning Wire's Speedbreaker Key
-- [ ] Combobreaker stays always-on (no change)
 
 ### Phase 2: Implement all 10 breaker powers
 - [ ] Steelbreaker — bonus scrap on battle victory
