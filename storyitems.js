@@ -121,6 +121,36 @@ const STORY_ITEMS = [
         category: "key",
         image: "images/IMAGE.gif"
     },
+    {
+        name: "Rusted Bulkhead Key",
+        desc: "A thick iron key with deep corrosion. Stamped on the handle: SUB-LEVEL 9.",
+        category: "key",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Biometric Override Chip",
+        desc: "A fingertip-sized implant that spoofs authorized biosignatures. Single use.",
+        category: "key",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Freight Elevator Token",
+        desc: "A scratched metal coin accepted by cargo lifts in the Industrial Zone.",
+        category: "key",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Warden's Master Fob",
+        desc: "Stripped from a decommissioned security unit. Opens most detention-block doors.",
+        category: "key",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Encrypted Passphrase Drive",
+        desc: "A thumb drive containing a rolling cipher. Whatever it unlocks changes codes every hour.",
+        category: "key",
+        image: "images/IMAGE.gif"
+    },
 
     // DNA Tags
     {
