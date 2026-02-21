@@ -4625,6 +4625,14 @@
                     return;
                 }
             }
+
+            // End-of-round regen
+            if (p.regen > 0 && p.hp < p.maxHp) {
+                const healed = Math.min(p.regen, p.maxHp - p.hp);
+                p.hp += healed;
+                await addMessage(`Mech regenerates ${healed} HP. (${p.hp}/${p.maxHp})`, 'player');
+                updateStats();
+            }
         }
 
         // End battle
