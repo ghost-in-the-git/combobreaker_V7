@@ -32,9 +32,10 @@ Examples:
 
 ## Key Structure
 
-- **11 keys total** in the game
+- **12 keys total** in the game
 - **1 key** (Unknown Sealed Key) = yours = Combobreaker = always active, not decryptable
 - **10 keys** dropped by bosses = sealed → decrypted → breaker power unlocked
+- **1 key** found on the Mapmaker's body in the Dead Zone = Skybreaker
 - **Combobreaker** stays always-on (it's YOU) — no change needed
 - **Speedbreaker** is currently always-on — needs to be **locked** behind Wire's key
 
@@ -46,14 +47,15 @@ Examples:
 | 1 | Scrapyard | T1 Destroyer | T1 Destroyer's Sealed Key | Chunk's Steelbreaker Key | **Chunk** | Scrap Refiner | **Steelbreaker** | Bonus scrap from battle victories |
 | 2 | Old Battlefield | Siege Remnant | Siege Remnant's Sealed Key | Sarge's Shieldbreaker Key | **Sarge** | Squad Defender | **Shieldbreaker** | Defence pool partially regenerates each round |
 | 3 | Downtown | Corporate Warlord | Corporate Warlord's Sealed Key | Ghost's Lootbreaker Key | **Ghost** | Infiltrator | **Lootbreaker** | Guaranteed item drop from battles |
-| 4 | Orbital Station | Station Core Guardian | Station Core Guardian's Sealed Key | Bolt's Stonebreaker Key | **Bolt** | Engineer | **Stonebreaker** | Bonus mining yield |
+| 4 | Orbital Station | Station Core Guardian | Station Core Guardian's Sealed Key | Bolt's Stonebreaker Key | **Bolt** | Miner | **Stonebreaker** | Bonus mining yield |
 | 5 | Wasteland | Feral War Engine | Feral War Engine's Sealed Key | Fang's Strikebreaker Key | **Fang** | Assault | **Strikebreaker** | Bonus flat damage on attacks |
 | 6 | Undercity | Hive Overlord | Hive Overlord's Sealed Key | Wire's Speedbreaker Key | **Wire** | Scout | **Speedbreaker** | Double-attack chance (currently default — needs locking) |
 | 7 | Industrial Zone | Smelter Titan | Smelter Titan's Sealed Key | Anvil's Crushbreaker Key | **Anvil** | Heavy Gunner | **Crushbreaker** | Attacks ignore a portion of enemy defence |
 | 8 | Frozen Reach | Avalanche Colossus | Avalanche Colossus's Sealed Key | Frost's Painbreaker Key | **Frost** | Medic | **Painbreaker** | Enhanced end-of-round regen |
-| 9 | Neon Strip | The House | The House's Sealed Key | Ace's Mindbreaker Key | **Ace** | Pilot / Gambler | **Mindbreaker** | Bonus Silicon from kills |
+| 9 | Neon Strip | The House | The House's Sealed Key | Ace's Powerbreaker Key | **Ace** | Mechanic | **Powerbreaker** | Bonus Silicon from kills |
 | 10 | Dead Zone | Abomination Core | Abomination Core's Sealed Key | Null's Voidbreaker Key | **Null** | Specialist | **Voidbreaker** | Chance to negate enemy attacks |
 | 11 | Frontline | Warlord Chassis | Warlord Chassis's Sealed Key | Rex's Warbreaker Key | **Rex** | Commander | **Warbreaker** | All breaker effects slightly boosted |
+| 12 | Dead Zone | *(Mapmaker's body)* | *(found, not sealed)* | Mapmaker's Skybreaker Key | **Mapmaker** | Navigator | **Skybreaker** | Reduced fuel cost when traveling |
 
 ## The Unknown Sealed Key
 
@@ -63,6 +65,15 @@ Examples:
 - It cannot be decrypted at the Decrypter (it's already you)
 - The Decrypter dropdown should not list it
 - The Mapmaker is the one who planted it in you — this connects to existing Mapmaker lore
+
+## The Mapmaker's Skybreaker Key
+
+- Found on the Mapmaker's body in the Dead Zone (existing lore: "He didn't make it.")
+- NOT a boss drop — it's looted from the body, already unsealed
+- The Mapmaker was the squad's Navigator — the one who planted your key in you
+- His key doesn't need decryption at the Decrypter (he died free, not trapped in a mech)
+- Skybreaker effect: reduced fuel cost when traveling between zones
+- This is the 12th and final breaker, completing the squad
 
 ## Code Changes Required
 
@@ -86,9 +97,10 @@ Examples:
 - [ ] Speedbreaker — double-attack chance (already exists, just needs gating)
 - [ ] Crushbreaker — attacks ignore a portion of enemy defence
 - [ ] Painbreaker — enhanced end-of-round regen
-- [ ] Mindbreaker — bonus Silicon from kills
+- [ ] Powerbreaker — bonus Silicon from kills
 - [ ] Voidbreaker — chance to negate enemy attacks
 - [ ] Warbreaker — all breaker effects slightly boosted
+- [ ] Skybreaker — reduced fuel cost when traveling
 
 ### Phase 3: Lore updates
 - [ ] Update boss encounter intro text / dialogue to hint at the trapped pilot
