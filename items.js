@@ -38,6 +38,30 @@ const ITEMS = [
         scrapCost: 1,
         xpReward: 10
     },
+    {
+        name: "Memory Defrag [+150 Silicon]",
+        type: "service",
+        desc: "The Professor hooks a cable into your cranial port and runs a deep defragmentation cycle. Corrupted data clusters realign, lost combat logs resurface, and your core processes hum with renewed clarity.",
+        image: "images/IMAGE.gif",
+        scrapCost: 10,
+        xpReward: 150
+    },
+    {
+        name: "Combobreaker Firmware [+2000 Silicon]",
+        type: "service",
+        desc: "The Professor pulls out an ancient military drive — the original firmware package for your chassis line. The installation takes hours. When it's done, entire combat subroutines you never knew existed are online.",
+        image: "images/IMAGE.gif",
+        scrapCost: 100,
+        xpReward: 2000
+    },
+    {
+        name: "Silicon Enforcement [+25000 Silicon]",
+        type: "service",
+        desc: "The Professor works in silence for a long time. He replaces your neural bus, rewires your silicon throughput, and installs something he won't name. When you power back on, everything feels different. Faster. Sharper. Like you've been running at half capacity your entire life.",
+        image: "images/IMAGE.gif",
+        scrapCost: 1000,
+        xpReward: 25000
+    },
     // ==================== BODY (HP) ====================
     {
         name: "Rat-Gnawed Plating [+5 HP]",

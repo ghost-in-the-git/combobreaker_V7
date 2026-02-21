@@ -16,9 +16,9 @@ const ENCOUNTERS_HOME = [
         discoveredEngageText: "The Professor glances up. 'You're back. Good — means you're still running.' He pushes his goggles up. 'Need something?'",
         appearanceRate: 100,
         minLevel: 1,
-        itemSlot1: [],
-        itemSlot2: ["Professor's Lesson [+10 Silicon]"],
-        itemSlot3: [],
+        itemSlot1: ["Professor's Lesson [+10 Silicon]", "Memory Defrag [+150 Silicon]"],
+        itemSlot2: ["Combobreaker Firmware [+2000 Silicon]"],
+        itemSlot3: ["Silicon Enforcement [+25000 Silicon]"],
         dialogue: [
             {
                 question: "Who am I?",
