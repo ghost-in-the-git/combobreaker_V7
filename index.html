@@ -4189,6 +4189,26 @@
             }
         }
 
+        // Evade a boss encounter — always succeeds (100% evasion)
+        function evadeBoss() {
+            if (!game.currentWave || game.inBattle) return;
+
+            if (game.waveExpireTimer) {
+                clearTimeout(game.waveExpireTimer);
+                game.waveExpireTimer = null;
+            }
+            clearCountdown();
+
+            addMessage(`[EVADE SUCCESSFUL] Speedbreaker engaged — you slipped their sensors!`, 'player');
+            removeBossDialogue();
+            game.currentWave = null;
+            game.isAmbush = false;
+            game.isBossEncounter = false;
+            currentBossEncounter = null;
+            btnRetreat.textContent = 'Decline';
+            startWaveTimer();
+        }
+
         // Get boss encounter data for current zone
         function getBossEncounter() {
             return BOSS_ENCOUNTERS.find(b => b.zone === currentLocation) || null;
@@ -4717,7 +4737,7 @@
             } else if (currentEncounter) {
                 declineEncounter();
             } else if (game.isBossEncounter && !game.inBattle) {
-                evadeAmbush(); // Boss evasion uses same speed check as ambush
+                evadeBoss(); // Boss evasion always succeeds
             } else if (game.isAmbush) {
                 evadeAmbush();
             } else {
