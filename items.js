@@ -41,7 +41,7 @@ const ITEMS = [
     {
         name: "Memory Defrag [+150 Silicon]",
         type: "service",
-        desc: "The Professor hooks a cable into your cranial port and runs a deep defragmentation cycle. Corrupted data clusters realign, lost combat logs resurface, and your core processes hum with renewed clarity.",
+        desc: "A deep defragmentation cycle. Corrupted data realigns and lost combat logs resurface.",
         image: "images/IMAGE.gif",
         scrapCost: 10,
         xpReward: 150
@@ -49,7 +49,7 @@ const ITEMS = [
     {
         name: "Combobreaker Firmware [+2000 Silicon]",
         type: "service",
-        desc: "The Professor pulls out an ancient military drive — the original firmware package for your chassis line. The installation takes hours. When it's done, entire combat subroutines you never knew existed are online.",
+        desc: "The original firmware package for your chassis line. Combat subroutines you never knew existed come online.",
         image: "images/IMAGE.gif",
         scrapCost: 100,
         xpReward: 2000
@@ -57,7 +57,7 @@ const ITEMS = [
     {
         name: "Silicon Enforcement [+25000 Silicon]",
         type: "service",
-        desc: "The Professor works in silence for a long time. He replaces your neural bus, rewires your silicon throughput, and installs something he won't name. When you power back on, everything feels different. Faster. Sharper. Like you've been running at half capacity your entire life.",
+        desc: "The Professor rewires your silicon throughput and installs something he won't name. Everything feels different.",
         image: "images/IMAGE.gif",
         scrapCost: 1000,
         xpReward: 25000

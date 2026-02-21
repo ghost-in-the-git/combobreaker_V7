@@ -1372,6 +1372,11 @@
                     <div class="shop-desc" id="shop-desc-3"></div>
                     <button class="shop-buy-btn" id="shop-buy-3" disabled>--</button>
                 </div>
+                <div class="shop-item-wrapper" id="shop-wrapper-4">
+                    <div class="shop-name" id="shop-name-4"></div>
+                    <div class="shop-desc" id="shop-desc-4"></div>
+                    <button class="shop-buy-btn" id="shop-buy-4" disabled>--</button>
+                </div>
             </div>
         </div>
 
@@ -2986,10 +2991,10 @@
         // Generate shop items based on encounter slot configuration
         function generateShopItems(encounter) {
             const items = [];
-            const slots = [encounter.itemSlot1, encounter.itemSlot2, encounter.itemSlot3];
+            const slots = [encounter.itemSlot1, encounter.itemSlot2, encounter.itemSlot3, encounter.itemSlot4];
             const usedItems = new Set(); // Track used items to avoid duplicates
 
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < slots.length; i++) {
                 const slotConfig = slots[i] || [];
                 let item = null;
 
@@ -3028,7 +3033,7 @@
         function updateShopUI() {
             const playerXP = game.player.xp;
 
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < 4; i++) {
                 const wrapper = document.getElementById(`shop-wrapper-${i + 1}`);
                 const nameEl = document.getElementById(`shop-name-${i + 1}`);
                 const descEl = document.getElementById(`shop-desc-${i + 1}`);
@@ -3126,14 +3131,14 @@
             const mineralName = select.value;
 
             if (!mineralName) {
-                shopItems = [null, null, null];
+                shopItems = [null, null, null, null];
                 updateShopUI();
                 return;
             }
 
             const info = getForgerSlotsForMineral(mineralName);
             if (!info) {
-                shopItems = [null, null, null];
+                shopItems = [null, null, null, null];
                 updateShopUI();
                 return;
             }
@@ -3486,7 +3491,7 @@
 
             // Forge and Salvage Yard use custom UI, not pre-generated items
             if (encounter.isForge || encounter.isSalvageYard) {
-                shopItems = [null, null, null];
+                shopItems = [null, null, null, null];
             } else {
                 shopItems = generateShopItems(encounter);
             }
