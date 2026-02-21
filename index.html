@@ -1320,6 +1320,10 @@
                     <div class="storage-desc" id="storage-desc-key"></div>
                 </div>
                 <div class="equip-slot">
+                    <select id="storage-beacon"><option value="">[BEACONS] -- Empty --</option></select>
+                    <div class="storage-desc" id="storage-desc-beacon"></div>
+                </div>
+                <div class="equip-slot">
                     <select id="storage-dna"><option value="">[DNA] -- Empty --</option></select>
                     <div class="storage-desc" id="storage-desc-dna"></div>
                 </div>
@@ -3998,15 +4002,22 @@
 
         // Update storage UI dropdowns with collected story items
         function updateStorageUI() {
-            const STORAGE_LABELS = { log: 'LOGS', key: 'KEYS', dna: 'DNA', debris: 'DEBRIS', scrap: 'SCRAP', map: 'MAPS', locationmap: 'LOCATIONS' };
+            const STORAGE_LABELS = { log: 'LOGS', key: 'KEYS', beacon: 'BEACONS', dna: 'DNA', debris: 'DEBRIS', scrap: 'SCRAP', map: 'MAPS', locationmap: 'LOCATIONS' };
             const items = game.storyItems || [];
-            const cats = ['log', 'key', 'dna', 'debris', 'map', 'locationmap'];
+            const cats = ['log', 'key', 'beacon', 'dna', 'debris', 'map', 'locationmap'];
             cats.forEach(cat => {
                 const select = document.getElementById(`storage-${cat}`);
                 const desc = document.getElementById(`storage-desc-${cat}`);
                 if (!select || !desc) return;
                 const tag = STORAGE_LABELS[cat];
-                const collected = items.map(name => STORY_ITEMS.find(i => i.name === name)).filter(i => i && i.category === cat);
+                let collected;
+                if (cat === 'beacon') {
+                    collected = items.map(name => STORY_ITEMS.find(i => i.name === name)).filter(i => i && i.category === 'key' && i.name.startsWith('Beacon:'));
+                } else if (cat === 'key') {
+                    collected = items.map(name => STORY_ITEMS.find(i => i.name === name)).filter(i => i && i.category === 'key' && !i.name.startsWith('Beacon:'));
+                } else {
+                    collected = items.map(name => STORY_ITEMS.find(i => i.name === name)).filter(i => i && i.category === cat);
+                }
                 select.innerHTML = `<option value="">[${tag}] ${collected.length} items</option>`;
                 collected.forEach(item => {
                     const opt = document.createElement('option');
@@ -4028,7 +4039,7 @@
         }
 
         // Storage dropdown change listeners
-        ['log', 'key', 'dna', 'debris', 'scrap', 'map', 'locationmap'].forEach(cat => {
+        ['log', 'key', 'beacon', 'dna', 'debris', 'scrap', 'map', 'locationmap'].forEach(cat => {
             document.getElementById(`storage-${cat}`).addEventListener('change', (e) => {
                 const desc = document.getElementById(`storage-desc-${cat}`);
                 const item = STORY_ITEMS.find(i => i.name === e.target.value);
