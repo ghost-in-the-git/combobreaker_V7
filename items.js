@@ -420,16 +420,6 @@ const ITEMS = [
         zone: "ratpile"
     },
     {
-        name: "Rusty Pipe [+1 ATK]",
-        type: "weapon",
-        desc: "A length of corroded pipe scavenged from the scrapyard. Barely qualifies as a weapon, but it's better than nothing.",
-        image: "images/IMAGE.gif",
-        stats: { attack: 1 },
-        dropRate: 0,
-        droppedBy: [],
-        cost: 0
-    },
-    {
         name: "Pulse Pistol [+1 ATK]",
         type: "weapon",
         desc: "A compact sidearm that fires concentrated energy pulses. Reliable, if underwhelming.",
