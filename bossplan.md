@@ -1,58 +1,75 @@
 # Boss Key / Decrypter System — Squad Roster Plan
 
-## Concept
+## Lore
 
-The 11 boss keys are silicon keys holding the souls of mech pilots from your squad. All squad members were part of a tactical frontline unit with different roles. Each pilot had a different type of mech — attack, defense, mining, medic, etc.
+You ARE the Combobreaker. That's your identity — the game is named after you.
 
-The keys represent these personalities that were corrupted when trapped in boss form but are now pure and released from their silicon coffin (the corrupted mech they were piloting). Decrypting the keys gives your mech a power that relates to the squad member's personality and their role in the squad.
+The squad was a tactical frontline mech unit. When the military decommissioned them, they hid each squad member's mech in a different zone. The pilots' souls were trapped inside silicon keys, locked within the corrupted mechs that became the zone bosses.
 
-Powers use the **"breaker"** suffix representing their role.
+The **Old Key** is YOUR key — the Combobreaker's own soul. The Mapmaker secretly planted it inside your chassis when the military was scattering the squad. You start the game with it. It's why you're awake. It's why you move without a pilot.
 
-**Combobreaker** and **Speedbreaker** are currently always-on in the game. They need to be removed from default and locked behind their respective boss keys.
+The other 10 keys are your squadmates. Defeating each boss frees the pilot's soul from their silicon coffin. Taking the key to the Decrypter releases the personality within and hardwires their combat specialty into your systems as a **breaker** power.
+
+## Key Structure
+
+- **11 keys total** in the game
+- **1 key** (Old Key) = yours = Combobreaker = always active, not decryptable
+- **10 keys** dropped by bosses = 10 breaker powers unlocked via the Decrypter
+- **Combobreaker** stays always-on (it's YOU) — no change needed
+- **Speedbreaker** is currently always-on — needs to be **locked** behind Wire's key
 
 ## Squad Roster
 
-| # | Zone | Boss Mech | Key Item | Pilot Name | Squad Role | Power | Effect |
-|---|------|-----------|----------|------------|------------|-------|--------|
-| 1 | Scrapyard | T1 Destroyer | Old Key | **Chunk** | Scrap Refiner | **Scrapbreaker** | Bonus scrap from battle victories |
-| 2 | Old Battlefield | Siege Remnant | Unmarked Keycard | **Sarge** | Squad Defender | **Shieldbreaker** | Defence pool partially regenerates each round |
-| 3 | Downtown | Corporate Warlord | Corroded Access Fob | **Ghost** | Infiltrator | **Lootbreaker** | Guaranteed item drop from battles |
-| 4 | Orbital Station | Station Core Guardian | Skeleton Key Module | **Bolt** | Engineer | **Minebreaker** | Bonus mining yield |
-| 5 | Wasteland | Feral War Engine | Unmarked Crate Key | **Fang** | Assault | **Strikebreaker** | Bonus flat damage on attacks |
-| 6 | Undercity | Hive Overlord | Orbital Docking Permit | **Wire** | Scout | **Speedbreaker** | Double-attack chance (currently default — needs locking) |
-| 7 | Industrial Zone | Smelter Titan | Rusted Bulkhead Key | **Anvil** | Heavy Gunner | **Combobreaker** | Double-damage chance (currently default — needs locking) |
-| 8 | Frozen Reach | Avalanche Colossus | Biometric Override Chip | **Frost** | Medic | **Lifebreaker** | Enhanced end-of-round regen |
-| 9 | Neon Strip | The House | Freight Elevator Token | **Ace** | Pilot / Gambler | **Luckbreaker** | Bonus Silicon from kills |
-| 10 | Dead Zone | Abomination Core | Warden's Master Fob | **Null** | Specialist | **Voidbreaker** | Chance to negate enemy attacks |
-| 11 | Frontline | Warlord Chassis | Encrypted Passphrase Drive | **Rex** | Commander | **Warbreaker** | All breaker effects slightly boosted |
+| # | Zone | Boss Mech | Key Drop | Pilot | Squad Role | Power | Effect |
+|---|------|-----------|----------|-------|------------|-------|--------|
+| — | (starter) | — | Old Key | **You** | Combobreaker | **Combobreaker** | Double-damage chance (always active) |
+| 1 | Scrapyard | T1 Destroyer | Chunk's Key | **Chunk** | Scrap Refiner | **Scrapbreaker** | Bonus scrap from battle victories |
+| 2 | Old Battlefield | Siege Remnant | Sarge's Key | **Sarge** | Squad Defender | **Shieldbreaker** | Defence pool partially regenerates each round |
+| 3 | Downtown | Corporate Warlord | Ghost's Key | **Ghost** | Infiltrator | **Lootbreaker** | Guaranteed item drop from battles |
+| 4 | Orbital Station | Station Core Guardian | Bolt's Key | **Bolt** | Engineer | **Minebreaker** | Bonus mining yield |
+| 5 | Wasteland | Feral War Engine | Fang's Key | **Fang** | Assault | **Strikebreaker** | Bonus flat damage on attacks |
+| 6 | Undercity | Hive Overlord | Wire's Key | **Wire** | Scout | **Speedbreaker** | Double-attack chance (currently default — needs locking) |
+| 7 | Industrial Zone | Smelter Titan | Anvil's Key | **Anvil** | Heavy Gunner | **Crushbreaker** | Attacks ignore a portion of enemy defence |
+| 8 | Frozen Reach | Avalanche Colossus | Frost's Key | **Frost** | Medic | **Lifebreaker** | Enhanced end-of-round regen |
+| 9 | Neon Strip | The House | Ace's Key | **Ace** | Pilot / Gambler | **Luckbreaker** | Bonus Silicon from kills |
+| 10 | Dead Zone | Abomination Core | Null's Key | **Null** | Specialist | **Voidbreaker** | Chance to negate enemy attacks |
+| 11 | Frontline | Warlord Chassis | Rex's Key | **Rex** | Commander | **Warbreaker** | All breaker effects slightly boosted |
 
-## Open Questions
+## The Old Key
 
-1. **Combo/Speed placement** — Speedbreaker on Wire (Undercity, zone 6) and Combobreaker on Anvil (Industrial Zone, zone 7). These are mid-late game unlocks. Earlier or later?
+- Player starts with it (already in storyItems on new game)
+- It is NOT a boss drop — the Scrapyard boss now drops "Chunk's Key" instead of "Old Key"
+- It cannot be decrypted at the Decrypter (it's already you)
+- The Decrypter dropdown should not list it
+- The Mapmaker is the one who planted it in you — this connects to existing Mapmaker lore
 
-2. **The 11th key** — Player starts with "Old Key" (Chunk's key). Does the Scrapyard boss still drop it too? (i.e. you already have it from the start, so Scrapbreaker could be the first power you decrypt?) Or should the starter Old Key be a different item?
+## Code Changes Required
 
-3. **Power scaling** — Some effects are flat (Scrapbreaker = +X scrap), others are percentage-based (Speedbreaker = uses speed stat). Keep the existing combo/speed stat-based proc system, just gated behind owning the protocol? Or change them?
+### Phase 1: Key renaming + Combobreaker/Speedbreaker gating
+- [ ] Rename all 10 boss keyDrop values in boss_encounters.js to "[Name]'s Key"
+- [ ] Add 10 new key story items to storyitems.js with pilot lore descriptions
+- [ ] Rename all Protocol story items to breaker names with squad member lore
+- [ ] Update DECRYPTER_POWERUPS mapping in index.html to use new key/protocol names
+- [ ] Remove Old Key from DECRYPTER_POWERUPS (not decryptable)
+- [ ] Gate speedbreaker proc in battleRound() behind owning Wire's decrypted protocol
+- [ ] Gate speedbreaker proc in evadeAmbush() behind owning Wire's decrypted protocol
+- [ ] Combobreaker stays always-on (no change)
 
-4. **Rex's Warbreaker** — "All breakers boosted" is the most complex to implement. Alternatives: flat stat boost to all stats, reduced fuel costs, or something simpler?
+### Phase 2: Implement all 10 breaker powers
+- [ ] Scrapbreaker — bonus scrap on battle victory
+- [ ] Shieldbreaker — defence pool partially regenerates each battle round
+- [ ] Lootbreaker — guaranteed item drop from battles
+- [ ] Minebreaker — bonus mining yield
+- [ ] Strikebreaker — bonus flat damage on attacks
+- [ ] Speedbreaker — double-attack chance (already exists, just needs gating)
+- [ ] Crushbreaker — attacks ignore a portion of enemy defence
+- [ ] Lifebreaker — enhanced end-of-round regen
+- [ ] Luckbreaker — bonus Silicon from kills
+- [ ] Voidbreaker — chance to negate enemy attacks
+- [ ] Warbreaker — all breaker effects slightly boosted
 
-5. **Pilot names** — Do Chunk and the other names work, or specific names in mind for any of them?
-
-## Implementation Steps
-
-- [ ] Rename all Protocol story items to use breaker names and squad member lore
-- [ ] Update DECRYPTER_POWERUPS mapping in index.html
-- [ ] Update key story item descriptions to reference the pilot trapped inside
-- [ ] Gate combobreaker proc behind owning "Combobreaker" protocol (Anvil's key)
-- [ ] Gate speedbreaker proc behind owning "Speedbreaker" protocol (Wire's key)
-- [ ] Implement Scrapbreaker effect (bonus scrap on victory)
-- [ ] Implement Shieldbreaker effect (defence regen per round)
-- [ ] Implement Lootbreaker effect (guaranteed item drops)
-- [ ] Implement Minebreaker effect (bonus mining yield)
-- [ ] Implement Strikebreaker effect (bonus flat damage)
-- [ ] Implement Lifebreaker effect (enhanced regen)
-- [ ] Implement Luckbreaker effect (bonus Silicon)
-- [ ] Implement Voidbreaker effect (dodge enemy attacks)
-- [ ] Implement Warbreaker effect (boost all breakers)
-- [ ] Update boss encounter dialogue/lore to reference the trapped pilot
+### Phase 3: Lore updates
+- [ ] Update boss encounter intro text / dialogue to hint at the trapped pilot
 - [ ] Update Decrypter dialogue to reference releasing the pilot's soul
+- [ ] Update Old Key description to hint at its true meaning
+- [ ] Update key story item descriptions to reference squad member personality
