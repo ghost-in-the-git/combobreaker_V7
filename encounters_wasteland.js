@@ -99,5 +99,29 @@ const ENCOUNTERS_WASTELAND = [
         itemSlot1: ["Refined Moonshardite"],
         itemSlot2: ["Refined Nightpyre"],
         itemSlot3: ["Refined Obsidryl"]
+    },
+    {
+        name: "The Herald",
+        type: "shop",
+        discoverable: true,
+        description: "A woman crouches in the shade of a wrecked dropship, wrapped in rad-shielding. A seismic device hums at her feet.",
+        engageText: "'Something lives under the sand.' She taps the seismic device. 'Not a mech. Not entirely. It surfaces when it feels vibrations — footsteps, engines, heartbeats.' She holds up a beacon. 'This is louder than all of those.'",
+        discoveredDescription: "The Herald sits beneath the same wreckage, seismic device still humming. Sand shifts around her in patterns that aren't wind.",
+        discoveredEngageText: "'The sand moved again last night. It's getting closer to the surface. You ready?'",
+        appearanceRate: 10,
+        minLevel: 1,
+        itemSlot1: ["Beacon: Wasteland"],
+        itemSlot2: [],
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "What does the beacon do?",
+                response: "'It sends vibrations deep into the sand. The War Engine will feel it. And it will come up hungry.'"
+            },
+            {
+                question: "Who are you?",
+                response: "'A survivor.' She looks at the shifting sand. 'I watched it pull three mechs underground in one night. I stopped counting after that.'"
+            }
+        ]
     }
 ];

@@ -99,5 +99,29 @@ const ENCOUNTERS_UNDERCITY = [
         itemSlot1: ["Refined Prismalune"],
         itemSlot2: ["Refined Quellium"],
         itemSlot3: ["Refined Riftmarble"]
+    },
+    {
+        name: "The Herald",
+        type: "shop",
+        discoverable: true,
+        description: "A woman sits cross-legged beside a flickering terminal in the tunnel darkness. Cables snake from the terminal into the walls. She's listening to something.",
+        engageText: "'The network down here has a heartbeat.' She touches the wall. 'One node controls it all — the Hive Overlord. It knows every tunnel, every junction, every signal.' She produces a beacon. 'This floods its frequencies. It will come looking for the source.'",
+        discoveredDescription: "The Herald sits in the same spot, cables still pulsing. The walls seem to breathe around her.",
+        discoveredEngageText: "'The network's agitated. Something's changing down here. You feel it too, don't you?'",
+        appearanceRate: 10,
+        minLevel: 1,
+        itemSlot1: ["Beacon: Undercity"],
+        itemSlot2: [],
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "What does the beacon do?",
+                response: "'It injects noise into the tunnel network. The Overlord treats noise as an infection. It will come to purge the source — you.'"
+            },
+            {
+                question: "Who are you?",
+                response: "'I mapped these tunnels before the Overlord took them.' Her jaw tightens. 'Now I help people take them back.'"
+            }
+        ]
     }
 ];

@@ -99,5 +99,29 @@ const ENCOUNTERS_DOWNTOWN = [
         itemSlot1: ["Refined Gloomstone"],
         itemSlot2: ["Refined Hexsilica"],
         itemSlot3: ["Refined Iridionite"]
+    },
+    {
+        name: "The Herald",
+        type: "shop",
+        discoverable: true,
+        description: "A woman in a long coat leans against a fire escape, a jury-rigged antenna array humming on the landing above her. She's watching the street.",
+        engageText: "'The Corporate Warlord owns this block.' She flicks a switch on the antenna. 'Every camera, every drone, every enforcer answers to him. But he's got a blind spot — ego.' She holds up a beacon. 'This exploits it.'",
+        discoveredDescription: "The Herald leans against the same fire escape, antenna still humming. She nods as you approach.",
+        discoveredEngageText: "'Back for more? The Warlord's still out there. That won't change until you change it.'",
+        appearanceRate: 10,
+        minLevel: 1,
+        itemSlot1: ["Beacon: Downtown"],
+        itemSlot2: [],
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "What does the beacon do?",
+                response: "'It broadcasts your position on every corporate frequency. The Warlord takes that personally. He'll come to you.'"
+            },
+            {
+                question: "Who are you?",
+                response: "'I used to work for people like him.' She doesn't elaborate. 'Now I work against them. That's all you need to know.'"
+            }
+        ]
     }
 ];

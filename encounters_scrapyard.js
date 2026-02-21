@@ -98,5 +98,29 @@ const ENCOUNTERS_SCRAPYARD = [
         itemSlot1: ["Refined Aetherite"],
         itemSlot2: ["Refined Bronzewisp"],
         itemSlot3: ["Refined Cindergem"]
+    },
+    {
+        name: "The Herald",
+        type: "shop",
+        discoverable: true,
+        description: "A woman in a tattered cloak stands motionless between two wrecked mechs. A faint signal pulses from a device in her hand.",
+        engageText: "She doesn't introduce herself. 'You've been busy. I can feel it — the ground shakes differently when something old starts paying attention.' She holds up a beacon. 'This will finish what you started.'",
+        discoveredDescription: "The Herald stands where you left her, cloak billowing in the scrapyard wind. The signal device pulses steadily in her grip.",
+        discoveredEngageText: "She tilts her head. 'Still here? Then you're not done yet.'",
+        appearanceRate: 10,
+        minLevel: 1,
+        itemSlot1: ["Beacon: Scrap Fields"],
+        itemSlot2: [],
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "What does the beacon do?",
+                response: "'It calls what's already watching you. The thing in the scrap — it knows you're here. The beacon just tells it you're ready.'"
+            },
+            {
+                question: "Who are you?",
+                response: "'I go where the fighting is thickest.' Her eyes are old. 'I've been waiting for someone who'd last long enough to need what I sell.'"
+            }
+        ]
     }
 ];

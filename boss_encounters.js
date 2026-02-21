@@ -9,6 +9,7 @@
  * Structure:
  * - zone: location key matching LOCATIONS
  * - enemy: full enemy stat block for the boss
+ * - beacon: name of the beacon story item required to unlock this boss
  * - introText: system flavour text when the boss appears
  * - dialogue: array of { question, response } for pre-fight conversation
  * - keyDrop: story item name (category: "key")
@@ -18,6 +19,7 @@
 const BOSS_ENCOUNTERS = [
     {
         zone: "scrapyard",
+        beacon: "Beacon: Scrap Fields",
         enemy: {
             name: "T1 Destroyer",
             attack: 10,
@@ -47,6 +49,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "oldbattlefield",
+        beacon: "Beacon: Old Battlefield",
         enemy: {
             name: "Siege Remnant",
             attack: 15,
@@ -79,6 +82,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "downtown",
+        beacon: "Beacon: Downtown",
         enemy: {
             name: "Corporate Warlord",
             attack: 20,
@@ -111,6 +115,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "orbitalstation",
+        beacon: "Beacon: Orbital Station",
         enemy: {
             name: "Station Core Guardian",
             attack: 28,
@@ -143,6 +148,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "wasteland",
+        beacon: "Beacon: Wasteland",
         enemy: {
             name: "Feral War Engine",
             attack: 35,
@@ -175,6 +181,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "undercity",
+        beacon: "Beacon: Undercity",
         enemy: {
             name: "Hive Overlord",
             attack: 42,
@@ -207,6 +214,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "industrialzone",
+        beacon: "Beacon: Industrial Zone",
         enemy: {
             name: "Smelter Titan",
             attack: 50,
@@ -239,6 +247,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "frozenreach",
+        beacon: "Beacon: Frozen Reach",
         enemy: {
             name: "Avalanche Colossus",
             attack: 60,
@@ -271,6 +280,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "neonstrip",
+        beacon: "Beacon: Neon Strip",
         enemy: {
             name: "The House",
             attack: 75,
@@ -303,6 +313,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "deadzone",
+        beacon: "Beacon: Dead Zone",
         enemy: {
             name: "Abomination Core",
             attack: 100,
@@ -335,6 +346,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "frontline",
+        beacon: "Beacon: Frontline",
         enemy: {
             name: "Warlord Chassis",
             attack: 130,

@@ -764,6 +764,153 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif",
         cost: 200
     },
+    // Beacons (purchased from The Herald — unlocks boss encounter in that zone)
+    {
+        name: "Beacon: Scrap Fields",
+        desc: "A pulsing signal emitter tuned to a frequency only the strongest respond to. Something in the Scrap Fields will hear it.",
+        category: "key",
+        image: "images/IMAGE.gif",
+        cost: 50
+    },
+    {
+        name: "Beacon: Old Battlefield",
+        desc: "A battered military transponder rewired to broadcast a challenge. Whatever stalks No Man's Land will come.",
+        category: "key",
+        image: "images/IMAGE.gif",
+        cost: 75
+    },
+    {
+        name: "Beacon: Downtown",
+        desc: "A corporate override beacon. When activated, it broadcasts your position on every channel Downtown monitors.",
+        category: "key",
+        image: "images/IMAGE.gif",
+        cost: 100
+    },
+    {
+        name: "Beacon: Orbital Station",
+        desc: "A station-frequency distress beacon modified to attract rather than repel. The station's guardian will respond.",
+        category: "key",
+        image: "images/IMAGE.gif",
+        cost: 130
+    },
+    {
+        name: "Beacon: Wasteland",
+        desc: "A seismic thumper that sends vibrations deep into the irradiated sand. Something down there is listening.",
+        category: "key",
+        image: "images/IMAGE.gif",
+        cost: 170
+    },
+    {
+        name: "Beacon: Undercity",
+        desc: "A network probe that floods the tunnel frequencies with noise. The Overlord will not ignore the intrusion.",
+        category: "key",
+        image: "images/IMAGE.gif",
+        cost: 220
+    },
+    {
+        name: "Beacon: Industrial Zone",
+        desc: "A factory override chip that triggers every alarm on the floor simultaneously. The foreman always responds to alarms.",
+        category: "key",
+        image: "images/IMAGE.gif",
+        cost: 280
+    },
+    {
+        name: "Beacon: Frozen Reach",
+        desc: "A thermal charge that melts through permafrost. The heat signature will wake what sleeps beneath the ice.",
+        category: "key",
+        image: "images/IMAGE.gif",
+        cost: 350
+    },
+    {
+        name: "Beacon: Neon Strip",
+        desc: "A high-roller chip encoded with an impossible debt. The House always collects.",
+        category: "key",
+        image: "images/IMAGE.gif",
+        cost: 440
+    },
+    {
+        name: "Beacon: Dead Zone",
+        desc: "A corrupted data pulse that mimics living code. In the Dead Zone, that's enough to draw attention.",
+        category: "key",
+        image: "images/IMAGE.gif",
+        cost: 550
+    },
+    {
+        name: "Beacon: Frontline",
+        desc: "A stolen military IFF tag set to 'priority target'. Every chassis on the Frontline will converge on your position.",
+        category: "key",
+        image: "images/IMAGE.gif",
+        cost: 700
+    },
+
+    // Herald location maps (encounter discoveries)
+    {
+        name: "Scrap Fields: The Herald",
+        desc: "Coordinates to a cloaked figure broadcasting on a dead frequency in the Scrap Fields. She knows what lurks here.",
+        category: "locationmap",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Old Battlefield: The Herald",
+        desc: "Position of a hooded messenger perched atop a burnt-out tank on the Old Battlefield. She watches the horizon.",
+        category: "locationmap",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Downtown: The Herald",
+        desc: "A rooftop address Downtown where the Herald operates from a jury-rigged antenna array. She's always transmitting.",
+        category: "locationmap",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Orbital Station: The Herald",
+        desc: "Docking bay coordinates for the Herald's blacked-out shuttle on the Orbital Station. No running lights.",
+        category: "locationmap",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Wasteland: The Herald",
+        desc: "A beacon frequency for the Herald's shielded outpost in the Wasteland. The signal cuts through the radiation.",
+        category: "locationmap",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Undercity: The Herald",
+        desc: "Tunnel coordinates where the Herald sits cross-legged beside a flickering terminal in the Undercity darkness.",
+        category: "locationmap",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Industrial Zone: The Herald",
+        desc: "A catwalk position high above the factory floor where the Herald watches the machines. She never blinks.",
+        category: "locationmap",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Frozen Reach: The Herald",
+        desc: "Thermal coordinates for the Herald's ice cave on the Frozen Reach. Warm air leaks from the entrance.",
+        category: "locationmap",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Neon Strip: The Herald",
+        desc: "A back-room frequency on the Neon Strip. The Herald deals from behind a wall of static screens.",
+        category: "locationmap",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Dead Zone: The Herald",
+        desc: "Coordinates to a sealed bunker in the Dead Zone where the Herald waits in hazmat gear. She's been expecting you.",
+        category: "locationmap",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Frontline: The Herald",
+        desc: "Foxhole coordinates on the Frontline where the Herald crouches behind reinforced steel. She has what you need.",
+        category: "locationmap",
+        image: "images/IMAGE.gif"
+    },
+
     // Asteroid Belt - discovered mining locations
     {
         name: "Asteroid Belt: Aetherite Asteroid",

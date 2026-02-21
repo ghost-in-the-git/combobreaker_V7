@@ -89,5 +89,29 @@ const ENCOUNTERS_DEADZONE = [
         itemSlot1: ["Refined Archive Shard"],
         itemSlot2: ["Refined Strata-Null"],
         itemSlot3: ["Refined Compound 33"]
+    },
+    {
+        name: "The Herald",
+        type: "shop",
+        discoverable: true,
+        description: "A woman in sealed hazmat gear crouches inside a bunker, the door barely ajar. Monitors behind her display corrupted data streams. She's been expecting you.",
+        engageText: "'The Abomination Core isn't a machine.' She adjusts a dial on her suit. 'It's a process. Data in, destruction out. It materializes where corrupted signals converge.' She holds up a beacon. 'This broadcasts living code into the Dead Zone. It won't be able to resist.'",
+        discoveredDescription: "The Herald waits in her bunker, hazmat visor reflecting the corrupted data on her screens. The air tastes like static.",
+        discoveredEngageText: "'The signal's getting stronger. The Core is forming again. You know what to do.'",
+        appearanceRate: 10,
+        minLevel: 1,
+        itemSlot1: ["Beacon: Dead Zone"],
+        itemSlot2: [],
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "What does the beacon do?",
+                response: "'It mimics living code — the one thing the Dead Zone doesn't have. The Abomination Core will converge on the signal. It always does.'"
+            },
+            {
+                question: "Who are you?",
+                response: "'The last person who went in and came back out.' She taps her hazmat visor. 'I saw it form. I saw it take shape from nothing. I barely made it to this bunker.'"
+            }
+        ]
     }
 ];

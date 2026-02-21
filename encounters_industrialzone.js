@@ -95,5 +95,29 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         itemSlot1: ["Refined Starvitrine"],
         itemSlot2: ["Refined Thorncrystal"],
         itemSlot3: ["Refined Umbracite"]
+    },
+    {
+        name: "The Herald",
+        type: "shop",
+        discoverable: true,
+        description: "A woman watches from a catwalk high above the factory floor. Below her, machines stamp and grind on endless loops. She hasn't blinked since you arrived.",
+        engageText: "'The Smelter Titan thinks it's still the foreman.' She descends a ladder without looking at the rungs. 'It responds to alarms — safety violations, unauthorized access, production faults.' She holds up a beacon. 'This triggers all of them at once.'",
+        discoveredDescription: "The Herald stands on her catwalk, silhouetted against the foundry glow. Sparks reflect in her unblinking eyes.",
+        discoveredEngageText: "'The production line never stops. Neither does the Titan. Unless someone stops it.'",
+        appearanceRate: 10,
+        minLevel: 1,
+        itemSlot1: ["Beacon: Industrial Zone"],
+        itemSlot2: [],
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "What does the beacon do?",
+                response: "'It overrides every alarm on the factory floor simultaneously. The Titan interprets that as a catastrophic safety violation. It will come to enforce order.'"
+            },
+            {
+                question: "Who are you?",
+                response: "'Former line worker.' She flexes a hand — the fingers move wrong, slightly mechanical. 'I got out before the Titan decided I was part of the equipment.'"
+            }
+        ]
     }
 ];

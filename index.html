@@ -1488,6 +1488,7 @@
     <script src="encounters_frozenreach.js"></script>
     <script src="encounters_neonstrip.js"></script>
     <script src="encounters_deadzone.js"></script>
+    <script src="encounters_frontline.js"></script>
     <script src="mining_scrapyard.js"></script>
     <script src="mining_oldbattlefield.js"></script>
     <script src="mining_downtown.js"></script>
@@ -2182,7 +2183,7 @@
             },
             frontline: {
                 enemies: ENEMIES_FRONTLINE,
-                encounters: null,
+                encounters: ENCOUNTERS_FRONTLINE,
                 mining: null,
                 ambush: AMBUSH_FRONTLINE,
                 fuelCost: 55,
@@ -2312,7 +2313,8 @@
                     { encounterName: "[COMMON] Derelict Vending Array", mapItem: "Scrap Fields: Derelict Vending Array" },
                     { encounterName: "Aetherite Asteroid", mapItem: "Scrap Fields: Aetherite Asteroid" },
                     { encounterName: "Bronzewisp Asteroid", mapItem: "Scrap Fields: Bronzewisp Asteroid" },
-                    { encounterName: "Cindergem Asteroid", mapItem: "Scrap Fields: Cindergem Asteroid" }
+                    { encounterName: "Cindergem Asteroid", mapItem: "Scrap Fields: Cindergem Asteroid" },
+                    { encounterName: "The Herald", mapItem: "Scrap Fields: The Herald" }
                 ]
             },
             oldbattlefield: {
@@ -2327,7 +2329,8 @@
                     { encounterName: "[COMMON] Experimental R&D Vendor", mapItem: "Old Battlefield: Experimental R&D Vendor" },
                     { encounterName: "Duskquartz Asteroid", mapItem: "Old Battlefield: Duskquartz Asteroid" },
                     { encounterName: "Emberlith Asteroid", mapItem: "Old Battlefield: Emberlith Asteroid" },
-                    { encounterName: "Frostveil Asteroid", mapItem: "Old Battlefield: Frostveil Asteroid" }
+                    { encounterName: "Frostveil Asteroid", mapItem: "Old Battlefield: Frostveil Asteroid" },
+                    { encounterName: "The Herald", mapItem: "Old Battlefield: The Herald" }
                 ]
             },
             downtown: {
@@ -2342,7 +2345,8 @@
                     { encounterName: "[COMMON] Neon Bazaar Kiosk", mapItem: "Downtown: Neon Bazaar Kiosk" },
                     { encounterName: "Gloomstone Asteroid", mapItem: "Downtown: Gloomstone Asteroid" },
                     { encounterName: "Hexsilica Asteroid", mapItem: "Downtown: Hexsilica Asteroid" },
-                    { encounterName: "Iridionite Asteroid", mapItem: "Downtown: Iridionite Asteroid" }
+                    { encounterName: "Iridionite Asteroid", mapItem: "Downtown: Iridionite Asteroid" },
+                    { encounterName: "The Herald", mapItem: "Downtown: The Herald" }
                 ]
             },
             orbitalstation: {
@@ -2357,7 +2361,8 @@
                     { encounterName: "[COMMON] Void Smuggler", mapItem: "Orbital Station: Void Smuggler" },
                     { encounterName: "Jetspinel Asteroid", mapItem: "Orbital Station: Jetspinel Asteroid" },
                     { encounterName: "Kryptoglass Asteroid", mapItem: "Orbital Station: Kryptoglass Asteroid" },
-                    { encounterName: "Lumenore Asteroid", mapItem: "Orbital Station: Lumenore Asteroid" }
+                    { encounterName: "Lumenore Asteroid", mapItem: "Orbital Station: Lumenore Asteroid" },
+                    { encounterName: "The Herald", mapItem: "Orbital Station: The Herald" }
                 ]
             },
             wasteland: {
@@ -2372,7 +2377,8 @@
                     { encounterName: "[COMMON] Buried Supply Cache", mapItem: "Wasteland: Buried Supply Cache" },
                     { encounterName: "Moonshardite Asteroid", mapItem: "Wasteland: Moonshardite Asteroid" },
                     { encounterName: "Nightpyre Asteroid", mapItem: "Wasteland: Nightpyre Asteroid" },
-                    { encounterName: "Obsidryl Asteroid", mapItem: "Wasteland: Obsidryl Asteroid" }
+                    { encounterName: "Obsidryl Asteroid", mapItem: "Wasteland: Obsidryl Asteroid" },
+                    { encounterName: "The Herald", mapItem: "Wasteland: The Herald" }
                 ]
             },
             undercity: {
@@ -2387,7 +2393,8 @@
                     { encounterName: "[COMMON] Shadow Broker", mapItem: "Undercity: Shadow Broker" },
                     { encounterName: "Prismalune Asteroid", mapItem: "Undercity: Prismalune Asteroid" },
                     { encounterName: "Quellium Asteroid", mapItem: "Undercity: Quellium Asteroid" },
-                    { encounterName: "Riftmarble Asteroid", mapItem: "Undercity: Riftmarble Asteroid" }
+                    { encounterName: "Riftmarble Asteroid", mapItem: "Undercity: Riftmarble Asteroid" },
+                    { encounterName: "The Herald", mapItem: "Undercity: The Herald" }
                 ]
             },
             industrialzone: {
@@ -2402,7 +2409,8 @@
                     { encounterName: "[COMMON] Shift Supervisor's Stash", mapItem: "Industrial Zone: Shift Supervisor's Stash" },
                     { encounterName: "Starvitrine Asteroid", mapItem: "Industrial Zone: Starvitrine Asteroid" },
                     { encounterName: "Thorncrystal Asteroid", mapItem: "Industrial Zone: Thorncrystal Asteroid" },
-                    { encounterName: "Umbracite Asteroid", mapItem: "Industrial Zone: Umbracite Asteroid" }
+                    { encounterName: "Umbracite Asteroid", mapItem: "Industrial Zone: Umbracite Asteroid" },
+                    { encounterName: "The Herald", mapItem: "Industrial Zone: The Herald" }
                 ]
             },
             frozenreach: {
@@ -2417,7 +2425,8 @@
                     { encounterName: "[COMMON] Glacier Prospector", mapItem: "Frozen Reach: Glacier Prospector" },
                     { encounterName: "Vortexium Asteroid", mapItem: "Frozen Reach: Vortexium Asteroid" },
                     { encounterName: "Wyrmstone Asteroid", mapItem: "Frozen Reach: Wyrmstone Asteroid" },
-                    { encounterName: "Xanthryx Asteroid", mapItem: "Frozen Reach: Xanthryx Asteroid" }
+                    { encounterName: "Xanthryx Asteroid", mapItem: "Frozen Reach: Xanthryx Asteroid" },
+                    { encounterName: "The Herald", mapItem: "Frozen Reach: The Herald" }
                 ]
             },
             neonstrip: {
@@ -2432,7 +2441,8 @@
                     { encounterName: "[COMMON] High-Roller Lounge", mapItem: "Neon Strip: High-Roller Lounge" },
                     { encounterName: "Yonderite Asteroid", mapItem: "Neon Strip: Yonderite Asteroid" },
                     { encounterName: "Zephyrsalt Asteroid", mapItem: "Neon Strip: Zephyrsalt Asteroid" },
-                    { encounterName: "Isotope Lace Asteroid", mapItem: "Neon Strip: Isotope Lace Asteroid" }
+                    { encounterName: "Isotope Lace Asteroid", mapItem: "Neon Strip: Isotope Lace Asteroid" },
+                    { encounterName: "The Herald", mapItem: "Neon Strip: The Herald" }
                 ]
             },
             deadzone: {
@@ -2447,7 +2457,8 @@
                     { encounterName: "[COMMON] Sealed Bunker Terminal", mapItem: "Dead Zone: Sealed Bunker Terminal" },
                     { encounterName: "Archive Shard Asteroid", mapItem: "Dead Zone: Archive Shard Asteroid" },
                     { encounterName: "Strata-Null Asteroid", mapItem: "Dead Zone: Strata-Null Asteroid" },
-                    { encounterName: "Compound 33 Asteroid", mapItem: "Dead Zone: Compound 33 Asteroid" }
+                    { encounterName: "Compound 33 Asteroid", mapItem: "Dead Zone: Compound 33 Asteroid" },
+                    { encounterName: "The Herald", mapItem: "Dead Zone: The Herald" }
                 ]
             },
             asteroidbelt: {
@@ -2473,7 +2484,9 @@
             frontline: {
                 openWorldName: "The Kill Corridor",
                 openWorldDesc: "Military forward operating base. Piloted combobreakers patrol in tight formation. Every sensor is pointed at you.",
-                destinations: []
+                destinations: [
+                    { encounterName: "The Herald", mapItem: "Frontline: The Herald" }
+                ]
             },
             forge: {
                 openWorldName: null,
@@ -4178,6 +4191,9 @@
             const hasKey = (game.storyItems || []).includes(boss.keyDrop);
             const hasDna = (game.storyItems || []).includes(boss.dnaDrop);
             if (hasKey && hasDna) return false;
+
+            // Boss only appears after player activates the zone's beacon
+            if (boss.beacon && !(game.storyItems || []).includes(boss.beacon)) return false;
 
             // Use enemy stats from boss encounter data
             const bossEnemy = boss.enemy;

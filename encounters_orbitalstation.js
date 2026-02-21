@@ -99,5 +99,29 @@ const ENCOUNTERS_ORBITALSTATION = [
         itemSlot1: ["Refined Jetspinel"],
         itemSlot2: ["Refined Kryptoglass"],
         itemSlot3: ["Refined Lumenore"]
+    },
+    {
+        name: "The Herald",
+        type: "shop",
+        discoverable: true,
+        description: "A woman in a patched EVA suit floats in a depressurised corridor, tethered to a support beam. A blacked-out shuttle is docked behind her.",
+        engageText: "'The station thinks it's still operational.' She pulls herself along the tether. 'Core Defense Unit 07 — it unfolds from the ceiling when it detects unauthorized presence. That's you, by the way.' She holds out a beacon. 'This makes sure it finds you.'",
+        discoveredDescription: "The Herald floats in the same corridor, tethered and waiting. Her shuttle's docking clamps haven't moved.",
+        discoveredEngageText: "'The Guardian is still patrolling. It won't stop until someone shuts it down — permanently.'",
+        appearanceRate: 10,
+        minLevel: 1,
+        itemSlot1: ["Beacon: Orbital Station"],
+        itemSlot2: [],
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "What does the beacon do?",
+                response: "'It triggers a station-wide distress alert. The Core Guardian always responds to distress signals. It's programmed to protect — by destroying the threat.'"
+            },
+            {
+                question: "Who are you?",
+                response: "'Former crew.' She touches the station wall. 'I was here when it went dark. I left. The Guardian didn't.'"
+            }
+        ]
     }
 ];

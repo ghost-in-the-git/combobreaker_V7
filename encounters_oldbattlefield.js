@@ -99,5 +99,29 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         itemSlot1: ["Refined Duskquartz"],
         itemSlot2: ["Refined Emberlith"],
         itemSlot3: ["Refined Frostveil"]
+    },
+    {
+        name: "The Herald",
+        type: "shop",
+        discoverable: true,
+        description: "A cloaked figure sits atop a burnt-out tank, scanning the horizon with a cracked monocular. A signal device blinks on her belt.",
+        engageText: "'The battlefield remembers its dead.' She climbs down slowly. 'But there's one that never died. It's still out there, running on orders from a war that ended years ago.' She produces a beacon. 'This will bring it to you.'",
+        discoveredDescription: "The Herald watches from her tank perch, cloak whipping in the wind. She's already reaching for the beacon before you arrive.",
+        discoveredEngageText: "She drops down. 'The Remnant is patient. But patience has limits.'",
+        appearanceRate: 10,
+        minLevel: 1,
+        itemSlot1: ["Beacon: Old Battlefield"],
+        itemSlot2: [],
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "What does the beacon do?",
+                response: "'It broadcasts on the old military frequencies. The Siege Remnant still listens to those channels. It will come.'"
+            },
+            {
+                question: "Who are you?",
+                response: "'Someone who's seen what happens when these things go unchallenged.' She looks out at the battlefield. 'I'd rather someone else handled it.'"
+            }
+        ]
     }
 ];

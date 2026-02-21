@@ -95,5 +95,29 @@ const ENCOUNTERS_FROZENREACH = [
         itemSlot1: ["Refined Vortexium"],
         itemSlot2: ["Refined Wyrmstone"],
         itemSlot3: ["Refined Xanthryx"]
+    },
+    {
+        name: "The Herald",
+        type: "shop",
+        discoverable: true,
+        description: "A woman huddles in an ice cave, warm air leaking from a thermal vent behind her. Frost coats her eyelashes but she doesn't shiver.",
+        engageText: "'There's something under the glacier.' She points down. 'It's been frozen for centuries. Wars, collapses, extinctions — it slept through all of them.' She holds up a beacon. 'A thermal charge. The heat will wake it.'",
+        discoveredDescription: "The Herald waits in her ice cave, thermal vent hissing at her back. The ground trembles faintly.",
+        discoveredEngageText: "'The ice cracked again last night. It's waking up on its own. Better to fight it on your terms.'",
+        appearanceRate: 10,
+        minLevel: 1,
+        itemSlot1: ["Beacon: Frozen Reach"],
+        itemSlot2: [],
+        itemSlot3: [],
+        dialogue: [
+            {
+                question: "What does the beacon do?",
+                response: "'It melts through the permafrost in a controlled burst. The Avalanche Colossus is sensitive to heat — it will interpret the thermal signature as a threat and surface.'"
+            },
+            {
+                question: "Who are you?",
+                response: "'A researcher.' She looks at the ice wall. 'I was studying the glacier when I found it. I ran. You won't.'"
+            }
+        ]
     }
 ];
