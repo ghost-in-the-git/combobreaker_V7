@@ -111,9 +111,9 @@ const ENCOUNTERS_ORBITALSTATION = [
         type: "shop",
         discoverable: true,
         description: "A woman in a patched EVA suit floats in a depressurised corridor, tethered to a support beam. A blacked-out shuttle is docked behind her.",
-        engageText: "'The rig's main shaft goes down about two kilometres.' She pulls herself along the tether. 'There's a DR-7 Prospector at the bottom. Been drilling the same rock face for 80 years — you can hear it through the hull if you press your hand to the wall.' She holds out a beacon. 'This makes sure it finds you.'",
+        engageText: "'The rig's main shaft goes down about two kilometres.' She pulls herself along the tether. 'There's a DR-7 Prospector at the bottom. Been drilling the same dead rock for 80 years. It won't notice you — it doesn't notice anything anymore.' She holds out a beacon. 'This disrupts the drill cycle. Breaks the loop. And when the loop breaks, it wakes up.'",
         discoveredDescription: "The Herald floats in the same corridor, tethered and waiting. Her shuttle's docking clamps haven't moved.",
-        discoveredEngageText: "'It's still down there. Still drilling. You can feel it through the floor.'",
+        discoveredEngageText: "'It's still down there. Still drilling. Still asleep. You want to wake it up or not?'",
         appearanceRate: 10,
         minLevel: 1,
         itemSlot1: ["Beacon: Orbital Station"],
@@ -123,7 +123,7 @@ const ENCOUNTERS_ORBITALSTATION = [
         dialogue: [
             {
                 question: "What does the beacon do?",
-                response: "'It sends a survey ping down the shaft. The Prospector reads it as a new work order — drill here, assay this. It'll come to whatever the ping marks as the dig site.' She looks at you. 'That's you.'"
+                response: "'It hits the Prospector with a frequency that interrupts the drill cycle. Forces a hard reset on its targeting systems.' She snaps her fingers. 'For about half a second it stops being a mining rig and remembers it's a mech. That's when it sees you. After that, you're just an obstruction in the dig site.'"
             },
             {
                 question: "Who are you?",
