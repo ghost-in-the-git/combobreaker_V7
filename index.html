@@ -4778,7 +4778,8 @@
             let comboTriggered = hasBreaker("Your Combobreaker Key") && Math.random() * 100 < p.breaker;
             let strikeTriggered = hasBreaker("Fang's Strikebreaker Key") && Math.random() * 100 < p.breaker;
             let crushTriggered = hasBreaker("Anvil's Crushbreaker Key") && Math.random() * 100 < p.breaker;
-            let attackCount = speedTriggered ? 2 : 1;
+            let warTriggered = hasBreaker("Judge's Warbreaker Key") && (speedTriggered || comboTriggered) && Math.random() * 100 < p.breaker;
+            let attackCount = speedTriggered ? (warTriggered ? 4 : 2) : 1;
 
             if (speedTriggered) {
                 await addMessage(`[SPEEDBREAKER TRIGGERED]`, 'player');
@@ -4792,11 +4793,14 @@
             if (crushTriggered) {
                 await addMessage(`[CRUSHBREAKER TRIGGERED] Damage hits all enemies!`, 'player');
             }
+            if (warTriggered) {
+                await addMessage(`[WARBREAKER TRIGGERED] Escalating to 4X!`, 'player');
+            }
 
-            // Calculate damage (strikebreaker ignores enemy defence, combobreaker doubles)
+            // Calculate damage (strikebreaker ignores enemy defence, combobreaker doubles/quadruples)
             let playerDamage = calculateDamage(p.attack, strikeTriggered ? 0 : et.defence);
             if (comboTriggered) {
-                playerDamage *= 2;
+                playerDamage *= warTriggered ? 4 : 2;
             }
 
             // Perform attacks
