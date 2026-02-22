@@ -110,10 +110,10 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A cloaked figure sits atop a burnt-out tank, scanning the horizon with a cracked monocular. A signal device blinks on her belt.",
+        description: "A slight woman sits atop a burnt-out tank, scanning the horizon with bare eyes sharper than any scope. Same build, same restless hands — she saw you coming before you saw her.",
         engageText: "'The battlefield remembers its dead.' She climbs down slowly. 'But there's one that never died. It's still out there, running on orders from a war that ended years ago.' She produces a beacon. 'This will bring it to you.'",
-        discoveredDescription: "The Herald watches from her tank perch, cloak whipping in the wind. She's already reaching for the beacon before you arrive.",
-        discoveredEngageText: "She drops down. 'The Remnant is patient. But patience has limits.'",
+        discoveredDescription: "The Herald watches from her tank perch, same slight frame, same too-sharp eyes. She's already reaching for the beacon before you arrive.",
+        discoveredEngageText: "She drops down. 'The Bulwark is still dug in. Same position. Same perimeter. It won't move until something crosses the line.'",
         appearanceRate: 10,
         minLevel: 1,
         itemSlot1: ["Beacon: Old Battlefield"],
@@ -123,11 +123,11 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         dialogue: [
             {
                 question: "What does the beacon do?",
-                response: "'It broadcasts on the old military frequencies. The Siege Remnant still listens to those channels. It will come.'"
+                response: "'It broadcasts a perimeter breach on the Bulwark's defensive frequency. The mech is dug in — it won't leave its position for anything less than a direct threat to whatever it thinks it's still protecting. The beacon makes you that threat.'"
             },
             {
                 question: "Who are you?",
-                response: "'Someone who's seen what happens when these things go unchallenged.' She looks out at the battlefield. 'I'd rather someone else handled it.'"
+                response: "'Someone who remembers what these machines were before they were monsters.' She watches the horizon like she's seeing a different battlefield. 'That was a long time ago.'"
             }
         ]
     }

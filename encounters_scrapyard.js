@@ -109,9 +109,9 @@ const ENCOUNTERS_SCRAPYARD = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman in a tattered cloak stands motionless between two wrecked mechs. A faint signal pulses from a device in her hand.",
+        description: "A slight woman stands motionless between two wrecked mechs, cloak pulled tight against the scrapyard wind. Her hands move with a precision that isn't quite human — adjusting a device, checking a frequency, still again — all in the time it takes you to blink.",
         engageText: "She doesn't introduce herself. 'You've been busy. I can feel it — the ground shakes differently when something old starts paying attention.' She holds up a beacon. 'This will finish what you started.'",
-        discoveredDescription: "The Herald stands where you left her, cloak billowing in the scrapyard wind. The signal device pulses steadily in her grip.",
+        discoveredDescription: "The Herald stands where you left her, same slight frame, same too-fast hands. The signal device pulses steadily in her grip.",
         discoveredEngageText: "She tilts her head. 'Still here? Then you're not done yet.'",
         appearanceRate: 10,
         minLevel: 1,
@@ -126,7 +126,7 @@ const ENCOUNTERS_SCRAPYARD = [
             },
             {
                 question: "Who are you?",
-                response: "'I go where the fighting is thickest.' Her eyes are old. 'I've been waiting for someone who'd last long enough to need what I sell.'"
+                response: "'I go where the dead mechs are.' Her eyes are older than her face. 'I've been doing this a long time. Longer than you've been awake.'"
             }
         ]
     }

@@ -110,10 +110,10 @@ const ENCOUNTERS_DOWNTOWN = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman in a long coat leans against a fire escape, a jury-rigged antenna array humming on the landing above her. She's watching the street.",
-        engageText: "'The Corporate Warlord owns this block.' She flicks a switch on the antenna. 'Every camera, every drone, every enforcer answers to him. But he's got a blind spot — ego.' She holds up a beacon. 'This exploits it.'",
-        discoveredDescription: "The Herald leans against the same fire escape, antenna still humming. She nods as you approach.",
-        discoveredEngageText: "'Back for more? The Warlord's still out there. That won't change until you change it.'",
+        description: "A slight woman leans against a fire escape, a jury-rigged antenna array humming on the landing above her. Same fast hands, same eyes that track too quick. She's watching the street like she already knows what's on it.",
+        engageText: "'There's something in the rain.' She flicks a switch on the antenna. 'An S-12 Wraith. Stealth frame, sensor-dampened hull, still cycling through broken camo patterns after eighty years. It drifts between the towers like an afterimage.' She holds up a beacon. 'This disrupts the stealth cycle. Makes it solid long enough to see you — and decide you're a threat.'",
+        discoveredDescription: "The Herald leans against the same fire escape, same slight frame, antenna still humming. She nods once as you approach.",
+        discoveredEngageText: "'It's still out there. Still flickering between the towers. You going to pin it down or let it keep haunting this place?'",
         appearanceRate: 10,
         minLevel: 1,
         itemSlot1: ["Beacon: Downtown"],
@@ -123,11 +123,11 @@ const ENCOUNTERS_DOWNTOWN = [
         dialogue: [
             {
                 question: "What does the beacon do?",
-                response: "'It broadcasts your position on every corporate frequency. The Warlord takes that personally. He'll come to you.'"
+                response: "'It emits a targeting pulse on the Wraith's sensor frequency. Breaks the stealth loop for a few seconds — long enough for its threat assessment to kick in. Once it sees you, the camo won't matter. It'll come straight at you.'"
             },
             {
                 question: "Who are you?",
-                response: "'I used to work for people like him.' She doesn't elaborate. 'Now I work against them. That's all you need to know.'"
+                response: "'Does it matter?' Her head tilts — the motion is too fast, almost mechanical. 'I know where the mechs are. I know how to wake them up. That's what you need from me.'"
             }
         ]
     }

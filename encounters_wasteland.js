@@ -110,9 +110,9 @@ const ENCOUNTERS_WASTELAND = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman in rad-shielding sits on the carcass of a Sand Stalker, marking kill patterns on a scored metal chart. The Stalker's armour has been shredded by something much bigger than it.",
+        description: "A slight woman in rad-shielding sits on the carcass of a Sand Stalker, marking kill patterns on a scored metal chart. Same fast hands, same eyes that catch light at the wrong angle. The Stalker's armour has been shredded by something much bigger than it.",
         engageText: "'There's an AX-3 Ravager out there.' She nods toward the open wasteland. 'Been killing everything that moves for 80 years — Sand Stalkers, Pack Runners, dust devils, anything that triggers its sensors. Assault frame running on fried targeting firmware. It doesn't hunt. It doesn't patrol. It just fights whatever's closest.' She holds up a beacon. 'Right now that's whatever stumbles into its path. This makes sure the closest thing is you.'",
-        discoveredDescription: "The Herald sits on a fresh Stalker carcass, updating her kill charts. The shredding pattern is the same as last time.",
+        discoveredDescription: "The Herald sits on a fresh Stalker carcass, same slight frame, same too-precise hands scoring marks into metal. The shredding pattern is the same as last time.",
         discoveredEngageText: "'Three more kills since you were here last. It's getting faster, not slower. You want to do this or not?'",
         appearanceRate: 10,
         minLevel: 1,
@@ -127,7 +127,7 @@ const ENCOUNTERS_WASTELAND = [
             },
             {
                 question: "Who are you?",
-                response: "'I track kill patterns.' She runs a finger along the chart — dozens of marks, all radiating outward from a central point. 'Every kill it makes, I log. Stalkers, Crawlers, Pack Runners. Anything with a heat signature that crosses its radius.' She folds the chart. 'Something that aggressive shouldn't be left running.'"
+                response: "'Someone who knows what these mechs sound like when the pilot's still inside.' She folds the chart with fingers that move too fast to track. She doesn't explain."
             }
         ]
     }

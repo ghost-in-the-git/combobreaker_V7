@@ -106,9 +106,9 @@ const ENCOUNTERS_NEONSTRIP = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman sits in a back room where every light works. Not the flickering half-life of the strip — these are steady, clean, repaired. She watches the door like she's been waiting.",
+        description: "A slight woman sits in a back room where every light works. Not the flickering half-life of the strip — these are steady, repaired. Same fast hands, same eyes that catch light wrong. She watches the door like she already knew you were coming.",
         engageText: "'You've seen the signs, right? The ones that work?' She gestures at the functioning lights. 'Something's been fixing the strip. Every broken thing, one by one. It doesn't stop.' She slides a beacon across the table. 'An engineering mech. Still running work orders for a pilot who's been dead for years.'",
-        discoveredDescription: "The Herald sits in her back room. More lights work now than the last time you were here. The repairs are spreading.",
+        discoveredDescription: "The Herald sits in her back room, same slight frame, same too-fast hands. More lights work now than the last time you were here.",
         discoveredEngageText: "'It's getting closer to this block. Fixing everything in its path. You going to let it get here, or go to it?'",
         appearanceRate: 10,
         minLevel: 1,
@@ -123,7 +123,7 @@ const ENCOUNTERS_NEONSTRIP = [
             },
             {
                 question: "Who are you?",
-                response: "'A technician.' She looks at the repaired lights. 'I used to maintain the strip's infrastructure. Then I noticed someone else was doing my job. Better than me. Faster. Every night, more things fixed. I followed the repairs to the source and saw it — crouched over a junction box, manipulator arms deep in the wiring. Working alone. I've been watching it ever since.'"
+                response: "'You've met me enough times to know I'm not going to answer that.' A pause. She holds up one hand — for a second the fingers blur, not quite solid. Then they're normal again. 'I'm what happens when the transfer goes too far.'"
             }
         ]
     }

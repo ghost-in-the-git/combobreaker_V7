@@ -106,9 +106,9 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman watches from a catwalk high above the factory floor. Below, the walls are cratered — pocked with decades of weapons fire. The rhythmic thud of heavy guns echoes from deeper in the complex. She hasn't flinched at the sound in years.",
+        description: "A slight woman watches from a catwalk high above the factory floor. Same build, same restless hands, same eyes that catch light wrong. Below, the walls are cratered by decades of weapons fire. The rhythmic thud of heavy guns echoes from deeper in the complex.",
         engageText: "'You can hear it from here.' She descends a ladder without looking at the rungs. 'The Devastator. It's been firing for as long as anyone can remember. Not at anything — just firing.' She holds up a beacon. 'This puts you in its targeting solution.'",
-        discoveredDescription: "The Herald stands on her catwalk, silhouetted against the foundry glow. Below, another salvo thuds into the factory walls.",
+        discoveredDescription: "The Herald stands on her catwalk, same slight silhouette against the foundry glow. Below, another salvo thuds into the factory walls.",
         discoveredEngageText: "'The guns never stop. But they've never had a real target. Until now.'",
         appearanceRate: 10,
         minLevel: 1,
@@ -123,7 +123,7 @@ const ENCOUNTERS_INDUSTRIALZONE = [
             },
             {
                 question: "Who are you?",
-                response: "'Former line worker.' She flexes a hand — the fingers move wrong, slightly mechanical. 'I worked three corridors from the blast zone. You learn to sleep through the sound of heavy weapons. You never learn to stop counting the seconds between salvos.'"
+                response: "'I knew all of them.' She says it watching the factory floor, not you. 'Every mech you've fought. Every pilot locked inside. I knew what they sounded like when they were people.'"
             }
         ]
     }

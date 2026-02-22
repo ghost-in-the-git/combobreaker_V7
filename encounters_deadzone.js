@@ -100,9 +100,9 @@ const ENCOUNTERS_DEADZONE = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman in sealed hazmat gear crouches inside a bunker, the door barely ajar. Her comms equipment is military-grade — the only gear that cuts through the interference. She's been mapping the blackout.",
+        description: "A slight woman in sealed hazmat gear crouches inside a bunker, the door barely ajar. Same build, same too-precise movements, even through the suit. Her comms equipment is military-grade — the only gear that cuts through the interference.",
         engageText: "'The Dead Zone isn't dead.' She pulls up a signal map — a perfect circle of electronic denial, expanding by a few meters every month. 'There's an EW mech at the center. A Phantom. It's been running full-spectrum jamming since its pilot died. Every frequency, all the time.' She holds up a beacon. 'This punches a hole in the noise. Briefly.'",
-        discoveredDescription: "The Herald waits in her bunker. Her signal map shows the denial zone has grown since your last visit.",
+        discoveredDescription: "The Herald waits in her bunker, same slight frame, same steady hands. Her signal map shows the denial zone has grown since your last visit.",
         discoveredEngageText: "'The blackout radius expanded again. Another hundred meters of silence. You going in or waiting until it reaches us?'",
         appearanceRate: 10,
         minLevel: 1,
@@ -117,7 +117,7 @@ const ENCOUNTERS_DEADZONE = [
             },
             {
                 question: "Who are you?",
-                response: "'A signals analyst.' She gestures at her equipment. 'I was hired to figure out why this region went dark. Everyone assumed it was contamination, infrastructure decay, natural causes. It's not. It's one mech, running every countermeasure in its arsenal at once, and it's been doing it for years. The perfect blackout. I'm the only one who knows it's not an accident.'"
+                response: "'My callsign was Wire.' She says it like putting down something heavy. 'Jess Nakamura. SC-1 Flicker. Fastest hands in the unit.' She holds up her hand — the fingers blur, then solidify. 'What's left of me, anyway.'"
             }
         ]
     }

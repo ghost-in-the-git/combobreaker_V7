@@ -106,9 +106,9 @@ const ENCOUNTERS_FROZENREACH = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman huddles in an ice cave, warm air leaking from a thermal vent behind her. Through the ice wall behind her, something glows faintly — medical displays, still lit, pulsing in the glacier.",
+        description: "A slight woman huddles in an ice cave, warm air leaking from a thermal vent behind her. Same fast hands, wrapped around her own arms. Through the ice wall, something glows faintly — medical displays, still lit, pulsing in the glacier.",
         engageText: "'It's a mech. A Lifeline.' She presses her palm against the ice. 'The medical systems are still running. Have been for decades. Heating elements cycle, ice melts, refreezes, melts again.' She holds up a beacon. 'A thermal charge. Enough heat to break it free.'",
-        discoveredDescription: "The Herald waits in her ice cave. Through the ice, the medical displays pulse — a slow, steady rhythm, like a heartbeat that isn't there.",
+        discoveredDescription: "The Herald waits in her ice cave, same slight frame, same restless hands. Through the ice, the medical displays pulse — a slow rhythm, like a heartbeat that isn't there.",
         discoveredEngageText: "'The ice is thinner today. The heating elements are winning. It'll break free on its own eventually. Better on your terms.'",
         appearanceRate: 10,
         minLevel: 1,
@@ -123,7 +123,7 @@ const ENCOUNTERS_FROZENREACH = [
             },
             {
                 question: "Who are you?",
-                response: "'A researcher.' She looks at the ice wall where the displays pulse. 'I was studying the glacier when I found the glow. A field hospital, frozen mid-operation, still trying to save someone. That's not something you walk away from without telling someone.'"
+                response: "'Someone who should have died with them.' She doesn't look at you. 'I didn't. I became something else instead.'"
             }
         ]
     }

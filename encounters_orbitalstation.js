@@ -110,9 +110,9 @@ const ENCOUNTERS_ORBITALSTATION = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman in a patched EVA suit floats in a depressurised corridor, tethered to a support beam. A blacked-out shuttle is docked behind her.",
+        description: "A slight woman in a patched EVA suit floats in a depressurised corridor, tethered to a support beam. Her hands make constant micro-adjustments to the tether — precise, mechanical movements that don't match the casual way she's watching you.",
         engageText: "'The rig's main shaft goes down about two kilometres.' She pulls herself along the tether. 'There's a DR-7 Prospector at the bottom. Been drilling the same dead rock for 80 years. It won't notice you — it doesn't notice anything anymore.' She holds out a beacon. 'This disrupts the drill cycle. Breaks the loop. And when the loop breaks, it wakes up.'",
-        discoveredDescription: "The Herald floats in the same corridor, tethered and waiting. Her shuttle's docking clamps haven't moved.",
+        discoveredDescription: "The Herald floats in the same corridor, same slight frame, same hands that never stop moving. Her shuttle's docking clamps haven't shifted.",
         discoveredEngageText: "'It's still down there. Still drilling. Still asleep. You want to wake it up or not?'",
         appearanceRate: 10,
         minLevel: 1,
@@ -127,7 +127,7 @@ const ENCOUNTERS_ORBITALSTATION = [
             },
             {
                 question: "Who are you?",
-                response: "'Former crew.' She touches the station wall. 'I ran logistics on this rig when the asteroid still had something worth pulling out of it. Left when the yields dried up. The Prospector didn't.'"
+                response: "'I go where the squad's mechs ended up.' The word 'squad' slips out. She notices, shuts her mouth, and looks away. 'Buy the beacon or don't.'"
             }
         ]
     }
