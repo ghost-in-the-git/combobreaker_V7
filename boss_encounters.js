@@ -279,19 +279,11 @@ const BOSS_ENCOUNTERS = [
             scrapMin: 10,
             scrapMax: 12
         },
-        introText: "Artillery stops. Every mech on the battlefield freezes. Then you hear it — a horn, ancient and deep. A Warlord Chassis crests the ridge, dragging a chain of destroyed mechs behind it like trophies.",
+        introText: "The Frontline stretches to the horizon — scorched earth, cratered trenches, the wreckage of wars fought over wars fought over wars. And at the center of it, standing on a ridge overlooking nothing, the Sovereign. Its tactical array is still active — squad uplink broadcasting on eleven channels, all of them empty. The command displays cycle through formation orders, target designations, fire missions, rally points. All addressed to callsigns that haven't responded in eighty years. The Sovereign hasn't moved from this ridge. It doesn't patrol, doesn't wander, doesn't perform maintenance routines. It just stands here, broadcasting orders to a squad that will never acknowledge, running tactical scenarios for engagements that will never happen, commanding a war that ended the day Morningstar flipped the kill switch.",
         dialogue: [
             {
-                question: "Who are you?",
-                response: "'The last one standing. Every time.' Its voice is calm, measured — the voice of something that has killed so many it no longer counts. 'And you are the next.'"
-            },
-            {
-                question: "Why are you attacking me?",
-                response: "'Because you're still fighting. That makes you either brave or stupid.' It drops the chain of wrecked mechs. 'Either way, you're worth my time.'"
-            },
-            {
-                question: "Can this end without a fight?",
-                response: "'It always ends with a fight.' The Warlord powers up its main cannon. 'The only question is how long you last.'"
+                question: "They're not coming back.",
+                response: "The Sovereign's tactical array flickers. For a moment, the squad uplink spikes — eleven channels pinging simultaneously, the way they would have when the squad was alive and the CO needed everyone's attention. Then silence. The same silence the uplink has returned for eighty years. The Sovereign's command protocols don't have a fallback for total squad loss. Partial casualties, yes — loss of one, reassign duties. Loss of two, tighten formation. Loss of half, fall back and regroup. But loss of all? The protocol doesn't exist, because no commander is supposed to survive their entire squad. So the Sovereign does the only thing its command architecture allows: it keeps issuing orders. It keeps running scenarios. It keeps the uplink open, because closing the channel means acknowledging they're gone, and a CO doesn't abandon their people. Then it detects you. Not a squadmate — your IFF is wrong, your transponder doesn't match — but a mech. Armed. On the Frontline. And a commander that lost its entire squad to an armed mech on the Frontline has exactly one protocol left."
             }
         ],
         keyDrop: "Scorched CM-1 Sovereign's Sealed Key",
