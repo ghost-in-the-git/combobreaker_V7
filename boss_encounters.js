@@ -204,19 +204,11 @@ const BOSS_ENCOUNTERS = [
             scrapMin: 6,
             scrapMax: 8
         },
-        introText: "The ice shelf cracks. A mountain of frost and steel rises from beneath the glacier — an Avalanche Colossus, frozen mid-stride for who knows how long, now thawing and furious.",
+        introText: "You find it standing in a crater of refrozen meltwater. Ice caked over every surface, cracked where heating elements pulse beneath the chassis, refrozen where they fail. The medical displays are still lit — vitals flatlined, status critical, treatment ongoing. The Lifeline's triage systems cycle in the cold: heating elements surge against the ice, biomonitors recalibrate on a cockpit that holds nothing living, emergency protocols loop through procedures for a patient that died eighty years ago. A walking field hospital, keeping itself alive because the protocol doesn't have a state for 'patient cannot be saved.' Only 'stabilize' and 'keep trying.'",
         dialogue: [
             {
-                question: "Who are you?",
-                response: "Ice shatters from its jaw as it opens its mouth. No words — just a blast of frozen air cold enough to crack your viewport."
-            },
-            {
-                question: "Why are you attacking me?",
-                response: "It has no reason. It was dormant. You woke it up. Now it wants to go back to sleep, and you're the thing keeping it awake."
-            },
-            {
-                question: "How long have you been here?",
-                response: "The ice encasing its legs is centuries thick. Whatever war deployed this thing, nobody alive remembers it."
+                question: "The pilot's dead.",
+                response: "The Lifeline's medical displays flicker. Triage sensors sweep the cockpit — no heartbeat, no respiration, no neural activity. The same reading they've returned for eighty years. The same reading the protocol has rejected eighty years running, because a field hospital doesn't give up on a patient. The heating elements surge, the biomonitors recalibrate, the triage system runs the assessment again and reaches the same conclusion it always does: patient critical, treatment ongoing. Then the sensors sweep outward — and find you. A living pilot. Vital signs. A patient it can actually reach. And a field hospital that hasn't saved anyone in eighty years locks onto the first heartbeat it's detected since the war ended."
             }
         ],
         keyDrop: "Frozen MD-5 Lifeline's Sealed Key",

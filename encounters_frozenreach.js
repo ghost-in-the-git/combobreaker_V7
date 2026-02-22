@@ -106,10 +106,10 @@ const ENCOUNTERS_FROZENREACH = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman huddles in an ice cave, warm air leaking from a thermal vent behind her. Frost coats her eyelashes but she doesn't shiver.",
-        engageText: "'There's something under the glacier.' She points down. 'It's been frozen for centuries. Wars, collapses, extinctions — it slept through all of them.' She holds up a beacon. 'A thermal charge. The heat will wake it.'",
-        discoveredDescription: "The Herald waits in her ice cave, thermal vent hissing at her back. The ground trembles faintly.",
-        discoveredEngageText: "'The ice cracked again last night. It's waking up on its own. Better to fight it on your terms.'",
+        description: "A woman huddles in an ice cave, warm air leaking from a thermal vent behind her. Through the ice wall behind her, something glows faintly — medical displays, still lit, pulsing in the glacier.",
+        engageText: "'It's a mech. A Lifeline.' She presses her palm against the ice. 'The medical systems are still running. Have been for decades. Heating elements cycle, ice melts, refreezes, melts again.' She holds up a beacon. 'A thermal charge. Enough heat to break it free.'",
+        discoveredDescription: "The Herald waits in her ice cave. Through the ice, the medical displays pulse — a slow, steady rhythm, like a heartbeat that isn't there.",
+        discoveredEngageText: "'The ice is thinner today. The heating elements are winning. It'll break free on its own eventually. Better on your terms.'",
         appearanceRate: 10,
         minLevel: 1,
         itemSlot1: ["Beacon: Frozen Reach"],
@@ -119,11 +119,11 @@ const ENCOUNTERS_FROZENREACH = [
         dialogue: [
             {
                 question: "What does the beacon do?",
-                response: "'It melts through the permafrost in a controlled burst. The Avalanche Colossus is sensitive to heat — it will interpret the thermal signature as a threat and surface.'"
+                response: "'It generates a sustained thermal pulse. The Lifeline's heating elements will synchronize with the external heat source — it's designed to respond to warmth. The ice won't hold it after that.'"
             },
             {
                 question: "Who are you?",
-                response: "'A researcher.' She looks at the ice wall. 'I was studying the glacier when I found it. I ran. You won't.'"
+                response: "'A researcher.' She looks at the ice wall where the displays pulse. 'I was studying the glacier when I found the glow. A field hospital, frozen mid-operation, still trying to save someone. That's not something you walk away from without telling someone.'"
             }
         ]
     }
