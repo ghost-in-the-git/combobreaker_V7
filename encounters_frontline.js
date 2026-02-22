@@ -17,7 +17,7 @@ const ENCOUNTERS_FRONTLINE = [
         appearanceRate: 10,
         minLevel: 1,
         itemSlot1: ["Beacon: Frontline"],
-        itemSlot2: [],
+        itemSlot2: ["Map: Morningstar's Destruction"],
         itemSlot3: [],
         itemSlot4: null,
         dialogue: [

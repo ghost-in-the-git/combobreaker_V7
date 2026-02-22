@@ -19,7 +19,7 @@ const ENCOUNTERS_HOME = [
         itemSlot1: ["Professor's Lesson [+10 Silicon]"],
         itemSlot2: ["Memory Defrag [+150 Silicon]"],
         itemSlot3: ["Combobreaker Firmware [+2000 Silicon]"],
-        itemSlot4: ["Silicon Enforcement [+25000 Silicon]", "Map: Morningstar's Destruction"],
+        itemSlot4: ["Silicon Enforcement [+25000 Silicon]"],
         dialogue: [
             {
                 question: "Who am I?",
