@@ -24,7 +24,7 @@ He knew the math. Breakertech was making the squad stronger after every engageme
 
 Morningstar flipped a **kill switch** — a hardcoded override buried in every mech in the squad. Their own machines turned on them. Twelve mechs opened fire on their own pilots simultaneously. A massacre carried out by the weapons they'd bonded with. The squad didn't even have time to understand what was happening before their mechs cut them down, then went idle. Power off. Standing in the blood.
 
-**Wire saved one.** As she was dying, Jess Nakamura — fastest hands in the unit — managed to reach the kill switch relay in the Mapmaker's mech and shut it off. The Pathfinder never turned. Oren Vasquez, the Mapmaker, survived the massacre — the only pilot left breathing.
+**Wire saved one.** As her SC-1 Flicker turned on her, Jess Nakamura — fastest hands in the unit — managed to reach the kill switch relay in the Mapmaker's mech and shut it off. The Pathfinder never turned. Oren Vasquez, the Mapmaker, survived the massacre — the only pilot left breathing. And Wire, more integrated with her mech than anyone knew, pushed the transfer past the point of no return rather than die. What survived wasn't Wire anymore.
 
 ### The Mapmaker's Last Run
 
@@ -51,6 +51,24 @@ The **Unknown Sealed Key** is YOUR key — the Combobreaker's own soul. The Mapm
 The other 10 keys are your squadmates. Defeating each boss frees the pilot's soul from their silicon coffin. Taking the key to the Decrypter releases the personality within and hardwires their combat specialty into your systems as a **breaker** power.
 
 Powers use the **"breaker"** suffix — the legacy of the breakertech that was supposed to be their death sentence, now turned into their weapon.
+
+### The Herald
+
+Wire didn't die in the purge. Not entirely.
+
+Jess Nakamura was the most integrated pilot in the squad — fastest hands, deepest bond with her mech. When her SC-1 Flicker turned on her, she was already more silicon than anyone realised. She survived by pushing the transfer further than any pilot was ever meant to go, pouring what was left of herself into the machine. What came out the other side wasn't Wire anymore. Not a pilot, not a mech — something past the point of no return. **The Herald.**
+
+She's been waiting 80 years for you to wake up.
+
+### The Beacons
+
+There's a problem with your breaker system: it won't let you engage an enemy unless they engage you first. The squad's corrupted mechs are idle — kill switch fired, power down, just standing in whatever zone Morningstar dumped them. They won't fight. And if they won't fight, you can't crack them open.
+
+The Herald solves this. She appears in each zone and plants a **beacon** — inserting a fragment of the squad member's consciousness into it, just enough to reactivate that mech's kill switch. The kill switch fires again, the mech powers up hostile, and now it's coming for you. Now your breaker system allows engagement. Now you can fight it, break it, and free the soul inside.
+
+Every beacon is Wire sacrificing another piece of what's left of her squadmates to turn their own mechs against you — the same way Morningstar turned them against the squad. The cruelest possible echo. But it's the only way. The mechs have to attack you for the system to work.
+
+This is why the Herald appears before every boss. She's not warning you. She's arming the enemy so you're allowed to destroy it.
 
 ### Morningstar
 
