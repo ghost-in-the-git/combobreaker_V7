@@ -54,19 +54,11 @@ const BOSS_ENCOUNTERS = [
             scrapMin: 1,
             scrapMax: 2
         },
-        introText: "A low rumble rolls across the battlefield. From behind a collapsed bunker, a Siege Remnant drags itself forward on damaged treads, turret already tracking your position.",
+        introText: "You almost walk past it. The MK-IV Bulwark is dug in behind a collapsed bunker, armour cratered and blackened, treads fused to the mud. It hasn't moved in decades. But it's still facing outward — turret locked on a perimeter that no longer exists, shielding a position with nothing left to protect. When you cross its line, the whole frame shudders awake.",
         dialogue: [
             {
-                question: "Who are you?",
-                response: "A garbled recording plays from its loudspeaker — orders from a war that ended years ago. It doesn't know the fighting stopped."
-            },
-            {
-                question: "Why are you attacking me?",
-                response: "Its IFF system is fried. Everything registers as hostile. Including you."
-            },
-            {
-                question: "Can you stand down?",
-                response: "The turret twitches, recalibrates. For a moment it seems to hesitate — then the barrel levels at your chest."
+                question: "I'm not the enemy.",
+                response: "The turret swings — but not toward you. The Bulwark shifts its bulk between you and the empty bunker behind it. A reflex. Guarding nothing. Then the firmware catches up and the barrel finds you again, because you're the only thing moving, and moving means threat."
             }
         ],
         keyDrop: "Shelled MK-IV Bulwark's Sealed Key",
