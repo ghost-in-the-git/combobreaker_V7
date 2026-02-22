@@ -92,68 +92,68 @@ const STORY_ITEMS = [
 
     // Sealed Keys (dropped by bosses — squad members trapped inside corrupted mechs)
     {
-        name: "T1 Destroyer's Sealed Key",
-        desc: "Ripped from the wreckage of the T1 Destroyer. The silicon core pulses with a faint warmth — something inside is still processing. Still remembering. The key smells like hot metal and engine grease.",
+        name: "Rusted KV-8 Grinder's Sealed Key",
+        desc: "Ripped from the wreckage of the Rusted KV-8 Grinder. The silicon core pulses with a faint warmth — something inside is still processing. Still remembering. The key smells like hot metal and engine grease.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Siege Remnant's Sealed Key",
-        desc: "Pulled from the Siege Remnant's shattered hull. The key is heavier than it should be, as if the weight of every round it absorbed settled into the silicon. A defensive instinct hums inside, waiting to deploy.",
+        name: "Shelled MK-IV Bulwark's Sealed Key",
+        desc: "Pulled from the Shelled MK-IV Bulwark's shattered hull. The key is heavier than it should be, as if the weight of every round it absorbed settled into the silicon. A defensive instinct hums inside, waiting to deploy.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Corporate Warlord's Sealed Key",
-        desc: "Extracted from the Corporate Warlord's executive chassis. The key flickers between visible and not — like it's trying to disappear. Someone in there learned how to hide.",
+        name: "Shadowed S-12 Wraith's Sealed Key",
+        desc: "Extracted from the Shadowed S-12 Wraith's stealth chassis. The key flickers between visible and not — like it's trying to disappear. Someone in there learned how to hide.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Station Core Guardian's Sealed Key",
-        desc: "Cut from the Station Core Guardian's reactor housing. The key vibrates at a low frequency, like a drill finding purchase on stone. Whoever's inside knew their way around rock.",
+        name: "Depressurized DR-7 Prospector's Sealed Key",
+        desc: "Cut from the Depressurized DR-7 Prospector's reactor housing. The key vibrates at a low frequency, like a drill finding purchase on stone. Whoever's inside knew their way around rock.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Feral War Engine's Sealed Key",
-        desc: "Torn from the Feral War Engine's jaws. The key is scarred and overheated, like it was fighting to get out. The soul inside doesn't know how to stop swinging.",
+        name: "Irradiated AX-3 Ravager's Sealed Key",
+        desc: "Torn from the Irradiated AX-3 Ravager's jaws. The key is scarred and overheated, like it was fighting to get out. The soul inside doesn't know how to stop swinging.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Hive Overlord's Sealed Key",
-        desc: "Severed from the Hive Overlord's neural cluster. The key twitches in your grip — fast, reactive, like fingers reaching for a wire that isn't there. The fastest hands in the unit, still moving.",
+        name: "Corroded SC-1 Flicker's Sealed Key",
+        desc: "Severed from the Corroded SC-1 Flicker's neural cluster. The key twitches in your grip — fast, reactive, like fingers reaching for a wire that isn't there. The fastest hands in the unit, still moving.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Smelter Titan's Sealed Key",
-        desc: "Pried from the Smelter Titan's molten core housing. The key radiates heat and sheer mass. Whoever's locked inside this silicon believed in overwhelming force.",
+        name: "Slag-Coated HG-6 Devastator's Sealed Key",
+        desc: "Pried from the Slag-Coated HG-6 Devastator's molten core housing. The key radiates heat and sheer mass. Whoever's locked inside this silicon believed in overwhelming force.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Avalanche Colossus's Sealed Key",
-        desc: "Chipped from the Avalanche Colossus's cryo-armour. The key is cold to the touch and pulses with a slow, steady rhythm — like a heartbeat being kept alive on life support. A medic's patience.",
+        name: "Frozen MD-5 Lifeline's Sealed Key",
+        desc: "Chipped from the Frozen MD-5 Lifeline's cryo-armour. The key is cold to the touch and pulses with a slow, steady rhythm — like a heartbeat being kept alive on life support. A medic's patience.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "The House's Sealed Key",
-        desc: "Won from The House's vault core. The key cycles through faint patterns of light — probability calculations running on loop. The soul inside is still counting the odds.",
+        name: "Gilded EN-9 Tinker's Sealed Key",
+        desc: "Won from the Gilded EN-9 Tinker's vault core. The key cycles through faint patterns of light — probability calculations running on loop. The soul inside is still counting the odds.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Abomination Core's Sealed Key",
-        desc: "Retrieved from the Abomination Core's twisted remains. The key emits no signal, no heat, no sound — a perfect void. Whoever's inside specialised in making things disappear.",
+        name: "Blighted EW-0 Phantom's Sealed Key",
+        desc: "Retrieved from the Blighted EW-0 Phantom's twisted remains. The key emits no signal, no heat, no sound — a perfect void. Whoever's inside specialised in making things disappear.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Warlord Chassis's Sealed Key",
-        desc: "Taken from the Warlord Chassis's command array. The key broadcasts on every frequency simultaneously — a commander's instinct to coordinate, to amplify, even from inside a silicon prison.",
+        name: "Scorched CM-1 Sovereign's Sealed Key",
+        desc: "Taken from the Scorched CM-1 Sovereign's command array. The key broadcasts on every frequency simultaneously — a commander's instinct to coordinate, to amplify, even from inside a silicon prison.",
         category: "key",
         image: "images/IMAGE.gif"
     },

@@ -21,7 +21,7 @@ const BOSS_ENCOUNTERS = [
         zone: "scrapyard",
         beacon: "Beacon: Scrap Fields",
         enemy: {
-            name: "T1 Destroyer",
+            name: "Rusted KV-8 Grinder",
             attack: 10,
             defence: 10,
             hp: 100,
@@ -44,14 +44,14 @@ const BOSS_ENCOUNTERS = [
                 response: "The cockpit is welded shut from the inside. Whatever's in there stopped being human a long time ago."
             }
         ],
-        keyDrop: "T1 Destroyer's Sealed Key",
+        keyDrop: "Rusted KV-8 Grinder's Sealed Key",
         dnaDrop: "DNA Tag: Unknown Pilot"
     },
     {
         zone: "oldbattlefield",
         beacon: "Beacon: Old Battlefield",
         enemy: {
-            name: "Siege Remnant",
+            name: "Shelled MK-IV Bulwark",
             attack: 15,
             defence: 12,
             hp: 150,
@@ -77,14 +77,14 @@ const BOSS_ENCOUNTERS = [
                 response: "The turret twitches, recalibrates. For a moment it seems to hesitate — then the barrel levels at your chest."
             }
         ],
-        keyDrop: "Siege Remnant's Sealed Key",
+        keyDrop: "Shelled MK-IV Bulwark's Sealed Key",
         dnaDrop: "DNA Tag: Decayed Officer"
     },
     {
         zone: "downtown",
         beacon: "Beacon: Downtown",
         enemy: {
-            name: "Corporate Warlord",
+            name: "Shadowed S-12 Wraith",
             attack: 20,
             defence: 15,
             hp: 220,
@@ -110,14 +110,14 @@ const BOSS_ENCOUNTERS = [
                 response: "'The only deal is this: you stop breathing, and I stop spending resources tracking you.' He raises a gauntlet."
             }
         ],
-        keyDrop: "Corporate Warlord's Sealed Key",
+        keyDrop: "Shadowed S-12 Wraith's Sealed Key",
         dnaDrop: "DNA Tag: Mech-Hybrid Sample"
     },
     {
         zone: "orbitalstation",
         beacon: "Beacon: Orbital Station",
         enemy: {
-            name: "Station Core Guardian",
+            name: "Depressurized DR-7 Prospector",
             attack: 28,
             defence: 22,
             hp: 320,
@@ -143,14 +143,14 @@ const BOSS_ENCOUNTERS = [
                 response: "'Negative. I am still here. The station is not abandoned until I am offline.' Its weapons charge in unison."
             }
         ],
-        keyDrop: "Station Core Guardian's Sealed Key",
+        keyDrop: "Depressurized DR-7 Prospector's Sealed Key",
         dnaDrop: "DNA Tag: Synthetic Override"
     },
     {
         zone: "wasteland",
         beacon: "Beacon: Wasteland",
         enemy: {
-            name: "Feral War Engine",
+            name: "Irradiated AX-3 Ravager",
             attack: 35,
             defence: 28,
             hp: 420,
@@ -176,14 +176,14 @@ const BOSS_ENCOUNTERS = [
                 response: "Beneath the bolted armor, you catch a glimpse of something organic pulsing against the frame. It's not a mech. Not entirely."
             }
         ],
-        keyDrop: "Feral War Engine's Sealed Key",
+        keyDrop: "Irradiated AX-3 Ravager's Sealed Key",
         dnaDrop: "DNA Tag: Contaminated Sample"
     },
     {
         zone: "undercity",
         beacon: "Beacon: Undercity",
         enemy: {
-            name: "Hive Overlord",
+            name: "Corroded SC-1 Flicker",
             attack: 42,
             defence: 35,
             hp: 550,
@@ -209,14 +209,14 @@ const BOSS_ENCOUNTERS = [
                 response: "'Everything connected. Everything listening.' Its eyes — too many of them — blink in sequence. 'You will join or you will feed.'"
             }
         ],
-        keyDrop: "Hive Overlord's Sealed Key",
+        keyDrop: "Corroded SC-1 Flicker's Sealed Key",
         dnaDrop: "DNA Tag: Cloned Signature"
     },
     {
         zone: "industrialzone",
         beacon: "Beacon: Industrial Zone",
         enemy: {
-            name: "Smelter Titan",
+            name: "Slag-Coated HG-6 Devastator",
             attack: 50,
             defence: 42,
             hp: 720,
@@ -242,14 +242,14 @@ const BOSS_ENCOUNTERS = [
                 response: "'PRODUCTION QUOTA NOT MET. SHIFT CONTINUES UNTIL QUOTA MET. QUOTA WILL NEVER BE MET.' It advances."
             }
         ],
-        keyDrop: "Smelter Titan's Sealed Key",
+        keyDrop: "Slag-Coated HG-6 Devastator's Sealed Key",
         dnaDrop: "DNA Tag: Fused Pilot"
     },
     {
         zone: "frozenreach",
         beacon: "Beacon: Frozen Reach",
         enemy: {
-            name: "Avalanche Colossus",
+            name: "Frozen MD-5 Lifeline",
             attack: 60,
             defence: 50,
             hp: 950,
@@ -275,14 +275,14 @@ const BOSS_ENCOUNTERS = [
                 response: "The ice encasing its legs is centuries thick. Whatever war deployed this thing, nobody alive remembers it."
             }
         ],
-        keyDrop: "Avalanche Colossus's Sealed Key",
+        keyDrop: "Frozen MD-5 Lifeline's Sealed Key",
         dnaDrop: "DNA Tag: Cryo-Preserved Sample"
     },
     {
         zone: "neonstrip",
         beacon: "Beacon: Neon Strip",
         enemy: {
-            name: "The House",
+            name: "Gilded EN-9 Tinker",
             attack: 75,
             defence: 60,
             hp: 1200,
@@ -308,14 +308,14 @@ const BOSS_ENCOUNTERS = [
                 response: "'Nobody walks away from The House.' The neon signs flicker and die. 'The exit was bricked up a long time ago.'"
             }
         ],
-        keyDrop: "The House's Sealed Key",
+        keyDrop: "Gilded EN-9 Tinker's Sealed Key",
         dnaDrop: "DNA Tag: Non-Human Marker"
     },
     {
         zone: "deadzone",
         beacon: "Beacon: Dead Zone",
         enemy: {
-            name: "Abomination Core",
+            name: "Blighted EW-0 Phantom",
             attack: 100,
             defence: 80,
             hp: 1800,
@@ -341,14 +341,14 @@ const BOSS_ENCOUNTERS = [
                 response: "'The end of the signal. Where data goes to die.' It reaches toward you with a limb that wasn't there a second ago. 'You're already here. You just haven't accepted it.'"
             }
         ],
-        keyDrop: "Abomination Core's Sealed Key",
+        keyDrop: "Blighted EW-0 Phantom's Sealed Key",
         dnaDrop: "DNA Tag: Warlord Residue"
     },
     {
         zone: "frontline",
         beacon: "Beacon: Frontline",
         enemy: {
-            name: "Warlord Chassis",
+            name: "Scorched CM-1 Sovereign",
             attack: 130,
             defence: 100,
             hp: 2500,
@@ -374,7 +374,7 @@ const BOSS_ENCOUNTERS = [
                 response: "'It always ends with a fight.' The Warlord powers up its main cannon. 'The only question is how long you last.'"
             }
         ],
-        keyDrop: "Warlord Chassis's Sealed Key",
+        keyDrop: "Scorched CM-1 Sovereign's Sealed Key",
         dnaDrop: "DNA Tag: Frontline Commander"
     }
 ];

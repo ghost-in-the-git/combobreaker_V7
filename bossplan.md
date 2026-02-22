@@ -79,9 +79,9 @@ Eighty years and thousands of miles away, Morningstar towers over the frontline 
 ### Sealed keys (dropped by bosses, before decryption)
 Format: `[Boss Name]'s Sealed Key`
 Examples:
-- `T1 Destroyer's Sealed Key`
-- `Hive Overlord's Sealed Key`
-- `Warlord Chassis's Sealed Key`
+- `Rusted KV-8 Grinder's Sealed Key`
+- `Corroded SC-1 Flicker's Sealed Key`
+- `Scorched CM-1 Sovereign's Sealed Key`
 
 The starter key: `Unknown Sealed Key` (was "Old Key")
 
@@ -107,17 +107,17 @@ Examples:
 | # | Zone | Boss Mech | Sealed Key | Decrypted Key | Pilot | Squad Role | Power | Effect |
 |---|------|-----------|------------|---------------|-------|------------|-------|--------|
 | — | (starter) | — | Unknown Sealed Key | Your Combobreaker Key | **You** | Combobreaker | **Combobreaker** | Chance to deal double damage |
-| 1 | Scrapyard | T1 Destroyer | T1 Destroyer's Sealed Key | Chunk's Steelbreaker Key | **Riley 'Chunk' Kowalski** | Scrap Refiner | **Steelbreaker** | Chance to gain double scrap |
-| 2 | Old Battlefield | Siege Remnant | Siege Remnant's Sealed Key | Sarge's Shieldbreaker Key | **Marcus 'Sarge' Oduya** | Squad Defender | **Shieldbreaker** | Chance to double defence at start of round |
-| 3 | Downtown | Corporate Warlord | Corporate Warlord's Sealed Key | Ghost's Visionbreaker Key | **Yuki 'Ghost' Tanaka** | Infiltrator | **Visionbreaker** | Chance to disappear and avoid attack |
-| 4 | Orbital Station | Station Core Guardian | Station Core Guardian's Sealed Key | Bolt's Stonebreaker Key | **Petra 'Bolt' Lindgren** | Miner | **Stonebreaker** | Chance to add mining stat to asteroid stability |
-| 5 | Wasteland | Feral War Engine | Feral War Engine's Sealed Key | Fang's Strikebreaker Key | **Diego 'Fang' Reyes** | Assault | **Strikebreaker** | Chance to ignore enemy defence stat |
-| 6 | Undercity | Hive Overlord | Hive Overlord's Sealed Key | Wire's Speedbreaker Key | **Jess 'Wire' Nakamura** | Scout | **Speedbreaker** | Chance to attack twice — needs gating |
-| 7 | Industrial Zone | Smelter Titan | Smelter Titan's Sealed Key | Anvil's Crushbreaker Key | **Dmitri 'Anvil' Volkov** | Heavy Gunner | **Crushbreaker** | Chance for damage to hit entire enemy group |
-| 8 | Frozen Reach | Avalanche Colossus | Avalanche Colossus's Sealed Key | Frost's Painbreaker Key | **Elise 'Frost' Calloway** | Medic | **Painbreaker** | Chance to regain HP equal to regen stat |
-| 9 | Neon Strip | The House | The House's Sealed Key | Ace's Powerbreaker Key | **Tariq 'Ace' Hassan** | Mechanic | **Powerbreaker** | Chance to double silicon gain |
-| 10 | Dead Zone | Abomination Core | Abomination Core's Sealed Key | Null's Soulbreaker Key | **Zara 'Null' Okonkwo** | Specialist | **Soulbreaker** | Chance to parry attack when hit |
-| 11 | Frontline | Warlord Chassis | Warlord Chassis's Sealed Key | Rex's Warbreaker Key | **Kane 'Rex' Hargrove** | Commander | **Warbreaker** | Chance for Combo/Speedbreaker to escalate to 4X |
+| 1 | Scrapyard | Rusted KV-8 Grinder | Rusted KV-8 Grinder's Sealed Key | Chunk's Steelbreaker Key | **Riley 'Chunk' Kowalski** | Scrap Refiner | **Steelbreaker** | Chance to gain double scrap |
+| 2 | Old Battlefield | Shelled MK-IV Bulwark | Shelled MK-IV Bulwark's Sealed Key | Sarge's Shieldbreaker Key | **Marcus 'Sarge' Oduya** | Squad Defender | **Shieldbreaker** | Chance to double defence at start of round |
+| 3 | Downtown | Shadowed S-12 Wraith | Shadowed S-12 Wraith's Sealed Key | Ghost's Visionbreaker Key | **Yuki 'Ghost' Tanaka** | Infiltrator | **Visionbreaker** | Chance to disappear and avoid attack |
+| 4 | Orbital Station | Depressurized DR-7 Prospector | Depressurized DR-7 Prospector's Sealed Key | Bolt's Stonebreaker Key | **Petra 'Bolt' Lindgren** | Miner | **Stonebreaker** | Chance to add mining stat to asteroid stability |
+| 5 | Wasteland | Irradiated AX-3 Ravager | Irradiated AX-3 Ravager's Sealed Key | Fang's Strikebreaker Key | **Diego 'Fang' Reyes** | Assault | **Strikebreaker** | Chance to ignore enemy defence stat |
+| 6 | Undercity | Corroded SC-1 Flicker | Corroded SC-1 Flicker's Sealed Key | Wire's Speedbreaker Key | **Jess 'Wire' Nakamura** | Scout | **Speedbreaker** | Chance to attack twice — needs gating |
+| 7 | Industrial Zone | Slag-Coated HG-6 Devastator | Slag-Coated HG-6 Devastator's Sealed Key | Anvil's Crushbreaker Key | **Dmitri 'Anvil' Volkov** | Heavy Gunner | **Crushbreaker** | Chance for damage to hit entire enemy group |
+| 8 | Frozen Reach | Frozen MD-5 Lifeline | Frozen MD-5 Lifeline's Sealed Key | Frost's Painbreaker Key | **Elise 'Frost' Calloway** | Medic | **Painbreaker** | Chance to regain HP equal to regen stat |
+| 9 | Neon Strip | Gilded EN-9 Tinker | Gilded EN-9 Tinker's Sealed Key | Ace's Powerbreaker Key | **Tariq 'Ace' Hassan** | Mechanic | **Powerbreaker** | Chance to double silicon gain |
+| 10 | Dead Zone | Blighted EW-0 Phantom | Blighted EW-0 Phantom's Sealed Key | Null's Soulbreaker Key | **Zara 'Null' Okonkwo** | Specialist | **Soulbreaker** | Chance to parry attack when hit |
+| 11 | Frontline | Scorched CM-1 Sovereign | Scorched CM-1 Sovereign's Sealed Key | Rex's Warbreaker Key | **Kane 'Rex' Hargrove** | Commander | **Warbreaker** | Chance for Combo/Speedbreaker to escalate to 4X |
 | 12 | Dead Zone | *(Mapmaker's body)* | Mapmaker's Sealed Key | Mapmaker's Skybreaker Key | **Oren 'Mapmaker' Vasquez** | Navigator | **Skybreaker** | Doubles all breaker proc chances (passive) |
 
 ### Breaker Powers
