@@ -44,47 +44,49 @@ Examples:
 
 | # | Zone | Boss Mech | Sealed Key | Decrypted Key | Pilot | Squad Role | Power | Effect |
 |---|------|-----------|------------|---------------|-------|------------|-------|--------|
-| — | (starter) | — | Unknown Sealed Key | Your Combobreaker Key | **You** | Combobreaker | **Combobreaker** | Chance to deal double damage (combo proc) |
-| 1 | Scrapyard | T1 Destroyer | T1 Destroyer's Sealed Key | Chunk's Steelbreaker Key | **Riley 'Chunk' Kowalski** | Scrap Refiner | **Steelbreaker** | Chance to gain double scrap (mining proc) |
-| 2 | Old Battlefield | Siege Remnant | Siege Remnant's Sealed Key | Sarge's Shieldbreaker Key | **Marcus 'Sarge' Oduya** | Squad Defender | **Shieldbreaker** | Chance to double defence at start of round (def proc) |
-| 3 | Downtown | Corporate Warlord | Corporate Warlord's Sealed Key | Ghost's Visionbreaker Key | **Yuki 'Ghost' Tanaka** | Infiltrator | **Visionbreaker** | Chance to disappear and avoid attack (combo proc) |
-| 4 | Orbital Station | Station Core Guardian | Station Core Guardian's Sealed Key | Bolt's Stonebreaker Key | **Petra 'Bolt' Lindgren** | Miner | **Stonebreaker** | Chance to add mining stat to asteroid stability (mining proc) |
-| 5 | Wasteland | Feral War Engine | Feral War Engine's Sealed Key | Fang's Strikebreaker Key | **Diego 'Fang' Reyes** | Assault | **Strikebreaker** | Chance to ignore enemy defence stat (attack proc) |
-| 6 | Undercity | Hive Overlord | Hive Overlord's Sealed Key | Wire's Speedbreaker Key | **Jess 'Wire' Nakamura** | Scout | **Speedbreaker** | Chance to attack twice (speed proc) — needs gating |
-| 7 | Industrial Zone | Smelter Titan | Smelter Titan's Sealed Key | Anvil's Crushbreaker Key | **Dmitri 'Anvil' Volkov** | Heavy Gunner | **Crushbreaker** | Chance for damage to hit entire enemy group (attack proc) |
-| 8 | Frozen Reach | Avalanche Colossus | Avalanche Colossus's Sealed Key | Frost's Painbreaker Key | **Elise 'Frost' Calloway** | Medic | **Painbreaker** | Chance to regain HP equal to regen stat (regen proc) |
-| 9 | Neon Strip | The House | The House's Sealed Key | Ace's Powerbreaker Key | **Tariq 'Ace' Hassan** | Mechanic | **Powerbreaker** | Chance to double silicon gain (level proc) |
-| 10 | Dead Zone | Abomination Core | Abomination Core's Sealed Key | Null's Soulbreaker Key | **Zara 'Null' Okonkwo** | Specialist | **Soulbreaker** | Chance to parry attack when hit (proc TBD) |
-| 11 | Frontline | Warlord Chassis | Warlord Chassis's Sealed Key | Rex's Warbreaker Key | **Kane 'Rex' Hargrove** | Commander | **Warbreaker** | Chance for Combo/Speedbreaker to escalate to 4X (combo proc) |
-| 12 | Dead Zone | *(Mapmaker's body)* | Mapmaker's Sealed Key | Mapmaker's Skybreaker Key | **Oren 'Mapmaker' Vasquez** | Navigator | **Skybreaker** | Adds speed stat to all breaker proc rates (passive) |
+| — | (starter) | — | Unknown Sealed Key | Your Combobreaker Key | **You** | Combobreaker | **Combobreaker** | Chance to deal double damage |
+| 1 | Scrapyard | T1 Destroyer | T1 Destroyer's Sealed Key | Chunk's Steelbreaker Key | **Riley 'Chunk' Kowalski** | Scrap Refiner | **Steelbreaker** | Chance to gain double scrap |
+| 2 | Old Battlefield | Siege Remnant | Siege Remnant's Sealed Key | Sarge's Shieldbreaker Key | **Marcus 'Sarge' Oduya** | Squad Defender | **Shieldbreaker** | Chance to double defence at start of round |
+| 3 | Downtown | Corporate Warlord | Corporate Warlord's Sealed Key | Ghost's Visionbreaker Key | **Yuki 'Ghost' Tanaka** | Infiltrator | **Visionbreaker** | Chance to disappear and avoid attack |
+| 4 | Orbital Station | Station Core Guardian | Station Core Guardian's Sealed Key | Bolt's Stonebreaker Key | **Petra 'Bolt' Lindgren** | Miner | **Stonebreaker** | Chance to add mining stat to asteroid stability |
+| 5 | Wasteland | Feral War Engine | Feral War Engine's Sealed Key | Fang's Strikebreaker Key | **Diego 'Fang' Reyes** | Assault | **Strikebreaker** | Chance to ignore enemy defence stat |
+| 6 | Undercity | Hive Overlord | Hive Overlord's Sealed Key | Wire's Speedbreaker Key | **Jess 'Wire' Nakamura** | Scout | **Speedbreaker** | Chance to attack twice — needs gating |
+| 7 | Industrial Zone | Smelter Titan | Smelter Titan's Sealed Key | Anvil's Crushbreaker Key | **Dmitri 'Anvil' Volkov** | Heavy Gunner | **Crushbreaker** | Chance for damage to hit entire enemy group |
+| 8 | Frozen Reach | Avalanche Colossus | Avalanche Colossus's Sealed Key | Frost's Painbreaker Key | **Elise 'Frost' Calloway** | Medic | **Painbreaker** | Chance to regain HP equal to regen stat |
+| 9 | Neon Strip | The House | The House's Sealed Key | Ace's Powerbreaker Key | **Tariq 'Ace' Hassan** | Mechanic | **Powerbreaker** | Chance to double silicon gain |
+| 10 | Dead Zone | Abomination Core | Abomination Core's Sealed Key | Null's Soulbreaker Key | **Zara 'Null' Okonkwo** | Specialist | **Soulbreaker** | Chance to parry attack when hit |
+| 11 | Frontline | Warlord Chassis | Warlord Chassis's Sealed Key | Rex's Warbreaker Key | **Kane 'Rex' Hargrove** | Commander | **Warbreaker** | Chance for Combo/Speedbreaker to escalate to 4X |
+| 12 | Dead Zone | *(Mapmaker's body)* | Mapmaker's Sealed Key | Mapmaker's Skybreaker Key | **Oren 'Mapmaker' Vasquez** | Navigator | **Skybreaker** | Doubles all breaker proc chances (passive) |
 
 ### Breaker Powers
 
-Every breaker is a **proc** — a percentage chance to trigger each round (or per-hit, per-event). The proc rate scales off a specific player stat. This makes stat investment meaningful: levelling combo makes Combobreaker fire more often, levelling speed makes Speedbreaker fire more often, etc.
+Every breaker is a **proc** — a percentage chance to trigger each round (or per-hit, per-event). All procs scale off the **breaker** stat (renamed from combo). One stat, one investment, all breakers. The more you level breaker, the more often everything fires.
 
-| Breaker | Proc Stat | Effect | Notes |
-|---------|-----------|--------|-------|
-| **Combobreaker** | Combo | Chance to deal **double damage** on hit | Your signature. The one the game is named after. |
-| **Steelbreaker** | Mining | Chance to gain **double scrap** from a battle | Chunk's salvage instinct kicking in. |
-| **Shieldbreaker** | Defence | Chance to **double defence** at the start of a round | Sarge's wall. Defence stat feeds its own proc. |
-| **Visionbreaker** | Combo | Chance to **disappear and completely avoid an attack** | Ghost's vanishing act. Combo-driven evasion. |
-| **Stonebreaker** | Mining | Chance to **add mining stat to asteroid stability** each round | Bolt reinforcing the rock. More mining = more stable ground. |
-| **Strikebreaker** | Attack | Chance to **ignore enemy defence stat entirely** | Fang hits like the armour isn't there. |
-| **Speedbreaker** | Speed | Chance to **attack twice** in one round | Wire's fast hands. Already exists, needs gating. |
-| **Crushbreaker** | Attack | Chance for damage to **hit the entire enemy group** | Anvil's area denial. One swing, everything feels it. |
-| **Painbreaker** | Regen | Chance to **regain HP equal to regen stat** at end of round | Frost patching you up between blows. |
-| **Powerbreaker** | Level | Chance to **double silicon gain** from a kill | Ace squeezing more out of every wreck. Scales with level number. |
-| **Soulbreaker** | ??? | Chance to trigger a **parry attack** when hit | Null's counter-play. Proc stat TBD. |
-| **Warbreaker** | Combo | Chance for Combobreaker & Speedbreaker to **escalate to 4X** | Rex amplifying the squad. When this fires, doubles become quads. |
-| **Skybreaker** | Speed *(passive)* | **Adds speed stat to ALL breaker proc rates** | Mapmaker's final gift. Not a proc itself — a global accelerator. |
+**Skybreaker** is the exception — it's not a proc. It's a passive that **doubles** every other breaker's proc chance. The Mapmaker's final gift.
+
+| Breaker | Effect | Notes |
+|---------|--------|-------|
+| **Combobreaker** | Chance to deal **double damage** on hit | Your signature. The one the game is named after. |
+| **Steelbreaker** | Chance to gain **double scrap** from a battle | Chunk's salvage instinct kicking in. |
+| **Shieldbreaker** | Chance to **double defence** at the start of a round | Sarge's wall goes up twice as hard. |
+| **Visionbreaker** | Chance to **disappear and completely avoid an attack** | Ghost's vanishing act. You're just not there. |
+| **Stonebreaker** | Chance to **add mining stat to asteroid stability** each round | Bolt reinforcing the rock. More mining = more stable ground. |
+| **Strikebreaker** | Chance to **ignore enemy defence stat entirely** | Fang hits like the armour isn't there. |
+| **Speedbreaker** | Chance to **attack twice** in one round | Wire's fast hands. Already exists, needs gating. |
+| **Crushbreaker** | Chance for damage to **hit the entire enemy group** | Anvil's area denial. One swing, everything feels it. |
+| **Painbreaker** | Chance to **regain HP equal to regen stat** at end of round | Frost patching you up between blows. |
+| **Powerbreaker** | Chance to **double silicon gain** from a kill | Ace squeezing more out of every wreck. |
+| **Soulbreaker** | Chance to trigger a **parry attack** when hit | Null's counter-play. You get hit, you hit back. |
+| **Warbreaker** | Chance for Combobreaker & Speedbreaker to **escalate to 4X** | Rex amplifying the squad. When this fires, doubles become quads. |
+| **Skybreaker** | **Doubles all breaker proc chances** | Mapmaker's final gift. Not a proc — a passive multiplier on everything else. |
 
 **Design notes:**
-- Most breakers are combat procs that roll each round or per-hit
-- Steelbreaker and Stonebreaker are the mining/economy breakers (both keyed off Mining)
-- Visionbreaker and Combobreaker both key off Combo — investing in combo gives both offensive and defensive payoff
-- Warbreaker is a multiplier on existing procs, not a standalone effect
-- Skybreaker is the only passive — it doesn't proc, it permanently boosts everything else
-- Soulbreaker's proc stat is undecided — could be defence (parry = defensive), combo (counter-play), or a unique stat
+- All procs roll against the **breaker** stat — simple, clean, one investment path
+- Breaker stat replaces the old "combo" stat in code and UI
+- Skybreaker is the endgame capstone — doubles every proc rate, found last
+- Warbreaker is a multiplier on top of multipliers — when it fires alongside Combobreaker, you deal 4X damage
+- Build identity comes from **which breakers you've unlocked** (key collection order) rather than stat allocation
+- The breaker stat has diminishing returns built in — proc % should cap or soft-cap so it never reaches 100%
 
 ### Pilot Identities
 
@@ -120,7 +122,7 @@ The squad only knew each other by callsigns in the field. Real names surface whe
 - NOT a boss drop — looted from the body, but still sealed like any other key
 - Must be taken to the Decrypter to unlock Skybreaker
 - The Mapmaker was the squad's Navigator — the one who planted your key in you
-- Skybreaker effect: adds speed stat to all breaker proc rates (passive global accelerator)
+- Skybreaker effect: doubles all breaker proc chances (passive multiplier)
 - This is the 12th and final breaker, completing the squad — and the most powerful
 
 ## Code Changes Required
@@ -135,21 +137,23 @@ The squad only knew each other by callsigns in the field. Real names surface whe
 - [ ] Gate combobreaker proc in battleRound() behind owning Your Combobreaker Key
 - [ ] Gate speedbreaker proc in battleRound() behind owning Wire's Speedbreaker Key
 - [ ] Gate speedbreaker proc in evadeAmbush() behind owning Wire's Speedbreaker Key
+- [ ] Rename "combo" stat to "breaker" in all code, UI labels, and stat references
 
 ### Phase 2: Implement all breaker powers (proc system)
-- [ ] Combobreaker — chance to deal double damage (combo proc) — gate behind Unknown Key decryption
-- [ ] Steelbreaker — chance to gain double scrap (mining proc)
-- [ ] Shieldbreaker — chance to double defence at start of round (def proc)
-- [ ] Visionbreaker — chance to disappear and avoid attack completely (combo proc)
-- [ ] Stonebreaker — chance to add mining stat to asteroid stability each round (mining proc)
-- [ ] Strikebreaker — chance to ignore enemy defence stat (attack proc)
-- [ ] Speedbreaker — chance to attack twice (speed proc) — already exists, just needs gating
-- [ ] Crushbreaker — chance for damage to hit entire enemy group (attack proc)
-- [ ] Painbreaker — chance to regain HP equal to regen stat at end of round (regen proc)
-- [ ] Powerbreaker — chance to double silicon gain (level number proc)
-- [ ] Soulbreaker — chance to trigger parry attack when hit (proc stat TBD)
-- [ ] Warbreaker — chance for Combobreaker & Speedbreaker to escalate to 4X (combo proc)
-- [ ] Skybreaker — adds speed stat to all breaker proc rates (passive, not a proc itself)
+All procs use the **breaker** stat for their proc chance.
+- [ ] Combobreaker — chance to deal double damage — gate behind Unknown Key decryption
+- [ ] Steelbreaker — chance to gain double scrap
+- [ ] Shieldbreaker — chance to double defence at start of round
+- [ ] Visionbreaker — chance to disappear and avoid attack completely
+- [ ] Stonebreaker — chance to add mining stat to asteroid stability each round
+- [ ] Strikebreaker — chance to ignore enemy defence stat
+- [ ] Speedbreaker — chance to attack twice — already exists, just needs gating
+- [ ] Crushbreaker — chance for damage to hit entire enemy group
+- [ ] Painbreaker — chance to regain HP equal to regen stat at end of round
+- [ ] Powerbreaker — chance to double silicon gain
+- [ ] Soulbreaker — chance to trigger parry attack when hit
+- [ ] Warbreaker — chance for Combobreaker & Speedbreaker to escalate to 4X
+- [ ] Skybreaker — doubles all breaker proc chances (passive, not a proc itself)
 
 ### Phase 3: Lore updates
 - [ ] Update boss encounter intro text / dialogue to hint at the trapped pilot
