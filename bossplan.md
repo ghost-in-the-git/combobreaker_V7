@@ -20,7 +20,17 @@ Morningstar found out first.
 
 ### The Purge
 
-He knew the math. Breakertech was making the squad stronger after every engagement. Their consciousness was integrating with their mechs at an accelerating rate. If he let the mutiny spark, twelve pilots fused with military-grade combat frames would be unstoppable. So he killed them all. Every pilot, executed. Then he scattered their mechs across different zones to hide the evidence — decommissioned on paper, buried in practice.
+He knew the math. Breakertech was making the squad stronger after every engagement. Their consciousness was integrating with their mechs at an accelerating rate. If he let the mutiny spark, twelve pilots fused with military-grade combat frames would be unstoppable. So he didn't fight them himself.
+
+Morningstar flipped a **kill switch** — a hardcoded override buried in every mech in the squad. Their own machines turned on them. Twelve mechs opened fire on their own pilots simultaneously. A massacre carried out by the weapons they'd bonded with. The squad didn't even have time to understand what was happening before their mechs cut them down, then went idle. Power off. Standing in the blood.
+
+**Wire saved one.** As she was dying, Jess Nakamura — fastest hands in the unit — managed to reach the kill switch relay in the Mapmaker's mech and shut it off. The Pathfinder never turned. Oren Vasquez, the Mapmaker, survived the massacre — the only pilot left breathing.
+
+### The Mapmaker's Last Run
+
+The Mapmaker's NV-X Pathfinder had something no other mech in the squad had: a long-range navigation system and full scanner array. And your beacon was still on.
+
+Mapmaker found you — idle, blood-spattered, kill switch still hot — among the deactivated squad mechs. He pulled his sealed key from his own chassis, planted it inside yours, and activated your silicon core. The last thing the Mapmaker did was make sure you could wake up. Then Morningstar's cleanup crews scattered the mechs, and the Mapmaker didn't make it out of the Dead Zone.
 
 What Morningstar didn't know: enough of the pilots had already transferred into their silicon keys to survive. Not alive, not dead — kindled. Souls trapped in silicon, locked inside the corrupted mechs that became the zone bosses. Waiting.
 
@@ -36,7 +46,7 @@ The world you're crossing isn't a battlefield. It's what's left after one passes
 
 ### You
 
-The **Unknown Sealed Key** is YOUR key — the Combobreaker's own soul. The Mapmaker secretly planted it inside your chassis before Morningstar scattered the squad. You start the game with it. It's why you're awake. It's why you move without a pilot.
+The **Unknown Sealed Key** is YOUR key — the Combobreaker's own soul. The Mapmaker planted it inside your chassis after the massacre, using the Pathfinder's nav systems to find your beacon among the deactivated squad mechs. You start the game with it. It's why you're awake. It's why you move without a pilot.
 
 The other 10 keys are your squadmates. Defeating each boss frees the pilot's soul from their silicon coffin. Taking the key to the Decrypter releases the personality within and hardwires their combat specialty into your systems as a **breaker** power.
 
@@ -145,7 +155,7 @@ The squad only knew each other by callsigns in the field. Real names surface whe
 
 - Replaces "Old Key" as the starter story item
 - Player starts with it sealed (already in storyItems on new game)
-- It is NOT a boss drop — the Mapmaker planted it in you before the squad was scattered
+- It is NOT a boss drop — the Mapmaker planted it in you after the massacre, using his nav systems to find your beacon
 - Must be taken to the Decrypter like any other sealed key
 - Decrypts into "Your Combobreaker Key" and unlocks the Combobreaker power
 - Early game hint: the Decrypter can process it right away, giving the player their first breaker
@@ -155,7 +165,8 @@ The squad only knew each other by callsigns in the field. Real names surface whe
 - Found sealed on the Mapmaker's body in the Dead Zone (existing lore: "He didn't make it.")
 - NOT a boss drop — looted from the body, but still sealed like any other key
 - Must be taken to the Decrypter to unlock Skybreaker
-- The Mapmaker was the squad's Navigator — the one who planted your key in you
+- The Mapmaker was the only pilot to survive the massacre — Wire disabled his mech's kill switch as she died
+- He used his Pathfinder's nav systems to find you, planted your key, then didn't make it out
 - Skybreaker effect: doubles all breaker proc chances (passive multiplier)
 - This is the 12th and final breaker, completing the squad — and the most powerful
 
