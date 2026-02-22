@@ -4830,6 +4830,13 @@
             for (let i = wave.currentTarget; i <= wave.count; i++) {
                 await addMessage(`${et.name} #${i} attacks Mech for ${et.attack} damage.`, 'enemy');
 
+                // Visionbreaker: chance to completely avoid this attack
+                const visionTriggered = hasBreaker("Ghost's Visionbreaker Key") && Math.random() * 100 < p.breaker;
+                if (visionTriggered) {
+                    await addMessage(`[VISIONBREAKER TRIGGERED] You disappeared — attack missed!`, 'player');
+                    continue;
+                }
+
                 if (remainingDefence >= et.attack) {
                     // Fully blocked
                     remainingDefence -= et.attack;
