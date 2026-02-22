@@ -4903,6 +4903,14 @@
                 await addMessage(`Mech regenerates ${healed} HP. (${p.hp}/${p.maxHp})`, 'player');
                 updateStats();
             }
+
+            // Painbreaker: chance to regain HP equal to regen stat
+            if (hasBreaker("Nail's Painbreaker Key") && p.regen > 0 && p.hp < p.maxHp && Math.random() * 100 < p.breaker) {
+                const painHealed = Math.min(p.regen, p.maxHp - p.hp);
+                p.hp += painHealed;
+                await addMessage(`[PAINBREAKER TRIGGERED] Mech restores ${painHealed} HP! (${p.hp}/${p.maxHp})`, 'player');
+                updateStats();
+            }
         }
 
         // End battle
