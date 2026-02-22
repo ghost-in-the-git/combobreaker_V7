@@ -4889,7 +4889,15 @@
                 // Scrap drop (per-enemy scrapChance and scrapMin/scrapMax)
                 const et = wave ? wave.enemyType : null;
                 if (et && et.scrapChance && Math.random() * 100 < et.scrapChance) {
-                    const scrapAmount = et.scrapMin + Math.floor(Math.random() * (et.scrapMax - et.scrapMin + 1));
+                    let scrapAmount = et.scrapMin + Math.floor(Math.random() * (et.scrapMax - et.scrapMin + 1));
+
+                    // Steelbreaker: chance to double scrap
+                    const steelTriggered = hasBreaker("Chunk's Steelbreaker Key") && Math.random() * 100 < game.player.breaker;
+                    if (steelTriggered) {
+                        scrapAmount *= 2;
+                        addMessage(`[STEELBREAKER TRIGGERED] Double scrap salvaged!`, 'player');
+                    }
+
                     game.scrap += scrapAmount;
                     addMessage(`Salvaged ${scrapAmount} scrap from the wreckage.`, 'victory');
                     updateStorageUI();
