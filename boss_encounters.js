@@ -104,19 +104,11 @@ const BOSS_ENCOUNTERS = [
             scrapMin: 2,
             scrapMax: 4
         },
-        introText: "Bulkhead doors slam shut behind you. The corridor floods with red light. A Station Core Guardian unfolds from the ceiling — six arms, each ending in a different weapon system.",
+        introText: "The mining shaft goes straight down. You descend past 80 years of drill marks — spiralling grooves cut into the asteroid rock, layer after layer, deeper than any survey would justify. At the bottom of the pit, the DR-7 Prospector is still working. Seismic drill arms grind against bare stone in slow, rhythmic strokes, re-carving grooves that have been carved a thousand times over. Its ore detection array sweeps the walls on a loop, pinging empty rock. The whole pit hums with it — a low, mechanical drone that's been echoing off these walls for decades. It doesn't look up. It's listening to stone that stopped answering a long time ago.",
         dialogue: [
             {
-                question: "Who are you?",
-                response: "'CORE DEFENSE UNIT 07. AUTHORIZATION: PERMANENT. You are not on the crew manifest.'"
-            },
-            {
-                question: "Why are you attacking me?",
-                response: "'Unauthorized presence detected in Sector 4. Lethal response authorized. This is not personal.'"
-            },
-            {
-                question: "The station is abandoned.",
-                response: "'Negative. I am still here. The station is not abandoned until I am offline.' Its weapons charge in unison."
+                question: "There's nothing left down here.",
+                response: "The drill arms slow. The ore detection array sweeps toward you — one long ping. It reads you. Bone density, mineral content, whatever a mining rig scans for. Then something in its firmware decides you're just more rock, and the drills spin back up. It turns back to the wall. Down here, everything is ore if you drill long enough."
             }
         ],
         keyDrop: "Depressurized DR-7 Prospector's Sealed Key",

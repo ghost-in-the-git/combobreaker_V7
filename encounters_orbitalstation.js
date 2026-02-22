@@ -111,9 +111,9 @@ const ENCOUNTERS_ORBITALSTATION = [
         type: "shop",
         discoverable: true,
         description: "A woman in a patched EVA suit floats in a depressurised corridor, tethered to a support beam. A blacked-out shuttle is docked behind her.",
-        engageText: "'The station thinks it's still operational.' She pulls herself along the tether. 'Core Defense Unit 07 — it unfolds from the ceiling when it detects unauthorized presence. That's you, by the way.' She holds out a beacon. 'This makes sure it finds you.'",
+        engageText: "'The rig's main shaft goes down about two kilometres.' She pulls herself along the tether. 'There's a DR-7 Prospector at the bottom. Been drilling the same rock face for 80 years — you can hear it through the hull if you press your hand to the wall.' She holds out a beacon. 'This makes sure it finds you.'",
         discoveredDescription: "The Herald floats in the same corridor, tethered and waiting. Her shuttle's docking clamps haven't moved.",
-        discoveredEngageText: "'The Guardian is still patrolling. It won't stop until someone shuts it down — permanently.'",
+        discoveredEngageText: "'It's still down there. Still drilling. You can feel it through the floor.'",
         appearanceRate: 10,
         minLevel: 1,
         itemSlot1: ["Beacon: Orbital Station"],
@@ -123,11 +123,11 @@ const ENCOUNTERS_ORBITALSTATION = [
         dialogue: [
             {
                 question: "What does the beacon do?",
-                response: "'It triggers a station-wide distress alert. The Core Guardian always responds to distress signals. It's programmed to protect — by destroying the threat.'"
+                response: "'It sends a survey ping down the shaft. The Prospector reads it as a new work order — drill here, assay this. It'll come to whatever the ping marks as the dig site.' She looks at you. 'That's you.'"
             },
             {
                 question: "Who are you?",
-                response: "'Former crew.' She touches the station wall. 'I was here when it went dark. I left. The Guardian didn't.'"
+                response: "'Former crew.' She touches the station wall. 'I ran logistics on this rig when the asteroid still had something worth pulling out of it. Left when the yields dried up. The Prospector didn't.'"
             }
         ]
     }
