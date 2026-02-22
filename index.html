@@ -3875,6 +3875,12 @@
                 await addMessage(`"Here — take this. It's a map to The Ratpile. Not much down there but rats, but it's a start."`, 'system');
             }
 
+            // The dead Mapmaker in the Dead Zone carries his sealed key
+            if (currentEncounter.name === 'The Mapmaker' && currentLocation === 'deadzone' && !(game.storyItems || []).includes("Mapmaker's Sealed Key")) {
+                addStoryItem("Mapmaker's Sealed Key");
+                await addMessage(`You find a sealed key clutched in his other hand. Still warm. He was holding it for you.`, 'system');
+            }
+
             // Grant location map on first engage of any encounter
             {
                 const zoneConfig = ZONE_DESTINATIONS[currentLocation];
