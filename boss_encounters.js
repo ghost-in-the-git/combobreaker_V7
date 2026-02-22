@@ -29,19 +29,11 @@ const BOSS_ENCOUNTERS = [
             squadMin: 1,
             squadMax: 1
         },
-        introText: "The scrap piles shift. Something massive pushes through the wreckage — a T1 Destroyer, still running original combat firmware. Its targeting laser locks onto you.",
+        introText: "A pile of compacted scrap shifts — then stands up. Eight tons of rusted salvage frame, industrial claws still opening and closing on nothing. A KV-8 Grinder, caked in 80 years of oxide and dust, its compactor bay grinding in a slow loop. It doesn't target you. It just reaches for you, the way it reaches for everything. Raw material.",
         dialogue: [
             {
-                question: "Who are you?",
-                response: "No response. The Destroyer's optics flicker — it doesn't process speech. Only threat assessment."
-            },
-            {
-                question: "Why are you attacking me?",
-                response: "Its chassis bears the scars of a hundred kills. It doesn't need a reason. You're in its territory."
-            },
-            {
-                question: "What happened to your pilot?",
-                response: "The cockpit is welded shut from the inside. Whatever's in there stopped being human a long time ago."
+                question: "Stop — I'm not scrap!",
+                response: "The claws hesitate. One optic flickers — a half-second of something behind the corrosion. Recognition. Then it dies, and the Grinder lurches forward again, claws wide, sorting you into the pile."
             }
         ],
         keyDrop: "Rusted KV-8 Grinder's Sealed Key",
