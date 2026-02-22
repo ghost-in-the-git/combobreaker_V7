@@ -2275,6 +2275,15 @@
                 desc: "Active military staging ground. Squadrons of piloted combobreakers hold the line. They killed you once.",
                 image: "images/IMAGE.gif"
             },
+            morningstar: {
+                enemies: null,
+                encounters: null,
+                mining: null,
+                ambush: null,
+                fuelCost: 100,
+                desc: "Past the frontline. Past the war. Morningstar is here — a monolithic war machine that hasn't stopped advancing in eighty years. The squad is with you. All of them. Finish it.",
+                image: "images/IMAGE.gif"
+            },
             forge: {
                 enemies: null,
                 encounters: ENCOUNTERS_FORGE,
@@ -2355,6 +2364,7 @@
             deadzone: 'DEAD ZONE',
             asteroidbelt: 'ASTEROID BELT',
             frontline: 'THE FRONTLINE',
+            morningstar: "MORNINGSTAR'S DESTRUCTION",
             forge: 'THE FORGE',
             salvageyard: 'MECH GRAVEYARD',
             decrypter: 'THE DECRYPTER',
@@ -2376,6 +2386,7 @@
             deadzone: 'Map: Dead Zone',
             asteroidbelt: 'Map: Asteroid Belt',
             frontline: 'Map: Frontline',
+            morningstar: 'Map: Morningstar\'s Destruction',
             forge: 'Map: The Forge',
             salvageyard: 'Map: Mech Graveyard',
             decrypter: 'Map: The Decrypter'
@@ -2583,6 +2594,11 @@
                 destinations: [
                     { encounterName: "The Herald", mapItem: "Frontline: The Herald" }
                 ]
+            },
+            morningstar: {
+                openWorldName: "Morningstar's Position",
+                openWorldDesc: "The end of the line. A monolithic war machine stands on scorched earth, facing you for the first time in eighty years.",
+                destinations: []
             },
             forge: {
                 openWorldName: null,
@@ -3126,6 +3142,8 @@
                         if (usedItems.has(name)) return false;
                         const si = STORY_ITEMS.find(s => s.name === name);
                         if (si && (game.storyItems || []).includes(name)) return false;
+                        // Check requires — item only available if player has all prerequisite items
+                        if (si && si.requires && !si.requires.every(req => (game.storyItems || []).includes(req))) return false;
                         return true;
                     });
                     if (availableInSlot.length > 0) {
@@ -4666,13 +4684,21 @@
             const loc = LOCATIONS[currentLocation];
 
             // Mining-only locations: only spawn mining events
-            if (!loc.enemies && !loc.encounters) {
+            if (!loc.enemies && !loc.encounters && loc.mining) {
                 if (game.player.mining > 0) {
                     if (!spawnMiningEvent()) {
                         addMessage(`[NO NEW ASTEROIDS] All asteroid types in this field have been mapped. Select a known asteroid from the destination list.`, 'system');
                     }
                 } else {
                     addMessage(`[NO DRILL EQUIPPED] Mining drill required to operate in this zone.`, 'system');
+                }
+                return;
+            }
+
+            // Boss-only locations: always attempt boss encounter
+            if (!loc.enemies && !loc.encounters && !loc.mining) {
+                if (!spawnBossEncounter()) {
+                    addMessage(`[ZONE CLEAR] No threats detected. The war is over.`, 'system');
                 }
                 return;
             }

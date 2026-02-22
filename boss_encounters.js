@@ -288,5 +288,30 @@ const BOSS_ENCOUNTERS = [
         ],
         keyDrop: "Scorched CM-1 Sovereign's Sealed Key",
         dnaDrop: "DNA Tag: Frontline Commander"
+    },
+    {
+        zone: "morningstar",
+        beacon: null,
+        enemy: {
+            name: "Morningstar",
+            attack: 200,
+            defence: 150,
+            hp: 5000,
+            xp: 50000,
+            squadMin: 1,
+            squadMax: 1,
+            scrapChance: 100,
+            scrapMin: 15,
+            scrapMax: 20
+        },
+        introText: "You've crossed the wasteland. You've freed the squad. Every key, every soul, every piece of what Morningstar tried to bury — you're carrying all of it.\n\nHe's bigger than anything you've fought. A monolithic war machine, towering over the scorched ridgeline, still grinding forward after eighty years. The frontline isn't a place — it's whatever ground he's standing on. Behind him, miles of nothing. Ahead of him, more nothing to make.\n\nHe doesn't turn when you approach. He already knows. The squad uplink — Rex's uplink, the one that broadcast to eleven empty channels for eighty years — just went dark. The Sovereign fell. And now every channel is broadcasting again, because you're carrying every one of them.\n\nMorningstar stops. The war machine pivots, slow and massive, and for the first time in eighty years, the frontline turns around. He's not advancing anymore. He's facing what's behind him.\n\nTwelve signals. Twelve keys. One combobreaker with the whole squad inside it.\n\nHe recognises the frequency. He should. He's the one who tried to kill it.",
+        dialogue: [
+            {
+                question: "You killed them.",
+                response: "The war machine is still for a long time. Targeting arrays sweep you — reading your chassis, your transponder, your squad uplink broadcasting on twelve frequencies he buried eighty years ago. When he speaks, it comes through every channel at once. A voice that used to command armies, now fused with something vast and mechanical. 'I gave the order. They were becoming something I couldn't control. Breakertech was making them more than human — more than machine. They would have torn the chain of command apart.' A pause. The weapon systems cycle. 'I'd do it again.'"
+            }
+        ],
+        keyDrop: "Morningstar's Kill Switch",
+        dnaDrop: "DNA Tag: Commander Morningstar"
     }
 ];

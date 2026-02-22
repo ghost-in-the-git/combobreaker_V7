@@ -231,6 +231,18 @@ const STORY_ITEMS = [
         category: "dna",
         image: "images/IMAGE.gif"
     },
+    {
+        name: "DNA Tag: Commander Morningstar",
+        desc: "Whatever was human in Morningstar stopped being human a long time ago. The DNA is degraded beyond recognition — eighty years of breakertech integration, combat stimulants, and something else the sequencer can't identify. The tag reads MORNINGSTAR and nothing else. It's enough.",
+        category: "dna",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Morningstar's Kill Switch",
+        desc: "The hardcoded override that killed the squad. A small device — barely the size of a fist — buried in the core of a monolithic war machine. One signal, twelve mechs, twelve pilots cut down by their own machines. Morningstar's final order, preserved in silicon. It's inert now. The squad is free. The war is over.",
+        category: "key",
+        image: "images/IMAGE.gif"
+    },
 
     // Mech Debris
     {
@@ -862,6 +874,28 @@ const STORY_ITEMS = [
         category: "map",
         image: "images/IMAGE.gif",
         cost: 200
+    },
+    {
+        name: "Map: Morningstar's Destruction",
+        desc: "The Professor's hand shook when he drew this. A single route past the frontline to Morningstar's position — the monolithic war machine that killed the squad eighty years ago. 'You've got all of them now,' he said. 'Every key. Every soul. Go finish it.'",
+        category: "map",
+        image: "images/IMAGE.gif",
+        cost: 0,
+        requires: [
+            "Your Combobreaker Key",
+            "Chunk's Steelbreaker Key",
+            "Sarge's Shieldbreaker Key",
+            "Ghost's Visionbreaker Key",
+            "Bolt's Stonebreaker Key",
+            "Fang's Strikebreaker Key",
+            "Wire's Speedbreaker Key",
+            "Anvil's Crushbreaker Key",
+            "Frost's Painbreaker Key",
+            "Ace's Powerbreaker Key",
+            "Null's Soulbreaker Key",
+            "Rex's Warbreaker Key",
+            "Mapmaker's Skybreaker Key"
+        ]
     },
     // Beacons (purchased from The Herald — unlocks boss encounter in that zone)
     {
