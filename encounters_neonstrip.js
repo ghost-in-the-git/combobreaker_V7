@@ -106,10 +106,10 @@ const ENCOUNTERS_NEONSTRIP = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman sits behind a wall of static screens in a back room, the bass from the Strip muffled to a pulse. Every screen shows a different feed of the same golden frame.",
-        engageText: "'The House runs every game on this strip.' She mutes a screen. 'Slots, fights, debts — all rigged, all his. Nobody wins. Nobody leaves.' She slides a beacon across the table. 'Unless you call in your marker.'",
-        discoveredDescription: "The Herald sits behind her screens. The feeds still show the same golden frame, pacing.",
-        discoveredEngageText: "'The House is still open. Still winning. You going to change that?'",
+        description: "A woman sits in a back room where every light works. Not the flickering half-life of the strip — these are steady, clean, repaired. She watches the door like she's been waiting.",
+        engageText: "'You've seen the signs, right? The ones that work?' She gestures at the functioning lights. 'Something's been fixing the strip. Every broken thing, one by one. It doesn't stop.' She slides a beacon across the table. 'An engineering mech. Still running work orders for a pilot who's been dead for years.'",
+        discoveredDescription: "The Herald sits in her back room. More lights work now than the last time you were here. The repairs are spreading.",
+        discoveredEngageText: "'It's getting closer to this block. Fixing everything in its path. You going to let it get here, or go to it?'",
         appearanceRate: 10,
         minLevel: 1,
         itemSlot1: ["Beacon: Neon Strip"],
@@ -119,11 +119,11 @@ const ENCOUNTERS_NEONSTRIP = [
         dialogue: [
             {
                 question: "What does the beacon do?",
-                response: "'It's a high-roller chip encoded with an impossible debt. The House always collects in person. He'll come to you.'"
+                response: "'It broadcasts a fault signal — a component failure on loop. The Tinker's diagnostic systems will flag it as a priority repair. It won't be able to ignore it.'"
             },
             {
                 question: "Who are you?",
-                response: "'A former dealer.' She looks at the screens. 'I counted cards for The House until I realized the deck was marked. Now I deal from my own.'"
+                response: "'A technician.' She looks at the repaired lights. 'I used to maintain the strip's infrastructure. Then I noticed someone else was doing my job. Better than me. Faster. Every night, more things fixed. I followed the repairs to the source and saw it — crouched over a junction box, manipulator arms deep in the wiring. Working alone. I've been watching it ever since.'"
             }
         ]
     }

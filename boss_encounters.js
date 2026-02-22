@@ -229,19 +229,11 @@ const BOSS_ENCOUNTERS = [
             scrapMin: 7,
             scrapMax: 9
         },
-        introText: "Every screen on the strip goes dark. Then they all display the same message: 'THE HOUSE ALWAYS WINS.' A massive frame steps out of the central casino — gold-plated, armed to the teeth, and smiling.",
+        introText: "The neon signs are wrong. Not broken — they should be broken, everything on the strip is broken — but these are lit. Repaired. Rewired with mismatched components, patched with scavenged circuitry, held together with field splices that no human hand made. You follow the trail of fixed things deeper into the strip and find it: the Tinker, gold-plated chassis tarnished to brown, crouched over an arcade cabinet, resoldering a board that hasn't mattered to anyone in decades. Its manipulator arms move with a machinist's precision. It doesn't look up. It has work to do.",
         dialogue: [
             {
-                question: "Who are you?",
-                response: "'The House. The dealer. The odds.' Its voice is smooth, amplified through every speaker on the strip. 'And you, friend, are overdue on your tab.'"
-            },
-            {
-                question: "Why are you attacking me?",
-                response: "'Nothing personal. But every winner becomes a liability eventually.' Its gold-plated fingers curl into fists. 'Time to settle up.'"
-            },
-            {
-                question: "What if I walk away?",
-                response: "'Nobody walks away from The House.' The neon signs flicker and die. 'The exit was bricked up a long time ago.'"
+                question: "Nobody asked you to fix these.",
+                response: "The Tinker's manipulator arms pause over the circuit board. Diagnostic sensors sweep the arcade cabinet — connection restored, power nominal, display functional. It files the repair as complete, logs it alongside thousands of others: neon signs, vending machines, traffic lights, speaker systems, door mechanisms, cooling units. All repaired. All functional. None requested. The work queue was supposed to come from Jury-Rig — targets prioritized, problems diagnosed, solutions improvised together. The queue has been empty for years. So the Tinker built its own. Every broken thing on the strip is a ticket. Every repair is a task completed. And when it runs out of broken things, it starts improving the ones it already fixed. Then it registers you — combat damage, worn components, suboptimal configurations. A machine that needs work. And the only thing an engineer's mech knows how to do with a machine that needs work is take it apart."
             }
         ],
         keyDrop: "Gilded EN-9 Tinker's Sealed Key",
