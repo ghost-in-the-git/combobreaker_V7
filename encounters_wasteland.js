@@ -110,10 +110,10 @@ const ENCOUNTERS_WASTELAND = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman crouches in the shade of a wrecked dropship, wrapped in rad-shielding. A seismic device hums at her feet.",
-        engageText: "'Something lives under the sand.' She taps the seismic device. 'Not a mech. Not entirely. It surfaces when it feels vibrations — footsteps, engines, heartbeats.' She holds up a beacon. 'This is louder than all of those.'",
-        discoveredDescription: "The Herald sits beneath the same wreckage, seismic device still humming. Sand shifts around her in patterns that aren't wind.",
-        discoveredEngageText: "'The sand moved again last night. It's getting closer to the surface. You ready?'",
+        description: "A woman in rad-shielding sits on the carcass of a Sand Stalker, marking kill patterns on a scored metal chart. The Stalker's armour has been shredded by something much bigger than it.",
+        engageText: "'There's an AX-3 Ravager out there.' She nods toward the open wasteland. 'Been killing everything that moves for 80 years — Sand Stalkers, Pack Runners, dust devils, anything that triggers its sensors. Assault frame running on fried targeting firmware. It doesn't hunt. It doesn't patrol. It just fights whatever's closest.' She holds up a beacon. 'Right now that's whatever stumbles into its path. This makes sure the closest thing is you.'",
+        discoveredDescription: "The Herald sits on a fresh Stalker carcass, updating her kill charts. The shredding pattern is the same as last time.",
+        discoveredEngageText: "'Three more kills since you were here last. It's getting faster, not slower. You want to do this or not?'",
         appearanceRate: 10,
         minLevel: 1,
         itemSlot1: ["Beacon: Wasteland"],
@@ -123,11 +123,11 @@ const ENCOUNTERS_WASTELAND = [
         dialogue: [
             {
                 question: "What does the beacon do?",
-                response: "'It sends vibrations deep into the sand. The War Engine will feel it. And it will come up hungry.'"
+                response: "'The Ravager's targeting is cooked — locks onto whatever's hottest. Thermal noise, radiation spikes, animals. The beacon burns hotter than all of them.' She taps the device. 'Plant it and you won't have to find the Ravager. It'll find you. Mid-charge.'"
             },
             {
                 question: "Who are you?",
-                response: "'A survivor.' She looks at the shifting sand. 'I watched it pull three mechs underground in one night. I stopped counting after that.'"
+                response: "'I track kill patterns.' She runs a finger along the chart — dozens of marks, all radiating outward from a central point. 'Every kill it makes, I log. Stalkers, Crawlers, Pack Runners. Anything with a heat signature that crosses its radius.' She folds the chart. 'Something that aggressive shouldn't be left running.'"
             }
         ]
     }

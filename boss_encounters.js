@@ -129,19 +129,11 @@ const BOSS_ENCOUNTERS = [
             scrapMin: 3,
             scrapMax: 5
         },
-        introText: "The sand erupts. A Feral War Engine bursts from beneath the dunes, shedding rust and rock. Its frame is a patchwork of salvaged armor bolted over something ancient and wrong.",
+        introText: "You hear it before you see it — engine scream and the wet crunch of something being taken apart. Over the next dune, an AX-3 Ravager has a Sand Stalker pinned under its frame and is tearing it to pieces. Not efficiently. Not cleanly. Just raw, continuous assault, blackened claws ripping through armour plating that stopped resisting minutes ago. The Stalker isn't moving anymore. The Ravager doesn't notice. It keeps hitting — the targeting firmware so cooked by decades of radiation it can't tell the difference between fighting and finished. The stripped-down frame is warped and blackened by 80 years of exposure, but the engine is still screaming. All engine and teeth, and nothing to stop either.",
         dialogue: [
             {
-                question: "Who are you?",
-                response: "It screams — not through speakers, but through metal. The sound vibrates through your cockpit like a living thing."
-            },
-            {
-                question: "Why are you attacking me?",
-                response: "Hunger. Not for fuel or power. Something else. It lunges forward, claws gouging the earth."
-            },
-            {
-                question: "What are you?",
-                response: "Beneath the bolted armor, you catch a glimpse of something organic pulsing against the frame. It's not a mech. Not entirely."
+                question: "It's dead.",
+                response: "The Ravager freezes over the Stalker's wreck. Sensors sweep down — thermal flatline, no movement, no threat. For one second the assault stance breaks and it just stands there. Not attacking, not defending. It doesn't know what to do with nothing to fight. Then your signal lights up its targeting array — warm, moving, armed — and the engine screams back to life. The first real target in 80 years. And the Ravager remembers what real feels like."
             }
         ],
         keyDrop: "Irradiated AX-3 Ravager's Sealed Key",
