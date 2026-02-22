@@ -4792,7 +4792,7 @@
             let comboTriggered = hasBreaker("Your Combobreaker Key") && Math.random() * 100 < getBreaker();
             let strikeTriggered = hasBreaker("Fang's Strikebreaker Key") && Math.random() * 100 < getBreaker();
             let crushTriggered = hasBreaker("Anvil's Crushbreaker Key") && Math.random() * 100 < getBreaker();
-            let warTriggered = hasBreaker("Judge's Warbreaker Key") && (speedTriggered || comboTriggered) && Math.random() * 100 < getBreaker();
+            let warTriggered = hasBreaker("Rex's Warbreaker Key") && (speedTriggered || comboTriggered) && Math.random() * 100 < getBreaker();
             let attackCount = speedTriggered ? (warTriggered ? 4 : 2) : 1;
 
             if (speedTriggered) {
@@ -4890,7 +4890,7 @@
                 }
 
                 // Soulbreaker: chance to parry attack and reflect damage back
-                const soulTriggered = hasBreaker("Padre's Soulbreaker Key") && Math.random() * 100 < getBreaker();
+                const soulTriggered = hasBreaker("Null's Soulbreaker Key") && Math.random() * 100 < getBreaker();
                 if (soulTriggered) {
                     await addMessage(`[SOULBREAKER TRIGGERED] Attack parried — ${et.attack} damage reflected!`, 'player');
                     if (i === wave.currentTarget && wave.currentEnemy !== null) {
@@ -4947,7 +4947,7 @@
             }
 
             // Painbreaker: chance to regain HP equal to regen stat
-            if (hasBreaker("Nail's Painbreaker Key") && p.regen > 0 && p.hp < p.maxHp && Math.random() * 100 < getBreaker()) {
+            if (hasBreaker("Frost's Painbreaker Key") && p.regen > 0 && p.hp < p.maxHp && Math.random() * 100 < getBreaker()) {
                 const painHealed = Math.min(p.regen, p.maxHp - p.hp);
                 p.hp += painHealed;
                 await addMessage(`[PAINBREAKER TRIGGERED] Mech restores ${painHealed} HP! (${p.hp}/${p.maxHp})`, 'player');
@@ -4974,7 +4974,7 @@
                 addMessage(`[ All hostiles confirmed destroyed ]`, 'system');
 
                 // Powerbreaker: chance to double silicon gain
-                const powerTriggered = hasBreaker("Duchess's Powerbreaker Key") && Math.random() * 100 < getBreaker();
+                const powerTriggered = hasBreaker("Ace's Powerbreaker Key") && Math.random() * 100 < getBreaker();
                 let finalXp = xpEarned;
                 if (powerTriggered) {
                     finalXp *= 2;
