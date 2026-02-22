@@ -48,7 +48,7 @@ const FORGER_PRIMARY_STATS = {
     legs: "speed",
     arms: "defence",
     weapon: "attack",
-    chip: "combo",
+    chip: "breaker",
     processor: "xpBonus",
     pilot: "all",
     drill: "mining",
@@ -74,7 +74,7 @@ const FORGER_SECONDARY_STATS = [
     { key: "attack",  suffix: "of Striking",     label: "ATK" },
     { key: "defence", suffix: "of the Bulwark",  label: "DEF" },
     { key: "speed",   suffix: "of Swiftness",    label: "SPD" },
-    { key: "combo",   suffix: "of the Chain",    label: "COMBO" },
+    { key: "breaker", suffix: "of the Chain",    label: "BREAKER" },
     { key: "xpBonus", suffix: "of Insight",      label: "SILICON" },
     { key: "mining",  suffix: "of Excavation",   label: "MINING" },
     { key: "regen",   suffix: "of Mending",      label: "REGEN" }
@@ -83,11 +83,11 @@ const FORGER_SECONDARY_STATS = [
 // Stat key → display label mapping
 const FORGER_STAT_LABELS = {
     hp: "HP", attack: "ATK", defence: "DEF", speed: "SPD",
-    combo: "COMBO", xpBonus: "SILICON", mining: "MINING", regen: "REGEN"
+    breaker: "BREAKER", xpBonus: "SILICON", mining: "MINING", regen: "REGEN"
 };
 
 // Display order for stat tags in item names
-const FORGER_STAT_ORDER = ["hp", "attack", "defence", "speed", "combo", "xpBonus", "mining", "regen"];
+const FORGER_STAT_ORDER = ["hp", "attack", "defence", "speed", "breaker", "xpBonus", "mining", "regen"];
 
 // Flavour text per slot type
 const FORGER_SLOT_DESCS = {
@@ -193,7 +193,7 @@ function generateForgerItem(mineralName, slotType) {
         stats.attack = allVal;
         stats.speed = allVal;
         stats.defence = allVal;
-        stats.combo = allVal;
+        stats.breaker = allVal;
         stats.mining = allVal;
         stats.regen = allVal;
         const secValue = getForgerStatValue(secondary.key, tier);

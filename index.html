@@ -1188,8 +1188,8 @@
                     <span class="stat-right"><span class="stat-value" id="stat-attack">0</span><button class="stat-upgrade" onclick="upgradeStat('attack')">+</button></span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">Combo</span>
-                    <span class="stat-right"><span class="stat-value" id="stat-combo">0%</span><button class="stat-upgrade" onclick="upgradeStat('combo')">+</button></span>
+                    <span class="stat-label">Breaker</span>
+                    <span class="stat-right"><span class="stat-value" id="stat-breaker">0%</span><button class="stat-upgrade" onclick="upgradeStat('breaker')">+</button></span>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Defence</span>
@@ -1596,7 +1596,7 @@
                 baseAttack: 0,
                 baseSpeed: 0,
                 baseDefence: 0,
-                baseCombo: 0,
+                baseBreaker: 0,
                 baseMining: 0,
                 baseRegen: 0,
                 // Current stats (with equipment)
@@ -1608,7 +1608,7 @@
                 attack: 0,
                 speed: 0,
                 defence: 0,
-                combo: 0,
+                breaker: 0,
                 mining: 0,
                 regen: 0,
                 fuel: 100,
@@ -1675,7 +1675,7 @@
                     baseAttack: game.player.baseAttack,
                     baseSpeed: game.player.baseSpeed,
                     baseDefence: game.player.baseDefence,
-                    baseCombo: game.player.baseCombo,
+                    baseBreaker: game.player.baseBreaker,
                     baseMining: game.player.baseMining,
                     baseRegen: game.player.baseRegen
                 },
@@ -1743,7 +1743,7 @@
                         `ATK: <span>${p.baseAttack}</span> | ` +
                         `SPD: <span>${p.baseSpeed}</span> | ` +
                         `DEF: <span>${p.baseDefence}</span><br>` +
-                        `Combo: <span>${p.baseCombo}%</span> | ` +
+                        `Breaker: <span>${p.baseBreaker}%</span> | ` +
                         `Deaths: <span>${data.deaths || 0}</span> | ` +
                         `Items: <span>${(data.inventory || []).length}</span>`;
                     loadBtn.style.display = '';
@@ -1801,7 +1801,7 @@
             game.player.baseAttack = 0;
             game.player.baseSpeed = 0;
             game.player.baseDefence = 0;
-            game.player.baseCombo = 0;
+            game.player.baseBreaker = 0;
             game.player.baseMining = 0;
             game.player.baseRegen = 0;
             game.player.fuel = 100;
@@ -1878,7 +1878,7 @@
             game.player.baseAttack = data.player.baseAttack !== undefined ? data.player.baseAttack : 0;
             game.player.baseSpeed = data.player.baseSpeed !== undefined ? data.player.baseSpeed : 0;
             game.player.baseDefence = data.player.baseDefence !== undefined ? data.player.baseDefence : 0;
-            game.player.baseCombo = data.player.baseCombo !== undefined ? data.player.baseCombo : 0;
+            game.player.baseBreaker = data.player.baseBreaker !== undefined ? data.player.baseBreaker : (data.player.baseCombo !== undefined ? data.player.baseCombo : 0);
             game.player.baseMining = data.player.baseMining !== undefined ? data.player.baseMining : 0;
             game.player.baseRegen = data.player.baseRegen !== undefined ? data.player.baseRegen : 0;
 
@@ -2014,7 +2014,7 @@
                 game.player.baseAttack = data.player.baseAttack !== undefined ? data.player.baseAttack : 0;
                 game.player.baseSpeed = data.player.baseSpeed !== undefined ? data.player.baseSpeed : 0;
                 game.player.baseDefence = data.player.baseDefence !== undefined ? data.player.baseDefence : 0;
-                game.player.baseCombo = data.player.baseCombo !== undefined ? data.player.baseCombo : 0;
+                game.player.baseBreaker = data.player.baseBreaker !== undefined ? data.player.baseBreaker : (data.player.baseCombo !== undefined ? data.player.baseCombo : 0);
                 game.player.baseMining = data.player.baseMining !== undefined ? data.player.baseMining : 0;
                 game.player.baseRegen = data.player.baseRegen !== undefined ? data.player.baseRegen : 0;
 
@@ -2838,7 +2838,7 @@
             document.getElementById('stat-attack').textContent = p.attack;
             document.getElementById('stat-speed').textContent = p.speed;
             document.getElementById('stat-defence').textContent = p.defence;
-            document.getElementById('stat-combo').textContent = `${p.combo}%`;
+            document.getElementById('stat-breaker').textContent = `${p.breaker}%`;
             document.getElementById('stat-mining').textContent = p.mining;
             document.getElementById('stat-regen').textContent = p.regen;
 
@@ -2859,7 +2859,7 @@
             p.attack = p.baseAttack;
             p.speed = p.baseSpeed;
             p.defence = p.baseDefence;
-            p.combo = p.baseCombo;
+            p.breaker = p.baseBreaker;
             p.mining = p.baseMining;
             p.regen = p.baseRegen;
 
@@ -2873,7 +2873,7 @@
                         if (item.stats.attack) p.attack += item.stats.attack;
                         if (item.stats.speed) p.speed += item.stats.speed;
                         if (item.stats.defence) p.defence += item.stats.defence;
-                        if (item.stats.combo) p.combo += item.stats.combo;
+                        if (item.stats.breaker) p.breaker += item.stats.breaker;
                         if (item.stats.mining) p.mining += item.stats.mining;
                         if (item.stats.regen) p.regen += item.stats.regen;
                     }
@@ -3019,7 +3019,7 @@
                 attack: 'baseAttack',
                 speed: 'baseSpeed',
                 defence: 'baseDefence',
-                combo: 'baseCombo',
+                breaker: 'baseBreaker',
                 mining: 'baseMining',
                 regen: 'baseRegen'
             };
@@ -3305,7 +3305,7 @@
             if (item.stats.attack) parts.push(`+${item.stats.attack} ATK`);
             if (item.stats.defence) parts.push(`+${item.stats.defence} DEF`);
             if (item.stats.speed) parts.push(`+${item.stats.speed} SPD`);
-            if (item.stats.combo) parts.push(`+${item.stats.combo} COMBO`);
+            if (item.stats.breaker) parts.push(`+${item.stats.breaker} BREAKER`);
             if (item.stats.mining) parts.push(`+${item.stats.mining} MINING`);
             if (item.stats.regen) parts.push(`+${item.stats.regen} REGEN`);
             if (item.stats.xpBonus) parts.push(`+${item.stats.xpBonus} SILICON`);
@@ -4189,6 +4189,11 @@
             });
         }
 
+        // Check if the player has a specific breaker power (owns the decrypted key)
+        function hasBreaker(breakerKeyName) {
+            return game.storyItems && game.storyItems.includes(breakerKeyName);
+        }
+
         // Add a story item to the player's storage
         function addStoryItem(itemName) {
             if (!game.storyItems) game.storyItems = [];
@@ -4422,7 +4427,7 @@
             return true;
         }
 
-        // Evade an ambush using speed stat (same calculation as speedbreaker)
+        // Evade an ambush using breaker stat (requires Speedbreaker key)
         function evadeAmbush() {
             if (!game.currentWave || game.inBattle) return;
 
@@ -4434,7 +4439,8 @@
             clearCountdown();
 
             const p = game.player;
-            const evadeRoll = Math.random() * 100 < p.speed;
+            const hasSpeed = hasBreaker("Wire's Speedbreaker Key");
+            const evadeRoll = hasSpeed && Math.random() * 100 < p.breaker;
 
             if (evadeRoll) {
                 addMessage(`[EVADE SUCCESSFUL] Speedbreaker engaged — you slipped their sensors!`, 'player');
@@ -4759,9 +4765,9 @@
             wave.turn++;
             await addMessage(`- - - - - - - - - - - - - - - - - - - - -[ Turn ${wave.turn} ]- - - - - - - - - - - - - - - - - - - - - `, 'system');
 
-            // Determine attacks this turn
-            let speedTriggered = Math.random() * 100 < p.speed;
-            let comboTriggered = Math.random() * 100 < p.combo;
+            // Determine breaker procs this turn (gated behind owning decrypted keys)
+            let speedTriggered = hasBreaker("Wire's Speedbreaker Key") && Math.random() * 100 < p.breaker;
+            let comboTriggered = hasBreaker("Your Combobreaker Key") && Math.random() * 100 < p.breaker;
             let attackCount = speedTriggered ? 2 : 1;
 
             if (speedTriggered) {
@@ -4771,7 +4777,7 @@
                 await addMessage(`[COMBOBREAKER TRIGGERED]`, 'player');
             }
 
-            // Calculate damage (combo applies to all attacks this turn)
+            // Calculate damage (combobreaker doubles all attacks this turn)
             let playerDamage = calculateDamage(p.attack, et.defence);
             if (comboTriggered) {
                 playerDamage *= 2;
