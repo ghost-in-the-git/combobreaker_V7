@@ -4930,8 +4930,17 @@
 
             if (victory) {
                 addMessage(`[ All hostiles confirmed destroyed ]`, 'system');
-                game.player.xp += xpEarned;
-                addMessage(`Mech gained ${xpEarned} Silicon.`, 'system');
+
+                // Powerbreaker: chance to double silicon gain
+                const powerTriggered = hasBreaker("Duchess's Powerbreaker Key") && Math.random() * 100 < game.player.breaker;
+                let finalXp = xpEarned;
+                if (powerTriggered) {
+                    finalXp *= 2;
+                    addMessage(`[POWERBREAKER TRIGGERED] Double Silicon earned!`, 'player');
+                }
+
+                game.player.xp += finalXp;
+                addMessage(`Mech gained ${finalXp} Silicon.`, 'system');
 
                 // Drop random item
                 if (enemyType) {
