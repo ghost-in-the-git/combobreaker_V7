@@ -79,19 +79,11 @@ const BOSS_ENCOUNTERS = [
             scrapMin: 2,
             scrapMax: 3
         },
-        introText: "The street lights cut out in sequence. A Corporate Warlord steps from the shadows flanked by flickering holograms of corporate insignia. His mech hums with military-grade modifications.",
+        introText: "Something is wrong with the rain. It falls around a shape that isn't there — an outline in the downpour, flickering between visible and gone. An S-12 Wraith, sensor-dampened hull still cycling through broken stealth patterns after 80 years. It drifts between the dead towers like an afterimage. Not patrolling. Not hunting. Just haunting.",
         dialogue: [
             {
-                question: "Who are you?",
-                response: "'Someone who owns this block. And everything on it.' His mech's shoulder cannons power up."
-            },
-            {
-                question: "Why are you attacking me?",
-                response: "'You've been cutting into my supply lines. That stops now.' He cracks his mech's knuckles — a deliberate, theatrical gesture."
-            },
-            {
-                question: "We can make a deal.",
-                response: "'The only deal is this: you stop breathing, and I stop spending resources tracking you.' He raises a gauntlet."
+                question: "I can see you.",
+                response: "The Wraith freezes. For one second the outline sharpens — fully visible, hull plating locked, like being seen pinned it in place. Then the stealth kicks back in and it's already somewhere else. Closer. The air where it was still shimmers with heat."
             }
         ],
         keyDrop: "Shadowed S-12 Wraith's Sealed Key",

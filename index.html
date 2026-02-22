@@ -4580,7 +4580,7 @@
             return true;
         }
 
-        // Show boss dialogue with questions and [FIGHT] button
+        // Show boss dialogue — dialogue first, then [FIGHT] after interaction
         function showBossDialogue() {
             if (!currentBossEncounter) return;
 
@@ -4598,23 +4598,31 @@
             const container = document.createElement('div');
             container.className = 'dialogue-btn-container boss-dialogue';
 
-            // Add dialogue questions
+            // Add dialogue questions — clicking one shows the response, then reveals [FIGHT]
             currentBossEncounter.dialogue.forEach(entry => {
                 const btn = document.createElement('button');
                 btn.className = 'dialogue-btn';
                 btn.textContent = entry.question;
                 btn.addEventListener('click', async () => {
+                    removeBossDialogue();
                     await addMessage(entry.question, 'player');
                     await addMessage(entry.response, 'system');
-                    // Re-render boss dialogue so the player can ask more
-                    showBossDialogue();
-                    const newContainer = document.querySelector('.boss-dialogue');
-                    if (newContainer) newContainer.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                    showBossFightButton();
                 });
                 container.appendChild(btn);
             });
 
-            // Add [FIGHT] button
+            chatMessages.appendChild(container);
+            container.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        }
+
+        // Show only the [FIGHT] button after dialogue interaction
+        function showBossFightButton() {
+            removeBossDialogue();
+
+            const container = document.createElement('div');
+            container.className = 'dialogue-btn-container boss-dialogue';
+
             const fightBtn = document.createElement('button');
             fightBtn.className = 'dialogue-btn';
             fightBtn.textContent = '[FIGHT]';
