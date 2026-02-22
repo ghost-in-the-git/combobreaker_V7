@@ -28,8 +28,8 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
     {
-        name: "Old Key",
-        desc: "A tarnished key you've had as long as you can remember. Whatever it opens, you haven't found it yet.",
+        name: "Unknown Sealed Key",
+        desc: "A silicon key fused into your chassis before you woke. It hums with a frequency you almost recognise — like a voice calling your name from inside the circuitry. The Mapmaker planted it in you. It's why you're alive.",
         category: "key",
         image: "images/IMAGE.gif"
     },
@@ -90,64 +90,76 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
 
-    // Keys
+    // Sealed Keys (dropped by bosses — squad members trapped inside corrupted mechs)
     {
-        name: "Unmarked Keycard",
-        desc: "A blank white keycard with no markings. It hums faintly when held near electrical panels.",
+        name: "T1 Destroyer's Sealed Key",
+        desc: "Ripped from the wreckage of the T1 Destroyer. The silicon core pulses with a faint warmth — something inside is still processing. Still remembering. The key smells like hot metal and engine grease.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Corroded Access Fob",
-        desc: "An old security fob caked in grime. The LED still blinks red every few seconds.",
+        name: "Siege Remnant's Sealed Key",
+        desc: "Pulled from the Siege Remnant's shattered hull. The key is heavier than it should be, as if the weight of every round it absorbed settled into the silicon. A defensive instinct hums inside, waiting to deploy.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Skeleton Key Module",
-        desc: "A black-market bypass chip. It won't open everything, but it opens more than it should.",
+        name: "Corporate Warlord's Sealed Key",
+        desc: "Extracted from the Corporate Warlord's executive chassis. The key flickers between visible and not — like it's trying to disappear. Someone in there learned how to hide.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Unmarked Crate Key",
-        desc: "A heavy iron key with no label. It doesn't match any standard lock pattern.",
+        name: "Station Core Guardian's Sealed Key",
+        desc: "Cut from the Station Core Guardian's reactor housing. The key vibrates at a low frequency, like a drill finding purchase on stone. Whoever's inside knew their way around rock.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Orbital Docking Permit",
-        desc: "An expired docking authorization for Bay 12. The station it references no longer exists on any map.",
+        name: "Feral War Engine's Sealed Key",
+        desc: "Torn from the Feral War Engine's jaws. The key is scarred and overheated, like it was fighting to get out. The soul inside doesn't know how to stop swinging.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Rusted Bulkhead Key",
-        desc: "A thick iron key with deep corrosion. Stamped on the handle: SUB-LEVEL 9.",
+        name: "Hive Overlord's Sealed Key",
+        desc: "Severed from the Hive Overlord's neural cluster. The key twitches in your grip — fast, reactive, like fingers reaching for a wire that isn't there. The fastest hands in the unit, still moving.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Biometric Override Chip",
-        desc: "A fingertip-sized implant that spoofs authorized biosignatures. Single use.",
+        name: "Smelter Titan's Sealed Key",
+        desc: "Pried from the Smelter Titan's molten core housing. The key radiates heat and sheer mass. Whoever's locked inside this silicon believed in overwhelming force.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Freight Elevator Token",
-        desc: "A scratched metal coin accepted by cargo lifts in the Industrial Zone.",
+        name: "Avalanche Colossus's Sealed Key",
+        desc: "Chipped from the Avalanche Colossus's cryo-armour. The key is cold to the touch and pulses with a slow, steady rhythm — like a heartbeat being kept alive on life support. A medic's patience.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Warden's Master Fob",
-        desc: "Stripped from a decommissioned security unit. Opens most detention-block doors.",
+        name: "The House's Sealed Key",
+        desc: "Won from The House's vault core. The key cycles through faint patterns of light — probability calculations running on loop. The soul inside is still counting the odds.",
         category: "key",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Encrypted Passphrase Drive",
-        desc: "A thumb drive containing a rolling cipher. Whatever it unlocks changes codes every hour.",
+        name: "Abomination Core's Sealed Key",
+        desc: "Retrieved from the Abomination Core's twisted remains. The key emits no signal, no heat, no sound — a perfect void. Whoever's inside specialised in making things disappear.",
+        category: "key",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Warlord Chassis's Sealed Key",
+        desc: "Taken from the Warlord Chassis's command array. The key broadcasts on every frequency simultaneously — a commander's instinct to coordinate, to amplify, even from inside a silicon prison.",
+        category: "key",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Mapmaker's Sealed Key",
+        desc: "Found on the Mapmaker's body in the Dead Zone. He didn't make it — but he made sure you did. The key is warm, like it's been waiting. His nav systems charted one last route: the one that led to you.",
         category: "key",
         image: "images/IMAGE.gif"
     },
@@ -264,70 +276,82 @@ const STORY_ITEMS = [
         image: "images/IMAGE.gif"
     },
 
-    // Decrypted Protocols (powerups from The Decrypter — boss keys consumed)
+    // Decrypted Breaker Keys (from The Decrypter — sealed keys consumed, pilot souls released)
     {
-        name: "Protocol: Scrapyard Override",
-        desc: "Decoded combat firmware from the T1 Destroyer. Grants a permanent edge in the Scrap Fields.",
+        name: "Your Combobreaker Key",
+        desc: "Your own soul, decrypted. The Mapmaker planted it in you before the end, and now you know why you're awake. Combobreaker — chance to deal double damage. The game is named after you.",
         category: "powerup",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Protocol: Battlefield Resonance",
-        desc: "Decrypted siege protocols from the Siege Remnant. Hardwired into your combat systems.",
+        name: "Chunk's Steelbreaker Key",
+        desc: "Riley 'Chunk' Kowalski. Scrap Refiner. The KV-8 Grinder's pilot — built like a salvage crane, could strip a mech to parts blindfolded. Steelbreaker — chance to gain double scrap. Chunk's salvage instinct, hardwired into your systems.",
         category: "powerup",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Protocol: Corporate Exploit",
-        desc: "Corporate override codes extracted from the Warlord's security fob. System-level access.",
+        name: "Sarge's Shieldbreaker Key",
+        desc: "Marcus 'Sarge' Oduya. Squad Defender. The MK-IV Bulwark's pilot — kept the squad alive longer than anyone had a right to expect. Shieldbreaker — chance to double defence at the start of a round. Sarge's wall goes up.",
         category: "powerup",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Protocol: Station Clearance",
-        desc: "Station defense bypass routines decoded from the Core Guardian's key module.",
+        name: "Ghost's Visionbreaker Key",
+        desc: "Yuki 'Ghost' Tanaka. Infiltrator. The S-12 Wraith's pilot — never seen entering or leaving, just already there. Visionbreaker — chance to disappear and completely avoid an attack. Ghost's vanishing act.",
         category: "powerup",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Protocol: Feral Instinct",
-        desc: "Predatory targeting algorithms extracted from the Feral War Engine's corrupted memory.",
+        name: "Bolt's Stonebreaker Key",
+        desc: "Petra 'Bolt' Lindgren. Miner. The DR-7 Prospector's pilot — could crack open a rock face and tell you what's inside by the sound. Stonebreaker — chance to add mining stat to asteroid stability. Bolt reinforcing the rock.",
         category: "powerup",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Protocol: Hive Frequency",
-        desc: "Network synchronization data decoded from the Hive Overlord's docking permit.",
+        name: "Fang's Strikebreaker Key",
+        desc: "Diego 'Fang' Reyes. Assault. The AX-3 Ravager's pilot — first one in, last one standing, preferred it that way. Strikebreaker — chance to ignore enemy defence stat entirely. Fang hits like the armour isn't there.",
         category: "powerup",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Protocol: Smelter Core",
-        desc: "Industrial override sequences extracted from the Smelter Titan's bulkhead key.",
+        name: "Wire's Speedbreaker Key",
+        desc: "Jess 'Wire' Nakamura. Scout. The SC-1 Flicker's pilot — fastest hands in the unit, rewired a mech mid-combat once on a dare. Speedbreaker — chance to attack twice. She saved the Mapmaker. She saved you. She became the Herald.",
         category: "powerup",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Protocol: Cryo Adaptation",
-        desc: "Cryogenic survival algorithms decoded from the Avalanche Colossus's biometric chip.",
+        name: "Anvil's Crushbreaker Key",
+        desc: "Dmitri 'Anvil' Volkov. Heavy Gunner. The HG-6 Devastator's pilot — if it had armour, he treated it as a suggestion. Crushbreaker — chance for damage to hit the entire enemy group. One swing, everything feels it.",
         category: "powerup",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Protocol: House Edge",
-        desc: "Probability manipulation routines cracked from The House's elevator token.",
+        name: "Frost's Painbreaker Key",
+        desc: "Elise 'Frost' Calloway. Medic. The MD-5 Lifeline's pilot — kept a cool head while putting people back together under fire. Painbreaker — chance to regain HP equal to regen stat. Frost patching you up between blows.",
         category: "powerup",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Protocol: Abomination Code",
-        desc: "Reality-bending computation patterns decoded from the Abomination Core's master fob.",
+        name: "Ace's Powerbreaker Key",
+        desc: "Tariq 'Ace' Hassan. Mechanic. The EN-9 Tinker's pilot — could fix anything, engines, guns, morale. Powerbreaker — chance to double silicon gain. Ace squeezing more out of every wreck.",
         category: "powerup",
         image: "images/IMAGE.gif"
     },
     {
-        name: "Protocol: Warlord's Cipher",
-        desc: "Rolling military encryption cracked from the Warlord Chassis's passphrase drive. The final protocol.",
+        name: "Null's Soulbreaker Key",
+        desc: "Zara 'Null' Okonkwo. Specialist. The EW-0 Phantom's pilot — specialised in making problems disappear, quietly. Soulbreaker — chance to trigger a parry attack when hit. You get hit, you hit back.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Rex's Warbreaker Key",
+        desc: "Kane 'Rex' Hargrove. Commander. The CM-1 Sovereign's pilot — the CO who made the calls nobody else wanted to make. Warbreaker — chance for Combobreaker and Speedbreaker to escalate to 4X. Rex amplifying the squad.",
+        category: "powerup",
+        image: "images/IMAGE.gif"
+    },
+    {
+        name: "Mapmaker's Skybreaker Key",
+        desc: "Oren 'Mapmaker' Vasquez. Navigator. The NV-X Pathfinder's pilot — charted every route the squad ever ran and planted your key before the end. Skybreaker — doubles all breaker proc chances. The Mapmaker's final gift. Not a proc — a passive multiplier on everything else.",
         category: "powerup",
         image: "images/IMAGE.gif"
     },

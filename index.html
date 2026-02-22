@@ -1645,7 +1645,7 @@
             scrap: 0,
             activeSlot: null, // Which save slot is currently active (1-3 or null)
             minerals: {}, // Collected minerals by category
-            storyItems: ['Mysterious Note', 'Old Key', 'Unreadable DNA Tag', 'Destroyed Mech Heart'], // Collected story items
+            storyItems: ['Mysterious Note', 'Unknown Sealed Key', 'Unreadable DNA Tag', 'Destroyed Mech Heart'], // Collected story items
             isAmbush: false, // Whether current wave is an ambush
             isBossEncounter: false // Whether current wave is a boss encounter
         };
@@ -1808,7 +1808,7 @@
             game.deaths = 0;
             game.scrap = 0;
             game.minerals = {};
-            game.storyItems = ['Mysterious Note', 'Old Key', 'Unreadable DNA Tag', 'Destroyed Mech Heart'];
+            game.storyItems = ['Mysterious Note', 'Unknown Sealed Key', 'Unreadable DNA Tag', 'Destroyed Mech Heart'];
             game.inventory = [];
             game.equipment = { body: null, legs: null, arms: null, weapon: null, chip: null, processor: null, pilot: null, drill: null, implant: null };
             currentLocation = 'home';
@@ -1886,7 +1886,7 @@
             game.deaths = data.deaths || 0;
             game.scrap = data.scrap || 0;
             game.minerals = data.minerals || {};
-            game.storyItems = data.storyItems && data.storyItems.length > 0 ? data.storyItems : ['Mysterious Note', 'Old Key', 'Unreadable DNA Tag', 'Destroyed Mech Heart'];
+            game.storyItems = data.storyItems && data.storyItems.length > 0 ? data.storyItems : ['Mysterious Note', 'Unknown Sealed Key', 'Unreadable DNA Tag', 'Destroyed Mech Heart'];
 
             // Restore location
             if (data.location && LOCATIONS[data.location]) {
@@ -2024,7 +2024,7 @@
                 game.scrap = data.scrap || 0;
                 game.activeSlot = data.activeSlot || null;
                 game.minerals = data.minerals || {};
-                game.storyItems = data.storyItems && data.storyItems.length > 0 ? data.storyItems : ['Mysterious Note', 'Old Key', 'Unreadable DNA Tag', 'Destroyed Mech Heart'];
+                game.storyItems = data.storyItems && data.storyItems.length > 0 ? data.storyItems : ['Mysterious Note', 'Unknown Sealed Key', 'Unreadable DNA Tag', 'Destroyed Mech Heart'];
 
                 // Restore location
                 if (data.location && LOCATIONS[data.location]) {
@@ -3482,71 +3482,83 @@
         }
 
         // Decrypter: key-to-powerup mapping
-        // Each boss key unlocks a unique powerup (stored as story item for now)
+        // Each sealed key decrypts into a breaker key (pilot soul released, power unlocked)
         const DECRYPTER_POWERUPS = {
-            "Old Key": {
-                name: "Protocol: Scrapyard Override",
-                desc: "Decoded combat firmware from the T1 Destroyer. Grants a permanent edge in the Scrap Fields.",
+            "Unknown Sealed Key": {
+                name: "Your Combobreaker Key",
+                desc: "Your own soul, decrypted. The Mapmaker planted it in you before the end, and now you know why you're awake. Combobreaker — chance to deal double damage. The game is named after you.",
                 category: "powerup",
                 image: "images/IMAGE.gif"
             },
-            "Unmarked Keycard": {
-                name: "Protocol: Battlefield Resonance",
-                desc: "Decrypted siege protocols from the Siege Remnant. Hardwired into your combat systems.",
+            "T1 Destroyer's Sealed Key": {
+                name: "Chunk's Steelbreaker Key",
+                desc: "Riley 'Chunk' Kowalski. Scrap Refiner. Steelbreaker — chance to gain double scrap. Chunk's salvage instinct, hardwired into your systems.",
                 category: "powerup",
                 image: "images/IMAGE.gif"
             },
-            "Corroded Access Fob": {
-                name: "Protocol: Corporate Exploit",
-                desc: "Corporate override codes extracted from the Warlord's security fob. System-level access.",
+            "Siege Remnant's Sealed Key": {
+                name: "Sarge's Shieldbreaker Key",
+                desc: "Marcus 'Sarge' Oduya. Squad Defender. Shieldbreaker — chance to double defence at the start of a round. Sarge's wall goes up.",
                 category: "powerup",
                 image: "images/IMAGE.gif"
             },
-            "Skeleton Key Module": {
-                name: "Protocol: Station Clearance",
-                desc: "Station defense bypass routines decoded from the Core Guardian's key module.",
+            "Corporate Warlord's Sealed Key": {
+                name: "Ghost's Visionbreaker Key",
+                desc: "Yuki 'Ghost' Tanaka. Infiltrator. Visionbreaker — chance to disappear and completely avoid an attack. Ghost's vanishing act.",
                 category: "powerup",
                 image: "images/IMAGE.gif"
             },
-            "Unmarked Crate Key": {
-                name: "Protocol: Feral Instinct",
-                desc: "Predatory targeting algorithms extracted from the Feral War Engine's corrupted memory.",
+            "Station Core Guardian's Sealed Key": {
+                name: "Bolt's Stonebreaker Key",
+                desc: "Petra 'Bolt' Lindgren. Miner. Stonebreaker — chance to add mining stat to asteroid stability. Bolt reinforcing the rock.",
                 category: "powerup",
                 image: "images/IMAGE.gif"
             },
-            "Orbital Docking Permit": {
-                name: "Protocol: Hive Frequency",
-                desc: "Network synchronization data decoded from the Hive Overlord's docking permit.",
+            "Feral War Engine's Sealed Key": {
+                name: "Fang's Strikebreaker Key",
+                desc: "Diego 'Fang' Reyes. Assault. Strikebreaker — chance to ignore enemy defence stat entirely. Fang hits like the armour isn't there.",
                 category: "powerup",
                 image: "images/IMAGE.gif"
             },
-            "Rusted Bulkhead Key": {
-                name: "Protocol: Smelter Core",
-                desc: "Industrial override sequences extracted from the Smelter Titan's bulkhead key.",
+            "Hive Overlord's Sealed Key": {
+                name: "Wire's Speedbreaker Key",
+                desc: "Jess 'Wire' Nakamura. Scout. Speedbreaker — chance to attack twice. She saved the Mapmaker. She saved you. She became the Herald.",
                 category: "powerup",
                 image: "images/IMAGE.gif"
             },
-            "Biometric Override Chip": {
-                name: "Protocol: Cryo Adaptation",
-                desc: "Cryogenic survival algorithms decoded from the Avalanche Colossus's biometric chip.",
+            "Smelter Titan's Sealed Key": {
+                name: "Anvil's Crushbreaker Key",
+                desc: "Dmitri 'Anvil' Volkov. Heavy Gunner. Crushbreaker — chance for damage to hit the entire enemy group. One swing, everything feels it.",
                 category: "powerup",
                 image: "images/IMAGE.gif"
             },
-            "Freight Elevator Token": {
-                name: "Protocol: House Edge",
-                desc: "Probability manipulation routines cracked from The House's elevator token.",
+            "Avalanche Colossus's Sealed Key": {
+                name: "Frost's Painbreaker Key",
+                desc: "Elise 'Frost' Calloway. Medic. Painbreaker — chance to regain HP equal to regen stat. Frost patching you up between blows.",
                 category: "powerup",
                 image: "images/IMAGE.gif"
             },
-            "Warden's Master Fob": {
-                name: "Protocol: Abomination Code",
-                desc: "Reality-bending computation patterns decoded from the Abomination Core's master fob.",
+            "The House's Sealed Key": {
+                name: "Ace's Powerbreaker Key",
+                desc: "Tariq 'Ace' Hassan. Mechanic. Powerbreaker — chance to double silicon gain. Ace squeezing more out of every wreck.",
                 category: "powerup",
                 image: "images/IMAGE.gif"
             },
-            "Encrypted Passphrase Drive": {
-                name: "Protocol: Warlord's Cipher",
-                desc: "Rolling military encryption cracked from the Warlord Chassis's passphrase drive. The final protocol.",
+            "Abomination Core's Sealed Key": {
+                name: "Null's Soulbreaker Key",
+                desc: "Zara 'Null' Okonkwo. Specialist. Soulbreaker — chance to trigger a parry attack when hit. You get hit, you hit back.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            },
+            "Warlord Chassis's Sealed Key": {
+                name: "Rex's Warbreaker Key",
+                desc: "Kane 'Rex' Hargrove. Commander. Warbreaker — chance for Combobreaker and Speedbreaker to escalate to 4X. Rex amplifying the squad.",
+                category: "powerup",
+                image: "images/IMAGE.gif"
+            },
+            "Mapmaker's Sealed Key": {
+                name: "Mapmaker's Skybreaker Key",
+                desc: "Oren 'Mapmaker' Vasquez. Navigator. Skybreaker — doubles all breaker proc chances. The Mapmaker's final gift.",
                 category: "powerup",
                 image: "images/IMAGE.gif"
             }

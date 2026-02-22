@@ -44,7 +44,7 @@ const BOSS_ENCOUNTERS = [
                 response: "The cockpit is welded shut from the inside. Whatever's in there stopped being human a long time ago."
             }
         ],
-        keyDrop: "Old Key",
+        keyDrop: "T1 Destroyer's Sealed Key",
         dnaDrop: "DNA Tag: Unknown Pilot"
     },
     {
@@ -77,7 +77,7 @@ const BOSS_ENCOUNTERS = [
                 response: "The turret twitches, recalibrates. For a moment it seems to hesitate — then the barrel levels at your chest."
             }
         ],
-        keyDrop: "Unmarked Keycard",
+        keyDrop: "Siege Remnant's Sealed Key",
         dnaDrop: "DNA Tag: Decayed Officer"
     },
     {
@@ -110,7 +110,7 @@ const BOSS_ENCOUNTERS = [
                 response: "'The only deal is this: you stop breathing, and I stop spending resources tracking you.' He raises a gauntlet."
             }
         ],
-        keyDrop: "Corroded Access Fob",
+        keyDrop: "Corporate Warlord's Sealed Key",
         dnaDrop: "DNA Tag: Mech-Hybrid Sample"
     },
     {
@@ -143,7 +143,7 @@ const BOSS_ENCOUNTERS = [
                 response: "'Negative. I am still here. The station is not abandoned until I am offline.' Its weapons charge in unison."
             }
         ],
-        keyDrop: "Skeleton Key Module",
+        keyDrop: "Station Core Guardian's Sealed Key",
         dnaDrop: "DNA Tag: Synthetic Override"
     },
     {
@@ -176,7 +176,7 @@ const BOSS_ENCOUNTERS = [
                 response: "Beneath the bolted armor, you catch a glimpse of something organic pulsing against the frame. It's not a mech. Not entirely."
             }
         ],
-        keyDrop: "Unmarked Crate Key",
+        keyDrop: "Feral War Engine's Sealed Key",
         dnaDrop: "DNA Tag: Contaminated Sample"
     },
     {
@@ -209,7 +209,7 @@ const BOSS_ENCOUNTERS = [
                 response: "'Everything connected. Everything listening.' Its eyes — too many of them — blink in sequence. 'You will join or you will feed.'"
             }
         ],
-        keyDrop: "Orbital Docking Permit",
+        keyDrop: "Hive Overlord's Sealed Key",
         dnaDrop: "DNA Tag: Cloned Signature"
     },
     {
@@ -242,7 +242,7 @@ const BOSS_ENCOUNTERS = [
                 response: "'PRODUCTION QUOTA NOT MET. SHIFT CONTINUES UNTIL QUOTA MET. QUOTA WILL NEVER BE MET.' It advances."
             }
         ],
-        keyDrop: "Rusted Bulkhead Key",
+        keyDrop: "Smelter Titan's Sealed Key",
         dnaDrop: "DNA Tag: Fused Pilot"
     },
     {
@@ -275,7 +275,7 @@ const BOSS_ENCOUNTERS = [
                 response: "The ice encasing its legs is centuries thick. Whatever war deployed this thing, nobody alive remembers it."
             }
         ],
-        keyDrop: "Biometric Override Chip",
+        keyDrop: "Avalanche Colossus's Sealed Key",
         dnaDrop: "DNA Tag: Cryo-Preserved Sample"
     },
     {
@@ -308,7 +308,7 @@ const BOSS_ENCOUNTERS = [
                 response: "'Nobody walks away from The House.' The neon signs flicker and die. 'The exit was bricked up a long time ago.'"
             }
         ],
-        keyDrop: "Freight Elevator Token",
+        keyDrop: "The House's Sealed Key",
         dnaDrop: "DNA Tag: Non-Human Marker"
     },
     {
@@ -341,7 +341,7 @@ const BOSS_ENCOUNTERS = [
                 response: "'The end of the signal. Where data goes to die.' It reaches toward you with a limb that wasn't there a second ago. 'You're already here. You just haven't accepted it.'"
             }
         ],
-        keyDrop: "Warden's Master Fob",
+        keyDrop: "Abomination Core's Sealed Key",
         dnaDrop: "DNA Tag: Warlord Residue"
     },
     {
@@ -374,7 +374,7 @@ const BOSS_ENCOUNTERS = [
                 response: "'It always ends with a fight.' The Warlord powers up its main cannon. 'The only question is how long you last.'"
             }
         ],
-        keyDrop: "Encrypted Passphrase Drive",
+        keyDrop: "Warlord Chassis's Sealed Key",
         dnaDrop: "DNA Tag: Frontline Commander"
     }
 ];
