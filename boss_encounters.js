@@ -154,19 +154,11 @@ const BOSS_ENCOUNTERS = [
             scrapMin: 4,
             scrapMax: 6
         },
-        introText: "The tunnel walls begin to move. Thousands of small mechs scatter as a Hive Overlord pushes through the narrow passage, its bulk scraping concrete from the ceiling.",
+        introText: "You hear it before you see it — a high-pitched whine echoing through the tunnels, bouncing off walls, impossible to place. Then a blur of corroded metal screams through the junction ahead. Gone. You turn — it's behind you. Gone again. The tunnel walls are scored with parallel grooves, the same corners scraped by the same chassis thousands of times over. An SC-1 Flicker, ultralight recon frame, the fastest chassis ever built — running the tunnel network at full speed, scanning, cataloguing, reporting to a squad frequency that went dead 80 years ago. You catch it in glimpses. A flicker of corroded plating through a doorway. A shadow that moves too fast to track. It's running recon on tunnels it's mapped a million times, delivering intel to no one, and it will not stop.",
         dialogue: [
             {
-                question: "Who are you?",
-                response: "A chorus of voices speaks in unison from its chassis — dozens of captured pilot recordings layered on top of each other. 'We are below.'"
-            },
-            {
-                question: "Why are you attacking me?",
-                response: "'Surface units do not belong here. You bring light. Light kills the network.' The smaller mechs begin to swarm."
-            },
-            {
-                question: "What is the network?",
-                response: "'Everything connected. Everything listening.' Its eyes — too many of them — blink in sequence. 'You will join or you will feed.'"
+                question: "There's no one left to report to.",
+                response: "The Flicker stops. Mid-stride, mid-route, hanging in the tunnel like something snagged it. Its comms array crackles — scanning for the squad frequency, the command channel, the uplink it was supposed to report back to. Static. Dead channels. For one second it's just standing there in the dark — a corroded ultralight frame with nowhere to run and no one waiting for the intel. Then the scout firmware kicks back in and decides you're the threat to report on. But there's no one to report to. So the only thing left is to deal with the threat itself."
             }
         ],
         keyDrop: "Corroded SC-1 Flicker's Sealed Key",

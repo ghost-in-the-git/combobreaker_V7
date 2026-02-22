@@ -110,10 +110,10 @@ const ENCOUNTERS_UNDERCITY = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman sits cross-legged beside a flickering terminal in the tunnel darkness. Cables snake from the terminal into the walls. She's listening to something.",
-        engageText: "'The network down here has a heartbeat.' She touches the wall. 'One node controls it all — the Hive Overlord. It knows every tunnel, every junction, every signal.' She produces a beacon. 'This floods its frequencies. It will come looking for the source.'",
-        discoveredDescription: "The Herald sits in the same spot, cables still pulsing. The walls seem to breathe around her.",
-        discoveredEngageText: "'The network's agitated. Something's changing down here. You feel it too, don't you?'",
+        description: "The Herald stands at a tunnel junction, one hand pressed flat against the wall. She's not listening to the tunnels. She's listening to something moving through them — fast.",
+        engageText: "'There's an SC-1 Flicker down here.' She doesn't look at you. 'Ultralight recon frame. Fastest chassis ever built. It's been running these tunnels for 80 years — scanning, mapping, reporting to a dead frequency.' A long pause. She pulls a beacon from her coat. Her hand isn't steady. 'This one's personal.' She doesn't explain. 'The beacon interrupts the recon loop. Forces a hard reset on targeting. For about half a second it stops running and sees you. After that, you're just another threat in the tunnel.'",
+        discoveredDescription: "The Herald is at the same junction, hand on the wall. She pulls it away when she hears you coming, like she was caught doing something private.",
+        discoveredEngageText: "'It's still running. Same routes. Same frequency.' She holds out the beacon without looking at it. 'Get it done.'",
         appearanceRate: 10,
         minLevel: 1,
         itemSlot1: ["Beacon: Undercity"],
@@ -123,11 +123,11 @@ const ENCOUNTERS_UNDERCITY = [
         dialogue: [
             {
                 question: "What does the beacon do?",
-                response: "'It injects noise into the tunnel network. The Overlord treats noise as an infection. It will come to purge the source — you.'"
+                response: "'The Flicker is running a recon loop — same tunnels, same route, same report to a frequency that's been dead for decades. The beacon jams the loop. Breaks the cycle.' She swallows. 'When the cycle breaks, the scout firmware panics. Needs a new target. You'll be the only thing standing still.'"
             },
             {
                 question: "Who are you?",
-                response: "'I mapped these tunnels before the Overlord took them.' Her jaw tightens. 'Now I help people take them back.'"
+                response: "She's quiet for too long. 'I knew the pilot.' Four words. She turns back to the wall and presses her hand flat against the stone, feeling the vibration of something fast moving through the tunnels below. 'Just get it done.'"
             }
         ]
     }
