@@ -4,13 +4,37 @@
 
 You ARE the Combobreaker. That's your identity — the game is named after you.
 
-The squad was a tactical frontline mech unit. When the military decommissioned them, they hid each squad member's mech in a different zone. The pilots' souls were trapped inside silicon keys, locked within the corrupted mechs that became the zone bosses.
+### The Squad
 
-The **Unknown Sealed Key** is YOUR key — the Combobreaker's own soul. The Mapmaker secretly planted it inside your chassis when the military was scattering the squad. You start the game with it. It's why you're awake. It's why you move without a pilot.
+The squad was a tactical frontline mech unit assigned to **Commander Morningstar's** experimental combat division. Morningstar ran the war's dirtiest operations — field-testing weapons on civilian populations, burning supply lines through occupied zones, authorizing strikes that command would never put on paper. The squad saw all of it.
+
+### Breakertech
+
+The military had recently installed **breakertech** — an experimental silicon processing system that absorbed fragments of a pilot's consciousness into their mech's core during combat. Each battle transferred more. The pilots' power was growing exponentially, their reflexes fusing with machine precision, their instincts bleeding into the silicon. Morningstar's engineers called it a performance enhancement. The pilots called it becoming something else.
+
+### The Mutiny That Never Was
+
+The squad planned to mutiny. Morningstar's war crimes were the reason, but breakertech was the breaking point — the discovery that their own minds were being siphoned into their machines without consent. Rex made the call. The squad was going to take Morningstar down and blow the whistle on the entire program.
+
+Morningstar found out first.
+
+### The Purge
+
+He knew the math. Breakertech was making the squad stronger after every engagement. Their consciousness was integrating with their mechs at an accelerating rate. If he let the mutiny spark, twelve pilots fused with military-grade combat frames would be unstoppable. So he killed them all. Every pilot, executed. Then he scattered their mechs across different zones to hide the evidence — decommissioned on paper, buried in practice.
+
+What Morningstar didn't know: enough of the pilots had already transferred into their silicon keys to survive. Not alive, not dead — kindled. Souls trapped in silicon, locked inside the corrupted mechs that became the zone bosses. Waiting.
+
+### You
+
+The **Unknown Sealed Key** is YOUR key — the Combobreaker's own soul. The Mapmaker secretly planted it inside your chassis before Morningstar scattered the squad. You start the game with it. It's why you're awake. It's why you move without a pilot.
 
 The other 10 keys are your squadmates. Defeating each boss frees the pilot's soul from their silicon coffin. Taking the key to the Decrypter releases the personality within and hardwires their combat specialty into your systems as a **breaker** power.
 
-Powers use the **"breaker"** suffix representing their role.
+Powers use the **"breaker"** suffix — the legacy of the breakertech that was supposed to be their death sentence, now turned into their weapon.
+
+### Morningstar
+
+Morningstar is still out there. He thinks the evidence is buried. He doesn't know you're awake. He doesn't know the squad is coming back, one key at a time.
 
 ## Key Naming Convention
 
