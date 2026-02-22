@@ -4776,17 +4776,21 @@
             // Determine breaker procs this turn (gated behind owning decrypted keys)
             let speedTriggered = hasBreaker("Wire's Speedbreaker Key") && Math.random() * 100 < p.breaker;
             let comboTriggered = hasBreaker("Your Combobreaker Key") && Math.random() * 100 < p.breaker;
+            let strikeTriggered = hasBreaker("Fang's Strikebreaker Key") && Math.random() * 100 < p.breaker;
             let attackCount = speedTriggered ? 2 : 1;
 
             if (speedTriggered) {
                 await addMessage(`[SPEEDBREAKER TRIGGERED]`, 'player');
             }
+            if (strikeTriggered) {
+                await addMessage(`[STRIKEBREAKER TRIGGERED] Enemy defence ignored!`, 'player');
+            }
             if (comboTriggered) {
                 await addMessage(`[COMBOBREAKER TRIGGERED]`, 'player');
             }
 
-            // Calculate damage (combobreaker doubles all attacks this turn)
-            let playerDamage = calculateDamage(p.attack, et.defence);
+            // Calculate damage (strikebreaker ignores enemy defence, combobreaker doubles)
+            let playerDamage = calculateDamage(p.attack, strikeTriggered ? 0 : et.defence);
             if (comboTriggered) {
                 playerDamage *= 2;
             }
