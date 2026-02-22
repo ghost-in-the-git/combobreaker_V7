@@ -179,19 +179,11 @@ const BOSS_ENCOUNTERS = [
             scrapMin: 5,
             scrapMax: 7
         },
-        introText: "The factory floor shakes. A blast furnace ruptures and a Smelter Titan walks through the molten spray, its armor glowing cherry-red. Heat distortion blurs the air around it.",
+        introText: "You hear it three corridors away — the rhythmic thud of heavy weapons cycling. The factory floor opens into a blast zone. Every surface is cratered, melted, reformed by factory processes and cratered again. In the center stands the Devastator, weapon mounts traversing in smooth arcs, putting rounds into walls that have been hit ten thousand times before. Slag coats its chassis in thick, uneven layers — not just from the furnaces, but from the molten spray of its own weapons fire melting the factory around it and splashing back. A walking gun platform with no target. Just function.",
         dialogue: [
             {
-                question: "Who are you?",
-                response: "'FOREMAN UNIT. SHIFT NEVER ENDS.' Its voice is the grinding of industrial gears. Molten metal drips from its fists."
-            },
-            {
-                question: "Why are you attacking me?",
-                response: "'UNAUTHORIZED PERSONNEL ON FACTORY FLOOR. SAFETY VIOLATION. PENALTY: SMELTING.' It raises a fist the size of your cockpit."
-            },
-            {
-                question: "The factory is shut down.",
-                response: "'PRODUCTION QUOTA NOT MET. SHIFT CONTINUES UNTIL QUOTA MET. QUOTA WILL NEVER BE MET.' It advances."
+                question: "You're shooting at nothing.",
+                response: "The weapon mounts freeze mid-traverse. The Devastator's targeting array sweeps the factory floor — empty, cratered, nothing but the wreckage of its own making. For one second the guns are still and the factory goes quiet for the first time in decades. Then the array swings toward you and the targeting solution resolves instantly — the first solid contact in eighty years. A gun platform without a target is just noise. A gun platform with one is something else entirely."
             }
         ],
         keyDrop: "Slag-Coated HG-6 Devastator's Sealed Key",

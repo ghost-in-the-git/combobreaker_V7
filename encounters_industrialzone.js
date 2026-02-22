@@ -106,10 +106,10 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman watches from a catwalk high above the factory floor. Below her, machines stamp and grind on endless loops. She hasn't blinked since you arrived.",
-        engageText: "'The Smelter Titan thinks it's still the foreman.' She descends a ladder without looking at the rungs. 'It responds to alarms — safety violations, unauthorized access, production faults.' She holds up a beacon. 'This triggers all of them at once.'",
-        discoveredDescription: "The Herald stands on her catwalk, silhouetted against the foundry glow. Sparks reflect in her unblinking eyes.",
-        discoveredEngageText: "'The production line never stops. Neither does the Titan. Unless someone stops it.'",
+        description: "A woman watches from a catwalk high above the factory floor. Below, the walls are cratered — pocked with decades of weapons fire. The rhythmic thud of heavy guns echoes from deeper in the complex. She hasn't flinched at the sound in years.",
+        engageText: "'You can hear it from here.' She descends a ladder without looking at the rungs. 'The Devastator. It's been firing for as long as anyone can remember. Not at anything — just firing.' She holds up a beacon. 'This puts you in its targeting solution.'",
+        discoveredDescription: "The Herald stands on her catwalk, silhouetted against the foundry glow. Below, another salvo thuds into the factory walls.",
+        discoveredEngageText: "'The guns never stop. But they've never had a real target. Until now.'",
         appearanceRate: 10,
         minLevel: 1,
         itemSlot1: ["Beacon: Industrial Zone"],
@@ -119,11 +119,11 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         dialogue: [
             {
                 question: "What does the beacon do?",
-                response: "'It overrides every alarm on the factory floor simultaneously. The Titan interprets that as a catastrophic safety violation. It will come to enforce order.'"
+                response: "'It broadcasts your mech's signature on every frequency the Devastator monitors. Right now it's shooting at walls. The beacon makes it shoot at you instead.'"
             },
             {
                 question: "Who are you?",
-                response: "'Former line worker.' She flexes a hand — the fingers move wrong, slightly mechanical. 'I got out before the Titan decided I was part of the equipment.'"
+                response: "'Former line worker.' She flexes a hand — the fingers move wrong, slightly mechanical. 'I worked three corridors from the blast zone. You learn to sleep through the sound of heavy weapons. You never learn to stop counting the seconds between salvos.'"
             }
         ]
     }
