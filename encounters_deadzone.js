@@ -100,10 +100,10 @@ const ENCOUNTERS_DEADZONE = [
         name: "The Herald",
         type: "shop",
         discoverable: true,
-        description: "A woman in sealed hazmat gear crouches inside a bunker, the door barely ajar. Monitors behind her display corrupted data streams. She's been expecting you.",
-        engageText: "'The Abomination Core isn't a machine.' She adjusts a dial on her suit. 'It's a process. Data in, destruction out. It materializes where corrupted signals converge.' She holds up a beacon. 'This broadcasts living code into the Dead Zone. It won't be able to resist.'",
-        discoveredDescription: "The Herald waits in her bunker, hazmat visor reflecting the corrupted data on her screens. The air tastes like static.",
-        discoveredEngageText: "'The signal's getting stronger. The Core is forming again. You know what to do.'",
+        description: "A woman in sealed hazmat gear crouches inside a bunker, the door barely ajar. Her comms equipment is military-grade — the only gear that cuts through the interference. She's been mapping the blackout.",
+        engageText: "'The Dead Zone isn't dead.' She pulls up a signal map — a perfect circle of electronic denial, expanding by a few meters every month. 'There's an EW mech at the center. A Phantom. It's been running full-spectrum jamming since its pilot died. Every frequency, all the time.' She holds up a beacon. 'This punches a hole in the noise. Briefly.'",
+        discoveredDescription: "The Herald waits in her bunker. Her signal map shows the denial zone has grown since your last visit.",
+        discoveredEngageText: "'The blackout radius expanded again. Another hundred meters of silence. You going in or waiting until it reaches us?'",
         appearanceRate: 10,
         minLevel: 1,
         itemSlot1: ["Beacon: Dead Zone"],
@@ -113,11 +113,11 @@ const ENCOUNTERS_DEADZONE = [
         dialogue: [
             {
                 question: "What does the beacon do?",
-                response: "'It mimics living code — the one thing the Dead Zone doesn't have. The Abomination Core will converge on the signal. It always does.'"
+                response: "'It broadcasts a clean signal on a military frequency — the kind the Phantom was designed to protect, not jam. For a few seconds, its IFF will flag you as friendly and the jamming will drop around your position. After that, it'll realize you're not in its database and reclassify. But you'll be close enough by then.'"
             },
             {
                 question: "Who are you?",
-                response: "'The last person who went in and came back out.' She taps her hazmat visor. 'I saw it form. I saw it take shape from nothing. I barely made it to this bunker.'"
+                response: "'A signals analyst.' She gestures at her equipment. 'I was hired to figure out why this region went dark. Everyone assumed it was contamination, infrastructure decay, natural causes. It's not. It's one mech, running every countermeasure in its arsenal at once, and it's been doing it for years. The perfect blackout. I'm the only one who knows it's not an accident.'"
             }
         ]
     }

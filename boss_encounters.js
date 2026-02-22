@@ -254,19 +254,11 @@ const BOSS_ENCOUNTERS = [
             scrapMin: 8,
             scrapMax: 10
         },
-        introText: "Reality bends. The air tastes like copper and static. An Abomination Core materializes — not walking, not flying, just suddenly there. Its form shifts between solid and something else entirely.",
+        introText: "Your sensors die first. Not damaged — suppressed. Radar returns nothing. Comms fill with static shaped like voices. Your navigation locks onto waypoints that don't exist, then corrects, then locks again. The Dead Zone isn't dead — it's jammed. Full-spectrum electronic denial, broadcast on every frequency, and it has been running for years. You find the source at the center of the blackout: the Phantom, chassis barely visible even at close range, active camouflage flickering through patterns meant for battlefields that no longer exist. Its electronic warfare suite hums at a frequency you feel in your teeth. Every countermeasure it has is running. Jamming, spoofing, masking, denying. It doesn't know you're here. It doesn't know anything is here. It's hiding everything from everything, including itself.",
         dialogue: [
             {
-                question: "Who are you?",
-                response: "It speaks in frequencies that bypass your audio systems and go straight into your neural link. 'I am what's left when everything else is taken away.'"
-            },
-            {
-                question: "Why are you attacking me?",
-                response: "'Attacking implies intent. I am a process. You are an input.' Its form ripples. 'The output is always the same.'"
-            },
-            {
-                question: "What is this place?",
-                response: "'The end of the signal. Where data goes to die.' It reaches toward you with a limb that wasn't there a second ago. 'You're already here. You just haven't accepted it.'"
+                question: "You're the reason nothing works out here.",
+                response: "The Phantom's sensor suite twitches — a brief spike in the jamming field, like a flinch. For a fraction of a second, your radar clears: you see the Dead Zone as it actually is. Not empty. Full of signals. Distress beacons, automated traders, navigation buoys, comm relays — all broadcasting, all functional, all buried under the Phantom's blanket of electronic noise. Then the jamming reasserts and it all disappears again. The Phantom was supposed to hide Specter's squad from enemy detection — selective masking, targeted jamming, precision spoofing directed at specific threats. Without Specter to designate targets, the Phantom defaulted to its broadest protocol: deny everything. Hide everything. Let nothing be seen, heard, or found. The perfect electronic warfare screen with no one behind it. And now your mech is transmitting — a signal source inside the denial zone. Not hidden. Not masked. The one thing the Phantom's protocols cannot tolerate."
             }
         ],
         keyDrop: "Blighted EW-0 Phantom's Sealed Key",
