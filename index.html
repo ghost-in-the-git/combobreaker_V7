@@ -4777,6 +4777,7 @@
             let speedTriggered = hasBreaker("Wire's Speedbreaker Key") && Math.random() * 100 < p.breaker;
             let comboTriggered = hasBreaker("Your Combobreaker Key") && Math.random() * 100 < p.breaker;
             let strikeTriggered = hasBreaker("Fang's Strikebreaker Key") && Math.random() * 100 < p.breaker;
+            let crushTriggered = hasBreaker("Anvil's Crushbreaker Key") && Math.random() * 100 < p.breaker;
             let attackCount = speedTriggered ? 2 : 1;
 
             if (speedTriggered) {
@@ -4787,6 +4788,9 @@
             }
             if (comboTriggered) {
                 await addMessage(`[COMBOBREAKER TRIGGERED]`, 'player');
+            }
+            if (crushTriggered) {
+                await addMessage(`[CRUSHBREAKER TRIGGERED] Damage hits all enemies!`, 'player');
             }
 
             // Calculate damage (strikebreaker ignores enemy defence, combobreaker doubles)
@@ -4809,7 +4813,25 @@
                 wave.currentEnemy -= playerDamage;
                 await addMessage(`Mech attacks ${et.name} #${wave.currentTarget} for ${playerDamage} damage.`, 'player');
 
-                // Check if current enemy 
+                // Crushbreaker AoE: damage all other remaining enemies (first attack only)
+                if (crushTriggered && atk === 1 && wave.remaining > 1) {
+                    let backgroundCount = wave.remaining - 1;
+                    if (playerDamage >= et.hp) {
+                        for (let k = 0; k < backgroundCount; k++) {
+                            wave.remaining--;
+                            const xpBonus = getXpBonus();
+                            const killXp = et.xp + xpBonus;
+                            wave.xpEarned = (wave.xpEarned || 0) + killXp;
+                            const bonusText = xpBonus > 0 ? ` (+${xpBonus} PROC)` : '';
+                            await addMessage(`[KILL CONFIRMED] ${et.name} destroyed by Crushbreaker (+${killXp} Silicon${bonusText})`, 'enemy');
+                        }
+                        wave.count = wave.currentTarget;
+                    } else {
+                        await addMessage(`Crushbreaker hits ${backgroundCount} other ${backgroundCount === 1 ? 'enemy' : 'enemies'} for ${playerDamage} damage each.`, 'player');
+                    }
+                }
+
+                // Check if current enemy
                 if (wave.currentEnemy <= 0) {
                     wave.remaining--;
                     const xpBonus = getXpBonus();
