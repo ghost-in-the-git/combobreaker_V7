@@ -24,6 +24,16 @@ He knew the math. Breakertech was making the squad stronger after every engageme
 
 What Morningstar didn't know: enough of the pilots had already transferred into their silicon keys to survive. Not alive, not dead — kindled. Souls trapped in silicon, locked inside the corrupted mechs that became the zone bosses. Waiting.
 
+### 80 Years Later
+
+The game begins **80 years** after the purge. You wake up in a world that kept burning without you.
+
+Morningstar's war never stopped. With the squad gone, there was nothing to check his advance. The frontline pushed thousands of miles further across the frontier — a slow, grinding conquest that left everything behind it hollowed out. The zones you travel through are the aftermath: post-war wastelands, shelled-out cities, collapsed infrastructure, scavenger economies built on military scrap. The war moved on. The people left behind didn't.
+
+Morningstar is still at the front. Not the man he was — **a monolithic mech** now, towering over the frontlines, still committing atrocities at industrial scale. Eighty years of breakertech, eighty years of war, eighty years of nobody saying no. Whatever he's become, he's been becoming it for a long time.
+
+The world you're crossing isn't a battlefield. It's what's left after one passes through. And at the far end of it, Morningstar is still going.
+
 ### You
 
 The **Unknown Sealed Key** is YOUR key — the Combobreaker's own soul. The Mapmaker secretly planted it inside your chassis before Morningstar scattered the squad. You start the game with it. It's why you're awake. It's why you move without a pilot.
@@ -34,7 +44,7 @@ Powers use the **"breaker"** suffix — the legacy of the breakertech that was s
 
 ### Morningstar
 
-Morningstar is still out there. He thinks the evidence is buried. He doesn't know you're awake. He doesn't know the squad is coming back, one key at a time.
+Eighty years and thousands of miles away, Morningstar towers over the frontline — a monolithic war machine that hasn't stopped advancing since the day he killed the squad. He thinks the evidence is buried under decades of scorched earth. He doesn't know you're awake. He doesn't know the squad is coming back, one key at a time, crossing the wasteland he left behind.
 
 ## Key Naming Convention
 
