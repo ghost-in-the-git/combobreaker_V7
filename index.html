@@ -4087,7 +4087,7 @@
                 mining.stability = Math.max(0, mining.stability - mining.stabilityLoss);
 
                 // Stonebreaker: chance to add mining stat to stability
-                const stoneTriggered = hasBreaker("Bolt's Stonebreaker Key") && Math.random() * 100 < game.player.breaker;
+                const stoneTriggered = hasBreaker("Bolt's Stonebreaker Key") && Math.random() * 100 < getBreaker();
                 if (stoneTriggered) {
                     mining.stability += game.player.mining;
                     await addMessage(`[STONEBREAKER TRIGGERED] Bolt reinforces the rock! +${game.player.mining} stability`, 'player');
@@ -4200,6 +4200,12 @@
         // Check if the player has a specific breaker power (owns the decrypted key)
         function hasBreaker(breakerKeyName) {
             return game.storyItems && game.storyItems.includes(breakerKeyName);
+        }
+
+        // Get effective breaker chance (Skybreaker doubles it)
+        function getBreaker() {
+            const base = game.player.breaker || 0;
+            return hasBreaker("Mapmaker's Skybreaker Key") ? Math.min(base * 2, 100) : base;
         }
 
         // Add a story item to the player's storage
@@ -4448,7 +4454,7 @@
 
             const p = game.player;
             const hasSpeed = hasBreaker("Wire's Speedbreaker Key");
-            const evadeRoll = hasSpeed && Math.random() * 100 < p.breaker;
+            const evadeRoll = hasSpeed && Math.random() * 100 < getBreaker();
 
             if (evadeRoll) {
                 addMessage(`[EVADE SUCCESSFUL] Speedbreaker engaged — you slipped their sensors!`, 'player');
@@ -4774,11 +4780,11 @@
             await addMessage(`- - - - - - - - - - - - - - - - - - - - -[ Turn ${wave.turn} ]- - - - - - - - - - - - - - - - - - - - - `, 'system');
 
             // Determine breaker procs this turn (gated behind owning decrypted keys)
-            let speedTriggered = hasBreaker("Wire's Speedbreaker Key") && Math.random() * 100 < p.breaker;
-            let comboTriggered = hasBreaker("Your Combobreaker Key") && Math.random() * 100 < p.breaker;
-            let strikeTriggered = hasBreaker("Fang's Strikebreaker Key") && Math.random() * 100 < p.breaker;
-            let crushTriggered = hasBreaker("Anvil's Crushbreaker Key") && Math.random() * 100 < p.breaker;
-            let warTriggered = hasBreaker("Judge's Warbreaker Key") && (speedTriggered || comboTriggered) && Math.random() * 100 < p.breaker;
+            let speedTriggered = hasBreaker("Wire's Speedbreaker Key") && Math.random() * 100 < getBreaker();
+            let comboTriggered = hasBreaker("Your Combobreaker Key") && Math.random() * 100 < getBreaker();
+            let strikeTriggered = hasBreaker("Fang's Strikebreaker Key") && Math.random() * 100 < getBreaker();
+            let crushTriggered = hasBreaker("Anvil's Crushbreaker Key") && Math.random() * 100 < getBreaker();
+            let warTriggered = hasBreaker("Judge's Warbreaker Key") && (speedTriggered || comboTriggered) && Math.random() * 100 < getBreaker();
             let attackCount = speedTriggered ? (warTriggered ? 4 : 2) : 1;
 
             if (speedTriggered) {
@@ -4857,7 +4863,7 @@
 
             // Shieldbreaker: chance to double defence at start of round
             let remainingDefence = p.defence;
-            const shieldTriggered = hasBreaker("Sarge's Shieldbreaker Key") && Math.random() * 100 < p.breaker;
+            const shieldTriggered = hasBreaker("Sarge's Shieldbreaker Key") && Math.random() * 100 < getBreaker();
             if (shieldTriggered) {
                 remainingDefence *= 2;
                 await addMessage(`[SHIELDBREAKER TRIGGERED] Defence doubled to ${remainingDefence}!`, 'player');
@@ -4869,14 +4875,14 @@
                 await addMessage(`${et.name} #${i} attacks Mech for ${et.attack} damage.`, 'enemy');
 
                 // Visionbreaker: chance to completely avoid this attack
-                const visionTriggered = hasBreaker("Ghost's Visionbreaker Key") && Math.random() * 100 < p.breaker;
+                const visionTriggered = hasBreaker("Ghost's Visionbreaker Key") && Math.random() * 100 < getBreaker();
                 if (visionTriggered) {
                     await addMessage(`[VISIONBREAKER TRIGGERED] You disappeared — attack missed!`, 'player');
                     continue;
                 }
 
                 // Soulbreaker: chance to parry attack and reflect damage back
-                const soulTriggered = hasBreaker("Padre's Soulbreaker Key") && Math.random() * 100 < p.breaker;
+                const soulTriggered = hasBreaker("Padre's Soulbreaker Key") && Math.random() * 100 < getBreaker();
                 if (soulTriggered) {
                     await addMessage(`[SOULBREAKER TRIGGERED] Attack parried — ${et.attack} damage reflected!`, 'player');
                     if (i === wave.currentTarget && wave.currentEnemy !== null) {
@@ -4933,7 +4939,7 @@
             }
 
             // Painbreaker: chance to regain HP equal to regen stat
-            if (hasBreaker("Nail's Painbreaker Key") && p.regen > 0 && p.hp < p.maxHp && Math.random() * 100 < p.breaker) {
+            if (hasBreaker("Nail's Painbreaker Key") && p.regen > 0 && p.hp < p.maxHp && Math.random() * 100 < getBreaker()) {
                 const painHealed = Math.min(p.regen, p.maxHp - p.hp);
                 p.hp += painHealed;
                 await addMessage(`[PAINBREAKER TRIGGERED] Mech restores ${painHealed} HP! (${p.hp}/${p.maxHp})`, 'player');
@@ -4960,7 +4966,7 @@
                 addMessage(`[ All hostiles confirmed destroyed ]`, 'system');
 
                 // Powerbreaker: chance to double silicon gain
-                const powerTriggered = hasBreaker("Duchess's Powerbreaker Key") && Math.random() * 100 < game.player.breaker;
+                const powerTriggered = hasBreaker("Duchess's Powerbreaker Key") && Math.random() * 100 < getBreaker();
                 let finalXp = xpEarned;
                 if (powerTriggered) {
                     finalXp *= 2;
@@ -4985,7 +4991,7 @@
                     let scrapAmount = et.scrapMin + Math.floor(Math.random() * (et.scrapMax - et.scrapMin + 1));
 
                     // Steelbreaker: chance to double scrap
-                    const steelTriggered = hasBreaker("Chunk's Steelbreaker Key") && Math.random() * 100 < game.player.breaker;
+                    const steelTriggered = hasBreaker("Chunk's Steelbreaker Key") && Math.random() * 100 < getBreaker();
                     if (steelTriggered) {
                         scrapAmount *= 2;
                         addMessage(`[STEELBREAKER TRIGGERED] Double scrap salvaged!`, 'player');
