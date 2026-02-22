@@ -4085,6 +4085,14 @@
 
                 // Asteroid loses stability
                 mining.stability = Math.max(0, mining.stability - mining.stabilityLoss);
+
+                // Stonebreaker: chance to add mining stat to stability
+                const stoneTriggered = hasBreaker("Bolt's Stonebreaker Key") && Math.random() * 100 < game.player.breaker;
+                if (stoneTriggered) {
+                    mining.stability += game.player.mining;
+                    await addMessage(`[STONEBREAKER TRIGGERED] Bolt reinforces the rock! +${game.player.mining} stability`, 'player');
+                }
+
                 await addMessage(`Asteroid stability at ${mining.stability}`, 'system');
 
                 // Check for collapse
