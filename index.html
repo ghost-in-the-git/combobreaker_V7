@@ -4871,6 +4871,30 @@
                     continue;
                 }
 
+                // Soulbreaker: chance to parry attack and reflect damage back
+                const soulTriggered = hasBreaker("Padre's Soulbreaker Key") && Math.random() * 100 < p.breaker;
+                if (soulTriggered) {
+                    await addMessage(`[SOULBREAKER TRIGGERED] Attack parried — ${et.attack} damage reflected!`, 'player');
+                    if (i === wave.currentTarget && wave.currentEnemy !== null) {
+                        wave.currentEnemy -= et.attack;
+                        if (wave.currentEnemy <= 0) {
+                            wave.remaining--;
+                            const xpBonus = getXpBonus();
+                            const killXp = et.xp + xpBonus;
+                            wave.xpEarned = (wave.xpEarned || 0) + killXp;
+                            const bonusText = xpBonus > 0 ? ` (+${xpBonus} PROC)` : '';
+                            await addMessage(`[KILL CONFIRMED] ${et.name} #${wave.currentTarget} destroyed by parry (+${killXp} Silicon${bonusText})`, 'enemy');
+                            wave.currentTarget++;
+                            wave.currentEnemy = null;
+                            if (wave.remaining <= 0) {
+                                endBattle(true);
+                                return;
+                            }
+                        }
+                    }
+                    continue;
+                }
+
                 if (remainingDefence >= et.attack) {
                     // Fully blocked
                     remainingDefence -= et.attack;
