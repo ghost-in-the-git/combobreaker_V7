@@ -49,7 +49,7 @@ const ENEMIES_DOWNTOWN = [
         scrapMax: 3
     },
     {
-        name: "T2 Sentinel",
+        name: "Sentinel",
         attack: 12,
         defence: 4,
         hp: 35,

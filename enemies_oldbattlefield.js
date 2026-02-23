@@ -49,7 +49,7 @@ const ENEMIES_OLDBATTLEFIELD = [
         scrapMax: 2
     },
     {
-        name: "T2 Enforcer",
+        name: "Enforcer",
         attack: 12,
         defence: 3,
         hp: 28,
@@ -63,7 +63,7 @@ const ENEMIES_OLDBATTLEFIELD = [
         scrapMax: 2
     },
     {
-        name: "T2 Heavy Tank",
+        name: "Heavy Tank",
         attack: 6,
         defence: 5,
         hp: 35,
@@ -77,7 +77,7 @@ const ENEMIES_OLDBATTLEFIELD = [
         scrapMax: 2
     },
     {
-        name: "T2 Assassin",
+        name: "Assassin",
         attack: 20,
         defence: 1,
         hp: 15,

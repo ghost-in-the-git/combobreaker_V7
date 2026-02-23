@@ -7,7 +7,7 @@
 
 const ENEMIES_SCRAPYARD = [
     {
-        name: "T1 Scout",
+        name: "Scout",
         attack: 2,
         defence: 0,
         hp: 1,
@@ -21,7 +21,7 @@ const ENEMIES_SCRAPYARD = [
         scrapMax: 1
     },
     {
-        name: "T1 Nano Swarm",
+        name: "Nano Swarm",
         attack: 1,
         defence: 0,
         hp: 1,
@@ -35,7 +35,7 @@ const ENEMIES_SCRAPYARD = [
         scrapMax: 1
     },
     {
-        name: "T1 Heavy Tank",
+        name: "Heavy Tank",
         attack: 1,
         defence: 2,
         hp: 10,
@@ -49,7 +49,7 @@ const ENEMIES_SCRAPYARD = [
         scrapMax: 1
     },
     {
-        name: "T1 Enforcer",
+        name: "Enforcer",
         attack: 5,
         defence: 1,
         hp: 5,
@@ -91,7 +91,7 @@ const ENEMIES_SCRAPYARD = [
         scrapMax: 1
     },
     {
-        name: "T1 Destroyer",
+        name: "Destroyer",
         attack: 10,
         defence: 5,
         hp: 100,
