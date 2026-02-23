@@ -841,6 +841,13 @@ const STORY_ITEMS = [
         cost: 80
     },
     {
+        name: "Map: The Guild",
+        desc: "A sealed envelope containing a wax-stamped invitation and a hand-drawn route through the deep tunnels. The address is written in code only the Undercity born can read.",
+        category: "map",
+        image: "images/IMAGE.gif",
+        cost: 90
+    },
+    {
         name: "Map: Frozen Reach",
         desc: "A thermal survey of the arctic zone. Heat signatures cluster around geothermal vents.",
         category: "map",
