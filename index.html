@@ -1260,6 +1260,10 @@
                     <select id="equip-implant"><option value="">-- None --</option></select>
                     <div class="equip-desc" id="equip-desc-implant"></div>
                 </div>
+                <div class="equip-slot">
+                    <select id="equip-mindsync"><option value="">-- None --</option></select>
+                    <div class="equip-desc" id="equip-desc-mindsync"></div>
+                </div>
             </div>
         </div>
 
@@ -1814,7 +1818,7 @@
             game.minerals = {};
             game.storyItems = ['Mysterious Note', 'Unknown Sealed Key', 'Unreadable DNA Tag', 'Destroyed Mech Heart'];
             game.inventory = [];
-            game.equipment = { body: null, legs: null, arms: null, weapon: null, chip: null, processor: null, pilot: null, drill: null, implant: null };
+            game.equipment = { body: null, legs: null, arms: null, weapon: null, chip: null, processor: null, pilot: null, drill: null, implant: null, mindsync: null };
             currentLocation = 'home';
             currentDestination = 'openworld';
 
@@ -1922,7 +1926,8 @@
                     processor: data.equipment.processor || null,
                     pilot: data.equipment.pilot || null,
                     drill: data.equipment.drill || null,
-                    implant: data.equipment.implant || null
+                    implant: data.equipment.implant || null,
+                    mindsync: data.equipment.mindsync || null
                 };
             }
 
@@ -2066,7 +2071,8 @@
                         processor: data.equipment.processor || null,
                         pilot: data.equipment.pilot || null,
                         drill: data.equipment.drill || null,
-                        implant: data.equipment.implant || null
+                        implant: data.equipment.implant || null,
+                        mindsync: data.equipment.mindsync || null
                     };
                 }
 
@@ -2938,11 +2944,11 @@
         // Update equipment dropdowns with inventory items
         const SLOT_LABELS = {
             body: 'BODY', legs: 'LEGS', arms: 'ARMS', weapon: 'WEAPON',
-            chip: 'CHIP', processor: 'PROC', implant: 'IMPLANT', pilot: 'PILOT', drill: 'DRILL'
+            chip: 'CHIP', processor: 'PROC', implant: 'IMPLANT', pilot: 'PILOT', drill: 'DRILL', mindsync: 'MINDSYNC'
         };
 
         function updateEquipmentUI() {
-            const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant'];
+            const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant', 'mindsync'];
 
             slots.forEach(slot => {
                 const select = document.getElementById(`equip-${slot}`);
@@ -2969,7 +2975,7 @@
 
         // Update equipment description text under each dropdown
         function updateEquipmentDescs() {
-            const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant'];
+            const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant', 'mindsync'];
             slots.forEach(slot => {
                 const descEl = document.getElementById(`equip-desc-${slot}`);
                 const itemName = game.equipment[slot];
@@ -3003,7 +3009,7 @@
 
         // Lock/unlock equipment dropdowns
         function setEquipmentLocked(locked) {
-            const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant'];
+            const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant', 'mindsync'];
             slots.forEach(slot => {
                 document.getElementById(`equip-${slot}`).disabled = locked;
             });
@@ -3374,7 +3380,7 @@
             select.innerHTML = '<option value="">[SELECT INSTALLATION TO SELL]</option>';
 
             const equippedIndices = getEquippedIndices();
-            const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant'];
+            const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant', 'mindsync'];
 
             let totalSellable = 0;
 
@@ -5234,7 +5240,7 @@
         // Initialize game
         function init() {
             // Set up equipment dropdown event listeners
-            const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant'];
+            const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant', 'mindsync'];
             slots.forEach(slot => {
                 document.getElementById(`equip-${slot}`).addEventListener('change', (e) => {
                     onEquipmentChange(slot, e.target.value);

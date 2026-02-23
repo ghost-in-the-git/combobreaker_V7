@@ -5,7 +5,7 @@
  *
  * Each item has:
  * - name: Display name
- * - type: "body", "legs", "arms", "weapon", "chip", "processor", "pilot", "drill", or "implant"
+ * - type: "body", "legs", "arms", "weapon", "chip", "processor", "pilot", "drill", "implant", or "mindsync"
  * - desc: Flavour text shown when installed
  * - image: Image path for the item icon
  * - stats: Object with stat bonuses { hp, defence, speed, attack, breaker }
@@ -24,6 +24,7 @@
  *   pilot: +1 ALL per tier (1, 2, 3 ... 10)
  *   drill: +1 MINING per tier (1, 2, 3 ... 10)
  *   implant: +1 REGEN per tier (1, 2, 3 ... 10)
+ *   mindsync: +1 SPD per tier (1, 2, 3 ... 10)
  *
  * Ratpile items sit outside the tier scaling as starter gear.
  */
@@ -1044,6 +1045,129 @@ const ITEMS = [
         droppedBy: [],
         cost: 350,
         zone: "deadzone"
+    },
+
+    // ==================== MINDSYNC (Speed) ====================
+    {
+        name: "Frayed Neural Thread [+1 SPD]",
+        type: "mindsync",
+        desc: "A scrap of neural wiring gnawed loose from a dead mech's cortex. The signal's weak, but your reflexes twitch faster with it plugged in.",
+        image: "images/IMAGE.gif",
+        stats: { speed: 1 },
+        dropRate: 55,
+        droppedBy: [],
+        cost: 8,
+        zone: "ratpile"
+    },
+    {
+        name: "Scraplink Headband [+1 SPD]",
+        type: "mindsync",
+        desc: "A crude brainwave amplifier soldered from salvaged comm relays. Sharpens reaction time just enough to matter.",
+        image: "images/IMAGE.gif",
+        stats: { speed: 1 },
+        dropRate: 50,
+        droppedBy: [],
+        cost: 15,
+        zone: "scrapyard"
+    },
+    {
+        name: "Reflex Conduit [+2 SPD]",
+        type: "mindsync",
+        desc: "A neural bridge that shortcuts the pilot's motor cortex directly into the mech's control loop. Thought becomes motion.",
+        image: "images/IMAGE.gif",
+        stats: { speed: 2 },
+        dropRate: 45,
+        droppedBy: [],
+        cost: 30,
+        zone: "oldbattlefield"
+    },
+    {
+        name: "Synaptic Booster [+3 SPD]",
+        type: "mindsync",
+        desc: "Floods the neural link with accelerant compounds. Everything slows down except you.",
+        image: "images/IMAGE.gif",
+        stats: { speed: 3 },
+        dropRate: 40,
+        droppedBy: [],
+        cost: 45,
+        zone: "downtown"
+    },
+    {
+        name: "Cortex Accelerator [+4 SPD]",
+        type: "mindsync",
+        desc: "Military-grade neural enhancement that overclocks the pilot's decision-making pathways. The lag between thinking and doing vanishes.",
+        image: "images/IMAGE.gif",
+        stats: { speed: 4 },
+        dropRate: 35,
+        droppedBy: [],
+        cost: 65,
+        zone: "orbitalstation"
+    },
+    {
+        name: "Twinlink Interface [+5 SPD]",
+        type: "mindsync",
+        desc: "Dual-channel neural sync that runs parallel thought streams — one for the pilot, one for the mech. They move as one.",
+        image: "images/IMAGE.gif",
+        stats: { speed: 5 },
+        dropRate: 28,
+        droppedBy: [],
+        cost: 85,
+        zone: "wasteland"
+    },
+    {
+        name: "Hypercognition Rig [+6 SPD]",
+        type: "mindsync",
+        desc: "Pushes the pilot's perception into overdrive. Combat slows to a crawl while you plan three moves ahead.",
+        image: "images/IMAGE.gif",
+        stats: { speed: 6 },
+        dropRate: 22,
+        droppedBy: [],
+        cost: 110,
+        zone: "undercity"
+    },
+    {
+        name: "Neuroflux Amplifier [+7 SPD]",
+        type: "mindsync",
+        desc: "Converts idle brainwaves into mech thrust. The faster you think, the faster you move. Most pilots burn out in weeks.",
+        image: "images/IMAGE.gif",
+        stats: { speed: 7 },
+        dropRate: 16,
+        droppedBy: [],
+        cost: 140,
+        zone: "industrialzone"
+    },
+    {
+        name: "Zero-Latency Core [+8 SPD]",
+        type: "mindsync",
+        desc: "Eliminates all neural delay between thought and action. The mech responds before the pilot consciously decides. It's unsettling.",
+        image: "images/IMAGE.gif",
+        stats: { speed: 8 },
+        dropRate: 10,
+        droppedBy: [],
+        cost: 175,
+        zone: "frozenreach"
+    },
+    {
+        name: "Precognitive Weave [+9 SPD]",
+        type: "mindsync",
+        desc: "Quantum-entangled neural mesh that reads intent before it forms. The mech is already moving when the thought begins.",
+        image: "images/IMAGE.gif",
+        stats: { speed: 9 },
+        dropRate: 6,
+        droppedBy: [],
+        cost: 215,
+        zone: "neonstrip"
+    },
+    {
+        name: "Omega Mindsync [+10 SPD]",
+        type: "mindsync",
+        desc: "Total neural fusion. No interface, no lag, no boundary between flesh and steel. The pilot doesn't control the mech — they become it.",
+        image: "images/IMAGE.gif",
+        stats: { speed: 10 },
+        dropRate: 3,
+        droppedBy: [],
+        cost: 260,
+        zone: "deadzone"
     }
 
 ];
@@ -1058,5 +1182,6 @@ const ITEM_TYPES = {
     processor: "PROCESSOR READY FOR INSTALLATION",
     pilot: "PILOT READY FOR INSTALLATION",
     drill: "MINING DRILL READY FOR INSTALLATION",
-    implant: "IMPLANT READY FOR INSTALLATION"
+    implant: "IMPLANT READY FOR INSTALLATION",
+    mindsync: "MINDSYNC READY FOR INSTALLATION"
 };

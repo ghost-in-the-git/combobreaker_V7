@@ -36,7 +36,7 @@ const FORGER_TIERS = [
 const FORGER_SLOT_GROUPS = [
     ["body", "legs", "arms"],
     ["weapon", "chip", "processor"],
-    ["implant", "drill"]
+    ["implant", "drill", "mindsync"]
 ];
 
 // Runtime registry of forged items (for name-based lookups after save/load)
@@ -52,7 +52,8 @@ const FORGER_PRIMARY_STATS = {
     chip: "breaker",
     processor: "xpBonus",
     drill: "mining",
-    implant: "regen"
+    implant: "regen",
+    mindsync: "speed"
 };
 
 // Base item word for each slot type (used in naming)
@@ -64,7 +65,8 @@ const FORGER_SLOT_WORDS = {
     chip: "Circuit",
     processor: "Core",
     implant: "Implant",
-    drill: "Excavator"
+    drill: "Excavator",
+    mindsync: "Cortex"
 };
 
 // The 8 secondary stat types (excluding ALL) with naming suffixes
@@ -97,7 +99,8 @@ const FORGER_SLOT_DESCS = {
     chip: "A systems chip grown from mineral lattice structures. Its crystalline pathways chain commands faster than silicon.",
     processor: "A processor core refined from raw mineral substrate. Processes combat data with crystalline efficiency.",
     implant: "A self-repair implant powered by mineral energy. Damaged systems knit back together between blows.",
-    drill: "A mining head forged from the hardest mineral compounds. Cuts through deposits like they're not there."
+    drill: "A mining head forged from the hardest mineral compounds. Cuts through deposits like they're not there.",
+    mindsync: "A neural interface forged from crystallized mineral lattice. Thought and motion collapse into one."
 };
 
 // Generic slot names for the blind-forge shop preview (player sees these before forging)
@@ -109,7 +112,8 @@ const FORGER_PREVIEW_NAMES = {
     chip: "Chip",
     processor: "Processor",
     implant: "Implant",
-    drill: "Drill"
+    drill: "Drill",
+    mindsync: "Mindsync"
 };
 
 /**
