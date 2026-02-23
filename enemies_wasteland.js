@@ -9,7 +9,7 @@ const ENEMIES_WASTELAND = [
     {
         name: "Rad Roach Swarm",
         attack: 14,
-        defence: 5,
+        defence: 2,
         hp: 20,
         xp: 18,
         appearanceRate: 22,
@@ -23,7 +23,7 @@ const ENEMIES_WASTELAND = [
     {
         name: "Dust Crawler",
         attack: 18,
-        defence: 10,
+        defence: 5,
         hp: 35,
         xp: 28,
         appearanceRate: 20,
@@ -37,7 +37,7 @@ const ENEMIES_WASTELAND = [
     {
         name: "Irradiated Scavenger",
         attack: 22,
-        defence: 8,
+        defence: 4,
         hp: 30,
         xp: 30,
         appearanceRate: 16,
@@ -51,7 +51,7 @@ const ENEMIES_WASTELAND = [
     {
         name: "Sand Stalker",
         attack: 28,
-        defence: 6,
+        defence: 3,
         hp: 25,
         xp: 35,
         appearanceRate: 14,
@@ -65,7 +65,7 @@ const ENEMIES_WASTELAND = [
     {
         name: "Wasteland Brute",
         attack: 20,
-        defence: 18,
+        defence: 9,
         hp: 70,
         xp: 55,
         appearanceRate: 10,
@@ -79,7 +79,7 @@ const ENEMIES_WASTELAND = [
     {
         name: "Irradiated Colossus",
         attack: 30,
-        defence: 15,
+        defence: 7,
         hp: 80,
         xp: 65,
         appearanceRate: 5,

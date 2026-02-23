@@ -37,7 +37,7 @@ const ENEMIES_SCRAPYARD = [
     {
         name: "T1 Heavy Tank",
         attack: 1,
-        defence: 4,
+        defence: 2,
         hp: 10,
         xp: 10,
         appearanceRate: 30,
@@ -51,7 +51,7 @@ const ENEMIES_SCRAPYARD = [
     {
         name: "T1 Enforcer",
         attack: 5,
-        defence: 2,
+        defence: 1,
         hp: 5,
         xp: 5,
         appearanceRate: 30,
@@ -65,7 +65,7 @@ const ENEMIES_SCRAPYARD = [
     {
         name: "Scrap Drone",
         attack: 3,
-        defence: 1,
+        defence: 0,
         hp: 3,
         xp: 3,
         appearanceRate: 25,
@@ -79,7 +79,7 @@ const ENEMIES_SCRAPYARD = [
     {
         name: "Junkyard Golem",
         attack: 6,
-        defence: 6,
+        defence: 3,
         hp: 20,
         xp: 15,
         appearanceRate: 8,
@@ -93,7 +93,7 @@ const ENEMIES_SCRAPYARD = [
     {
         name: "T1 Destroyer",
         attack: 10,
-        defence: 10,
+        defence: 5,
         hp: 100,
         xp: 100,
         appearanceRate: 3,

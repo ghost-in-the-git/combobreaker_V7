@@ -9,7 +9,7 @@ const ENEMIES_DEADZONE = [
     {
         name: "Corrupted Probe",
         attack: 45,
-        defence: 22,
+        defence: 11,
         hp: 85,
         xp: 80,
         appearanceRate: 22,
@@ -23,7 +23,7 @@ const ENEMIES_DEADZONE = [
     {
         name: "Toxic Shambler",
         attack: 50,
-        defence: 32,
+        defence: 16,
         hp: 130,
         xp: 110,
         appearanceRate: 18,
@@ -37,7 +37,7 @@ const ENEMIES_DEADZONE = [
     {
         name: "Blight Walker",
         attack: 60,
-        defence: 28,
+        defence: 14,
         hp: 110,
         xp: 120,
         appearanceRate: 16,
@@ -51,7 +51,7 @@ const ENEMIES_DEADZONE = [
     {
         name: "Kill-Swarm Node",
         attack: 70,
-        defence: 20,
+        defence: 10,
         hp: 90,
         xp: 130,
         appearanceRate: 14,
@@ -65,7 +65,7 @@ const ENEMIES_DEADZONE = [
     {
         name: "Corrupted Warden",
         attack: 55,
-        defence: 45,
+        defence: 22,
         hp: 200,
         xp: 180,
         appearanceRate: 10,
@@ -79,7 +79,7 @@ const ENEMIES_DEADZONE = [
     {
         name: "Plague Engine",
         attack: 80,
-        defence: 55,
+        defence: 27,
         hp: 300,
         xp: 260,
         appearanceRate: 5,

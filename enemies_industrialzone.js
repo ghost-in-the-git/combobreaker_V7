@@ -9,7 +9,7 @@ const ENEMIES_INDUSTRIALZONE = [
     {
         name: "Assembly Drone",
         attack: 24,
-        defence: 12,
+        defence: 6,
         hp: 40,
         xp: 35,
         appearanceRate: 22,
@@ -23,7 +23,7 @@ const ENEMIES_INDUSTRIALZONE = [
     {
         name: "Loader Mech",
         attack: 20,
-        defence: 20,
+        defence: 10,
         hp: 65,
         xp: 50,
         appearanceRate: 18,
@@ -37,7 +37,7 @@ const ENEMIES_INDUSTRIALZONE = [
     {
         name: "Arc Welder Unit",
         attack: 35,
-        defence: 12,
+        defence: 6,
         hp: 45,
         xp: 50,
         appearanceRate: 16,
@@ -51,7 +51,7 @@ const ENEMIES_INDUSTRIALZONE = [
     {
         name: "Furnace Guardian",
         attack: 30,
-        defence: 24,
+        defence: 12,
         hp: 100,
         xp: 80,
         appearanceRate: 14,
@@ -65,7 +65,7 @@ const ENEMIES_INDUSTRIALZONE = [
     {
         name: "Overclocked Foreman",
         attack: 40,
-        defence: 18,
+        defence: 9,
         hp: 80,
         xp: 75,
         appearanceRate: 10,
@@ -79,7 +79,7 @@ const ENEMIES_INDUSTRIALZONE = [
     {
         name: "Reactor Sentinel",
         attack: 45,
-        defence: 30,
+        defence: 15,
         hp: 140,
         xp: 120,
         appearanceRate: 5,

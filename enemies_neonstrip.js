@@ -9,7 +9,7 @@ const ENEMIES_NEONSTRIP = [
     {
         name: "Holo Decoy Swarm",
         attack: 35,
-        defence: 18,
+        defence: 9,
         hp: 65,
         xp: 60,
         appearanceRate: 22,
@@ -23,7 +23,7 @@ const ENEMIES_NEONSTRIP = [
     {
         name: "Casino Enforcer",
         attack: 38,
-        defence: 28,
+        defence: 14,
         hp: 100,
         xp: 85,
         appearanceRate: 18,
@@ -37,7 +37,7 @@ const ENEMIES_NEONSTRIP = [
     {
         name: "Neon Stalker",
         attack: 50,
-        defence: 20,
+        defence: 10,
         hp: 80,
         xp: 90,
         appearanceRate: 16,
@@ -51,7 +51,7 @@ const ENEMIES_NEONSTRIP = [
     {
         name: "Syndicate Heavy",
         attack: 45,
-        defence: 35,
+        defence: 17,
         hp: 150,
         xp: 130,
         appearanceRate: 14,
@@ -65,7 +65,7 @@ const ENEMIES_NEONSTRIP = [
     {
         name: "VIP Bodyguard",
         attack: 55,
-        defence: 30,
+        defence: 15,
         hp: 130,
         xp: 120,
         appearanceRate: 10,
@@ -79,7 +79,7 @@ const ENEMIES_NEONSTRIP = [
     {
         name: "Pit Boss Mech",
         attack: 65,
-        defence: 45,
+        defence: 22,
         hp: 220,
         xp: 200,
         appearanceRate: 5,

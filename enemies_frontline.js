@@ -9,7 +9,7 @@ const ENEMIES_FRONTLINE = [
     {
         name: "Patrol Frame",
         attack: 55,
-        defence: 30,
+        defence: 15,
         hp: 110,
         xp: 100,
         appearanceRate: 22,
@@ -23,7 +23,7 @@ const ENEMIES_FRONTLINE = [
     {
         name: "Enforcer Mech",
         attack: 65,
-        defence: 40,
+        defence: 20,
         hp: 160,
         xp: 140,
         appearanceRate: 18,
@@ -37,7 +37,7 @@ const ENEMIES_FRONTLINE = [
     {
         name: "Shock Lancer",
         attack: 85,
-        defence: 32,
+        defence: 16,
         hp: 130,
         xp: 160,
         appearanceRate: 16,
@@ -51,7 +51,7 @@ const ENEMIES_FRONTLINE = [
     {
         name: "Siege Breaker",
         attack: 70,
-        defence: 60,
+        defence: 30,
         hp: 280,
         xp: 220,
         appearanceRate: 14,
@@ -65,7 +65,7 @@ const ENEMIES_FRONTLINE = [
     {
         name: "Black Ops Frame",
         attack: 100,
-        defence: 70,
+        defence: 35,
         hp: 400,
         xp: 350,
         appearanceRate: 10,
@@ -79,7 +79,7 @@ const ENEMIES_FRONTLINE = [
     {
         name: "Squadron Commander",
         attack: 90,
-        defence: 80,
+        defence: 40,
         hp: 500,
         xp: 400,
         appearanceRate: 5,

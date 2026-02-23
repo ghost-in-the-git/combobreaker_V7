@@ -9,7 +9,7 @@ const ENEMIES_ORBITALSTATION = [
     {
         name: "Micro Drone Cluster",
         attack: 10,
-        defence: 4,
+        defence: 2,
         hp: 15,
         xp: 14,
         appearanceRate: 22,
@@ -23,7 +23,7 @@ const ENEMIES_ORBITALSTATION = [
     {
         name: "Station Security Bot",
         attack: 14,
-        defence: 8,
+        defence: 4,
         hp: 25,
         xp: 20,
         appearanceRate: 20,
@@ -37,7 +37,7 @@ const ENEMIES_ORBITALSTATION = [
     {
         name: "Void Welder",
         attack: 18,
-        defence: 6,
+        defence: 3,
         hp: 20,
         xp: 22,
         appearanceRate: 16,
@@ -51,7 +51,7 @@ const ENEMIES_ORBITALSTATION = [
     {
         name: "Orbital Sentry",
         attack: 16,
-        defence: 12,
+        defence: 6,
         hp: 45,
         xp: 35,
         appearanceRate: 14,
@@ -65,7 +65,7 @@ const ENEMIES_ORBITALSTATION = [
     {
         name: "Zero-G Interceptor",
         attack: 22,
-        defence: 8,
+        defence: 4,
         hp: 35,
         xp: 40,
         appearanceRate: 10,
@@ -79,7 +79,7 @@ const ENEMIES_ORBITALSTATION = [
     {
         name: "Hijacked Defense Turret",
         attack: 25,
-        defence: 15,
+        defence: 7,
         hp: 55,
         xp: 50,
         appearanceRate: 5,

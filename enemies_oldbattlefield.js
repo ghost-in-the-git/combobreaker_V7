@@ -9,7 +9,7 @@ const ENEMIES_OLDBATTLEFIELD = [
     {
         name: "Reactivated Scout",
         attack: 4,
-        defence: 1,
+        defence: 0,
         hp: 6,
         xp: 5,
         appearanceRate: 25,
@@ -23,7 +23,7 @@ const ENEMIES_OLDBATTLEFIELD = [
     {
         name: "Rusted Artillery Drone",
         attack: 8,
-        defence: 2,
+        defence: 1,
         hp: 10,
         xp: 8,
         appearanceRate: 22,
@@ -37,7 +37,7 @@ const ENEMIES_OLDBATTLEFIELD = [
     {
         name: "Ghosted Warframe",
         attack: 10,
-        defence: 5,
+        defence: 2,
         hp: 20,
         xp: 15,
         appearanceRate: 18,
@@ -51,7 +51,7 @@ const ENEMIES_OLDBATTLEFIELD = [
     {
         name: "T2 Enforcer",
         attack: 12,
-        defence: 6,
+        defence: 3,
         hp: 28,
         xp: 22,
         appearanceRate: 14,
@@ -65,7 +65,7 @@ const ENEMIES_OLDBATTLEFIELD = [
     {
         name: "T2 Heavy Tank",
         attack: 6,
-        defence: 10,
+        defence: 5,
         hp: 35,
         xp: 25,
         appearanceRate: 10,
@@ -79,7 +79,7 @@ const ENEMIES_OLDBATTLEFIELD = [
     {
         name: "T2 Assassin",
         attack: 20,
-        defence: 2,
+        defence: 1,
         hp: 15,
         xp: 30,
         appearanceRate: 5,

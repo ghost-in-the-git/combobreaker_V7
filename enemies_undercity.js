@@ -9,7 +9,7 @@ const ENEMIES_UNDERCITY = [
     {
         name: "Tunnel Rat",
         attack: 18,
-        defence: 8,
+        defence: 4,
         hp: 28,
         xp: 25,
         appearanceRate: 22,
@@ -23,7 +23,7 @@ const ENEMIES_UNDERCITY = [
     {
         name: "Sewer Drone",
         attack: 22,
-        defence: 12,
+        defence: 6,
         hp: 45,
         xp: 38,
         appearanceRate: 18,
@@ -37,7 +37,7 @@ const ENEMIES_UNDERCITY = [
     {
         name: "Pipe Lurker",
         attack: 28,
-        defence: 10,
+        defence: 5,
         hp: 38,
         xp: 40,
         appearanceRate: 16,
@@ -51,7 +51,7 @@ const ENEMIES_UNDERCITY = [
     {
         name: "Black-Ops Infiltrator",
         attack: 35,
-        defence: 8,
+        defence: 4,
         hp: 30,
         xp: 45,
         appearanceRate: 14,
@@ -65,7 +65,7 @@ const ENEMIES_UNDERCITY = [
     {
         name: "Chem Sprayer",
         attack: 25,
-        defence: 18,
+        defence: 9,
         hp: 85,
         xp: 70,
         appearanceRate: 10,
@@ -79,7 +79,7 @@ const ENEMIES_UNDERCITY = [
     {
         name: "Subterranean Warden",
         attack: 38,
-        defence: 25,
+        defence: 12,
         hp: 110,
         xp: 90,
         appearanceRate: 5,

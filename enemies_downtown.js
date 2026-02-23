@@ -9,7 +9,7 @@ const ENEMIES_DOWNTOWN = [
     {
         name: "Street Modder",
         attack: 7,
-        defence: 3,
+        defence: 1,
         hp: 12,
         xp: 10,
         appearanceRate: 25,
@@ -23,7 +23,7 @@ const ENEMIES_DOWNTOWN = [
     {
         name: "Corp Security Drone",
         attack: 10,
-        defence: 6,
+        defence: 3,
         hp: 18,
         xp: 14,
         appearanceRate: 22,
@@ -37,7 +37,7 @@ const ENEMIES_DOWNTOWN = [
     {
         name: "Neon Ronin",
         attack: 14,
-        defence: 4,
+        defence: 2,
         hp: 15,
         xp: 18,
         appearanceRate: 16,
@@ -51,7 +51,7 @@ const ENEMIES_DOWNTOWN = [
     {
         name: "T2 Sentinel",
         attack: 12,
-        defence: 8,
+        defence: 4,
         hp: 35,
         xp: 28,
         appearanceRate: 14,
@@ -65,7 +65,7 @@ const ENEMIES_DOWNTOWN = [
     {
         name: "Corporate Mech Squad",
         attack: 10,
-        defence: 10,
+        defence: 5,
         hp: 40,
         xp: 35,
         appearanceRate: 10,
@@ -79,7 +79,7 @@ const ENEMIES_DOWNTOWN = [
     {
         name: "Black Market Enforcer",
         attack: 18,
-        defence: 8,
+        defence: 4,
         hp: 30,
         xp: 40,
         appearanceRate: 5,
