@@ -1560,6 +1560,7 @@
     <script src="storyitems.js"></script>
     <script src="encounters_home.js"></script>
     <script src="encounters_forge.js"></script>
+    <script src="encounters_guild.js"></script>
     <script src="encounters_salvageyard.js"></script>
     <script src="encounters_decrypter.js"></script>
     <script src="encounters_ratpile.js"></script>
@@ -2293,6 +2294,15 @@
                 desc: "A hidden workshop built into an old munitions bunker. The air shimmers with heat from the forge.",
                 image: "images/IMAGE.gif"
             },
+            guild: {
+                enemies: null,
+                encounters: ENCOUNTERS_GUILD,
+                mining: null,
+                ambush: null,
+                fuelCost: 10,
+                desc: "A smoke-filled hall deep in the Undercity tunnels. Pilot dossiers cover every wall. Mercenaries for hire — no loyalty, no questions.",
+                image: "images/IMAGE.gif"
+            },
             salvageyard: {
                 enemies: null,
                 encounters: ENCOUNTERS_SALVAGEYARD,
@@ -2366,6 +2376,7 @@
             frontline: 'THE FRONTLINE',
             morningstar: "MORNINGSTAR'S DESTRUCTION",
             forge: 'THE FORGE',
+            guild: 'THE GUILD',
             salvageyard: 'MECH GRAVEYARD',
             decrypter: 'THE DECRYPTER',
             home: 'HOME'
@@ -2606,6 +2617,13 @@
                 openWorldDesc: null,
                 destinations: [
                     { encounterName: "The Forger", mapItem: "The Forge: The Forger" }
+                ]
+            },
+            guild: {
+                openWorldName: null,
+                openWorldDesc: null,
+                destinations: [
+                    { encounterName: "The Broker", mapItem: "The Guild: The Broker" }
                 ]
             },
             salvageyard: {
