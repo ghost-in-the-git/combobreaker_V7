@@ -16,7 +16,7 @@ const ALL_PILOTS = [
         stats: { hp: 1, attack: 1, speed: 1, defence: 1, breaker: 1, mining: 1, regen: 1 },
         dropRate: 50,
         droppedBy: [],
-        cost: 30,
+        cost: 300,
         zone: "guild"
     },
     {
@@ -27,7 +27,7 @@ const ALL_PILOTS = [
         stats: { hp: 2, attack: 2, speed: 2, defence: 2, breaker: 2, mining: 2, regen: 2 },
         dropRate: 47,
         droppedBy: [],
-        cost: 45,
+        cost: 450,
         zone: "guild"
     },
     {
@@ -38,7 +38,7 @@ const ALL_PILOTS = [
         stats: { hp: 3, attack: 3, speed: 3, defence: 3, breaker: 3, mining: 3, regen: 3 },
         dropRate: 45,
         droppedBy: [],
-        cost: 65,
+        cost: 650,
         zone: "guild"
     },
     {
@@ -49,7 +49,7 @@ const ALL_PILOTS = [
         stats: { hp: 4, attack: 4, speed: 4, defence: 4, breaker: 4, mining: 4, regen: 4 },
         dropRate: 42,
         droppedBy: [],
-        cost: 90,
+        cost: 900,
         zone: "guild"
     },
     {
@@ -60,7 +60,7 @@ const ALL_PILOTS = [
         stats: { hp: 5, attack: 5, speed: 5, defence: 5, breaker: 5, mining: 5, regen: 5 },
         dropRate: 39,
         droppedBy: [],
-        cost: 120,
+        cost: 1200,
         zone: "guild"
     },
     {
@@ -71,7 +71,7 @@ const ALL_PILOTS = [
         stats: { hp: 6, attack: 6, speed: 6, defence: 6, breaker: 6, mining: 6, regen: 6 },
         dropRate: 36,
         droppedBy: [],
-        cost: 155,
+        cost: 1550,
         zone: "guild"
     },
     {
@@ -82,7 +82,7 @@ const ALL_PILOTS = [
         stats: { hp: 7, attack: 7, speed: 7, defence: 7, breaker: 7, mining: 7, regen: 7 },
         dropRate: 33,
         droppedBy: [],
-        cost: 195,
+        cost: 1950,
         zone: "guild"
     },
     {
@@ -93,7 +93,7 @@ const ALL_PILOTS = [
         stats: { hp: 8, attack: 8, speed: 8, defence: 8, breaker: 8, mining: 8, regen: 8 },
         dropRate: 30,
         droppedBy: [],
-        cost: 240,
+        cost: 2400,
         zone: "guild"
     },
     {
@@ -104,7 +104,7 @@ const ALL_PILOTS = [
         stats: { hp: 9, attack: 9, speed: 9, defence: 9, breaker: 9, mining: 9, regen: 9 },
         dropRate: 27,
         droppedBy: [],
-        cost: 290,
+        cost: 2900,
         zone: "guild"
     },
     {
@@ -115,7 +115,7 @@ const ALL_PILOTS = [
         stats: { hp: 10, attack: 10, speed: 10, defence: 10, breaker: 10, mining: 10, regen: 10 },
         dropRate: 24,
         droppedBy: [],
-        cost: 345,
+        cost: 3450,
         zone: "guild"
     },
     {
@@ -126,7 +126,7 @@ const ALL_PILOTS = [
         stats: { hp: 11, attack: 11, speed: 11, defence: 11, breaker: 11, mining: 11, regen: 11 },
         dropRate: 21,
         droppedBy: [],
-        cost: 405,
+        cost: 4050,
         zone: "guild"
     },
     {
@@ -137,7 +137,7 @@ const ALL_PILOTS = [
         stats: { hp: 12, attack: 12, speed: 12, defence: 12, breaker: 12, mining: 12, regen: 12 },
         dropRate: 18,
         droppedBy: [],
-        cost: 470,
+        cost: 4700,
         zone: "guild"
     },
     {
@@ -148,7 +148,7 @@ const ALL_PILOTS = [
         stats: { hp: 13, attack: 13, speed: 13, defence: 13, breaker: 13, mining: 13, regen: 13 },
         dropRate: 16,
         droppedBy: [],
-        cost: 540,
+        cost: 5400,
         zone: "guild"
     },
     {
@@ -159,7 +159,7 @@ const ALL_PILOTS = [
         stats: { hp: 14, attack: 14, speed: 14, defence: 14, breaker: 14, mining: 14, regen: 14 },
         dropRate: 14,
         droppedBy: [],
-        cost: 615,
+        cost: 6150,
         zone: "guild"
     },
     {
@@ -170,7 +170,7 @@ const ALL_PILOTS = [
         stats: { hp: 15, attack: 15, speed: 15, defence: 15, breaker: 15, mining: 15, regen: 15 },
         dropRate: 12,
         droppedBy: [],
-        cost: 695,
+        cost: 6950,
         zone: "guild"
     },
     {
@@ -181,7 +181,7 @@ const ALL_PILOTS = [
         stats: { hp: 16, attack: 16, speed: 16, defence: 16, breaker: 16, mining: 16, regen: 16 },
         dropRate: 10,
         droppedBy: [],
-        cost: 780,
+        cost: 7800,
         zone: "guild"
     },
     {
@@ -192,7 +192,7 @@ const ALL_PILOTS = [
         stats: { hp: 17, attack: 17, speed: 17, defence: 17, breaker: 17, mining: 17, regen: 17 },
         dropRate: 9,
         droppedBy: [],
-        cost: 870,
+        cost: 8700,
         zone: "guild"
     },
     {
@@ -203,7 +203,7 @@ const ALL_PILOTS = [
         stats: { hp: 18, attack: 18, speed: 18, defence: 18, breaker: 18, mining: 18, regen: 18 },
         dropRate: 7,
         droppedBy: [],
-        cost: 965,
+        cost: 9650,
         zone: "guild"
     },
     {
@@ -214,7 +214,7 @@ const ALL_PILOTS = [
         stats: { hp: 19, attack: 19, speed: 19, defence: 19, breaker: 19, mining: 19, regen: 19 },
         dropRate: 6,
         droppedBy: [],
-        cost: 1065,
+        cost: 10650,
         zone: "guild"
     },
     {
@@ -225,7 +225,7 @@ const ALL_PILOTS = [
         stats: { hp: 20, attack: 20, speed: 20, defence: 20, breaker: 20, mining: 20, regen: 20 },
         dropRate: 5,
         droppedBy: [],
-        cost: 1170,
+        cost: 11700,
         zone: "guild"
     }
 ];
