@@ -3236,7 +3236,7 @@
                     } else if (item.scrapCost) {
                         const canAfford = (game.scrap || 0) >= item.scrapCost;
                         nameEl.classList.toggle('cant-afford', !canAfford);
-                        buyBtn.textContent = `[Buy ${item.scrapCost} Scrap]`;
+                        buyBtn.textContent = `[Cost: ${item.scrapCost} Scrap]`;
                         buyBtn.disabled = !canAfford;
                     } else {
                         const canAfford = playerXP >= item.cost;
