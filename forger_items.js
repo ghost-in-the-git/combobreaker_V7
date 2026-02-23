@@ -8,9 +8,10 @@
  *
  * Each generated item gets:
  *   - Primary stat: 2 × tier value (double the standard item for that slot)
- *   - Secondary stat: +tier in a randomly chosen stat (from 8 types, excluding ALL)
+ *   - Secondary stat: +tier in a randomly chosen stat (from 8 types)
  *
  * HP scales at 10× everywhere (primary body = 20×tier, secondary HP on any slot = 10×tier).
+ * Pilots are NOT forged — they live in pilots.js.
  *
  * FORGER_ITEMS is a runtime registry — starts empty, populated as items are forged.
  * Persisted via save/load so name-based lookups continue to work.
@@ -35,7 +36,7 @@ const FORGER_TIERS = [
 const FORGER_SLOT_GROUPS = [
     ["body", "legs", "arms"],
     ["weapon", "chip", "processor"],
-    ["pilot", "implant", "drill"]
+    ["implant", "drill"]
 ];
 
 // Runtime registry of forged items (for name-based lookups after save/load)
@@ -50,7 +51,6 @@ const FORGER_PRIMARY_STATS = {
     weapon: "attack",
     chip: "breaker",
     processor: "xpBonus",
-    pilot: "all",
     drill: "mining",
     implant: "regen"
 };
@@ -63,7 +63,6 @@ const FORGER_SLOT_WORDS = {
     weapon: "Blade",
     chip: "Circuit",
     processor: "Core",
-    pilot: "Interface",
     implant: "Implant",
     drill: "Excavator"
 };
@@ -97,7 +96,6 @@ const FORGER_SLOT_DESCS = {
     weapon: "A weapon forged from smelted minerals. The edge never dulls, and each strike lands with unnatural force.",
     chip: "A systems chip grown from mineral lattice structures. Its crystalline pathways chain commands faster than silicon.",
     processor: "A processor core refined from raw mineral substrate. Processes combat data with crystalline efficiency.",
-    pilot: "A neural interface infused with mineral resonance. Synchronizes pilot and mech at a fundamental level.",
     implant: "A self-repair implant powered by mineral energy. Damaged systems knit back together between blows.",
     drill: "A mining head forged from the hardest mineral compounds. Cuts through deposits like they're not there."
 };
@@ -110,7 +108,6 @@ const FORGER_PREVIEW_NAMES = {
     weapon: "Weapon",
     chip: "Chip",
     processor: "Processor",
-    pilot: "Pilot Module",
     implant: "Implant",
     drill: "Drill"
 };
@@ -186,43 +183,22 @@ function generateForgerItem(mineralName, slotType) {
     // Build stats object
     const stats = {};
 
-    if (primaryKey === "all") {
-        // Pilot: +2×tier to all 7 stats, then layer secondary on top
-        const allVal = tier * 2;
-        stats.hp = allVal;
-        stats.attack = allVal;
-        stats.speed = allVal;
-        stats.defence = allVal;
-        stats.breaker = allVal;
-        stats.mining = allVal;
-        stats.regen = allVal;
-        const secValue = getForgerStatValue(secondary.key, tier);
-        stats[secondary.key] = (stats[secondary.key] || 0) + secValue;
-    } else {
-        // Primary stat at 2× tier
-        const primaryValue = getForgerStatValue(primaryKey, tier) * 2;
-        stats[primaryKey] = primaryValue;
-        // Secondary stat at 1× tier
-        const secValue = getForgerStatValue(secondary.key, tier);
-        stats[secondary.key] = (stats[secondary.key] || 0) + secValue;
-    }
+    // Primary stat at 2× tier
+    const primaryValue = getForgerStatValue(primaryKey, tier) * 2;
+    stats[primaryKey] = primaryValue;
+    // Secondary stat at 1× tier
+    const secValue = getForgerStatValue(secondary.key, tier);
+    stats[secondary.key] = (stats[secondary.key] || 0) + secValue;
 
     // Build stat tag string for item name
-    let statTag;
-    if (primaryKey === "all") {
-        // Pilot always shows [+N ALL][+M STAT] for clarity
-        const secValue = getForgerStatValue(secondary.key, tier);
-        statTag = `[+${tier * 2} ALL][+${secValue} ${secondary.label}]`;
-    } else {
-        // Non-pilot: list each stat in fixed order, combining if primary === secondary
-        const parts = [];
-        for (const key of FORGER_STAT_ORDER) {
-            if (stats[key] && stats[key] > 0) {
-                parts.push(`[+${stats[key]} ${FORGER_STAT_LABELS[key]}]`);
-            }
+    // List each stat in fixed order, combining if primary === secondary
+    const parts = [];
+    for (const key of FORGER_STAT_ORDER) {
+        if (stats[key] && stats[key] > 0) {
+            parts.push(`[+${stats[key]} ${FORGER_STAT_LABELS[key]}]`);
         }
-        statTag = parts.join("");
     }
+    const statTag = parts.join("");
 
     // Build item name: "Mineral SlotWord of Suffix [stats]"
     const slotWord = FORGER_SLOT_WORDS[slotType];
