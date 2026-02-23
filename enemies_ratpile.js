@@ -25,7 +25,7 @@ const ENEMIES_RATPILE = [
         attack: 2,
         defence: 0,
         hp: 5,
-        xp: 3,
+        xp: 5,
         appearanceRate: 50,
         minLevel: 1,
         squadMin: 1,
