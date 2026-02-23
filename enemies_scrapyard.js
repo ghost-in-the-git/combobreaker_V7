@@ -21,20 +21,6 @@ const ENEMIES_SCRAPYARD = [
         scrapMax: 1
     },
     {
-        name: "Nano Swarm",
-        attack: 1,
-        defence: 0,
-        hp: 1,
-        xp: 1,
-        appearanceRate: 3,
-        minLevel: 1,
-        squadMin: 5,
-        squadMax: 10,
-        scrapChance: 40,
-        scrapMin: 1,
-        scrapMax: 1
-    },
-    {
         name: "Heavy Tank",
         attack: 1,
         defence: 2,
