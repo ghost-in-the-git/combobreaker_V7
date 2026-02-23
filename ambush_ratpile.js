@@ -6,15 +6,29 @@
 
 const AMBUSH_RATPILE = [
     {
-        name: "RabiSil Rat",
-        attack: 2,
+        name: "Silicon Rat",
+        attack: 1,
         defence: 0,
         hp: 1,
-        xp: 2,
+        xp: 1,
         appearanceRate: 100,
         minLevel: 1,
-        squadMin: 6,
-        squadMax: 6,
+        squadMin: 1,
+        squadMax: 3,
+        scrapChance: 30,
+        scrapMin: 1,
+        scrapMax: 1
+    },
+    {
+        name: "Bloated Rat",
+        attack: 2,
+        defence: 0,
+        hp: 5,
+        xp: 5,
+        appearanceRate: 50,
+        minLevel: 1,
+        squadMin: 1,
+        squadMax: 2,
         scrapChance: 30,
         scrapMin: 1,
         scrapMax: 1
