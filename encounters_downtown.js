@@ -78,7 +78,7 @@ const ENCOUNTERS_DOWNTOWN = [
         minLevel: 1,
         itemSlot1: ["Map: Orbital Station"],
         itemSlot2: ["Map: The Decrypter"],
-        itemSlot3: [],
+        itemSlot3: null,
         itemSlot4: null,
         dialogue: [
             {

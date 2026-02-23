@@ -77,7 +77,7 @@ const ENCOUNTERS_SCRAPYARD = [
         minLevel: 1,
         itemSlot1: ["Map: Old Battlefield"],
         itemSlot2: ["Map: Mech Graveyard"],
-        itemSlot3: [],
+        itemSlot3: null,
         itemSlot4: null,
         dialogue: [
             {

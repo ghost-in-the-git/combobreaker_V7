@@ -78,7 +78,7 @@ const ENCOUNTERS_UNDERCITY = [
         minLevel: 1,
         itemSlot1: ["Map: Industrial Zone"],
         itemSlot2: ["Map: The Guild"],
-        itemSlot3: [],
+        itemSlot3: null,
         itemSlot4: null,
         dialogue: [
             {

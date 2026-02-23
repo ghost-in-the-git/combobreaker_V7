@@ -78,7 +78,7 @@ const ENCOUNTERS_DEADZONE = [
         minLevel: 1,
         itemSlot1: ["Map: Asteroid Belt"],
         itemSlot2: ["Map: Frontline"],
-        itemSlot3: [],
+        itemSlot3: null,
         itemSlot4: null
     },
     {

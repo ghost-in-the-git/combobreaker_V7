@@ -77,8 +77,8 @@ const ENCOUNTERS_FROZENREACH = [
         appearanceRate: 15,
         minLevel: 1,
         itemSlot1: ["Map: Neon Strip"],
-        itemSlot2: [],
-        itemSlot3: [],
+        itemSlot2: null,
+        itemSlot3: null,
         itemSlot4: null,
         dialogue: [
             {
