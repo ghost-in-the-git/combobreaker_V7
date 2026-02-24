@@ -2653,7 +2653,9 @@
                 opt.value = key;
                 const fuelCost = LOCATIONS[key].fuelCost || 0;
                 const fuelTag = fuelCost > 0 ? ` (${fuelCost} fuel)` : '';
-                opt.textContent = `[ZONE] ${LOCATION_NAMES[key] || key}${fuelTag}`;
+                const friendZones = ['home', 'forge', 'guild', 'salvageyard'];
+                const tag = friendZones.includes(key) ? '[FRIEND]' : '[ZONE]';
+                opt.textContent = `${tag} ${LOCATION_NAMES[key] || key}${fuelTag}`;
                 if (key === current) opt.selected = true;
                 select.appendChild(opt);
             }
