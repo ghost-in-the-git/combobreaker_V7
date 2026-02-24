@@ -55,9 +55,4 @@ const REFINED_MINERALS = [
     { name: "Refined Archive Shard", desc: "Flawless archive shard. Harder than anything known.", image: "images/IMAGE.gif", mineralCost: { mineral: "Archive Shard", category: "tier10", count: 5 }, refinedMineral: true },
     { name: "Refined Strata-Null", desc: "Perfect strata-null crystal, resonating with strange energy.", image: "images/IMAGE.gif", mineralCost: { mineral: "Strata-Null", category: "tier10", count: 5 }, refinedMineral: true },
     { name: "Refined Compound 33", desc: "Pure compound 33, cut to channel raw power.", image: "images/IMAGE.gif", mineralCost: { mineral: "Compound 33", category: "tier10", count: 5 }, refinedMineral: true },
-
-    // ??? (Tier 11)
-    { name: "Refined Reagent Arcadium", desc: "Purified reagent arcadium, pulsing with unstable energy.", image: "images/IMAGE.gif", mineralCost: { mineral: "Reagent Arcadium", category: "tier11", count: 5 }, refinedMineral: true },
-    { name: "Refined Catalyst MK-II", desc: "Catalyst MK-II, refined to maximum potency.", image: "images/IMAGE.gif", mineralCost: { mineral: "Catalyst MK-II", category: "tier11", count: 5 }, refinedMineral: true },
-    { name: "Refined Anomaly 0x3A", desc: "Anomaly 0x3A, stabilized but still radiating unknown frequencies.", image: "images/IMAGE.gif", mineralCost: { mineral: "Anomaly 0x3A", category: "tier11", count: 5 }, refinedMineral: true }
 ];

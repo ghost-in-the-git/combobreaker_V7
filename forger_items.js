@@ -28,8 +28,7 @@ const FORGER_TIERS = [
     { tier: 7, zone: "Industrial Zone", minerals: ["Starvitrine", "Thorncrystal", "Umbracite"] },
     { tier: 8, zone: "Frozen Reach", minerals: ["Vortexium", "Wyrmstone", "Xanthryx"] },
     { tier: 9, zone: "Neon Strip", minerals: ["Yonderite", "Zephyrsalt", "Isotope Lace"] },
-    { tier: 10, zone: "Dead Zone", minerals: ["Archive Shard", "Strata-Null", "Compound 33"] },
-    { tier: 11, zone: "???", minerals: ["Reagent Arcadium", "Catalyst MK-II", "Anomaly 0x3A"] }
+    { tier: 10, zone: "Dead Zone", minerals: ["Archive Shard", "Strata-Null", "Compound 33"] }
 ];
 
 // Installation types assigned to each mineral position within a tier
