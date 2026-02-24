@@ -32,7 +32,7 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
         appearanceRate: 15,
         minLevel: 1,
         itemSlot1: ["Energy Blade [+2 ATK]"],
-        itemSlot2: ["Combo Link Chip [+2 COMBO]"],
+        itemSlot2: ["Combo Link Chip [+2 BREAKER]"],
         itemSlot3: ["Enhanced Data Processor [+2 Silicon]"],
         itemSlot4: null
     },

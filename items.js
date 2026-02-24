@@ -19,7 +19,7 @@
  *   legs: +1 SPD per tier (1, 2, 3 ... 10)
  *   arms: +1 DEF per tier (1, 2, 3 ... 10)
  *   weapon: +1 ATK per tier (1, 2, 3 ... 10)
- *   chip: +1 COMBO per tier (1, 2, 3 ... 10)
+ *   chip: +1 BREAKER per tier (1, 2, 3 ... 10)
  *   processor: +1 SILICON per tier (1, 2, 3 ... 10)
  *   pilot: +1 ALL per tier (1, 2, 3 ... 10)
  *   drill: +1 MINING per tier (1, 2, 3 ... 10)
@@ -434,7 +434,7 @@ const ITEMS = [
 
     // ==================== WEAPON (Attack) ====================
     {
-        name: "Sharpened Rat Fang [+1 ATK][+1 COMBO]",
+        name: "Sharpened Rat Fang [+1 ATK][+1 BREAKER]",
         type: "weapon",
         desc: "A silicon rat's fang, sharpened to a point and lashed to a handle. Fast and vicious, like the thing it came from.",
         image: "images/IMAGE.gif",
@@ -555,7 +555,7 @@ const ITEMS = [
         zone: "deadzone"
     },
 
-    // ==================== SYSTEMS CHIP (Combo) ====================
+    // ==================== SYSTEMS CHIP (Breaker) ====================
     {
         name: "Corroded Chip [+1 DEF]",
         type: "chip",
@@ -568,7 +568,7 @@ const ITEMS = [
         zone: "ratpile"
     },
     {
-        name: "Targeting Firmware [+1 COMBO]",
+        name: "Targeting Firmware [+1 BREAKER]",
         type: "chip",
         desc: "Basic combat firmware that identifies windows for follow-up strikes on scanned targets.",
         image: "images/IMAGE.gif",
@@ -579,7 +579,7 @@ const ITEMS = [
         zone: "scrapyard"
     },
     {
-        name: "Combo Link Chip [+2 COMBO]",
+        name: "Combo Link Chip [+2 BREAKER]",
         type: "chip",
         desc: "Micro-controllers that chain attack sequences together, finding rhythm in the chaos of combat.",
         image: "images/IMAGE.gif",
@@ -590,7 +590,7 @@ const ITEMS = [
         zone: "oldbattlefield"
     },
     {
-        name: "Chain Booster [+3 COMBO]",
+        name: "Chain Booster [+3 BREAKER]",
         type: "chip",
         desc: "A co-processor that optimizes strike timing for maximum combo potential.",
         image: "images/IMAGE.gif",
@@ -601,7 +601,7 @@ const ITEMS = [
         zone: "downtown"
     },
     {
-        name: "Chain Protocol [+4 COMBO]",
+        name: "Chain Protocol [+4 BREAKER]",
         type: "chip",
         desc: "Pattern recognition software that identifies openings for follow-up strikes mid-swing.",
         image: "images/IMAGE.gif",
@@ -612,7 +612,7 @@ const ITEMS = [
         zone: "orbitalstation"
     },
     {
-        name: "Strike Sequencer [+5 COMBO]",
+        name: "Strike Sequencer [+5 BREAKER]",
         type: "chip",
         desc: "Military-grade sequencing AI. Calculates optimal combo chains in microseconds.",
         image: "images/IMAGE.gif",
@@ -623,7 +623,7 @@ const ITEMS = [
         zone: "wasteland"
     },
     {
-        name: "Assault Algorithm [+6 COMBO]",
+        name: "Assault Algorithm [+6 BREAKER]",
         type: "chip",
         desc: "Predictive combat AI that anticipates enemy recovery windows and chains strikes before they can react.",
         image: "images/IMAGE.gif",
@@ -634,7 +634,7 @@ const ITEMS = [
         zone: "undercity"
     },
     {
-        name: "Neural Sequencer [+7 COMBO]",
+        name: "Neural Sequencer [+7 BREAKER]",
         type: "chip",
         desc: "Predictive motion algorithms that pre-calculate combo paths before the pilot decides.",
         image: "images/IMAGE.gif",
@@ -645,7 +645,7 @@ const ITEMS = [
         zone: "industrialzone"
     },
     {
-        name: "Overdrive Sequencer [+8 COMBO]",
+        name: "Overdrive Sequencer [+8 BREAKER]",
         type: "chip",
         desc: "Deep-learning combat AI that adapts combo patterns to each enemy's defensive rhythm.",
         image: "images/IMAGE.gif",
@@ -656,7 +656,7 @@ const ITEMS = [
         zone: "frozenreach"
     },
     {
-        name: "Predator Protocol [+9 COMBO]",
+        name: "Predator Protocol [+9 BREAKER]",
         type: "chip",
         desc: "Black-ops firmware that maps kill chains across multiple targets simultaneously.",
         image: "images/IMAGE.gif",
@@ -667,7 +667,7 @@ const ITEMS = [
         zone: "neonstrip"
     },
     {
-        name: "Omega Protocol [+10 COMBO]",
+        name: "Omega Protocol [+10 BREAKER]",
         type: "chip",
         desc: "Omega-class combo matrix. Converts the entire combat system into an endless chain of strikes.",
         image: "images/IMAGE.gif",

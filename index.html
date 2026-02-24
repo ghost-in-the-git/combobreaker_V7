@@ -4841,10 +4841,10 @@
 
             // Determine breaker procs this turn (gated behind owning decrypted keys)
             let speedTriggered = hasBreaker("Wire's Speedbreaker Key") && Math.random() * 100 < getBreaker();
-            let comboTriggered = hasBreaker("Your Combobreaker Key") && Math.random() * 100 < getBreaker();
+            let breakerTriggered = hasBreaker("Your Combobreaker Key") && Math.random() * 100 < getBreaker();
             let strikeTriggered = hasBreaker("Fang's Strikebreaker Key") && Math.random() * 100 < getBreaker();
             let crushTriggered = hasBreaker("Anvil's Crushbreaker Key") && Math.random() * 100 < getBreaker();
-            let warTriggered = hasBreaker("Rex's Warbreaker Key") && (speedTriggered || comboTriggered) && Math.random() * 100 < getBreaker();
+            let warTriggered = hasBreaker("Rex's Warbreaker Key") && (speedTriggered || breakerTriggered) && Math.random() * 100 < getBreaker();
             let attackCount = speedTriggered ? (warTriggered ? 4 : 2) : 1;
 
             if (speedTriggered) {
@@ -4853,7 +4853,7 @@
             if (strikeTriggered) {
                 await addMessage(`[STRIKEBREAKER TRIGGERED] Enemy defence ignored!`, 'player');
             }
-            if (comboTriggered) {
+            if (breakerTriggered) {
                 await addMessage(`[COMBOBREAKER TRIGGERED]`, 'player');
             }
             if (crushTriggered) {
@@ -4865,7 +4865,7 @@
 
             // Calculate damage (strikebreaker ignores enemy defence, combobreaker doubles/quadruples)
             let playerDamage = calculateDamage(p.attack, strikeTriggered ? 0 : et.defence);
-            if (comboTriggered) {
+            if (breakerTriggered) {
                 playerDamage *= warTriggered ? 4 : 2;
             }
 

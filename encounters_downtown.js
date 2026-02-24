@@ -32,7 +32,7 @@ const ENCOUNTERS_DOWNTOWN = [
         appearanceRate: 20,
         minLevel: 1,
         itemSlot1: ["Chain Blade [+3 ATK]"],
-        itemSlot2: ["Chain Booster [+3 COMBO]"],
+        itemSlot2: ["Chain Booster [+3 BREAKER]"],
         itemSlot3: ["Combat Analyzer [+3 Silicon]"],
         itemSlot4: null
     },

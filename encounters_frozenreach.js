@@ -32,7 +32,7 @@ const ENCOUNTERS_FROZENREACH = [
         appearanceRate: 20,
         minLevel: 1,
         itemSlot1: ["Breaker Blade [+8 ATK]"],
-        itemSlot2: ["Overdrive Sequencer [+8 COMBO]"],
+        itemSlot2: ["Overdrive Sequencer [+8 BREAKER]"],
         itemSlot3: ["Deep War Simulator [+8 Silicon]"],
         itemSlot4: null
     },

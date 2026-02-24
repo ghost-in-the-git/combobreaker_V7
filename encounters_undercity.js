@@ -32,7 +32,7 @@ const ENCOUNTERS_UNDERCITY = [
         appearanceRate: 20,
         minLevel: 1,
         itemSlot1: ["Assault Module [+6 ATK]"],
-        itemSlot2: ["Assault Algorithm [+6 COMBO]"],
+        itemSlot2: ["Assault Algorithm [+6 BREAKER]"],
         itemSlot3: ["Adaptive Learning Matrix [+6 Silicon]"],
         itemSlot4: null
     },

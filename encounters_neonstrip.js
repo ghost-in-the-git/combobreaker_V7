@@ -32,7 +32,7 @@ const ENCOUNTERS_NEONSTRIP = [
         appearanceRate: 20,
         minLevel: 1,
         itemSlot1: ["Annihilator Cannon [+9 ATK]"],
-        itemSlot2: ["Predator Protocol [+9 COMBO]"],
+        itemSlot2: ["Predator Protocol [+9 BREAKER]"],
         itemSlot3: ["Precognition Engine [+9 Silicon]"],
         itemSlot4: null
     },

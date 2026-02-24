@@ -32,7 +32,7 @@ const ENCOUNTERS_ORBITALSTATION = [
         appearanceRate: 20,
         minLevel: 1,
         itemSlot1: ["Shock Cannon [+4 ATK]"],
-        itemSlot2: ["Chain Protocol [+4 COMBO]"],
+        itemSlot2: ["Chain Protocol [+4 BREAKER]"],
         itemSlot3: ["Tactical Neural Net [+4 Silicon]"],
         itemSlot4: null
     },

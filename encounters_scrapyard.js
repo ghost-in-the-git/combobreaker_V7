@@ -31,7 +31,7 @@ const ENCOUNTERS_SCRAPYARD = [
         appearanceRate: 20,
         minLevel: 1,
         itemSlot1: ["Pulse Pistol [+1 ATK]"],
-        itemSlot2: ["Targeting Firmware [+1 COMBO]"],
+        itemSlot2: ["Targeting Firmware [+1 BREAKER]"],
         itemSlot3: ["Basic Data Processor [+1 Silicon]"],
         itemSlot4: null
     },

@@ -32,7 +32,7 @@ const ENCOUNTERS_DEADZONE = [
         appearanceRate: 20,
         minLevel: 1,
         itemSlot1: ["Omega Rupture Cannon [+10 ATK]"],
-        itemSlot2: ["Omega Protocol [+10 COMBO]"],
+        itemSlot2: ["Omega Protocol [+10 BREAKER]"],
         itemSlot3: ["Omega Experience Engine [+10 Silicon]"],
         itemSlot4: null
     },

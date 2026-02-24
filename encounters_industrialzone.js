@@ -32,7 +32,7 @@ const ENCOUNTERS_INDUSTRIALZONE = [
         appearanceRate: 20,
         minLevel: 1,
         itemSlot1: ["Railgun [+7 ATK]"],
-        itemSlot2: ["Neural Sequencer [+7 COMBO]"],
+        itemSlot2: ["Neural Sequencer [+7 BREAKER]"],
         itemSlot3: ["Quantum Learning Core [+7 Silicon]"],
         itemSlot4: null
     },

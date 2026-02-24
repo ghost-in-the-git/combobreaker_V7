@@ -32,7 +32,7 @@ const ENCOUNTERS_WASTELAND = [
         appearanceRate: 20,
         minLevel: 1,
         itemSlot1: ["Plasma Rifle [+5 ATK]"],
-        itemSlot2: ["Strike Sequencer [+5 COMBO]"],
+        itemSlot2: ["Strike Sequencer [+5 BREAKER]"],
         itemSlot3: ["Battlefield Recorder [+5 Silicon]"],
         itemSlot4: null
     },
