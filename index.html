@@ -242,10 +242,48 @@
         }
 
         .message {
-            padding: 10px 15px;
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+            padding: 10px;
             border-radius: 8px;
-            max-width: 80%;
+            border: 1px solid transparent;
             animation: fadeIn 0.3s ease;
+            gap: 12px;
+            box-sizing: border-box;
+        }
+
+        .message-avatar {
+            width: 64px;
+            height: 64px;
+            min-width: 64px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 2px solid #333;
+        }
+
+        .message-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .message-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .message-label {
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .message-text {
+            line-height: 1.4;
         }
 
         @keyframes fadeIn {
@@ -254,68 +292,80 @@
         }
 
         .message.system {
-            background: none;
-            border: none;
+            background: #0a0a12;
+            border-color: #00ff88;
             color: #00ff88;
-            align-self: center;
-            max-width: 90%;
         }
+        .message.system .message-label { color: #00ff88; }
+        .message.system .message-avatar { border-color: #00ff88; }
 
         .message.systemblue {
-            background: none;
-            border: none;
+            background: #0a0a12;
+            border-color: #4488ff;
             color: #0000ff;
-            align-self: center;
-            max-width: 90%;
         }
+        .message.systemblue .message-label { color: #4488ff; }
+        .message.systemblue .message-avatar { border-color: #4488ff; }
 
         .message.enemy {
             background: #2a1a1a;
-            border-left: 3px solid #ff4444;
+            border-color: #ff4444;
             color: #ff6666;
         }
+        .message.enemy .message-label { color: #ff4444; }
+        .message.enemy .message-avatar { border-color: #ff4444; }
 
         .message.player {
             background: #1a2a1a;
-            border-left: 3px solid #00ff88;
+            border-color: #00ff88;
             color: #00ff88;
-            align-self: flex-end;
         }
+        .message.player .message-label { color: #00ff88; }
+        .message.player .message-avatar { border-color: #00ff88; }
 
         .message.battle {
             background: #1a1a2e;
-            border-left: 3px solid #4488ff;
+            border-color: #4488ff;
             color: #88aaff;
             font-style: italic;
         }
+        .message.battle .message-label { color: #4488ff; }
+        .message.battle .message-avatar { border-color: #4488ff; }
 
         .message.damage {
             background: #2a1a2a;
-            border-left: 3px solid #ff44aa;
+            border-color: #ff44aa;
             color: #ff88cc;
         }
+        .message.damage .message-label { color: #ff44aa; }
+        .message.damage .message-avatar { border-color: #ff44aa; }
 
         .message.victory {
             background: #1a2a2a;
-            border-left: 3px solid #00ffcc;
+            border-color: #00ffcc;
             color: #00ffcc;
             font-weight: bold;
         }
+        .message.victory .message-label { color: #00ffcc; }
+        .message.victory .message-avatar { border-color: #00ffcc; }
 
         .message.defeat {
             background: #2a1a1a;
-            border-left: 3px solid #ff0000;
+            border-color: #ff0000;
             color: #ff4444;
             font-weight: bold;
         }
+        .message.defeat .message-label { color: #ff0000; }
+        .message.defeat .message-avatar { border-color: #ff0000; }
 
         .message.levelup {
             background: #2a2a1a;
-            border-left: 3px solid #ffdd00;
+            border-color: #ffdd00;
             color: #ffdd00;
             font-weight: bold;
-            text-align: center;
         }
+        .message.levelup .message-label { color: #ffdd00; }
+        .message.levelup .message-avatar { border-color: #ffdd00; }
 
         /* Equipment Panel */
         .equipment-panel {
@@ -2850,11 +2900,51 @@
             changeDestination(e.target.value);
         });
 
+        // Label map for message types
+        const MESSAGE_LABELS = {
+            system: 'SYSTEM',
+            systemblue: 'SYSTEM',
+            enemy: 'ENEMY',
+            player: 'MECH',
+            battle: 'BATTLE',
+            damage: 'DAMAGE',
+            victory: 'VICTORY',
+            defeat: 'DEFEAT',
+            levelup: 'LEVEL UP'
+        };
+
         // Add message to chat with delay
-        async function addMessage(text, type = 'system') {
+        async function addMessage(text, type = 'system', options = {}) {
+            const img = options.image || 'images/IMAGE.gif';
+            const label = options.label || MESSAGE_LABELS[type] || type.toUpperCase();
+
             const msg = document.createElement('div');
             msg.className = `message ${type}`;
-            msg.textContent = text;
+
+            const avatar = document.createElement('div');
+            avatar.className = 'message-avatar';
+            const avatarImg = document.createElement('img');
+            avatarImg.src = img;
+            avatarImg.alt = '';
+            avatar.appendChild(avatarImg);
+
+            const content = document.createElement('div');
+            content.className = 'message-content';
+
+            const labelEl = document.createElement('div');
+            labelEl.className = 'message-label';
+            labelEl.textContent = label;
+
+            const textEl = document.createElement('div');
+            textEl.className = 'message-text';
+            textEl.textContent = text;
+
+            content.appendChild(labelEl);
+            content.appendChild(textEl);
+
+            msg.appendChild(avatar);
+            msg.appendChild(content);
+
             chatMessages.appendChild(msg);
             msg.scrollIntoView({ behavior: 'smooth', block: 'end' });
             await new Promise(resolve => setTimeout(resolve, 800));
