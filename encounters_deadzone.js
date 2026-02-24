@@ -120,5 +120,27 @@ const ENCOUNTERS_DEADZONE = [
                 response: "'My callsign was Wire.' She says it like putting down something heavy. 'Jess Nakamura. SC-1 Flicker. Fastest hands in the unit.' She holds up her hand — the fingers blur, then solidify. 'What's left of me, anyway.'"
             }
         ]
+    },
+    {
+        name: "Blighted EW-0 Phantom",
+        type: "shop",
+        discoverable: true,
+        isBossArea: true,
+        description: "Your sensors die first. Not damaged — suppressed. Radar returns nothing. Comms fill with static shaped like voices. At the center of the blackout: the Phantom, chassis barely visible, active camouflage flickering through patterns meant for battlefields that no longer exist. Every countermeasure it has is running. Jamming, spoofing, masking, denying.",
+        engageText: "The Phantom's jamming field washes over you and keeps going. You're inside the denial zone but you're not transmitting on any frequency it's targeting. It doesn't know you're here. It doesn't know anything is here.",
+        discoveredDescription: "Your sensors die the moment you enter the zone. The EW-0 Phantom is still at the center, broadcasting its blanket of electronic denial across every frequency.",
+        discoveredEngageText: "The Phantom's camouflage flickers. Same patterns. Same denial. You're invisible inside its invisibility — hidden by the thing that's hiding from everything.",
+        appearanceRate: 8,
+        minLevel: 1,
+        itemSlot1: null,
+        itemSlot2: null,
+        itemSlot3: null,
+        itemSlot4: null,
+        dialogue: [
+            {
+                question: "It's jamming everything.",
+                response: "Full-spectrum electronic denial — every frequency, every band, every protocol. The Phantom was supposed to provide selective cover for its squad. Without a pilot to designate targets, it defaulted to the broadest setting: deny everything. The perfect hiding spot with no one left to hide."
+            }
+        ]
     }
 ];

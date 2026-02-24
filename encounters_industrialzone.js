@@ -126,5 +126,27 @@ const ENCOUNTERS_INDUSTRIALZONE = [
                 response: "'I knew all of them.' She says it watching the factory floor, not you. 'Every mech you've fought. Every pilot locked inside. I knew what they sounded like when they were people.'"
             }
         ]
+    },
+    {
+        name: "Slag-Coated HG-6 Devastator",
+        type: "shop",
+        discoverable: true,
+        isBossArea: true,
+        description: "You hear it three corridors away — the rhythmic thud of heavy weapons cycling. The factory floor opens into a blast zone. In the center stands the Devastator, weapon mounts traversing in smooth arcs, putting rounds into walls that have been hit ten thousand times before. Slag coats its chassis in thick, uneven layers.",
+        engageText: "The Devastator's targeting array sweeps past you and keeps traversing. You're not in the firing arc. You're not in the blast zone. It has walls to shoot and nothing else matters.",
+        discoveredDescription: "The rhythmic thud of weapons fire echoes through the factory corridors. The HG-6 Devastator is still in its blast zone, putting rounds into the same cratered walls.",
+        discoveredEngageText: "The Devastator doesn't pause. Same walls. Same arcs. Same rounds. You're still not in the firing solution.",
+        appearanceRate: 8,
+        minLevel: 1,
+        itemSlot1: null,
+        itemSlot2: null,
+        itemSlot3: null,
+        itemSlot4: null,
+        dialogue: [
+            {
+                question: "Why does it keep shooting?",
+                response: "The HG-6 was a walking gun platform — suppressive fire, area denial, total destruction of designated targets. Without a target designator, the Devastator cycles through its firing patterns on the last known coordinates. The walls. Forever."
+            }
+        ]
     }
 ];

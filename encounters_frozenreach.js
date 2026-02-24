@@ -126,5 +126,27 @@ const ENCOUNTERS_FROZENREACH = [
                 response: "'Someone who should have died with them.' She doesn't look at you. 'I didn't. I became something else instead.'"
             }
         ]
+    },
+    {
+        name: "Frozen MD-5 Lifeline",
+        type: "shop",
+        discoverable: true,
+        isBossArea: true,
+        description: "You find it standing in a crater of refrozen meltwater. Ice caked over every surface, cracked where heating elements pulse beneath the chassis. The medical displays are still lit — vitals flatlined, status critical, treatment ongoing. A walking field hospital, keeping itself alive because the protocol doesn't have a state for 'patient cannot be saved.'",
+        engageText: "The Lifeline's triage sensors sweep you briefly. Living pilot — vital signs normal. Not critical. Not a priority. It turns back to the empty cockpit and resumes treatment on a patient that died eighty years ago.",
+        discoveredDescription: "The MD-5 Lifeline stands in its crater of refrozen ice, medical displays still cycling. Vitals flatlined. Treatment ongoing. The same loop as before.",
+        discoveredEngageText: "The Lifeline's sensors sweep you and dismiss you. Healthy patient. No triage priority. It has a critical case to attend to — the same one it's been attending to for eighty years.",
+        appearanceRate: 8,
+        minLevel: 1,
+        itemSlot1: null,
+        itemSlot2: null,
+        itemSlot3: null,
+        itemSlot4: null,
+        dialogue: [
+            {
+                question: "The pilot is long dead.",
+                response: "The medical displays flicker. Triage reassessment: no heartbeat, no respiration, no neural activity. The same result as every other assessment for eighty years. The same result the protocol rejects, because a field hospital doesn't give up. Treatment ongoing."
+            }
+        ]
     }
 ];

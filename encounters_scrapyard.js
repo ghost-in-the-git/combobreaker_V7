@@ -129,5 +129,27 @@ const ENCOUNTERS_SCRAPYARD = [
                 response: "'I go where the dead mechs are.' Her eyes are older than her face. 'I've been doing this a long time. Longer than you've been awake.'"
             }
         ]
+    },
+    {
+        name: "Rusted KV-8 Grinder",
+        type: "shop",
+        discoverable: true,
+        isBossArea: true,
+        description: "A pile of compacted scrap shifts — then stands up. Eight tons of rusted salvage frame, industrial claws still opening and closing on nothing. A KV-8 Grinder, caked in 80 years of oxide and dust, its compactor bay grinding in a slow loop. It doesn't target you. It just reaches for everything around it. Raw material.",
+        engageText: "The Grinder's optics sweep past you without stopping. You're not scrap. You're not worth processing. It turns back to the pile and keeps grinding.",
+        discoveredDescription: "The KV-8 Grinder is where you left it, still grinding the same pile of scrap in the same slow loop. The claws open and close on nothing.",
+        discoveredEngageText: "The Grinder doesn't acknowledge you. Same routine. Same loop. It has no reason to fight you.",
+        appearanceRate: 8,
+        minLevel: 1,
+        itemSlot1: null,
+        itemSlot2: null,
+        itemSlot3: null,
+        itemSlot4: null,
+        dialogue: [
+            {
+                question: "It's just... grinding.",
+                response: "The compactor bay cycles. Scrap in, scrap out. The KV-8 was a salvage frame — built to process wreckage, not fight. Whatever made it dangerous died with the pilot. What's left is just a machine doing its job, 80 years past the last shift change."
+            }
+        ]
     }
 ];

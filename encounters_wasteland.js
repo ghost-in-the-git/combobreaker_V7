@@ -130,5 +130,27 @@ const ENCOUNTERS_WASTELAND = [
                 response: "'Someone who knows what these mechs sound like when the pilot's still inside.' She folds the chart with fingers that move too fast to track. She doesn't explain."
             }
         ]
+    },
+    {
+        name: "Irradiated AX-3 Ravager",
+        type: "shop",
+        discoverable: true,
+        isBossArea: true,
+        description: "You hear it before you see it — engine scream and the wet crunch of something being taken apart. Over the next dune, an AX-3 Ravager has a Sand Stalker pinned under its frame, tearing it to pieces. Not efficiently. Not cleanly. Just raw, continuous assault on something that stopped resisting minutes ago.",
+        engageText: "The Ravager finishes with the Stalker's wreck and stands still. Sensors sweep — nothing moving, nothing warm, nothing to fight. It doesn't register you as a target. You're not close enough. You're not hostile enough. It wanders back into the dunes.",
+        discoveredDescription: "The AX-3 Ravager is stalking the dunes again, hunting for anything that moves. The engine scream carries for miles across the flat wasteland.",
+        discoveredEngageText: "The Ravager's sensors sweep past you. No engagement. You're not triggering its targeting firmware — not yet.",
+        appearanceRate: 8,
+        minLevel: 1,
+        itemSlot1: null,
+        itemSlot2: null,
+        itemSlot3: null,
+        itemSlot4: null,
+        dialogue: [
+            {
+                question: "It's just killing everything it finds.",
+                response: "The targeting firmware is cooked — decades of radiation have blurred the line between 'enemy' and 'moving.' But you're standing still, and you're not close enough to trigger the proximity protocols. The Ravager needs something to chase. Right now, that's not you."
+            }
+        ]
     }
 ];

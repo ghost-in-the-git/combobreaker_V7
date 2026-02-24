@@ -130,5 +130,27 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
                 response: "'Someone who remembers what these machines were before they were monsters.' She watches the horizon like she's seeing a different battlefield. 'That was a long time ago.'"
             }
         ]
+    },
+    {
+        name: "Shelled MK-IV Bulwark",
+        type: "shop",
+        discoverable: true,
+        isBossArea: true,
+        description: "You almost walk past it. The MK-IV Bulwark is dug in behind a collapsed bunker, armour cratered and blackened, treads fused to the mud. It hasn't moved in decades. But it's still facing outward — turret locked on a perimeter that no longer exists, shielding a position with nothing left to protect.",
+        engageText: "The Bulwark's turret traverses slowly across the empty field. It tracks movement, but you're not crossing its line. It has no orders to engage. It just holds the position.",
+        discoveredDescription: "The MK-IV Bulwark is still dug in behind the bunker. Same position. Same perimeter. The turret tracks the empty field in a slow, endless arc.",
+        discoveredEngageText: "The Bulwark registers you and dismisses you. You're not a threat to the position. It goes back to guarding nothing.",
+        appearanceRate: 8,
+        minLevel: 1,
+        itemSlot1: null,
+        itemSlot2: null,
+        itemSlot3: null,
+        itemSlot4: null,
+        dialogue: [
+            {
+                question: "What is it guarding?",
+                response: "The bunker behind it is empty. Collapsed roof, rusted cots, nothing worth protecting. But the Bulwark's defensive protocols don't check what's behind it — only what's in front. As long as something might cross the line, it holds."
+            }
+        ]
     }
 ];

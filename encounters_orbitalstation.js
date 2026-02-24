@@ -130,5 +130,27 @@ const ENCOUNTERS_ORBITALSTATION = [
                 response: "'I go where the squad's mechs ended up.' The word 'squad' slips out. She notices, shuts her mouth, and looks away. 'Buy the beacon or don't.'"
             }
         ]
+    },
+    {
+        name: "Depressurized DR-7 Prospector",
+        type: "shop",
+        discoverable: true,
+        isBossArea: true,
+        description: "The mining shaft goes straight down. At the bottom of the pit, the DR-7 Prospector is still working. Seismic drill arms grind against bare stone in slow, rhythmic strokes, re-carving grooves that have been carved a thousand times over. Its ore detection array sweeps the walls on a loop, pinging empty rock.",
+        engageText: "The Prospector's ore detection array sweeps past you and keeps going. You're not rock. You're not ore. You don't register on any scan it cares about.",
+        discoveredDescription: "The DR-7 Prospector is still at the bottom of the shaft, drills grinding the same grooves into the same bare stone. The low mechanical drone hasn't changed.",
+        discoveredEngageText: "The Prospector doesn't look up. The drills keep grinding. Down here, you're just more empty space between the walls.",
+        appearanceRate: 8,
+        minLevel: 1,
+        itemSlot1: null,
+        itemSlot2: null,
+        itemSlot3: null,
+        itemSlot4: null,
+        dialogue: [
+            {
+                question: "There's nothing left to mine.",
+                response: "The drill arms slow for a moment. The ore detection array pings the wall — empty, the same reading it's returned for decades. Then the drills spin back up. The Prospector's firmware doesn't have a state for 'deposit exhausted.' Only 'keep drilling.'"
+            }
+        ]
     }
 ];

@@ -126,5 +126,27 @@ const ENCOUNTERS_NEONSTRIP = [
                 response: "'You've met me enough times to know I'm not going to answer that.' A pause. She holds up one hand — for a second the fingers blur, not quite solid. Then they're normal again. 'I'm what happens when the transfer goes too far.'"
             }
         ]
+    },
+    {
+        name: "Gilded EN-9 Tinker",
+        type: "shop",
+        discoverable: true,
+        isBossArea: true,
+        description: "The neon signs are wrong. Not broken — repaired. Rewired with mismatched components, patched with scavenged circuitry. You follow the trail of fixed things deeper into the strip and find it: the Tinker, gold-plated chassis tarnished to brown, crouched over an arcade cabinet, resoldering a board that hasn't mattered in decades.",
+        engageText: "The Tinker's manipulator arms don't pause. Diagnostic sensors sweep the cabinet — connection restored, power nominal. It files the repair and moves to the next broken thing. You're not broken enough to be interesting.",
+        discoveredDescription: "The EN-9 Tinker has moved to a new project — a busted traffic light, this time. The tarnished gold chassis crouches over the wiring with machinist precision.",
+        discoveredEngageText: "The Tinker doesn't look up. You're functional. You're not on the work queue. It has things to fix.",
+        appearanceRate: 8,
+        minLevel: 1,
+        itemSlot1: null,
+        itemSlot2: null,
+        itemSlot3: null,
+        itemSlot4: null,
+        dialogue: [
+            {
+                question: "Nobody asked it to fix any of this.",
+                response: "The Tinker's work queue was supposed to come from its pilot — targets prioritized, problems diagnosed. The queue's been empty for decades. So it built its own. Every broken thing on the strip is a ticket. Every repair is a task completed. It will never run out."
+            }
+        ]
     }
 ];

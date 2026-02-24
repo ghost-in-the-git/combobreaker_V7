@@ -130,5 +130,27 @@ const ENCOUNTERS_UNDERCITY = [
                 response: "She's quiet for too long. 'I knew the pilot.' Four words. She turns back to the wall and presses her hand flat against the stone, feeling the vibration of something fast moving through the tunnels below. 'Just get it done.'"
             }
         ]
+    },
+    {
+        name: "Corroded SC-1 Flicker",
+        type: "shop",
+        discoverable: true,
+        isBossArea: true,
+        description: "A high-pitched whine echoes through the tunnels, bouncing off walls, impossible to place. Then a blur of corroded metal screams through the junction ahead. Gone. You turn — it's behind you. Gone again. An SC-1 Flicker, running the tunnel network at full speed, delivering intel to no one.",
+        engageText: "The Flicker blurs through the junction without slowing. You catch a glimpse of corroded plating — then it's gone, already three tunnels away. It's running recon on a network it's mapped a million times. You're not worth stopping for.",
+        discoveredDescription: "The high-pitched whine is back. The SC-1 Flicker is still running its endless circuit through the tunnels, a blur of corroded metal that never stops moving.",
+        discoveredEngageText: "The Flicker screams past you again. Same speed. Same route. Same corroded blur. It has nowhere to stop and no one to report to.",
+        appearanceRate: 8,
+        minLevel: 1,
+        itemSlot1: null,
+        itemSlot2: null,
+        itemSlot3: null,
+        itemSlot4: null,
+        dialogue: [
+            {
+                question: "It's so fast.",
+                response: "The SC-1 was the fastest chassis ever built — ultralight recon, designed to outrun anything on the battlefield. Without a pilot to tell it where to go, the speed is just... running. Laps through tunnels it memorized decades ago, delivering reports to a dead frequency."
+            }
+        ]
     }
 ];

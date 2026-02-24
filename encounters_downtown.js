@@ -130,5 +130,27 @@ const ENCOUNTERS_DOWNTOWN = [
                 response: "'Does it matter?' Her head tilts — the motion is too fast, almost mechanical. 'I know where the mechs are. I know how to wake them up. That's what you need from me.'"
             }
         ]
+    },
+    {
+        name: "Shadowed S-12 Wraith",
+        type: "shop",
+        discoverable: true,
+        isBossArea: true,
+        description: "Something is wrong with the rain. It falls around a shape that isn't there — an outline in the downpour, flickering between visible and gone. An S-12 Wraith, sensor-dampened hull still cycling through broken stealth patterns after 80 years. It drifts between the dead towers like an afterimage. Not patrolling. Not hunting. Just haunting.",
+        engageText: "The Wraith's outline shimmers and fades. It doesn't register you as a target. Just another shape in the rain, not worth decloaking for.",
+        discoveredDescription: "The rain still falls around the shape that isn't there. The S-12 Wraith drifts between the towers, flickering through the same stealth patterns.",
+        discoveredEngageText: "The Wraith passes through the intersection without slowing. You're background noise. Not a threat. Not anything.",
+        appearanceRate: 8,
+        minLevel: 1,
+        itemSlot1: null,
+        itemSlot2: null,
+        itemSlot3: null,
+        itemSlot4: null,
+        dialogue: [
+            {
+                question: "Can it even see me?",
+                response: "Hard to tell. The stealth patterns cycle endlessly — hiding from threats that don't exist, cloaking against sensors that stopped scanning decades ago. The Wraith's awareness is buried under layers of countermeasures. It's hiding so hard it might have forgotten there's something underneath."
+            }
+        ]
     }
 ];
