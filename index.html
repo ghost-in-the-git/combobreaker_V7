@@ -3934,7 +3934,7 @@
 
             addMessage(`[ENCOUNTER] ${encounter.name}`, 'system');
             const isVendorDest = currentDestination && currentDestination !== 'openworld';
-            addMessage(isVendorDest && encounter.discoveredDescription ? encounter.discoveredDescription : encounter.description, 'system');
+            addMessage(isVendorDest && encounter.discoveredDescription ? encounter.discoveredDescription : encounter.description, 'system', { label: encounter.name });
 
             // At a vendor destination or auto-engage encounter, skip countdown and buttons
             if (isVendorDest || encounter.autoEngage) {
@@ -3991,18 +3991,18 @@
             clearCountdown();
 
             const useDiscoveredEngage = currentDestination && currentDestination !== 'openworld' && currentEncounter.discoveredEngageText;
-            await addMessage(useDiscoveredEngage ? currentEncounter.discoveredEngageText : currentEncounter.engageText, 'system');
+            await addMessage(useDiscoveredEngage ? currentEncounter.discoveredEngageText : currentEncounter.engageText, 'system', { label: currentEncounter.name });
 
             // The Professor gives the Ratpile map for free if the player doesn't have it
             if (currentEncounter.name === 'The Professor' && !(game.storyItems || []).includes('Map: The Ratpile')) {
                 addStoryItem('Map: The Ratpile');
-                await addMessage(`"Here — take this. It's a map to The Ratpile. Not much down there but rats, but it's a start."`, 'system');
+                await addMessage(`"Here — take this. It's a map to The Ratpile. Not much down there but rats, but it's a start."`, 'system', { label: currentEncounter.name });
             }
 
             // The dead Mapmaker in the Dead Zone carries his sealed key
             if (currentEncounter.name === 'The Mapmaker' && currentLocation === 'deadzone' && !(game.storyItems || []).includes("Mapmaker's Sealed Key")) {
                 addStoryItem("Mapmaker's Sealed Key");
-                await addMessage(`You find a sealed key clutched in his other hand. Still warm. He was holding it for you.`, 'system');
+                await addMessage(`You find a sealed key clutched in his other hand. Still warm. He was holding it for you.`, 'system', { label: currentEncounter.name });
             }
 
             // Grant location map on first engage of any encounter
@@ -4081,7 +4081,7 @@
                     // Show the player's question
                     await addMessage(entry.question, 'player');
                     // Show the NPC response
-                    await addMessage(entry.response, 'system');
+                    await addMessage(entry.response, 'system', { label: encounter.name });
                     // Re-render dialogue buttons so the player can ask more
                     showDialogueButtons(encounter);
                     // Scroll to the new buttons
@@ -4770,7 +4770,7 @@
                 btn.addEventListener('click', async () => {
                     removeBossDialogue();
                     await addMessage(entry.question, 'player');
-                    await addMessage(entry.response, 'system');
+                    await addMessage(entry.response, 'system', { label: currentBossEncounter.name });
                     showBossFightButton();
                 });
                 container.appendChild(btn);
