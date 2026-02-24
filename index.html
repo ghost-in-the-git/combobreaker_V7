@@ -367,6 +367,15 @@
         .message.levelup .message-label { color: #ffdd00; }
         .message.levelup .message-avatar { border-color: #ffdd00; }
 
+        .message.turncounter {
+            background: #1a1a1a;
+            border-color: #666;
+            color: #999;
+            text-align: center;
+        }
+        .message.turncounter .message-label { color: #888; }
+        .message.turncounter .message-avatar { display: none; }
+
         /* Equipment Panel */
         .equipment-panel {
             margin-top: 10px;
@@ -2910,7 +2919,8 @@
             damage: 'DAMAGE',
             victory: 'VICTORY',
             defeat: 'DEFEAT',
-            levelup: 'LEVEL UP'
+            levelup: 'LEVEL UP',
+            turncounter: 'TURN'
         };
 
         // Add message to chat with delay
@@ -2942,7 +2952,9 @@
             content.appendChild(labelEl);
             content.appendChild(textEl);
 
-            msg.appendChild(avatar);
+            if (type !== 'turncounter') {
+                msg.appendChild(avatar);
+            }
             msg.appendChild(content);
 
             chatMessages.appendChild(msg);
@@ -4234,7 +4246,7 @@
             let turn = 0;
             while (mining.stability > 0 && mining.currentDepth < mining.depth) {
                 turn++;
-                await addMessage(`- - - - - - - - - - - - - - - - - - - - -[ Turn ${turn} ]- - - - - - - - - - - - - - - - - - - - - `, 'system');
+                await addMessage(`- - - - - - - - - - - - - - - - - - - - -[ Turn ${turn} ]- - - - - - - - - - - - - - - - - - - - - `, 'turncounter');
 
                 // Player mines deeper
                 mining.currentDepth = Math.min(mining.currentDepth + game.player.mining, mining.depth);
@@ -4950,7 +4962,7 @@
             }
 
             wave.turn++;
-            await addMessage(`- - - - - - - - - - - - - - - - - - - - -[ Turn ${wave.turn} ]- - - - - - - - - - - - - - - - - - - - - `, 'system');
+            await addMessage(`- - - - - - - - - - - - - - - - - - - - -[ Turn ${wave.turn} ]- - - - - - - - - - - - - - - - - - - - - `, 'turncounter');
 
             // Determine breaker procs this turn (gated behind owning decrypted keys)
             let speedTriggered = hasBreaker("Wire's Speedbreaker Key") && Math.random() * 100 < getBreaker();
