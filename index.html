@@ -5231,6 +5231,12 @@
 
         // Initialize game
         function init() {
+            // Check for landing page action
+            const landingSlot = localStorage.getItem('combobreaker_landing_slot');
+            const landingAction = localStorage.getItem('combobreaker_landing_action');
+            localStorage.removeItem('combobreaker_landing_slot');
+            localStorage.removeItem('combobreaker_landing_action');
+
             // Set up equipment dropdown event listeners
             const slots = ['body', 'legs', 'arms', 'weapon', 'chip', 'processor', 'pilot', 'drill', 'implant', 'mindsync'];
             slots.forEach(slot => {
@@ -5239,50 +5245,51 @@
                 });
             });
 
-            // Load saved game if exists
-            const saveLoaded = loadGame();
-            if (saveLoaded) {
-                // Recalculate stats with loaded equipment
-                recalculateStats();
-                // Set HP to max on load (fresh session)
-                game.player.hp = game.player.maxHp;
+            // If we came from the landing page, handle the action
+            if (landingSlot && landingAction) {
+                const slotNum = parseInt(landingSlot);
+                if (landingAction === 'new') {
+                    // Fresh start on empty slot
+                    updateLocationDropdown();
+                    updateDestinationDropdown();
+                    updateEquipmentUI();
+                    updateMiningUI();
+                    updateStorageUI();
+                    updateStats();
+                    newGame(slotNum);
+                    return;
+                } else if (landingAction === 'load') {
+                    loadFromSlot(slotNum);
+                    recalculateStats();
+                    game.player.hp = game.player.maxHp;
+                    updateLocationDropdown();
+                    updateDestinationDropdown();
+                    updateEquipmentUI();
+                    updateMiningUI();
+                    updateStorageUI();
+
+                    addMessage(`============================================`, 'system');
+                    addMessage(`=== C O M B O B R E A K E R  O N L I N E ===`, 'system');
+                    addMessage(`============================================`, 'system');
+                    addMessage(`[SAVE DATA LOADED] Welcome back, Pilot 72632`, 'system');
+                    addMessage(`Level ${game.player.level} | Silicon: ${game.player.xp}/${game.player.xpToLevel} | ${game.inventory.length} items in inventory`, 'system');
+                    addMessage(``, 'system');
+                    addMessage(`[] Engagement Protocols Approved [Autopilot Deactivated] `, 'system');
+                    addMessage(`[K E Y //::X2Y***_***_***_***_***_LZ7`, 'system');
+                    addMessage(`BreakerPilot Command Key Accepted.`, 'system');
+                    addMessage(`Engagement commands now available. [Engage] or [Decline]`, 'system');
+                    updateStats();
+                    startFuelRegen();
+                    setTimeout(() => {
+                        spawnWave();
+                        startWaveTimer();
+                    }, 2000);
+                    return;
+                }
             }
 
-            updateLocationDropdown();
-            updateDestinationDropdown();
-            updateEquipmentUI();
-            updateMiningUI();
-            updateStorageUI();
-
-            addMessage(`============================================`, 'system');
-            addMessage(`=== C O M B O B R E A K E R  O N L I N E ===`, 'system');
-            addMessage(`============================================`, 'system');
-
-            if (saveLoaded) {
-                addMessage(`[SAVE DATA LOADED] Welcome back, Pilot 72632`, 'system');
-                addMessage(`Level ${game.player.level} | Silicon: ${game.player.xp}/${game.player.xpToLevel} | ${game.inventory.length} items in inventory`, 'system');
-                addMessage(``, 'system');
-                addMessage(`[] Engagement Protocols Approved [Autopilot Deactivated] `, 'system');
-                addMessage(`[K E Y //::X2Y***_***_***_***_***_LZ7`, 'system');
-                addMessage(`BreakerPilot Command Key Accepted.`, 'system');
-                addMessage(`Engagement commands now available. [Engage] or [Decline]`, 'system');
-                updateStats();
-                startFuelRegen();
-
-                // Resume wave cycle
-                setTimeout(() => {
-                    spawnWave();
-                    startWaveTimer();
-                }, 2000);
-            } else {
-                addMessage(`Remote mech is ready for combat [Pilot 72632]`, 'system');
-                addMessage(`Select a save slot to begin.`, 'system');
-                updateStats();
-
-                // No save data — open save modal so player picks a slot
-                document.getElementById('save-modal').classList.add('visible');
-                refreshSlotDisplays();
-            }
+            // No landing action — redirect to landing page
+            window.location.href = 'landing.html';
         }
 
         init();
