@@ -2695,7 +2695,8 @@
                         opt.value = dest.encounterName;
                         const isMine = zoneConfig.destinationType === 'mine' || dest.encounterName.endsWith(' Asteroid');
                         const isRefiner = dest.destinationType === 'refiner';
-                        const prefix = isMine ? '[MINE]' : isRefiner ? '[REFINER]' : '[VENDOR]';
+                        const isHerald = dest.encounterName === 'The Herald';
+                        const prefix = isMine ? '[MINE]' : isRefiner ? '[REFINER]' : isHerald ? '[BEACON]' : '[VENDOR]';
                         opt.textContent = `${prefix} ${dest.encounterName.replace(/^\[COMMON\] /, '')}`;
                         select.appendChild(opt);
                     }
