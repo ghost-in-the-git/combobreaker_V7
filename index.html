@@ -3934,8 +3934,8 @@
                 showDialogueButtons(currentEncounter);
             }
 
-            // Add inline leave button in chat (not needed at vendor destinations)
-            if (!currentDestination || currentDestination === 'openworld') {
+            // Add inline leave button in chat (not needed at vendor destinations or decrypter)
+            if ((!currentDestination || currentDestination === 'openworld') && currentLocation !== 'decrypter') {
                 game.shopLeaveBtn = document.createElement('div');
                 game.shopLeaveBtn.className = 'action-btn-container';
                 const leaveBtn = document.createElement('button');
