@@ -4909,7 +4909,7 @@
             game.waveExpireTimer = setTimeout(() => {
                 clearCountdown();
                 if (game.currentWave && !game.inBattle) {
-                    addMessage(`Signal lost. Scanning...`, 'system');
+                    addMessage(`Signal lost. Scanning...`, 'system', { image: 'images/Comp 1.gif' });
                     game.currentWave = null;
                     hideInlineButtons();
                     startWaveTimer();
