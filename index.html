@@ -5156,7 +5156,7 @@
                 }
 
                 game.player.xp += finalXp;
-                addMessage(`Mech gained ${finalXp} Silicon.`, 'system');
+                addMessage(`Mech gained ${finalXp} Silicon.`, 'victory', { label: 'Item found:' });
 
                 // Drop random item
                 if (enemyType) {
