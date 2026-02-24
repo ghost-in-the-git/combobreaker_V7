@@ -2914,6 +2914,12 @@
             turncounter: 'TURN'
         };
 
+        function numberToWord(n) {
+            const words = ['ZERO','ONE','TWO','THREE','FOUR','FIVE','SIX','SEVEN','EIGHT','NINE','TEN',
+                'ELEVEN','TWELVE','THIRTEEN','FOURTEEN','FIFTEEN','SIXTEEN','SEVENTEEN','EIGHTEEN','NINETEEN','TWENTY'];
+            return words[n] || String(n);
+        }
+
         // Add message to chat with delay
         async function addMessage(text, type = 'system', options = {}) {
             const img = options.image || 'images/IMAGE.gif';
@@ -4237,7 +4243,7 @@
             let turn = 0;
             while (mining.stability > 0 && mining.currentDepth < mining.depth) {
                 turn++;
-                await addMessage(`- - - - - - - - - - - - - - - - - - - - -[ Turn ${turn} ]- - - - - - - - - - - - - - - - - - - - - `, 'turncounter');
+                await addMessage(`- - - - - - - - - - - - - - - - - - - - -[${numberToWord(turn)}]- - - - - - - - - - - - - - - - - - - - -`, 'turncounter');
 
                 // Player mines deeper
                 mining.currentDepth = Math.min(mining.currentDepth + game.player.mining, mining.depth);
@@ -4953,7 +4959,7 @@
             }
 
             wave.turn++;
-            await addMessage(`- - - - - - - - - - - - - - - - - - - - -[ Turn ${wave.turn} ]- - - - - - - - - - - - - - - - - - - - - `, 'turncounter');
+            await addMessage(`- - - - - - - - - - - - - - - - - - - - -[${numberToWord(wave.turn)}]- - - - - - - - - - - - - - - - - - - - -`, 'turncounter');
 
             // Determine breaker procs this turn (gated behind owning decrypted keys)
             let speedTriggered = hasBreaker("Wire's Speedbreaker Key") && Math.random() * 100 < getBreaker();
