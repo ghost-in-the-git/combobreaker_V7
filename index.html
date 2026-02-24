@@ -4039,8 +4039,6 @@
 
             if (currentEncounter.isSalvageYard) {
                 await addMessage(`Your Scrap: ${game.scrap || 0}`, 'system');
-            } else {
-                await addMessage(`Your Silicon: ${game.player.xp}`, 'system');
             }
 
             // Show dialogue buttons if encounter has dialogue
