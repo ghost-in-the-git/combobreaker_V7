@@ -8,6 +8,7 @@
 const ENEMIES_RATPILE = [
     {
         name: "Silicon Rat",
+        image: "images/RAT.gif",
         attack: 1,
         defence: 0,
         hp: 1,
@@ -22,6 +23,7 @@ const ENEMIES_RATPILE = [
     },
     {
         name: "Bloated Rat",
+        image: "images/RAT.gif",
         attack: 2,
         defence: 0,
         hp: 5,

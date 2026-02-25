@@ -4797,7 +4797,7 @@
 
             game.currentWave = generateWave();
             const et = game.currentWave.enemyType;
-            addMessage(`[TARGET ACQUIRED]> ${game.currentWave.count} ${et.name}s are within engagement range [ATK:${et.attack} DEF:${et.defence} HP:${et.hp}]`, 'enemy');
+            addMessage(`[TARGET ACQUIRED]> ${game.currentWave.count} ${et.name}s are within engagement range [ATK:${et.attack} DEF:${et.defence} HP:${et.hp}]`, 'enemy', { image: et.image });
 
             // Create countdown message
             let secondsLeft = Math.floor(game.WAVE_EXPIRE / 1000);
@@ -4931,7 +4931,7 @@
                             const killXp = et.xp + xpBonus;
                             wave.xpEarned = (wave.xpEarned || 0) + killXp;
                             const bonusText = xpBonus > 0 ? ` (+${xpBonus} PROC)` : '';
-                            await addMessage(`[KILL CONFIRMED] ${et.name} destroyed by Crushbreaker (+${killXp} Silicon${bonusText})`, 'enemy');
+                            await addMessage(`[KILL CONFIRMED] ${et.name} destroyed by Crushbreaker (+${killXp} Silicon${bonusText})`, 'enemy', { image: et.image });
                         }
                         wave.count = wave.currentTarget;
                     } else {
@@ -4946,7 +4946,7 @@
                     const killXp = et.xp + xpBonus;
                     wave.xpEarned = (wave.xpEarned || 0) + killXp;
                     const bonusText = xpBonus > 0 ? ` (+${xpBonus} PROC)` : '';
-                    await addMessage(`[KILL CONFIRMED] ${et.name} #${wave.currentTarget} destroyed (+${killXp} Silicon${bonusText})`, 'enemy');
+                    await addMessage(`[KILL CONFIRMED] ${et.name} #${wave.currentTarget} destroyed (+${killXp} Silicon${bonusText})`, 'enemy', { image: et.image });
                     wave.currentTarget++;
                     wave.currentEnemy = null;
 
@@ -4955,7 +4955,7 @@
                         return;
                     }
                 } else {
-                    await addMessage(`${et.name} #${wave.currentTarget} reduced to ${wave.currentEnemy} of ${et.hp} HP`, 'enemy');
+                    await addMessage(`${et.name} #${wave.currentTarget} reduced to ${wave.currentEnemy} of ${et.hp} HP`, 'enemy', { image: et.image });
                 }
             }
 
@@ -4970,7 +4970,7 @@
             // All remaining enemies attack in sequence
 
             for (let i = wave.currentTarget; i <= wave.count; i++) {
-                await addMessage(`${et.name} #${i} attacks Mech for ${et.attack} damage.`, 'enemy');
+                await addMessage(`${et.name} #${i} attacks Mech for ${et.attack} damage.`, 'enemy', { image: et.image });
 
                 // Visionbreaker: chance to completely avoid this attack
                 const visionTriggered = hasBreaker("Ghost's Visionbreaker Key") && Math.random() * 100 < getBreaker();
@@ -4991,7 +4991,7 @@
                             const killXp = et.xp + xpBonus;
                             wave.xpEarned = (wave.xpEarned || 0) + killXp;
                             const bonusText = xpBonus > 0 ? ` (+${xpBonus} PROC)` : '';
-                            await addMessage(`[KILL CONFIRMED] ${et.name} #${wave.currentTarget} destroyed by parry (+${killXp} Silicon${bonusText})`, 'enemy');
+                            await addMessage(`[KILL CONFIRMED] ${et.name} #${wave.currentTarget} destroyed by parry (+${killXp} Silicon${bonusText})`, 'enemy', { image: et.image });
                             wave.currentTarget++;
                             wave.currentEnemy = null;
                             if (wave.remaining <= 0) {
