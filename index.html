@@ -3971,13 +3971,8 @@
             addMessage(`============================================`, 'system');
 
             if (saveLoaded) {
-                addMessage(`[SAVE DATA LOADED] Welcome back, Pilot 72632`, 'system');
+
                 addMessage(`Level ${game.player.level} | XP: ${game.player.xp}/${game.player.xpToLevel} | ${game.inventory.length} items in inventory`, 'system');
-                addMessage(``, 'system');
-                addMessage(`[] Engagement Protocols Approved [Autopilot Deactivated] `, 'system');
-                addMessage(`[K E Y //::X2Y***_***_***_***_***_LZ7`, 'system');
-                addMessage(`BreakerPilot Command Key Accepted.`, 'system');
-                addMessage(`Engagement commands now available. [Engage] or [Decline]`, 'system');
                 updateStats();
                 startFuelRegen();
 
