@@ -68,6 +68,7 @@ const ENCOUNTERS_INDUSTRIALZONE = [
     },
     {
         name: "The Mapmaker",
+        characterImage: "images/mapmaker.gif",
         type: "shop",
         discoverable: true,
         description: "A hooded figure stands motionless nearby, a rolled chart clutched in one hand.",
@@ -104,6 +105,7 @@ const ENCOUNTERS_INDUSTRIALZONE = [
     },
     {
         name: "The Herald",
+        characterImage: "images/herald.gif",
         type: "shop",
         discoverable: true,
         description: "A slight woman watches from a catwalk high above the factory floor. Same build, same restless hands, same eyes that catch light wrong. Below, the walls are cratered by decades of weapons fire. The rhythmic thud of heavy guns echoes from deeper in the complex.",
@@ -129,6 +131,7 @@ const ENCOUNTERS_INDUSTRIALZONE = [
     },
     {
         name: "Slag-Coated HG-6 Devastator",
+        characterImage: "images/boss_devastator.gif",
         type: "shop",
         discoverable: true,
         isBossArea: true,

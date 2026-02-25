@@ -11,6 +11,7 @@
 const ENCOUNTERS_DECRYPTER = [
     {
         name: "The Decrypter",
+        characterImage: "images/decrypter.gif",
         type: "shop",
         isDecrypter: true,
         autoEngage: true,

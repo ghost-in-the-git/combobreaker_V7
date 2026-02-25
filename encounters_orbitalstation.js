@@ -68,6 +68,7 @@ const ENCOUNTERS_ORBITALSTATION = [
     },
     {
         name: "The Mapmaker",
+        characterImage: "images/mapmaker.gif",
         type: "shop",
         discoverable: true,
         description: "A hooded figure stands motionless nearby, a rolled chart clutched in one hand.",
@@ -108,6 +109,7 @@ const ENCOUNTERS_ORBITALSTATION = [
     },
     {
         name: "The Herald",
+        characterImage: "images/herald.gif",
         type: "shop",
         discoverable: true,
         description: "A slight woman in a patched EVA suit floats in a depressurised corridor, tethered to a support beam. Her hands make constant micro-adjustments to the tether — precise, mechanical movements that don't match the casual way she's watching you.",
@@ -133,6 +135,7 @@ const ENCOUNTERS_ORBITALSTATION = [
     },
     {
         name: "Depressurized DR-7 Prospector",
+        characterImage: "images/boss_prospector.gif",
         type: "shop",
         discoverable: true,
         isBossArea: true,

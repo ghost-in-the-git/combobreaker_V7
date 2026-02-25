@@ -68,6 +68,7 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
     },
     {
         name: "The Mapmaker",
+        characterImage: "images/mapmaker.gif",
         type: "shop",
         discoverable: true,
         description: "A hooded figure stands motionless nearby, a rolled chart clutched in one hand.",
@@ -108,6 +109,7 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
     },
     {
         name: "The Herald",
+        characterImage: "images/herald.gif",
         type: "shop",
         discoverable: true,
         description: "A slight woman sits atop a burnt-out tank, scanning the horizon with bare eyes sharper than any scope. Same build, same restless hands — she saw you coming before you saw her.",
@@ -133,6 +135,7 @@ const ENCOUNTERS_OLDBATTLEFIELD = [
     },
     {
         name: "Shelled MK-IV Bulwark",
+        characterImage: "images/boss_bulwark.gif",
         type: "shop",
         discoverable: true,
         isBossArea: true,

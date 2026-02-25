@@ -67,6 +67,7 @@ const ENCOUNTERS_SCRAPYARD = [
     },
     {
         name: "The Mapmaker",
+        characterImage: "images/mapmaker.gif",
         type: "shop",
         discoverable: true,
         description: "A hooded figure stands motionless nearby, a rolled chart clutched in one hand.",
@@ -107,6 +108,7 @@ const ENCOUNTERS_SCRAPYARD = [
     },
     {
         name: "The Herald",
+        characterImage: "images/herald.gif",
         type: "shop",
         discoverable: true,
         description: "A slight woman stands motionless between two wrecked mechs, cloak pulled tight against the scrapyard wind. Her hands move with a precision that isn't quite human — adjusting a device, checking a frequency, still again — all in the time it takes you to blink.",
@@ -132,6 +134,7 @@ const ENCOUNTERS_SCRAPYARD = [
     },
     {
         name: "Rusted KV-8 Grinder",
+        characterImage: "images/boss_grinder.gif",
         type: "shop",
         discoverable: true,
         isBossArea: true,

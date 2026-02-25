@@ -12,6 +12,7 @@
 const ENCOUNTERS_SALVAGEYARD = [
     {
         name: "Abandoned Monolith",
+        characterImage: "images/monolith.gif",
         type: "shop",
         isSalvageYard: true,
         discoverable: true,

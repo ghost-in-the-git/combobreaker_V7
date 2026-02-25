@@ -7,6 +7,7 @@
 const ENCOUNTERS_RATPILE = [
     {
         name: "The Mapmaker",
+        characterImage: "images/mapmaker.gif",
         type: "shop",
         discoverable: true,
         description: "A hooded figure stands motionless in the tunnel, a rolled chart clutched in one hand.",

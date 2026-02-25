@@ -68,6 +68,7 @@ const ENCOUNTERS_DEADZONE = [
     },
     {
         name: "The Mapmaker",
+        characterImage: "images/mapmaker.gif",
         type: "shop",
         discoverable: true,
         description: "A hooded figure lies crumpled against a wall. The cloak is unmistakable. He isn't moving.",
@@ -98,6 +99,7 @@ const ENCOUNTERS_DEADZONE = [
     },
     {
         name: "The Herald",
+        characterImage: "images/herald.gif",
         type: "shop",
         discoverable: true,
         description: "A slight woman in sealed hazmat gear crouches inside a bunker, the door barely ajar. Same build, same too-precise movements, even through the suit. Her comms equipment is military-grade — the only gear that cuts through the interference.",
@@ -123,6 +125,7 @@ const ENCOUNTERS_DEADZONE = [
     },
     {
         name: "Blighted EW-0 Phantom",
+        characterImage: "images/boss_phantom.gif",
         type: "shop",
         discoverable: true,
         isBossArea: true,

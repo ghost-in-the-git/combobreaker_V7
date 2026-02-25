@@ -68,6 +68,7 @@ const ENCOUNTERS_WASTELAND = [
     },
     {
         name: "The Mapmaker",
+        characterImage: "images/mapmaker.gif",
         type: "shop",
         discoverable: true,
         description: "A hooded figure stands motionless nearby, a rolled chart clutched in one hand.",
@@ -108,6 +109,7 @@ const ENCOUNTERS_WASTELAND = [
     },
     {
         name: "The Herald",
+        characterImage: "images/herald.gif",
         type: "shop",
         discoverable: true,
         description: "A slight woman in rad-shielding sits on the carcass of a Sand Stalker, marking kill patterns on a scored metal chart. Same fast hands, same eyes that catch light at the wrong angle. The Stalker's armour has been shredded by something much bigger than it.",
@@ -133,6 +135,7 @@ const ENCOUNTERS_WASTELAND = [
     },
     {
         name: "Irradiated AX-3 Ravager",
+        characterImage: "images/boss_ravager.gif",
         type: "shop",
         discoverable: true,
         isBossArea: true,

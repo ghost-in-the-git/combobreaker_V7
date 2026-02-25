@@ -19,6 +19,7 @@
 const BOSS_ENCOUNTERS = [
     {
         zone: "scrapyard",
+        characterImage: "images/boss_grinder.gif",
         beacon: "Beacon: Scrap Fields",
         enemy: {
             name: "Rusted KV-8 Grinder",
@@ -41,6 +42,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "oldbattlefield",
+        characterImage: "images/boss_bulwark.gif",
         beacon: "Beacon: Old Battlefield",
         enemy: {
             name: "Shelled MK-IV Bulwark",
@@ -66,6 +68,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "downtown",
+        characterImage: "images/boss_wraith.gif",
         beacon: "Beacon: Downtown",
         enemy: {
             name: "Shadowed S-12 Wraith",
@@ -91,6 +94,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "orbitalstation",
+        characterImage: "images/boss_prospector.gif",
         beacon: "Beacon: Orbital Station",
         enemy: {
             name: "Depressurized DR-7 Prospector",
@@ -116,6 +120,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "wasteland",
+        characterImage: "images/boss_ravager.gif",
         beacon: "Beacon: Wasteland",
         enemy: {
             name: "Irradiated AX-3 Ravager",
@@ -141,6 +146,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "undercity",
+        characterImage: "images/boss_flicker.gif",
         beacon: "Beacon: Undercity",
         enemy: {
             name: "Corroded SC-1 Flicker",
@@ -166,6 +172,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "industrialzone",
+        characterImage: "images/boss_devastator.gif",
         beacon: "Beacon: Industrial Zone",
         enemy: {
             name: "Slag-Coated HG-6 Devastator",
@@ -191,6 +198,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "frozenreach",
+        characterImage: "images/boss_lifeline.gif",
         beacon: "Beacon: Frozen Reach",
         enemy: {
             name: "Frozen MD-5 Lifeline",
@@ -216,6 +224,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "neonstrip",
+        characterImage: "images/boss_tinker.gif",
         beacon: "Beacon: Neon Strip",
         enemy: {
             name: "Gilded EN-9 Tinker",
@@ -241,6 +250,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "deadzone",
+        characterImage: "images/boss_phantom.gif",
         beacon: "Beacon: Dead Zone",
         enemy: {
             name: "Blighted EW-0 Phantom",
@@ -266,6 +276,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "frontline",
+        characterImage: "images/boss_sovereign.gif",
         beacon: "Beacon: Frontline",
         enemy: {
             name: "Scorched CM-1 Sovereign",
@@ -291,6 +302,7 @@ const BOSS_ENCOUNTERS = [
     },
     {
         zone: "morningstar",
+        characterImage: "images/boss_morningstar.gif",
         beacon: null,
         enemy: {
             name: "Morningstar",

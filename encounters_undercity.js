@@ -68,6 +68,7 @@ const ENCOUNTERS_UNDERCITY = [
     },
     {
         name: "The Mapmaker",
+        characterImage: "images/mapmaker.gif",
         type: "shop",
         discoverable: true,
         description: "A hooded figure stands motionless nearby, a rolled chart clutched in one hand.",
@@ -108,6 +109,7 @@ const ENCOUNTERS_UNDERCITY = [
     },
     {
         name: "The Herald",
+        characterImage: "images/herald.gif",
         type: "shop",
         discoverable: true,
         description: "A slight woman stands at a tunnel junction, one hand pressed flat against the wall. Same fast hands — but the one on the wall is trembling. She's not listening to the tunnels. She's listening to something moving through them — fast.",
@@ -133,6 +135,7 @@ const ENCOUNTERS_UNDERCITY = [
     },
     {
         name: "Corroded SC-1 Flicker",
+        characterImage: "images/boss_flicker.gif",
         type: "shop",
         discoverable: true,
         isBossArea: true,

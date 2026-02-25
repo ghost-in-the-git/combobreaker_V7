@@ -68,6 +68,7 @@ const ENCOUNTERS_DOWNTOWN = [
     },
     {
         name: "The Mapmaker",
+        characterImage: "images/mapmaker.gif",
         type: "shop",
         discoverable: true,
         description: "A hooded figure stands motionless nearby, a rolled chart clutched in one hand.",
@@ -108,6 +109,7 @@ const ENCOUNTERS_DOWNTOWN = [
     },
     {
         name: "The Herald",
+        characterImage: "images/herald.gif",
         type: "shop",
         discoverable: true,
         description: "A slight woman leans against a fire escape, a jury-rigged antenna array humming on the landing above her. Same fast hands, same eyes that track too quick. She's watching the street like she already knows what's on it.",
@@ -133,6 +135,7 @@ const ENCOUNTERS_DOWNTOWN = [
     },
     {
         name: "Shadowed S-12 Wraith",
+        characterImage: "images/boss_wraith.gif",
         type: "shop",
         discoverable: true,
         isBossArea: true,

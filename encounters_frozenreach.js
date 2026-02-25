@@ -68,6 +68,7 @@ const ENCOUNTERS_FROZENREACH = [
     },
     {
         name: "The Mapmaker",
+        characterImage: "images/mapmaker.gif",
         type: "shop",
         discoverable: true,
         description: "A hooded figure stands motionless nearby, a rolled chart clutched in one hand.",
@@ -104,6 +105,7 @@ const ENCOUNTERS_FROZENREACH = [
     },
     {
         name: "The Herald",
+        characterImage: "images/herald.gif",
         type: "shop",
         discoverable: true,
         description: "A slight woman huddles in an ice cave, warm air leaking from a thermal vent behind her. Same fast hands, wrapped around her own arms. Through the ice wall, something glows faintly — medical displays, still lit, pulsing in the glacier.",
@@ -129,6 +131,7 @@ const ENCOUNTERS_FROZENREACH = [
     },
     {
         name: "Frozen MD-5 Lifeline",
+        characterImage: "images/boss_lifeline.gif",
         type: "shop",
         discoverable: true,
         isBossArea: true,

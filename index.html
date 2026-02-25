@@ -4785,7 +4785,7 @@
                 btn.addEventListener('click', async () => {
                     removeBossDialogue();
                     await addMessage(entry.question, 'player');
-                    await addMessage(entry.response, 'system', { label: currentBossEncounter.name });
+                    await addMessage(entry.response, 'system', { label: currentBossEncounter.enemy.name, image: currentBossEncounter.characterImage, characterDialogue: !!currentBossEncounter.characterImage });
                     showBossFightButton();
                 });
                 container.appendChild(btn);
