@@ -7,6 +7,7 @@
 const ENCOUNTERS_HOME = [
     {
         name: "The Professor",
+        characterImage: "images/professor.gif",
         type: "shop",
         discoverable: true,
         autoEngage: true,

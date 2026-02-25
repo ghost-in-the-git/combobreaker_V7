@@ -269,6 +269,13 @@
             display: block;
         }
 
+        .message-avatar.character-avatar {
+            width: 256px;
+            height: 256px;
+            min-width: 256px;
+            image-rendering: pixelated;
+        }
+
         .message-content {
             flex: 1;
             min-width: 0;
@@ -2928,7 +2935,7 @@
             msg.className = `message ${type}`;
 
             const avatar = document.createElement('div');
-            avatar.className = 'message-avatar';
+            avatar.className = options.characterDialogue ? 'message-avatar character-avatar' : 'message-avatar';
             const avatarImg = document.createElement('img');
             avatarImg.src = img;
             avatarImg.alt = '';
@@ -3999,12 +4006,12 @@
             clearCountdown();
 
             const useDiscoveredEngage = currentDestination && currentDestination !== 'openworld' && currentEncounter.discoveredEngageText;
-            await addMessage(useDiscoveredEngage ? currentEncounter.discoveredEngageText : currentEncounter.engageText, 'system', { label: currentEncounter.name });
+            await addMessage(useDiscoveredEngage ? currentEncounter.discoveredEngageText : currentEncounter.engageText, 'system', { label: currentEncounter.name, image: currentEncounter.characterImage, characterDialogue: !!currentEncounter.characterImage });
 
             // The Professor gives the Ratpile map for free if the player doesn't have it
             if (currentEncounter.name === 'The Professor' && !(game.storyItems || []).includes('Map: The Ratpile')) {
                 addStoryItem('Map: The Ratpile');
-                await addMessage(`"Here — take this. It's a map to The Ratpile. Not much down there but rats, but it's a start."`, 'system', { label: currentEncounter.name });
+                await addMessage(`"Here — take this. It's a map to The Ratpile. Not much down there but rats, but it's a start."`, 'system', { label: currentEncounter.name, image: currentEncounter.characterImage, characterDialogue: !!currentEncounter.characterImage });
             }
 
             // The dead Mapmaker in the Dead Zone carries his sealed key
@@ -4089,7 +4096,7 @@
                     // Show the player's question
                     await addMessage(entry.question, 'player');
                     // Show the NPC response
-                    await addMessage(entry.response, 'system', { label: encounter.name });
+                    await addMessage(entry.response, 'system', { label: encounter.name, image: encounter.characterImage, characterDialogue: !!encounter.characterImage });
                     // Re-render dialogue buttons so the player can ask more
                     showDialogueButtons(encounter);
                     // Scroll to the new buttons
