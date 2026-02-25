@@ -1704,13 +1704,14 @@
             WAVE_EXPIRE: 30000, // 30 seconds to engage
             countdownInterval: null,
             countdownMsg: null,
-            ENCOUNTER_CHANCE: 20, // % chance for encounter instead of enemy wave
+            KILLS_PER_EVENT: 10, // Kills needed to spawn an event
             deaths: 0,
             scrap: 0,
             activeSlot: null, // Which save slot is currently active (1-3 or null)
             minerals: {}, // Collected minerals by category
             storyItems: ['Mysterious Note', 'Unknown Sealed Key', 'Unreadable DNA Tag', 'Destroyed Mech Heart'], // Collected story items
-            isBossEncounter: false // Whether current wave is a boss encounter
+            isBossEncounter: false, // Whether current wave is a boss encounter
+            killCounter: 0 // Kills since last event spawn (resets at 10)
         };
 
         // Current encounter state
@@ -1719,8 +1720,6 @@
         let currentMiningEvent = null;
         let currentBossEncounter = null; // Active boss encounter data
 
-        const MINING_CHANCE = 15; // % chance for mining event instead of enemy wave
-        const BOSS_CHANCE = 50; // % chance for boss encounter instead of normal enemy wave
 
         const SAVE_KEY = 'combobreaker_save';
         const SLOT_KEYS = ['combobreaker_slot_1', 'combobreaker_slot_2', 'combobreaker_slot_3'];
@@ -1751,7 +1750,8 @@
                 destination: currentDestination || 'openworld',
                 minerals: game.minerals || {},
                 storyItems: game.storyItems || [],
-                forgedItems: [...FORGER_ITEMS]
+                forgedItems: [...FORGER_ITEMS],
+                killCounter: game.killCounter || 0
             };
         }
 
@@ -2088,6 +2088,7 @@
                 game.activeSlot = data.activeSlot || null;
                 game.minerals = data.minerals || {};
                 game.storyItems = data.storyItems && data.storyItems.length > 0 ? data.storyItems : ['Mysterious Note', 'Unknown Sealed Key', 'Unreadable DNA Tag', 'Destroyed Mech Heart'];
+                game.killCounter = data.killCounter || 0;
 
                 // Restore location
                 if (data.location && LOCATIONS[data.location]) {
@@ -2397,11 +2398,29 @@
             const zoneConfig = ZONE_DESTINATIONS[currentLocation];
             if (!zoneConfig) return allEncounters;
 
+            const storyItems = game.storyItems || [];
+
+            // Check if all 4 vendors and 3 mines are discovered (for Herald gating)
+            const vendorDests = zoneConfig.destinations.filter(d => d.encounterName.startsWith('[COMMON]'));
+            const mineDests = zoneConfig.destinations.filter(d => d.encounterName.endsWith(' Asteroid'));
+            const allVendorsFound = vendorDests.every(d => storyItems.includes(d.mapItem));
+            const allMinesFound = mineDests.every(d => storyItems.includes(d.mapItem));
+            const heraldUnlocked = vendorDests.length > 0 && mineDests.length > 0 && allVendorsFound && allMinesFound;
+
+            // Check if boss is defeated (for Mapmaker gating)
+            const boss = BOSS_ENCOUNTERS.find(b => b.zone === currentLocation);
+            const bossDefeated = boss && storyItems.includes(boss.keyDrop) && storyItems.includes(boss.dnaDrop);
+
             return allEncounters.filter(enc => {
+                // Gate Herald behind all vendors + mines discovered
+                if (enc.name === 'The Herald' && !heraldUnlocked) return false;
+                // Gate Mapmaker behind boss defeated
+                if (enc.name === 'The Mapmaker' && !bossDefeated) return false;
+
                 const dest = zoneConfig.destinations.find(d => d.encounterName === enc.name);
                 if (!dest) return true; // not discoverable, keep it
                 // If discovered (player has location map), filter it OUT of open world
-                return !(game.storyItems || []).includes(dest.mapItem);
+                return !storyItems.includes(dest.mapItem);
             });
         }
 
@@ -4750,14 +4769,30 @@
                 return;
             }
 
-            // Check for encounter chance
-            if (Math.random() * 100 < game.ENCOUNTER_CHANCE) {
-                if (spawnEncounter()) return;
-            }
+            // Kill counter reached: spawn a random event (encounter, mining, or boss area)
+            if (game.killCounter >= game.KILLS_PER_EVENT) {
+                game.killCounter = 0;
+                saveGame();
 
-            // Check for mining event chance (only if player has mining stat > 0)
-            if (game.player.mining > 0 && Math.random() * 100 < MINING_CHANCE) {
-                if (spawnMiningEvent()) return;
+                // Build list of available event types
+                const eventOptions = [];
+                if (spawnEncounter !== undefined && getEncounters() && getEncounters().length > 0) {
+                    eventOptions.push('encounter');
+                }
+                if (game.player.mining > 0 && loc.mining && selectAsteroid()) {
+                    eventOptions.push('mining');
+                }
+                if (getBossEncounter()) {
+                    eventOptions.push('boss');
+                }
+
+                if (eventOptions.length > 0) {
+                    const pick = eventOptions[Math.floor(Math.random() * eventOptions.length)];
+                    if (pick === 'encounter' && spawnEncounter()) return;
+                    if (pick === 'mining' && spawnMiningEvent()) return;
+                    if (pick === 'boss') { spawnBossEncounter(); return; }
+                }
+                // If chosen event failed to spawn, fall through to enemies
             }
 
             game.currentWave = generateWave();
@@ -5070,6 +5105,16 @@
                     addMessage(`[BOSS DEFEATED] The ${enemyType} falls.`, 'victory');
                     addStoryItem(currentBossEncounter.keyDrop);
                     addStoryItem(currentBossEncounter.dnaDrop);
+                }
+
+                // Increment kill counter for non-boss victories in combat zones
+                if (!game.isBossEncounter && LOCATIONS[currentLocation].enemies) {
+                    game.killCounter++;
+                    if (game.killCounter >= game.KILLS_PER_EVENT) {
+                        addMessage(`The next path is clear, what will we find.`, 'system');
+                    } else {
+                        addMessage(`Your path clears a little more. ${game.killCounter}/${game.KILLS_PER_EVENT} encounters cleared.`, 'system');
+                    }
                 }
 
                 checkLevelUp();
