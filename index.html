@@ -1061,6 +1061,23 @@
             font-size: 12px;
         }
 
+        .location-image-container {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid #00ff8855;
+            margin-bottom: 8px;
+        }
+
+        .location-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            image-rendering: pixelated;
+        }
+
         .location-desc {
             margin-top: 4px;
         }
@@ -1328,6 +1345,9 @@
                 <div class="equip-slot">
                     <select id="location-select">
                     </select>
+                </div>
+                <div class="location-image-container">
+                    <img id="location-image" src="images/LOCATION.gif" alt="Location">
                 </div>
                 <div class="equip-slot">
                     <select id="destination-select">
@@ -1874,6 +1894,7 @@
             updateLocationDropdown();
             updateDestinationDropdown();
             document.getElementById('location-select').value = currentLocation;
+            document.getElementById('location-image').src = LOCATIONS[currentLocation].image;
             document.getElementById('location-desc').innerHTML = `<div class="storage-desc-content"><img src="${LOCATIONS[currentLocation].image}" alt="Location"><span>${LOCATIONS[currentLocation].desc}</span></div>`;
 
             recalculateStats();
@@ -1985,6 +2006,7 @@
             updateLocationDropdown();
             updateDestinationDropdown();
             document.getElementById('location-select').value = currentLocation;
+            document.getElementById('location-image').src = LOCATIONS[currentLocation].image;
             document.getElementById('location-desc').innerHTML = `<div class="storage-desc-content"><img src="${LOCATIONS[currentLocation].image}" alt="Location"><span>${LOCATIONS[currentLocation].desc}</span></div>`;
 
             recalculateStats();
@@ -2092,6 +2114,7 @@
                 updateDestinationDropdown();
                 document.getElementById('location-select').value = currentLocation;
                 document.getElementById('destination-select').value = currentDestination;
+                document.getElementById('location-image').src = LOCATIONS[currentLocation].image;
                 document.getElementById('location-desc').innerHTML = `<div class="storage-desc-content"><img src="${LOCATIONS[currentLocation].image}" alt="Location"><span>${LOCATIONS[currentLocation].desc}</span></div>`;
 
                 // Restore forged items registry before inventory lookup
@@ -2852,6 +2875,9 @@
             }
             currentLocation = locationKey;
             currentDestination = 'openworld';
+
+            // Update location image
+            document.getElementById('location-image').src = LOCATIONS[locationKey].image;
 
             // Update description — use open world desc if available
             const zoneConfig = ZONE_DESTINATIONS[locationKey];
