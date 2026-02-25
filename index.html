@@ -373,6 +373,108 @@
         .message.turncounter .message-label { color: #888; }
         .message.turncounter .message-avatar { display: none; }
 
+        /* Battle Card */
+        .battle-card {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 12px;
+            background: #0a0a12;
+            border: 1px solid #ff4444;
+            border-radius: 8px;
+            animation: fadeIn 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .battle-card-label {
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .battle-card-label.enemy-label { color: #ff4444; }
+        .battle-card-label.player-label { color: #4488ff; }
+
+        .battle-card-row {
+            display: flex;
+            gap: 6px;
+        }
+
+        .battle-card-slot {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 6px;
+            border: 1px solid;
+            border-radius: 4px;
+            min-height: 90px;
+            gap: 3px;
+        }
+
+        .battle-card-slot.enemy-slot {
+            background: #2a1a1a;
+            border-color: #ff444444;
+            color: #ff6666;
+        }
+        .battle-card-slot.enemy-slot.active {
+            border-color: #ff4444;
+        }
+        .battle-card-slot.enemy-slot.targeting {
+            border-color: #ff6666;
+            box-shadow: 0 0 8px #ff444466;
+        }
+
+        .battle-card-slot.player-slot {
+            background: #1a1a2e;
+            border-color: #4488ff44;
+            color: #88aaff;
+        }
+        .battle-card-slot.player-slot.active {
+            border-color: #4488ff;
+        }
+
+        .battle-card-slot.empty {
+            background: #111;
+            border-color: #222 !important;
+            color: #333;
+        }
+
+        .battle-card-slot.dead {
+            background: #111;
+            border-color: #222 !important;
+            color: #333;
+        }
+
+        .battle-card-slot img {
+            width: 48px;
+            height: 48px;
+            image-rendering: pixelated;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .battle-card-slot .slot-name {
+            font-size: 9px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .battle-card-slot .slot-stats {
+            font-size: 8px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        .battle-card-divider {
+            border: none;
+            border-top: 1px solid #ffffff11;
+            margin: 4px 0;
+        }
+
         /* Equipment Panel */
         .equipment-panel {
             margin-top: 10px;
@@ -1694,6 +1796,7 @@
             },
             currentWave: null,
             inBattle: false,
+            battleCard: null,
             battleInterval: null,
             regenInterval: null,
             fuelRegenInterval: null,
@@ -1841,6 +1944,7 @@
 
             // Stop all active timers and battle state
             game.inBattle = false;
+            if (game.battleCard) { game.battleCard.remove(); game.battleCard = null; }
             game.currentWave = null;
             game.isBossEncounter = false;
             currentBossEncounter = null;
@@ -1916,6 +2020,7 @@
 
             // Stop all active timers and battle state
             game.inBattle = false;
+            if (game.battleCard) { game.battleCard.remove(); game.battleCard = null; }
             game.currentWave = null;
             game.isBossEncounter = false;
             currentBossEncounter = null;
@@ -2809,6 +2914,7 @@
 
             // Stop all active timers and battle state
             game.inBattle = false;
+            if (game.battleCard) { game.battleCard.remove(); game.battleCard = null; }
             game.currentWave = null;
             game.isBossEncounter = false;
             currentBossEncounter = null;
@@ -2873,6 +2979,7 @@
 
             // Stop all active timers and battle state
             game.inBattle = false;
+            if (game.battleCard) { game.battleCard.remove(); game.battleCard = null; }
             game.currentWave = null;
             game.isBossEncounter = false;
             currentBossEncounter = null;
@@ -2971,6 +3078,166 @@
             chatMessages.appendChild(msg);
             msg.scrollIntoView({ behavior: 'smooth', block: 'end' });
             await new Promise(resolve => setTimeout(resolve, 800));
+        }
+
+        // Battle Card - creates the inline 4-slot formation display
+        function createBattleCard(wave) {
+            // Remove any existing battle card
+            if (game.battleCard) {
+                game.battleCard.remove();
+                game.battleCard = null;
+            }
+
+            const card = document.createElement('div');
+            card.className = 'battle-card';
+
+            // Enemy formation label
+            const enemyLabel = document.createElement('div');
+            enemyLabel.className = 'battle-card-label enemy-label';
+            enemyLabel.textContent = 'HOSTILE FORMATION';
+            card.appendChild(enemyLabel);
+
+            // Enemy row - 4 slots
+            const enemyRow = document.createElement('div');
+            enemyRow.className = 'battle-card-row';
+            enemyRow.dataset.role = 'enemy-row';
+
+            for (let i = 0; i < 4; i++) {
+                const slot = document.createElement('div');
+                if (i < wave.count && wave.enemies[i]) {
+                    const enemy = wave.enemies[i];
+                    slot.className = 'battle-card-slot enemy-slot active';
+                    slot.dataset.slotIndex = i;
+
+                    const img = document.createElement('img');
+                    img.src = enemy.image || 'images/IMAGE.gif';
+                    img.alt = enemy.name;
+                    slot.appendChild(img);
+
+                    const name = document.createElement('div');
+                    name.className = 'slot-name';
+                    name.textContent = enemy.name;
+                    slot.appendChild(name);
+
+                    const stats = document.createElement('div');
+                    stats.className = 'slot-stats';
+                    stats.textContent = `HP:${enemy.hp}/${enemy.maxHp} ATK:${wave.enemyType.attack} DEF:${wave.enemyType.defence}`;
+                    slot.appendChild(stats);
+                } else {
+                    slot.className = 'battle-card-slot enemy-slot empty';
+                    const emptyLabel = document.createElement('div');
+                    emptyLabel.className = 'slot-name';
+                    emptyLabel.textContent = '- - -';
+                    slot.appendChild(emptyLabel);
+                }
+                enemyRow.appendChild(slot);
+            }
+            card.appendChild(enemyRow);
+
+            // Divider
+            const divider = document.createElement('hr');
+            divider.className = 'battle-card-divider';
+            card.appendChild(divider);
+
+            // Player formation label
+            const playerLabel = document.createElement('div');
+            playerLabel.className = 'battle-card-label player-label';
+            playerLabel.textContent = 'MECH FORMATION';
+            card.appendChild(playerLabel);
+
+            // Player row - 4 slots (1 active mech, 3 empty)
+            const playerRow = document.createElement('div');
+            playerRow.className = 'battle-card-row';
+            playerRow.dataset.role = 'player-row';
+
+            for (let i = 0; i < 4; i++) {
+                const slot = document.createElement('div');
+                if (i === 0) {
+                    slot.className = 'battle-card-slot player-slot active';
+
+                    const img = document.createElement('img');
+                    img.src = 'images/COMBOBREAKER_IDLE.gif';
+                    img.alt = 'Mech';
+                    slot.appendChild(img);
+
+                    const name = document.createElement('div');
+                    name.className = 'slot-name';
+                    name.textContent = 'COMBOBREAKER';
+                    slot.appendChild(name);
+
+                    const stats = document.createElement('div');
+                    stats.className = 'slot-stats';
+                    const p = game.player;
+                    stats.textContent = `HP:${p.hp}/${p.maxHp} ATK:${p.attack} DEF:${p.defence}`;
+                    slot.appendChild(stats);
+                } else {
+                    slot.className = 'battle-card-slot player-slot empty';
+                    const emptyLabel = document.createElement('div');
+                    emptyLabel.className = 'slot-name';
+                    emptyLabel.textContent = '- - -';
+                    slot.appendChild(emptyLabel);
+                }
+                playerRow.appendChild(slot);
+            }
+            card.appendChild(playerRow);
+
+            chatMessages.appendChild(card);
+            card.scrollIntoView({ behavior: 'smooth', block: 'end' });
+
+            game.battleCard = card;
+        }
+
+        // Update battle card to reflect current battle state
+        function updateBattleCard() {
+            const card = game.battleCard;
+            if (!card) return;
+
+            const wave = game.currentWave;
+            if (!wave || !wave.enemies) return;
+
+            // Update enemy slots
+            const enemyRow = card.querySelector('[data-role="enemy-row"]');
+            if (!enemyRow) return;
+            const enemySlots = enemyRow.children;
+
+            for (let i = 0; i < 4; i++) {
+                const slot = enemySlots[i];
+                if (!slot) continue;
+
+                if (i < wave.count && wave.enemies[i]) {
+                    const enemy = wave.enemies[i];
+                    if (!enemy.alive) {
+                        // Dead: turn grey and empty
+                        slot.className = 'battle-card-slot enemy-slot dead';
+                        slot.innerHTML = '';
+                        const emptyLabel = document.createElement('div');
+                        emptyLabel.className = 'slot-name';
+                        emptyLabel.textContent = '- - -';
+                        slot.appendChild(emptyLabel);
+                    } else {
+                        // Alive: update HP and targeting
+                        const isTarget = (i === wave.currentTarget - 1);
+                        slot.className = 'battle-card-slot enemy-slot' + (isTarget ? ' targeting' : ' active');
+
+                        const statsEl = slot.querySelector('.slot-stats');
+                        if (statsEl) {
+                            statsEl.textContent = `HP:${enemy.hp}/${enemy.maxHp} ATK:${wave.enemyType.attack} DEF:${wave.enemyType.defence}`;
+                        }
+                    }
+                }
+            }
+
+            // Update player slot
+            const playerRow = card.querySelector('[data-role="player-row"]');
+            if (!playerRow) return;
+            const playerSlot = playerRow.children[0];
+            if (playerSlot) {
+                const statsEl = playerSlot.querySelector('.slot-stats');
+                if (statsEl) {
+                    const p = game.player;
+                    statsEl.textContent = `HP:${p.hp}/${p.maxHp} ATK:${p.attack} DEF:${p.defence}`;
+                }
+            }
         }
 
         // Update UI
@@ -3234,13 +3501,26 @@
             const max = enemyType.squadMax || 1;
             const enemyCount = Math.floor(Math.random() * (max - min + 1)) + min;
 
+            // Build individual enemy tracking array (groundwork for mixed squads)
+            const enemies = [];
+            for (let i = 0; i < enemyCount; i++) {
+                enemies.push({
+                    name: enemyType.name,
+                    image: enemyType.image,
+                    hp: enemyType.hp,
+                    maxHp: enemyType.hp,
+                    alive: true
+                });
+            }
+
             return {
                 enemyType: enemyType,
                 count: enemyCount,
                 remaining: enemyCount,
                 currentTarget: 1, // Which enemy we're fighting (1-indexed)
                 currentEnemy: null, // Will hold current enemy's HP in battle
-                turn: 0
+                turn: 0,
+                enemies: enemies
             };
         }
 
@@ -4564,6 +4844,7 @@
 
             addMessage(`[EVADE SUCCESSFUL] Speedbreaker engaged — you slipped their sensors!`, 'player');
             removeBossDialogue();
+            if (game.battleCard) { game.battleCard.remove(); game.battleCard = null; }
             game.currentWave = null;
             game.isBossEncounter = false;
             currentBossEncounter = null;
@@ -4611,11 +4892,19 @@
                 remaining: 1,
                 currentTarget: 1,
                 currentEnemy: null,
-                turn: 0
+                turn: 0,
+                enemies: [{
+                    name: bossEnemy.name,
+                    image: boss.characterImage || bossEnemy.image,
+                    hp: bossEnemy.hp,
+                    maxHp: bossEnemy.hp,
+                    alive: true
+                }]
             };
             game.isBossEncounter = true;
 
             addMessage(`[BOSS ENCOUNTER] ${boss.introText}`, 'enemy');
+            createBattleCard(game.currentWave);
 
             // Create countdown message
             let secondsLeft = Math.floor(game.WAVE_EXPIRE / 1000);
@@ -4798,6 +5087,7 @@
             game.currentWave = generateWave();
             const et = game.currentWave.enemyType;
             addMessage(`[TARGET ACQUIRED]> ${game.currentWave.count} ${et.name}s are within engagement range [ATK:${et.attack} DEF:${et.defence} HP:${et.hp}]`, 'enemy', { image: et.image });
+            createBattleCard(game.currentWave);
 
             // Create countdown message
             let secondsLeft = Math.floor(game.WAVE_EXPIRE / 1000);
@@ -4826,6 +5116,10 @@
                 clearCountdown();
                 if (game.currentWave && !game.inBattle) {
                     addMessage(`Signal lost. Scanning...`, 'system', { image: 'images/Comp 1.gif' });
+                    if (game.battleCard) {
+                        game.battleCard.remove();
+                        game.battleCard = null;
+                    }
                     game.currentWave = null;
                     hideInlineButtons();
                     startWaveTimer();
@@ -4919,6 +5213,10 @@
                 }
 
                 wave.currentEnemy -= playerDamage;
+                if (wave.enemies[wave.currentTarget - 1]) {
+                    wave.enemies[wave.currentTarget - 1].hp = Math.max(0, wave.currentEnemy);
+                }
+                updateBattleCard();
                 await addMessage(`Mech attacks ${et.name} #${wave.currentTarget} for ${playerDamage} damage.`, 'player');
 
                 // Crushbreaker AoE: damage all other remaining enemies (first attack only)
@@ -4933,6 +5231,14 @@
                             const bonusText = xpBonus > 0 ? ` (+${xpBonus} PROC)` : '';
                             await addMessage(`[KILL CONFIRMED] ${et.name} destroyed by Crushbreaker (+${killXp} Silicon${bonusText})`, 'enemy', { image: et.image });
                         }
+                        // Mark all background enemies as dead on the card
+                        for (let j = wave.currentTarget; j < wave.enemies.length; j++) {
+                            if (wave.enemies[j]) {
+                                wave.enemies[j].alive = false;
+                                wave.enemies[j].hp = 0;
+                            }
+                        }
+                        updateBattleCard();
                         wave.count = wave.currentTarget;
                     } else {
                         await addMessage(`Crushbreaker hits ${backgroundCount} other ${backgroundCount === 1 ? 'enemy' : 'enemies'} for ${playerDamage} damage each.`, 'player');
@@ -4942,6 +5248,11 @@
                 // Check if current enemy
                 if (wave.currentEnemy <= 0) {
                     wave.remaining--;
+                    if (wave.enemies[wave.currentTarget - 1]) {
+                        wave.enemies[wave.currentTarget - 1].alive = false;
+                        wave.enemies[wave.currentTarget - 1].hp = 0;
+                    }
+                    updateBattleCard();
                     const xpBonus = getXpBonus();
                     const killXp = et.xp + xpBonus;
                     wave.xpEarned = (wave.xpEarned || 0) + killXp;
@@ -4955,6 +5266,7 @@
                         return;
                     }
                 } else {
+                    updateBattleCard();
                     await addMessage(`${et.name} #${wave.currentTarget} reduced to ${wave.currentEnemy} of ${et.hp} HP`, 'enemy', { image: et.image });
                 }
             }
@@ -4985,8 +5297,16 @@
                     await addMessage(`[SOULBREAKER TRIGGERED] Attack parried — ${et.attack} damage reflected!`, 'player');
                     if (i === wave.currentTarget && wave.currentEnemy !== null) {
                         wave.currentEnemy -= et.attack;
+                        if (wave.enemies[wave.currentTarget - 1]) {
+                            wave.enemies[wave.currentTarget - 1].hp = Math.max(0, wave.currentEnemy);
+                        }
                         if (wave.currentEnemy <= 0) {
                             wave.remaining--;
+                            if (wave.enemies[wave.currentTarget - 1]) {
+                                wave.enemies[wave.currentTarget - 1].alive = false;
+                                wave.enemies[wave.currentTarget - 1].hp = 0;
+                            }
+                            updateBattleCard();
                             const xpBonus = getXpBonus();
                             const killXp = et.xp + xpBonus;
                             wave.xpEarned = (wave.xpEarned || 0) + killXp;
@@ -4998,6 +5318,8 @@
                                 endBattle(true);
                                 return;
                             }
+                        } else {
+                            updateBattleCard();
                         }
                     }
                     continue;
@@ -5014,11 +5336,13 @@
                     remainingDefence = 0;
                     p.hp = Math.max(0, p.hp - damageTaken);
                     updateStats();
+                    updateBattleCard();
                 } else {
                     // No defence left
                     p.hp = Math.max(0, p.hp - et.attack);
                     await addMessage(`Mech takes ${et.attack} damage.`, 'player');
                     updateStats();
+                    updateBattleCard();
                 }
 
                 // Check if player defeated
@@ -5034,6 +5358,7 @@
                 p.hp += healed;
                 await addMessage(`Mech regenerates ${healed} HP. (${p.hp}/${p.maxHp})`, 'player');
                 updateStats();
+                updateBattleCard();
             }
 
             // Painbreaker: chance to regain HP equal to regen stat
@@ -5042,6 +5367,7 @@
                 p.hp += painHealed;
                 await addMessage(`[PAINBREAKER TRIGGERED] Mech restores ${painHealed} HP! (${p.hp}/${p.maxHp})`, 'player');
                 updateStats();
+                updateBattleCard();
             }
         }
 
@@ -5054,6 +5380,10 @@
                 clearInterval(game.battleInterval);
                 game.battleInterval = null;
             }
+
+            // Final card update before clearing
+            updateBattleCard();
+            game.battleCard = null;
 
             const wave = game.currentWave;
             const enemiesKilled = wave ? wave.count - wave.remaining : 0;
@@ -5216,6 +5546,10 @@
             clearCountdown();
 
             addMessage(`Engagement denied. Live to fight another day.`, 'player');
+            if (game.battleCard) {
+                game.battleCard.remove();
+                game.battleCard = null;
+            }
             game.currentWave = null;
             startWaveTimer();
         }

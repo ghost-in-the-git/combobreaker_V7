@@ -29,7 +29,7 @@ const ENEMIES_DOWNTOWN = [
         appearanceRate: 22,
         minLevel: 1,
         squadMin: 1,
-        squadMax: 3,
+        squadMax: 4,
         scrapChance: 45,
         scrapMin: 2,
         scrapMax: 3
